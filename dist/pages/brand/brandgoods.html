@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width,initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"/>
+    <meta content="telephone=no" name="format-detection"/>
+    <meta name="google" value="notranslate"/>
+    <meta name="root-url" value="<?php echo JQ_URL; ?>"/>
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
+    <meta http-equiv="Pragma" content="no-cache"/>
+    <meta http-equiv="Expires" content="0"/>
+    <meta http-equiv="x-dns-prefetch-control" content="on"/>
+    <title>品牌商品</title>
+    <link rel="stylesheet" href="../../styles/swiper.min.css"/>
+    <link rel="stylesheet" href="../../styles/framework.css"/>
+    <link rel="stylesheet" href="../../styles/app-base.css"/>
+    <link rel="stylesheet" href="../../styles/ricky.css?v=04062"/>
+    <script type="text/javascript" src="../../scripts/zepto.min.js"></script>
+    <script type="text/javascript" src="../../scripts/zepto.swiper.min.js"></script>
+    <!--<script type="text/javascript" src="../../scripts/zepto.app.js?v=04063"></script>
+     <script type="text/javascript" src="../../scripts/zepto.custom.js?v=04062"></script>-->
+
+    <!--样式模块公用放入-->
+
+    <link rel="stylesheet" href="../../assets/styles/brand.css?rev=1feb95f16b19a17c439e0a62d6023173">
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        (function initFontSize() {
+          var resizeEvent = 'orientationchange' in window ? 'orientationchange' : 'resize';
+
+          function changeSize() {
+            const designWidth = 750; //设计稿尺寸是640px
+            const designWidth2 = 1080;
+            var html = document.documentElement; //根元素
+            var deviceWidth = html.clientWidth; //屏幕逻辑宽度
+            var base = 100;
+
+            if (deviceWidth > designWidth2) {
+              deviceWidth = designWidth2;
+            }
+            html.style.fontSize = (deviceWidth / designWidth) * base + "px";
+            //console.log(html.style.fontSize);
+            //alert(html.style.fontSize+"==="+deviceWidth);
+          }
+
+          changeSize();
+          window.addEventListener(resizeEvent, changeSize, false);
+        })();
+      });
+    </script>
+</head>
+<body>
+<!--头部-->
+<div class="jm-header">
+    <div class="jm-wrapper">
+        <a href="#">
+            <div class="posl icon icon_back icon-fix"></div>
+        </a>
+        <p class="title">品牌商品</p>
+        <a href="#">
+            <div class="posr icon icon_share icon-fix"></div>
+        </a>
+    </div>
+</div>
+<!--内容-->
+<div id="content" class="page-content">
+    <div class="brandgoods">
+        <!--合伙人及店铺介绍-->
+        <div class="partner">
+            <div class="logo">
+                <!--头像 移除hidden类-->
+                <img class="hidden" src="../../assets/images/store/logo1.png?rev=29bd6d5e483415b8a8d0994ae20b23dd"
+                     alt="">
+                <!--无头像-->
+                <div class="noimg"></div>
+            </div>
+            <div class="twitter">
+                <span class="name">科颜氏</span>
+                <span class="sell">在售商品45个</span>
+                <span class="focus"><i class="pos  icon icon_attention icon-fix"></i>已关注</span>
+            </div>
+            <div class="payback">
+                <div class="left">
+                    <div class="outcircle">
+                        <div class="incircle">
+                            <span class="up">推广</span>
+                            <span class="down">佣金</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bottom">
+                    <div class="up">直销：20%</div>
+                    <div class="down">推销：10%</div>
+                </div>
+            </div>
+        </div>
+        <!--内容列表-->
+        <ul class="list goods-box">
+            <li class="goods-item">
+                <a href="#">
+                    <div class="imgbox">
+                        <img src="../../assets/images/brand/goods-1.png" alt="">
+                    </div>
+                    <span class="hot">热销</span>
+                    <div class="infobox">
+                        <span class="brand-name">科颜氏高温保湿</span>
+                        <span class="price">$320<span class="oldprice">$400</span></span>
+
+                    </div>
+                </a>
+            </li>
+            <li class="goods-item">
+                <a href="#">
+                    <div class="imgbox">
+                        <img src="../../assets/images/brand/goods-2.png" alt="">
+                    </div>
+                    <span class="hot">热销</span>
+                    <div class="infobox">
+                        <span class="brand-name">科颜氏高温保湿</span>
+                        <span class="price">$320<span class="oldprice">$400</span></span>
+
+                    </div>
+                </a>
+            </li>
+            <li class="goods-item">
+                <a href="#">
+                    <div class="imgbox">
+                        <img src="../../assets/images/brand/goods-3.png" alt="">
+                    </div>
+                    <span class="hot">热销</span>
+                    <div class="infobox">
+                        <span class="brand-name">科颜氏高温保湿</span>
+                        <span class="price">$320<span class="oldprice">$400</span></span>
+
+                    </div>
+                </a>
+            </li>
+
+        </ul>
+    </div>
+</div>
+
+<!--脚步导入开始-->
+<!--js模块公用放入-->
+</body>
+</html>

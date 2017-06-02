@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    @@include('../partical/meta.inc',{"title":"店铺首页"})
+    @@include('../partical/styles.inc', {
+    "links":"<link rel='stylesheet' href='../assets/styles/store.css?rev=@@hash'/>"
+    })
+</head>
+<body>
+<!--头部-->
+<div class="jm-header-navbar">
+    <div class="jm-wrapper">
+        <div class="jm-back"></div>
+        <p class="title">品牌合伙</p>
+    </div>
+</div>
+<!--body内容信息-->
+<div id="content" class="page-content">
+    <img class="hidden" src="../assets/images/store/good2.png?rev=@@hash" alt="">
+</div>
+
+<!--底部导航-->
+@@include('../partical/footer.inc')
+<!--脚步导入开始-->
+@@include('../partical/script.inc')
+<script src='../assets/scripts/store.js?rev=@@hash'></script>
+<script src='../assets/scripts/brand.js?rev=@@hash'></script>
+</body>
+</html>

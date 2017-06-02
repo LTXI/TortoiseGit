@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    @@include('../../partical/meta.inc',{"title":"品牌商品"})
+    @@include('../../partical/styles.inc', {"links":""})
+    <link rel="stylesheet" href="../../assets/styles/brand.css?rev=@@hash">
+    @@include('../../partical/fontsize.inc')
+</head>
+<body>
+<!--头部-->
+<div class="jm-header">
+    <div class="jm-wrapper">
+        <a href="#">
+            <div class="posl icon icon_back icon-fix"></div>
+        </a>
+        <p class="title">品牌商品</p>
+        <a href="#">
+            <div class="posr icon icon_share icon-fix"></div>
+        </a>
+    </div>
+</div>
+<!--内容-->
+<div id="content" class="page-content">
+    <div class="brandgoods">
+        <!--合伙人及店铺介绍-->
+        <div class="partner">
+            <div class="logo">
+                <!--头像 移除hidden类-->
+                <img class="hidden" src="../../assets/images/store/logo1.png?rev=@@hash" alt="">
+                <!--无头像-->
+                <div class="noimg"></div>
+            </div>
+            <div class="twitter">
+                <span class="name">科颜氏</span>
+                <span class="sell">在售商品45个</span>
+                <span class="focus"><i class="pos  icon icon_attention icon-fix"></i>已关注</span>
+            </div>
+            <div class="payback">
+                <div class="left">
+                    <div class="outcircle">
+                        <div class="incircle">
+                            <span class="up">推广</span>
+                            <span class="down">佣金</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bottom">
+                    <div class="up">直销：20%</div>
+                    <div class="down">推销：10%</div>
+                </div>
+            </div>
+        </div>
+        <!--内容列表-->
+        <ul class="list goods-box">
+            <li class="goods-item">
+                <a href="#"><div class="imgbox">
+                    <img src="../../assets/images/brand/goods-1.png" alt="">
+                </div>
+                    <span class="hot">热销</span>
+                    <div class="infobox">
+                        <span class="brand-name">科颜氏高温保湿</span>
+                        <span class="price">$320<span class="oldprice">$400</span></span>
+
+                    </div></a>
+            </li>
+            <li class="goods-item">
+                <a href="#"><div class="imgbox">
+                    <img src="../../assets/images/brand/goods-2.png" alt="">
+                </div>
+                    <span class="hot">热销</span>
+                    <div class="infobox">
+                        <span class="brand-name">科颜氏高温保湿</span>
+                        <span class="price">$320<span class="oldprice">$400</span></span>
+
+                    </div></a>
+            </li>
+            <li class="goods-item">
+                <a href="#">
+                    <div class="imgbox">
+                        <img src="../../assets/images/brand/goods-3.png" alt="">
+                    </div>
+                    <span class="hot">热销</span>
+                    <div class="infobox">
+                        <span class="brand-name">科颜氏高温保湿</span>
+                        <span class="price">$320<span class="oldprice">$400</span></span>
+
+                    </div>
+                </a>
+            </li>
+
+        </ul>
+    </div>
+</div>
+
+<!--脚步导入开始-->
+@@include('../../partical/script.inc')
+</body>
+</html>

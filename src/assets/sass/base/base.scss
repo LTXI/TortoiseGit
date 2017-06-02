@@ -1,0 +1,33 @@
+
+//base 基础样式
+//reset 重置 直接映入进base，不再编译生成
+
+@import  "reset.scss";
+$font-falmily:"STHeiti","Microsoft YaHei",Helvetica,Arial,sans-serif;
+$bgk:#f4f4f4;
+$width:7.5rem;
+$max-width:1080px;
+ //html的font-size =  = deviceWidth(屏幕尺寸) / 设计稿尺寸*100;  结果值为方便计算，扩大了100倍
+$base:100;
+$basefontsize:(19 / $base)+rem;
+
+body {
+  color:#feffff;
+  width:$width;
+  //font-size: $basefontsize;
+  max-width: $max-width;
+  margin: 0 auto;
+  background: $bgk;
+  font-family:$font-falmily;
+  -webkit-tap-heightlight-color:rgba(0,0,0,0);
+}
+
+.hidden{
+  display: none;
+}
+
+
+//定义一个变量和一个mixin
+
+
+

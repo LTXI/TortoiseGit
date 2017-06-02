@@ -1,0 +1,22 @@
+{
+  "name": "yunshop",
+  "description": "yunshop project",
+  "main": "gulpfile.js",
+  "authors": [
+    "liutx"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "assets/vendor/",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.2.1"
+  },
+  "devDependencies": {}
+}
