@@ -152,7 +152,7 @@ body {
   top: .17rem;
   width: .3rem;
   height: .35rem;
-  background: url("../images/store/icon_arrow.png?v=f343a") no-repeat center center;
+  background: url("../images/store/icon_arrow.png") no-repeat center center;
   background-size: cover;
 }
 
@@ -165,7 +165,7 @@ body {
 .jm-store .store {
   position: relative;
   height: 2.9rem;
-  background: url("../images/store/store-bg.png?v=08a3d") no-repeat center center;
+  background: url("../images/store/store-bg.png") no-repeat center center;
   background-size: cover;
 }
 
@@ -189,7 +189,7 @@ body {
       -ms-flex: 0 0 1.24rem;
           flex: 0 0 1.24rem;
   height: 1.24rem;
-  background: url("../images/store/icon_store_bg.png?v=933f2") no-repeat center center;
+  background: url("../images/store/icon_store_bg.png") no-repeat center center;
   background-size: cover;
   text-align: center;
 }
@@ -236,7 +236,7 @@ body {
   right: 0;
   width: .8rem;
   height: .5rem;
-  background: url("../images/store/icon_code.png?v=63b56") no-repeat center center;
+  background: url("../images/store/icon_code.png") no-repeat center center;
   background-size: cover;
 }
 
@@ -269,7 +269,7 @@ body {
   display: inline-block;
   width: .4rem;
   height: .4rem;
-  background: url("../images/store/sign.png?v=5c80f") no-repeat center center;
+  background: url("../images/store/sign.png") no-repeat center center;
   background-size: cover;
   vertical-align: middle;
 }
@@ -286,7 +286,7 @@ body {
   display: inline-block;
   width: .3rem;
   height: .3rem;
-  background: url("../images/store/more.png?v=b8ca7") no-repeat center center;
+  background: url("../images/store/more.png") no-repeat center center;
   background-size: cover;
   vertical-align: middle;
 }
@@ -435,7 +435,7 @@ body {
           transform: translateY(-50%);
   line-height: .28rem;
   text-align: center;
-  background: url("../images/store/icon_discount.png?v=1bbe4") no-repeat center center;
+  background: url("../images/store/icon_discount.png") no-repeat center center;
   background-size: cover;
 }
 
@@ -447,7 +447,7 @@ body {
   width: .65rem;
   height: .65rem;
   border-radius: 50%;
-  background: #fdfdfd url("../images/store/icon_backtop.png?v=d566f") no-repeat center center;
+  background: #fdfdfd url("../images/store/icon_backtop.png") no-repeat center center;
   background-size: cover;
   z-index: 1210;
   -webkit-transform-origin: 0px 0px 0px;

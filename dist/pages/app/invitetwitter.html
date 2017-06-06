@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en" id="code">
+<head>
+       <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+    <meta content="telephone=no" name="format-detection" />
+    <meta name="google" value="notranslate" />
+    <meta name="root-url" value="<?php echo JQ_URL; ?>" />
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <meta http-equiv="x-dns-prefetch-control" content="on" />
+    <title>邀请推客</title>
+    <link rel="stylesheet" href="../../styles/swiper.min.css" />
+    <link rel="stylesheet" href="../../styles/framework.css" />
+    <link rel="stylesheet" href="../../styles/app-base.css" />
+    <link rel="stylesheet" href="../../styles/ricky.css?v=04062" />
+   <script type="text/javascript" src="../../scripts/zepto.min.js"></script>
+    <script type="text/javascript" src="../../scripts/zepto.swiper.min.js"></script>
+   <!--<script type="text/javascript" src="../../scripts/zepto.app.js?v=04063"></script>
+    <script type="text/javascript" src="../../scripts/zepto.custom.js?v=04062"></script>-->
+
+    <!--样式模块公用放入-->
+
+    <link rel="stylesheet" href="../../assets/styles/app.css">
+
+    <script >
+document.addEventListener('DOMContentLoaded', function () {
+(function initFontSize() {
+		var resizeEvent = 'orientationchange' in window ? 'orientationchange' : 'resize';
+
+		function changeSize() {
+			const designWidth = 750; //设计稿尺寸是640px
+			const designWidth2 = 1080;
+			var html = document.documentElement; //根元素
+			var deviceWidth = html.clientWidth; //屏幕逻辑宽度
+			var base = 100;
+
+			if (deviceWidth > designWidth2) {
+				deviceWidth = designWidth2;
+			}
+			html.style.fontSize = (deviceWidth / designWidth) * base + "px";
+			//console.log(html.style.fontSize);
+			//alert(html.style.fontSize+"==="+deviceWidth);
+		}
+		changeSize();
+		window.addEventListener(resizeEvent, changeSize, false);
+	})();
+});
+</script>
+</head>
+<body>
+<!--头部-->
+<div class="jm-header">
+    <div class="jm-wrapper">
+        <a href="#">
+            <div class="posl icon icon_back icon-fix"></div>
+        </a>
+        <p class="title">邀请推客</p>
+        <a href="#">
+            <div class="posr icon icon_share icon-fix"></div>
+        </a>
+    </div>
+</div>
+
+<div id="content" class="page-content invite-twitter">
+    <div class="top">
+        <div class="search-input">
+            <form action="#">
+                <div class="inner ">
+                    <button><i class=" icon-search"></i></button>
+                    <input type="search" id="search-input" name="key" autocomplete="off" placeholder="搜索会员">
+                </div>
+            </form>
+        </div>
+    </div>
+    <ul class="listbox">
+        <li class="itembox">
+            <div class="item user">
+                <span class="left">用户：</span>
+                <span class="right">12345678911</span>
+            </div>
+            <div class="item ">
+                <span class="left">招募时间：</span>
+                <span class="right time">2017-12-12</span>
+            </div>
+            <div class="item">
+                <span class="left">招募状态：</span>
+                <span class="right state">已完成</span>
+            </div>
+            <div class="done">
+                <a href="#" class="btn">撤 销</a>
+            </div>
+        </li>
+        <li class="itembox">
+            <div class="item user">
+                <span class="left">用户：</span>
+                <span class="right">12345678911</span>
+            </div>
+            <div class="item ">
+                <span class="left">招募时间：</span>
+                <span class="right time">2017-12-12</span>
+            </div>
+            <div class="item">
+                <span class="left">招募状态：</span>
+                <span class="right state">已完成</span>
+            </div>
+            <div class="done">
+                <a href="#" class="btn">撤 销</a>
+            </div>
+        </li>
+        <li class="itembox">
+            <div class="item user">
+                <span class="left">用户：</span>
+                <span class="right">12345678911</span>
+            </div>
+            <div class="item ">
+                <span class="left">招募时间：</span>
+                <span class="right time">2017-12-12</span>
+            </div>
+            <div class="item">
+                <span class="left">招募状态：</span>
+                <span class="right state">已完成</span>
+            </div>
+            <div class="done">
+                <a href="#" class="btn">撤 销</a>
+            </div>
+        </li>
+    </ul>
+    <!--更多-->
+    <div class="more">
+        更多...
+    </div>
+</div>
+
+<!--尾部导航-->
+<div id="footer" class="app-page-footer">
+    <div class="footer_inner">
+        <a class="on" href="#">
+            <span class="line"><i class="icon icon-invite"></i></span>
+            <span class="text">邀请</span>
+        </a>
+        <a href="#">
+            <span class="line"><i class="icon icon-team"></i></span>
+            <span class="text">团队</span></a>
+        <a href="#">
+            <span class="line"><i class="icon icon-alliance"></i></span>
+            <span class="text">联盟</span></a>
+        <a href="#">
+            <span class="line"><i class="icon icon-my"></i></span>
+            <span class="text">我的</span>
+        </a>
+    </div>
+</div>
+
+
+<!--脚步导入开始-->
+<!--js模块公用放入-->
+<script src="../../assets/scripts/app.js"></script>
+</body>
+</html>

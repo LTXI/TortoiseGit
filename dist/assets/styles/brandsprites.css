@@ -1,5 +1,5 @@
 .icon {
-  background: url("../images/common/brand.png?v=af6ce") no-repeat;
+  background: url("../images/common/brand.png") no-repeat;
 }
 
 .icon_back {
@@ -76,7 +76,7 @@
   position: absolute;
   left: 0;
   top: 0;
-  background-image: url("../images/common/brand.png?v=af6ce");
+  background-image: url("../images/common/brand.png");
   background-repeat: no-repeat;
   background-size: 119rem;
   -webkit-transform-origin: 0 0;

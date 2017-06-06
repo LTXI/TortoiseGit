@@ -123,7 +123,7 @@ body {
 }
 
 .icon {
-  background: url("../images/common/brand.png?v=af6ce") no-repeat;
+  background: url("../images/common/brand.png") no-repeat;
 }
 
 .icon_back {
@@ -200,7 +200,7 @@ body {
   position: absolute;
   left: 0;
   top: 0;
-  background-image: url("../images/common/brand.png?v=af6ce");
+  background-image: url("../images/common/brand.png");
   background-repeat: no-repeat;
   background-size: 119rem;
   -webkit-transform-origin: 0 0;
@@ -642,7 +642,7 @@ body {
   display: inline-block;
   width: 4.5rem;
   height: 4.5rem;
-  background: url("../images/brand/code-bg.png?v=18cfa") no-repeat center center;
+  background: url("../images/brand/code-bg.png") no-repeat center center;
   background-size: contain;
 }
 
@@ -728,11 +728,12 @@ body {
   top: 0;
   width: .53rem;
   min-width: 40px;
+  height: .35rem;
   line-height: .35rem;
   background-color: #c72443;
   color: #fff;
   font-size: .26rem;
-  padding: .07rem 0.04rem;
+  padding: 0 .04rem;
 }
 
 .brandgoods .goods-box .goods-item .imgbox img {

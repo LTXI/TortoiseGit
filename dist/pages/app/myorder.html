@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en" id="code">
+<head>
+       <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+    <meta content="telephone=no" name="format-detection" />
+    <meta name="google" value="notranslate" />
+    <meta name="root-url" value="<?php echo JQ_URL; ?>" />
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <meta http-equiv="x-dns-prefetch-control" content="on" />
+    <title>我的订单</title>
+    <link rel="stylesheet" href="../../styles/swiper.min.css" />
+    <link rel="stylesheet" href="../../styles/framework.css" />
+    <link rel="stylesheet" href="../../styles/app-base.css" />
+    <link rel="stylesheet" href="../../styles/ricky.css?v=04062" />
+   <script type="text/javascript" src="../../scripts/zepto.min.js"></script>
+    <script type="text/javascript" src="../../scripts/zepto.swiper.min.js"></script>
+   <!--<script type="text/javascript" src="../../scripts/zepto.app.js?v=04063"></script>
+    <script type="text/javascript" src="../../scripts/zepto.custom.js?v=04062"></script>-->
+
+    <!--样式模块公用放入-->
+
+    <link rel="stylesheet" href="../../assets/styles/app.css">
+
+    <script >
+document.addEventListener('DOMContentLoaded', function () {
+(function initFontSize() {
+		var resizeEvent = 'orientationchange' in window ? 'orientationchange' : 'resize';
+
+		function changeSize() {
+			const designWidth = 750; //设计稿尺寸是640px
+			const designWidth2 = 1080;
+			var html = document.documentElement; //根元素
+			var deviceWidth = html.clientWidth; //屏幕逻辑宽度
+			var base = 100;
+
+			if (deviceWidth > designWidth2) {
+				deviceWidth = designWidth2;
+			}
+			html.style.fontSize = (deviceWidth / designWidth) * base + "px";
+			//console.log(html.style.fontSize);
+			//alert(html.style.fontSize+"==="+deviceWidth);
+		}
+		changeSize();
+		window.addEventListener(resizeEvent, changeSize, false);
+	})();
+});
+</script>
+</head>
+<body>
+<!--头部-->
+
+<div class="jm-header">
+    <div class="jm-wrapper">
+        <a href="#">
+            <div class="posl icon icon_back icon-fix"></div>
+        </a>
+        <p class="title">我的订单</p>
+        <!--<a href="#">
+            <div class="posr icon icon_share icon-fix"></div>
+        </a>-->
+    </div>
+</div>
+<div class="order_subnav">
+    <ul class="order_subnav_list">
+        <li class="current"><a href="#">全部</a></li>
+        <li><a href="#">待付款</a></li>
+        <li><a href="#">待发货</a></li>
+        <li><a href="#">已完成</a></li>
+        <li><a href="#">退货中</a></li>
+    </ul>
+</div>
+<div id="content" class="page-content my_order">
+    <ul>
+        <li class="orderlist">
+            <div class="top">
+                <span class="time">下单时间：<span>2017-05-07 19:36</span></span>
+                <i class="delete"></i>
+            </div>
+            <div class="middle">
+                <div class="item-left">
+                    <div class="imgbox">
+                        <div class="inbox">
+                            <img src="../../assets/images/app/team/logo1.png" alt=""/>
+                        </div>
+                    </div>
+                </div>
+                <div class="item-middle">
+                    <p class="title">CUGU古驰</p>
+                    <p class="type">手提包</p>
+                    <p class="num">数量:<span>15件</span></p>
+                </div>
+                <div class="item-middle-price">
+                    <span>$5000</span>
+                </div>
+                <div class="item-right">
+                    <a href="#"><span class="state">待付款</span></a>
+                </div>
+            </div>
+            <div class="bottom">
+                <a class="cancel operation" href="#">取消订单</a>
+            </div>
+        </li>
+        <li class="orderlist">
+            <div class="top">
+                <span class="time">下单时间：<span>2017-05-07 19:36</span></span>
+                <i class="delete"></i>
+            </div>
+            <div class="middle">
+                <div class="item-left">
+                    <div class="imgbox">
+                        <div class="inbox">
+                            <img src="../../assets/images/app/team/logo.png" alt=""/>
+                        </div>
+                    </div>
+                </div>
+                <div class="item-middle">
+                    <p class="title">CUGU古驰</p>
+                    <p class="type">手提包</p>
+                    <p class="num">数量:<span>15件</span></p>
+                </div>
+                <div class="item-middle-price">
+                    <span>$5000</span>
+                </div>
+                <div class="item-right">
+                    <a href="#"><span class="state">待发货</span></a>
+                </div>
+            </div>
+            <div class="bottom">
+                <a class="cancel operation" href="#">取消订单</a>
+            </div>
+        </li>
+        <li class="orderlist">
+            <div class="top">
+                <span class="time">下单时间：<span>2017-05-07 19:36</span></span>
+                <i class="delete"></i>
+            </div>
+            <div class="middle">
+                <div class="item-left">
+                    <div class="imgbox">
+                        <div class="inbox">
+                            <img src="../../assets/images/app/team/logo1.png" alt=""/>
+                        </div>
+                    </div>
+                </div>
+                <div class="item-middle">
+                    <p class="title">CUGU古驰</p>
+                    <p class="type">手提包</p>
+                    <p class="num">数量:<span>15件</span></p>
+                </div>
+                <div class="item-middle-price">
+                    <span>$5000</span>
+                </div>
+                <div class="item-right">
+                    <a href="#"><span class="state">已完成</span></a>
+                </div>
+            </div>
+            <div class="bottom">
+                <a class="done operation" href="#">再次下单</a>
+            </div>
+        </li>
+    </ul>
+    <!--暂无数据-->
+    <!--<div class="data-tips">
+        <div class="box">
+            <i></i>
+            <p>还没有相关订单</p>
+        </div>
+    </div>-->
+</div>
+<!--脚步导入开始-->
+<!--js模块公用放入-->
+<script src="../../assets/scripts/app.js"></script>
+</body>
+</html>

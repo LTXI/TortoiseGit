@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en" id="code">
+<head>
+       <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+    <meta content="telephone=no" name="format-detection" />
+    <meta name="google" value="notranslate" />
+    <meta name="root-url" value="<?php echo JQ_URL; ?>" />
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <meta http-equiv="x-dns-prefetch-control" content="on" />
+    <title>我的</title>
+    <link rel="stylesheet" href="../../styles/swiper.min.css" />
+    <link rel="stylesheet" href="../../styles/framework.css" />
+    <link rel="stylesheet" href="../../styles/app-base.css" />
+    <link rel="stylesheet" href="../../styles/ricky.css?v=04062" />
+   <script type="text/javascript" src="../../scripts/zepto.min.js"></script>
+    <script type="text/javascript" src="../../scripts/zepto.swiper.min.js"></script>
+   <!--<script type="text/javascript" src="../../scripts/zepto.app.js?v=04063"></script>
+    <script type="text/javascript" src="../../scripts/zepto.custom.js?v=04062"></script>-->
+
+    <!--样式模块公用放入-->
+
+    <link rel="stylesheet" href="../../assets/styles/app.css">
+    <script >
+document.addEventListener('DOMContentLoaded', function () {
+(function initFontSize() {
+		var resizeEvent = 'orientationchange' in window ? 'orientationchange' : 'resize';
+
+		function changeSize() {
+			const designWidth = 750; //设计稿尺寸是640px
+			const designWidth2 = 1080;
+			var html = document.documentElement; //根元素
+			var deviceWidth = html.clientWidth; //屏幕逻辑宽度
+			var base = 100;
+
+			if (deviceWidth > designWidth2) {
+				deviceWidth = designWidth2;
+			}
+			html.style.fontSize = (deviceWidth / designWidth) * base + "px";
+			//console.log(html.style.fontSize);
+			//alert(html.style.fontSize+"==="+deviceWidth);
+		}
+		changeSize();
+		window.addEventListener(resizeEvent, changeSize, false);
+	})();
+});
+</script>
+</head>
+<body>
+
+<div id="content" class="page-content my-user">
+    <div class="top">
+        <div class="userinfo">
+            <div class="item-left">
+                <div class="imgbox">
+                    <div class="inbox"><img src="../../assets/images/app/user/avatar.png" alt=""></div>
+                </div>
+            </div>
+            <div class="item-middle">
+                <span class="tel">132465897789</span>
+                <span class="brand">品牌：LV/CK</span>
+            </div>
+            <div class="item-right">
+                <a href="#"><i class="codeicon"></i></a>
+            </div>
+        </div>
+        <div class="bottombox">
+            <div class="left">
+                <a class="item" href="#">
+                    <i class="num">58</i>
+                    <span class="text">我的收益</span>
+                </a>
+            </div>
+            <div class="right">
+                <a class="item" href="#">
+                    <i class="num">16</i>
+                    <span class="text">佣金金额</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="order">
+        <div class="orderitem">
+            <a href="#"> <span class="title">我的订单</span>
+            <span class="orderlink">查看所有订单<i class="arrow-icon"></i></span></a>
+        </div>
+        <div class="orderinfo">
+            <a class="item" href="#">
+                <span class="line"><i class="icon icon-unpay"></i></span>
+                <span class="text">待支付</span>
+            </a>
+            <a class="item" href="#">
+                <span class="line"><i class="icon icon-unems "></i></span>
+                <span class="text">待发货</span>
+            </a>
+            <a class="item" href="#">
+                <span class="line"><i class="icon icon-ems"></i></span>
+                <span class="text">已发货</span>
+            </a>
+            <a class="item" href="#">
+                <span class="line"><i class="icon icon-done"></i></span>
+                <span class="text">已完成</span>
+            </a>
+        </div>
+    </div>
+    <div class="account">
+        <div class="accountitem">
+            <span class="title">我的订单</span>
+        </div>
+        <div class="accounbox">
+            <div class="left">
+                <a class="item" href="#">
+                    <i class="num">￥58</i>
+                    <span class="text">金币</span>
+                </a>
+            </div>
+            <div class="right">
+                <a class="item" href="#">
+                    <i class="num">16</i>
+                    <span class="text">积分</span>
+                </a>
+            </div>
+            <div class="line"></div>
+        </div>
+
+    </div>
+    <div class="set">
+        <div class="setitem">
+            <a href="#"> <span class="title">资料设置</span>
+                <span class="orderlink"><i class="arrow-icon"></i></span></a>
+        </div>
+    </div>
+</div>
+
+<!--尾部导航-->
+<div id="footer" class="app-page-footer">
+    <div class="footer_inner">
+        <a class="on" href="#">
+            <span class="line"><i class="icon icon-invite"></i></span>
+            <span class="text">邀请</span>
+        </a>
+        <a href="#">
+            <span class="line"><i class="icon icon-team"></i></span>
+            <span class="text">团队</span></a>
+        <a href="#">
+            <span class="line"><i class="icon icon-alliance"></i></span>
+            <span class="text">联盟</span></a>
+        <a href="#">
+            <span class="line"><i class="icon icon-my"></i></span>
+            <span class="text">我的</span>
+        </a>
+    </div>
+</div>
+
+
+<!--脚步导入开始-->
+<!--js模块公用放入-->
+<script src="../../assets/scripts/app.js"></script>
+</body>
+</html>
