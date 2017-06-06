@@ -30,6 +30,10 @@ var gulp = require('gulp'),
 ///---------
 //加版本
   runSequence = require('run-sequence'),
+  /**需要在源代码处修改为如下格式：
+   var verStr = (options.verConnecter || "") + md5;
+   src=src+"?v="+verStr;
+   **/
   assetRev = require('gulp-asset-rev'),
   rev = require('gulp-rev'),
   revCollector = require('gulp-rev-collector');
@@ -84,7 +88,7 @@ gulp.task('sass', function () {
     /*.pipe(cssver({
      useDate:true
      }))*/
-     .pipe(cleancss())//压缩
+     //.pipe(cleancss())//压缩
 
     .pipe(sourcemaps.write('./maps'))//生成map文件的路径
     .pipe(gulp.dest(outAssetsPath + '/styles/'))
@@ -161,7 +165,7 @@ gulp.task('scripts', function () {
     .pipe(plumber())
     .pipe(uglify())
     .pipe(gulp.dest(outAssetsPath + '/scripts'))
-    .pipe(assetRev({hashLen: 10}))
+    .pipe(assetRev({hashLen: 5}))
     .pipe(gulp.dest(outAssetsPath + '/scripts'))
 });
 
