@@ -410,15 +410,6 @@
       }
     }
   }
-  .unlist {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    font-size: .24rem;
-    color: #595757;
-  }
 }
 
 //我的推客 end
@@ -806,7 +797,6 @@
         background-size: contain;
       }
     }
-
   }
   .account {
     color: #595757;
@@ -822,7 +812,6 @@
       }
 
     }
-
     .accounbox {
       position: relative;
       width: 100%;
@@ -1084,30 +1073,77 @@
     }
   }
 
-  .data-tips {
-    text-align: center;
-    position: fixed;
-    top: 4rem;
-    left: 50%;
-    transform: translateX(-50%);
-    .box {
+}
+
+//我的订单 end
+
+//无数据提示公用 begin
+.data-tips {
+  text-align: center;
+  width: 100%;
+  .tipsbox {
+    display: inline-block;
+    padding-top: 2rem;
+    width: 60%;
+    min-width: 2.4rem;
+    i.icon {
       display: inline-block;
-      width: 2.4rem;
-      i {
-        display: inline-block;
-        width: 2rem;
-        height: 2rem;
-        background: url("../images/app/user/data_tip_icon.png") no-repeat center center;
-        background-size: contain;
-      }
-      p{
-        color: #595757;
-        font-size: .28rem;
-      }
+      width: 2rem;
+      height: 2rem;
+      background: url("../images/app/user/data_tip_icon.png") no-repeat center center;
+      background-size: contain;
+    }
+    p.desc {
+      color: #595757;
+      font-size: .28rem;
     }
   }
 }
 
-//我的订单 end
+//无数据提示 end
+
+//客户列表begin
+.customer-list {
+  .time-search {
+    margin-bottom: .2rem;
+    form {
+      white-space: nowrap;
+      height: 1rem;
+      line-height: 1rem;
+    }
+    padding: 0 0 0 .1rem;
+    color: #231815;
+    background-color: #fff;
+    input[type="text"] {
+      border: 1px solid #e6e6e6;
+      width: 2.2rem;
+      height: .6rem;
+      line-height: .6rem;
+      margin: 0 .1rem;
+    }
+    input[type="submit"] {
+      border: 1px solid #fee564;
+      padding: 0 .2rem;
+      height: .6rem;
+      line-height: .6rem;
+      background-color: #fee564;
+      border-radius: 5px;
+      font-size: .24rem;
+    }
+  }
+
+  //列表同我的推客，只向右偏移
+  .itembox .item-left {
+    padding: 0 2.56rem 0 .36rem;
+  }
+
+}
+
+//客户列表end
+
+//代理详情 begin
+//代理详情 end
+
+
 
 

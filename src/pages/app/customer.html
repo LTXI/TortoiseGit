@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" id="code">
+<head>
+    @@include('../../partical/meta.inc',{"title":"客户列表"})
+    @@include('../../partical/styles.inc', {"links":""})
+    <link rel="stylesheet" href="../../assets/styles/app.css">
+    <script src="../../assets/scripts/zepto.mdatetimer.js"></script>
+    <link rel="stylesheet" href="../../assets/styles/zepto.mdatetimer.css">
+    @@include('../../partical/fontsize.inc')
+
+
+</head>
+<body>
+<!--头部-->
+<div class="jm-header">
+    <div class="jm-wrapper">
+        <a href="#">
+            <div class="posl icon icon_back icon-fix"></div>
+        </a>
+        <p class="title">客户列表</p>
+        <!--<a href="#">
+            <div class="posr icon icon_share icon-fix"></div>
+        </a>-->
+    </div>
+</div>
+<div id="content" class="page-content customer-list my-twitter">
+    <!--时间筛选-->
+    <div class="time-search">
+        <form action="#" method="get">
+            时间:<input type="text" id="picktime" value="" name="time1" readonly>至<input type="text" id="picktime2" value="" name="time2" readonly>
+            <input type="submit" value="查询" />
+        </form>
+    </div>
+    <!--查询结果列表-->
+    <ul class="list">
+        <li class="item">
+            <div class="top">
+                <div class="timebox">
+                    <span class="left">加入时间：</span>
+                    <span class="right">2017-12-12</span>
+                </div>
+            </div>
+            <div class="itembox">
+                <div class="item-left">
+                    <div class="imgbox">
+                        <img src="../../assets/images/app/team/avatar.png" alt=""/></div>
+                </div>
+                <div class="item-middle">
+                    <p class="">客户:<span>小米</span></p>
+                    <p class="">订单数量:<span class="red">15</span></p>
+                    <p class="">订单总额:<span class="red">￥75000</span></p>
+                </div>
+                <!--<div class="item-right">
+                    <a href="#"><span class="state">查看</span></a>
+                </div>-->
+            </div>
+        </li>
+        <li class="item">
+            <div class="top">
+                <div class="timebox">
+                    <span class="left">加入时间：</span>
+                    <span class="right">2017-12-12</span>
+                </div>
+            </div>
+            <div class="itembox">
+                <div class="item-left">
+                    <div class="imgbox">
+                        <img src="../../assets/images/app/team/avatar.png" alt=""/></div>
+                </div>
+                <div class="item-middle">
+                    <p class="">客户:<span>小米</span></p>
+                    <p class="">订单数量:<span class="red">15</span></p>
+                    <p class="">订单总额:<span class="red">￥75000</span></p>
+                </div>
+                <!--<div class="item-right">
+                    <a href="#"><span class="state">查看</span></a>
+                </div>-->
+            </div>
+        </li>
+    </ul>
+
+
+</div>
+<script>
+  $(function () {
+    var config = {
+      mode: 2, //时间选择器模式：1：年月日，2：年月日时分（24小时），3：年月日时分（12小时），4：年月日时分秒。默认：1
+      format: 2, //时间格式化方式：1：2015年06月10日 17时30分46秒，2：2015-05-10  17:30:46。默认：2
+      years: [2000, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017], //年份数组
+      nowbtn: true, //是否显示现在按钮
+      onOk: function () {
+        //alert('OK');
+      },  //点击确定时添加额外的执行函数 默认null
+      onCancel: function () {
+        //alert('A');
+      }, //点击取消时添加额外的执行函数 默认null
+    }
+
+    $('#picktime, #picktime2').mdatetimer(config);
+  });
+
+</script>
+<!--脚步导入开始-->
+@@include('../../partical/script.inc')
+<script src="../../assets/scripts/app.js"></script>
+</body>
+</html>
