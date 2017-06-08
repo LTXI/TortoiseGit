@@ -4,5 +4,4 @@ $(function () {
     $(".app-page-footer a").removeClass('on');
     $(e.currentTarget).addClass("on");
   })
-
 });

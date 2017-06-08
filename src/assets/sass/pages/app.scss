@@ -415,6 +415,7 @@
 //我的推客 end
 
 //我的品牌 begin
+//代理详情公用
 .my-brand {
   .list {
     background-color: #f4f4f4;
@@ -471,6 +472,10 @@
       .title {
         font-size: .34rem;
       }
+      .desc {
+        line-height: 1.1;
+        font-size: .28rem;
+      }
       span {
         padding-right: .24rem;
         color: #9FA0A0;
@@ -479,9 +484,8 @@
 
     }
     .item-right {
-      align-self: flex-start;
+      align-self: center;
       flex-basis: 1.4rem;
-      padding-top: .2rem;
       .item {
         width: 1rem;
         text-align: center;
@@ -501,6 +505,23 @@
         color: #595757;
       }
 
+      .btn_yellow, .btn_peach {
+        display: inline-block;
+        width: 1.2rem;
+        height: .42rem;
+        text-align: center;
+        font-size: .24rem;
+      }
+      .btn_peach {
+        background: url("../images/app/peach.png") no-repeat center center;
+        background-size: contain;
+        margin-top: .1rem;
+      }
+      .btn_yellow {
+        background: url("../images/app/yellow.png") no-repeat center center;
+        background-size: contain;
+        margin-bottom: .1rem;
+      }
     }
   }
 }
@@ -1142,6 +1163,98 @@
 //客户列表end
 
 //代理详情 begin
+.agent-detail {
+  .top-info {
+    background-color: #fff;
+    margin-bottom: 0.24rem;
+    li {
+      border-bottom: 1px solid #dbdbdb;
+      &:last-child {
+        border-bottom: none;
+      }
+      .item {
+        height: .85rem;
+        line-height: .85rem;
+        position: relative;
+        padding: 0 .28rem 0 .34rem;
+        .left {
+          float: left;
+          color: #231815;
+        }
+        .right {
+          float: right;
+          color: #9FA0A0;
+        }
+      }
+      .item.weChat-card {
+        padding: .37rem .28rem;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        .item-left {
+          flex-basis: 1.5rem;
+          align-self: flex-start;
+          color: #231815;
+          line-height: 1;
+        }
+        .item-middle {
+          width: 1.2rem;
+          height: 1.2rem;
+          img{
+            display: inline-block;
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+  .brand-type{
+
+    position: relative;
+    height: .9rem;
+    line-height: .9rem;
+    text-align: center;
+    font-size: .3rem;
+    border-bottom: 1px solid #e7e7e7;
+    background-color: #fff;
+    .title {
+      display: inline-block;
+      position: relative;
+      color: #231815;
+      font-size: .32rem;
+      padding: 0 .1rem;
+
+      &::before{
+        content: "";
+        display: block;
+        width: .31rem;
+        height: .31rem;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        background: url("../images/app/sign.png") no-repeat center center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        transform: translate(-100%, -50%);
+      }
+      &::after{
+        content: "";
+        display: block;
+        width: .31rem;
+        height: .31rem;
+        position: absolute;
+        top: 50%;
+        background: url("../images/app/sign.png") no-repeat center center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        transform: translate(100%, -50%);
+        right: 0;
+      }
+    }
+  }
+}
+
 //代理详情 end
 
 

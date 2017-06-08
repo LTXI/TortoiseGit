@@ -1,1 +1,0 @@
-"use strict";$(function(){!function(){function n(){var n=document.documentElement,t=n.clientWidth;t>640&&(t=640),n.style.fontSize=t/640*100+"px"}var t="orientationchange"in window?"orientationchange":"resize";n(),window.addEventListener(t,n,!1)}()});
