@@ -1,0 +1,514 @@
+//左右两列  ，内容左右上下居中，父类需要font-size:0,position
+//html结构<div class="bottombox">
+//<div class="left">
+//<a class="item" href="#">
+//<i class="num">58</i>
+//<span class="text">我的推客</span>
+//</a>
+//</div>
+//<div class="right">
+//<a class="item" href="#">
+//<i class="num">16</i>
+//<span class="text">我的品牌</span>
+//</a>
+//</div>
+//</div>
+@mixin col-2-center-text-img($height:2rem,$font-size:.36rem) {
+  //父类属性设置
+  & {
+    font-size: 0; //将孩子inline-block, 有间距
+  }
+  .left, .right {
+    display: inline-block;
+    font-size: $font-size;
+    width: 50%;
+    height: $height;
+    text-align: center;
+    position: relative;
+    .item {
+      display: inline-block;
+      position: absolute;
+      width: 100%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    //图片的
+    .icon {
+      width: .6rem;
+      height: .6rem;
+      display: inline-block;
+    }
+    .icon1 {
+      background: url("../images/app/twitter/twitter_icon.png") no-repeat center center;
+      background-size: cover;
+    }
+    .icon2 {
+      background: url("../images/app/twitter/code_icon.png") no-repeat center center;
+      background-size: cover;
+    }
+    //文本的
+    .num {
+      color: #f23030;
+      font-style: normal;
+    }
+    .text {
+      color: #595757;
+      display: block;
+    }
+  }
+}
+
+//标题，左边有图标(我的团队 新推客)
+//html 结构 <div class="topbox">
+//<div class="item ">
+//<span class="icon"></span>
+//<span class="title">我的团队</span>
+//</div>
+//</div>
+@mixin title-left-icon {
+  font-size: .36rem;
+  display: flex;
+  align-items: center;
+  height: 1rem;
+  justify-content: space-between;
+  border-bottom: 1px solid #e7e7e7;
+  .item {
+    position: relative;
+    padding-left: .28rem;
+    .icon {
+      display: inline-block;
+      width: .4rem;
+      height: .4rem;
+      background: url("../images/app/sign.png") no-repeat center center;
+      background-size: cover;
+      vertical-align: middle;
+    }
+    .title {
+      display: inline-block;
+      line-height: .4rem;
+      height: .4rem;
+      color: #000;
+      vertical-align: middle;
+    }
+  }
+}
+
+//标题两边有图标
+//<div class="brand-type">
+//<p class="title">我的代理品牌</p>
+//</div>
+@mixin title-text-both-icon{
+  position: relative;
+  height: .9rem;
+  line-height: .9rem;
+  text-align: center;
+  font-size: .3rem;
+  border-bottom: 1px solid #e7e7e7;
+  background-color: #fff;
+  .title {
+    display: inline-block;
+    position: relative;
+    color: #231815;
+    font-size: .32rem;
+    padding: 0 .1rem;
+
+    &::before {
+      content: "";
+      display: block;
+      width: .31rem;
+      height: .31rem;
+      position: absolute;
+      left: 0;
+      top: 50%;
+      background: url("../images/app/sign.png") no-repeat center center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      transform: translate(-100%, -50%);
+    }
+    &::after {
+      content: "";
+      display: block;
+      width: .31rem;
+      height: .31rem;
+      position: absolute;
+      top: 50%;
+      background: url("../images/app/sign.png") no-repeat center center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      transform: translate(100%, -50%);
+      right: 0;
+    }
+  }
+}
+
+
+
+//--文本标题（左右）
+
+// border-bottom: 1px solid #dbdbdb;
+$title_left_text_color: #595757;
+$title_right_text_color: #9FA0A0;
+
+//html结构 <div class="timebox">
+//<span class="left">加入时间：</span>
+//<span class="right">2017-12-12</span>
+//</div>
+@mixin title-text-both($height:1rem,$border-bottom-width:1px) {
+  height: $height;
+  line-height: $height;
+  position: relative;
+  overflow: hidden;
+  border-bottom: $border-bottom-width solid #e7e7e7;
+  //padding: 0 .28rem;
+  .left {
+    float: left;
+    color: $title_left_text_color;
+    font-size: .3rem;
+  }
+  .right {
+    float: right;
+    color: $title_right_text_color;
+    font-size: .26rem;
+  }
+}
+
+//--超链接点击，最右箭头图标
+//html结构 <div class="orderitem">
+//<a href="#"> <span class="title">我的订单</span>
+//<span class="orderlink">查看所有订单<i class="arrow-icon"></i></span></a>
+//</div>
+@mixin link-title-text-both($height:1rem,$border-bottom-width:1px) {
+  padding: 0 .28rem;
+  height: $height;
+  line-height: $height;
+  border-bottom: $border-bottom-width solid #e7e7e7;
+  .title {
+    float: left;
+    color: #231815;
+  }
+  a {
+    display: block;
+    color: #231815
+  }
+  .orderlink {
+    float: right;
+    vertical-align: middle;
+    color: #595757;
+    .arrow-icon {
+      padding-left: .4rem;
+      display: inline-block;
+      width: .18rem;
+      height: .24rem;
+      background: url("../images/app/user/right_arrow.png") no-repeat center center;
+      background-size: contain;
+    }
+  }
+}
+
+//行分为3列， 各列宽度传入
+//<div class="itembox">
+//<div class="item-left">
+//</div>
+//<div class="item-middle">
+//</div>
+//<div class="item-right">
+//</div>
+//</div>
+//$left-width $mid-width $right-width 分别左 中 右宽度
+//$align-self 单项垂直居中显示
+//(代理详情 我的品牌)
+@mixin layout-col-3($left-width:1.9rem, $mid-width:4.1rem, $right-width: 1.4rem,$align-self:center) {
+  //padding: .3rem 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+  .item-left {
+    flex-basis: $left-width;
+    align-self: $align-self;
+  }
+  .item-middle {
+    align-self: $align-self;
+    flex-basis: $mid-width;
+  }
+  .item-right {
+    align-self: $align-self;
+    flex-basis: $right-width;
+  }
+}
+
+//div中显示圆形图片
+//<div class="imgbox">
+//<div class="inbox">
+//<img src="../../assets/images/app/team/logo.png" alt=""/>
+//</div>
+//</div>
+//$outbox-width 最外层的div的宽度  $inbox-width 内层的div的宽度
+@mixin  create-circle-image($outbox-width:1.18rem, $inbox-width:.9rem){
+  .imgbox {
+    background-color: #ddd;
+    width: $outbox-width;
+    height: $outbox-width;
+    line-height: $outbox-width;
+    text-align: center;
+    position: relative;
+    .inbox {
+      display: inline-block;
+      width: $inbox-width;
+      height: $inbox-width;
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+      border-radius: 50%;
+      overflow: hidden;
+      background-color: #fff;
+      img {
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+}
+
+
+//我的推客列表
+//<div class="itembox">
+//<div class="item-left">
+//<div class="imgbox">
+//<img src="../../assets/images/app/team/avatar.png" alt=""/></div>
+//</div>
+//<div class="item-middle">
+//<p class="">ID:<span>74(1633***112)</span></p>
+//<p class="">属下客户数量:<span>1</span></p>
+//<p class="">订单数量:<span class="red">15</span></p>
+//<p class="">订单总额:<span class="red">￥75000</span></p>
+//</div>
+//<div class="item-right">
+//<a href="#"><span class="state">查看</span></a>
+//</div>
+//</div>
+@mixin twitter-list-item {
+  padding: .3rem 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+  .item-left {
+    flex-basis: 2rem;
+    //border: 1px solid red;
+    padding: 0 .36rem;
+    .imgbox {
+      display: inline-block;
+      width: 1.18rem;
+      height: 1.18rem;
+      img {
+        width: 100%;
+      }
+    }
+  }
+  .item-middle {
+    flex-basis: 4.1rem;
+    //border: 1px solid green;
+    padding-top: .2rem;
+    span {
+      padding-left: .25rem;
+    }
+    span.red {
+      color: #f23030;
+    }
+  }
+  .item-right {
+    align-self: flex-start;
+    flex-basis: 1.4rem;
+    //border: 1px solid green;
+    padding-top: .2rem;
+    .state {
+      width: 1.1rem;
+      height: .44rem;
+      line-height: .44rem;
+      display: inline-block;
+      background-color: #fee564;
+      border-radius: 10rem;
+      text-align: center;
+      box-shadow: 0 0 5px 5px #fff5c7 inset;
+      font-size: .28rem;
+    }
+  }
+}
+
+//我的联盟
+//<div class="itembox">
+//<div class="item-left">
+//<div class="imgbox">
+//<img src="../../assets/images/app/alliance/logo.png" alt=""/></div>
+//</div>
+//<div class="item-middle">
+//<p class="title">美国科颜式</p>
+//<p class="">合伙人佣金比:<span>0</span></p>
+//<p class="">推客佣金比:<span>1</span></p>
+//<p class="">已派送:<span>15</span></p>
+//<p class="">代理数量:<span>10</span></p>
+//<p class="">推客数量:<span>15</span></p>
+//<a class="detailbtn" href="#">详情</a>
+//</div>
+//<div class="item-right">
+//<a href="#"><span class="state">申请成为代理></span></a>
+//</div>
+//</div>
+@mixin  alliance-list-item {
+  padding: .3rem 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+  .item-left {
+    flex-basis: 2rem;
+    //border: 1px solid red;
+    padding: 0 .36rem;
+    .imgbox {
+      display: inline-block;
+      width: 1.18rem;
+      height: 1.18rem;
+      img {
+        width: 100%;
+      }
+    }
+  }
+  .item-middle {
+    padding-top: 0rem;
+    flex-basis: 3.3rem;
+    p.title {
+      color: #231815;
+      font-size: .4rem;
+      padding-bottom: .1rem
+    }
+    span {
+      padding-left: .25rem;
+    }
+    span.red {
+      color: #f23030;
+    }
+    .detailbtn {
+      display: inline-block;
+      width: 1rem;
+      height: .42rem;
+      line-height: .42rem;
+      border: 1px solid #f23030;
+      border-radius: 5px;
+      text-align: center;
+      color: #f23030;
+      margin-top: .15rem;
+    }
+  }
+  .item-right {
+    align-self: flex-start;
+    flex-basis: 2.4rem;
+    padding-top: .1rem;
+    .state {
+      width: 2.2rem;
+      min-width: 2.2rem;
+      height: .46rem;
+      line-height: .46rem;
+      display: inline-block;
+      background-color: #fee564;
+      border-radius: 10rem;
+      text-align: center;
+      box-shadow: 0 0 5px 5px #fff5c7 inset;
+      color: #595757;
+      font-size: .28rem;
+    }
+  }
+}
+
+
+//我的品牌
+//<div class="itembox">
+//<div class="item-left">
+//<div class="imgbox">
+//<div class="inbox">
+//<img src="../../assets/images/app/team/logo.png" alt=""/>
+//</div>
+//</div>
+//</div>
+//<div class="item-middle">
+//<p class="title">雅诗兰黛</p>
+//<p class="desc"><span>雅诗雅诗兰黛雅诗兰黛雅诗兰黛雅诗兰黛雅诗兰黛雅诗雅诗兰黛雅诗兰黛雅诗</span></p>
+//</div>
+//<div class="item-right">
+//<a class="btn_yellow" href="#">商品</a>
+//<a class="btn_peach" href="#">合伙人</a>
+//</div>
+//</div>
+@mixin brand-list-item {
+  @include layout-col-3(1.9rem,4.1rem, 1.4rem,center);
+  padding: .3rem 0;
+  .item-left {
+    padding: 0 .5rem 0 .36rem;
+    @include create-circle-image(1.18rem,.9rem);
+  }
+  .item-middle {
+    color: #231815;
+    .title {
+      font-size: .34rem;
+    }
+    .desc {
+      line-height: 1.1;
+      font-size: .28rem;
+    }
+    span {
+      padding-right: .24rem;
+      color: #9FA0A0;
+      font-size: .28rem;
+    }
+  }
+  .item-right {
+    .item {
+      width: 1rem;
+      text-align: center;
+      font-size: 0;
+    }
+    .icon {
+      display: inline-block;
+      width: .44rem;
+      height: .44rem;
+      background: url("../images/app/team/attention.png") no-repeat center center;
+      background-size: contain;
+    }
+    .text {
+      display: block;
+      text-align: center;
+      font-size: .3rem;
+      color: #595757;
+    }
+
+    .btn_yellow, .btn_peach {
+      display: inline-block;
+      width: 1.2rem;
+      height: .42rem;
+      text-align: center;
+      font-size: .24rem;
+    }
+    .btn_peach {
+      background: url("../images/app/peach.png") no-repeat center center;
+      background-size: contain;
+      margin-top: .1rem;
+    }
+    .btn_yellow {
+      background: url("../images/app/yellow.png") no-repeat center center;
+      background-size: contain;
+      margin-bottom: .1rem;
+    }
+  }
+}
+
+
