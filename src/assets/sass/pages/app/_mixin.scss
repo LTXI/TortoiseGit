@@ -98,10 +98,10 @@
 //<div class="brand-type">
 //<p class="title">我的代理品牌</p>
 //</div>
-@mixin title-text-both-icon{
+@mixin title-text-both-icon($height:.9rem){
   position: relative;
-  height: .9rem;
-  line-height: .9rem;
+  height: $height;
+  line-height: $height;
   text-align: center;
   font-size: .3rem;
   border-bottom: 1px solid #e7e7e7;
@@ -178,7 +178,7 @@ $title_right_text_color: #9FA0A0;
 //<a href="#"> <span class="title">我的订单</span>
 //<span class="orderlink">查看所有订单<i class="arrow-icon"></i></span></a>
 //</div>
-@mixin link-title-text-both($height:1rem,$border-bottom-width:1px) {
+@mixin link-item-icon($height:1rem,$border-bottom-width:1px) {
   padding: 0 .28rem;
   height: $height;
   line-height: $height;
@@ -202,6 +202,7 @@ $title_right_text_color: #9FA0A0;
       height: .24rem;
       background: url("../images/app/user/right_arrow.png") no-repeat center center;
       background-size: contain;
+      vertical-align: middle;
     }
   }
 }
@@ -510,5 +511,101 @@ $title_right_text_color: #9FA0A0;
     }
   }
 }
+
+
+//标题  返回 编辑 喜欢icon
+@mixin jm-header {
+  background: #fff;
+  height: 1.26rem;
+  border-bottom: 1px solid #e7e7e7;
+  padding-top: .26rem;
+  .jm-wrapper {
+    position: relative;
+    .title {
+      height: 1rem;
+      line-height: 1rem;
+      text-align: center;
+      font-size: .42rem;
+      color: #000;
+    }
+    .posl, .posr, .poslike {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    .posl {
+      left: .24rem;
+    }
+    .posr {
+      right: .24rem;
+    }
+    .poslike {
+      right: 1rem;
+    }
+  }
+}
+
+//垂直居中
+@mixin vertical-center{
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+//水平居中
+@mixin horizontal-center{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+@mixin center{
+  position: absolute;
+  left: 50%;
+  top:50%;
+  transform: translate(-50%,-50%);
+}
+//省略号
+@mixin  ellipsis{
+  overflow: hidden;
+  text-overflow:ellipsis;
+  white-space: nowrap;
+}
+
+
+//
+//推荐品牌 店铺详细用
+@mixin  goodsign {
+  position: relative;
+  background: #f4f4f4;
+  font-size: .36rem;
+  color: #00aa00;
+  .content {
+    display: flex;
+    justify-content: flex-start;
+    align-content:flex-start;
+    flex-wrap: wrap;
+    .item {
+      background: #fff;
+      flex: 0 1 33.333%;
+      height: 1.85rem;
+      border: 2px solid #f4f4f4;
+      border-top: none;
+      border-left: none;
+      position: relative;
+      img{
+        position:absolute;
+        display: inline-block;
+        width: 60%;
+        margin: 0 auto;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      &:nth-child(3n) {
+        border-right: none;
+      }
+    }
+  }
+}
+
 
 

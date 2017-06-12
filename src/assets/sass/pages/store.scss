@@ -1,5 +1,7 @@
-@import  "../base/base.scss";
-@import  "../base/navbar.scss";
+@import "../base/base.scss";
+@import "../base/navbar.scss";
+@import "brandsprites";
+@import "./app/mixin";
 
 .jm-header-navbar {
   height: 1rem;
@@ -135,37 +137,38 @@
 
 //品牌推荐
 .jm-goodsign {
-  position: relative;
-  background: #f4f4f4;
-  font-size: .36rem;
-  color: #00aa00;
-  .content {
-    display: flex;
-    justify-content: flex-start;
-    align-content:flex-start;
-    flex-wrap: wrap;
-    .item {
-      background: #fff;
-      flex: 0 1 33.333%;
-      height: 1.85rem;
-      border: 2px solid #f4f4f4;
-      border-top: none;
-      border-left: none;
-      position: relative;
-      img{
-        position:absolute;
-        display: inline-block;
-        width: 60%;
-        margin: 0 auto;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-      }
-      &:nth-child(3n) {
-        border-right: none;
-      }
-    }
-  }
+  @include goodsign;
+  /* position: relative;
+   background: #f4f4f4;
+   font-size: .36rem;
+   color: #00aa00;
+   .content {
+     display: flex;
+     justify-content: flex-start;
+     align-content: flex-start;
+     flex-wrap: wrap;
+     .item {
+       background: #fff;
+       flex: 0 1 33.333%;
+       height: 1.85rem;
+       border: 2px solid #f4f4f4;
+       border-top: none;
+       border-left: none;
+       position: relative;
+       img {
+         position: absolute;
+         display: inline-block;
+         width: 60%;
+         margin: 0 auto;
+         top: 50%;
+         left: 50%;
+         transform: translate(-50%, -50%);
+       }
+       &:nth-child(3n) {
+         border-right: none;
+       }
+     }
+   }*/
 }
 
 //精品推荐
@@ -216,23 +219,23 @@
           overflow: hidden;
           text-overflow: ellipsis;
           color: #333;
-          white-space:nowrap;
+          white-space: nowrap;
         }
         .price {
           position: relative;
           margin-bottom: .08rem;
           vertical-align: middle;
-          span{
+          span {
             color: #cd3d3d;
           }
           .spe {
             display: inline-block;
             position: absolute;
-            top:50%;
+            top: 50%;
             right: 0;
             width: 1rem;
             height: .28rem;
-            transform:translateY(-50%);
+            transform: translateY(-50%);
             line-height: .28rem;
             text-align: center;
             background: url("../images/store/icon_discount.png") no-repeat center center;
@@ -266,6 +269,164 @@
 #jm-goodsign .content {
 
 }
+
+//店铺详情begin
+.jm-header {
+  @include jm-header;
+}
+
+.store-detail {
+  .top {
+    position: relative;
+    height: 1.66rem;
+    background-color: #fff;
+    margin-bottom: .24rem;
+    .left {
+      @include vertical-center;
+      display: inline-block;
+      padding-left: .5rem;
+      width: 5rem;
+      height: 1rem;
+      line-height: 1rem;
+
+      .icon {
+        @include vertical-center;
+        display: inline-block;
+        height: .72rem;
+        width: .76rem;
+        background: #fdfdfd url("../images/store/store.png") no-repeat center center;
+        background-size: cover;
+      }
+      .title {
+        display: inline-block;
+        padding-left: 1rem;
+        font-size: .32rem;
+        color: #231815;
+        width: 100%;
+        @include ellipsis;
+
+      }
+    }
+    .right {
+      @include vertical-center;
+      font-size: .28rem;
+      float: right;
+      right: 0;
+      width: 1.12rem;
+      height: .78rem;
+      .uptext {
+        position: relative;
+        z-index: 1;
+        height: .5rem;
+
+        padding-left: .46rem;
+        background: url("../images/store/likie_iocn.png") no-repeat .11rem center;
+        background-color: #c72443;
+        background-size: .24rem .24rem;
+        color: #fff;
+        border-top-left-radius: .1rem;
+        border-bottom-left-radius: .1rem;
+      }
+      .downtext {
+        position: relative;
+        text-align: center;
+        height: .5rem;
+        margin-top: -.1rem;
+        padding-top: .05rem;
+        background-color: #fee662;
+        color: #231815;
+        border-top-left-radius: .1rem;
+        border-bottom-left-radius: .1rem;
+        z-index: 0;
+        font-size: .26rem;
+      }
+    }
+  }
+  .mid {
+    .item {
+      background-color: #fff;
+      @include link-item-icon(.83rem, 1px);
+
+    }
+    .provider-item .arrow-icon {
+      width: .40rem;
+      height: .38rem;
+      background-image: url("../images/common/icon-provider.png") !important;
+
+    }
+    .code-item .arrow-icon {
+      width: .40rem;
+      height: .38rem;
+      background-image: url("../images/common/icon_code.png") !important;
+    }
+    .space-bottom {
+      margin-bottom: .24rem;
+    }
+
+    .time-item .time {
+      color: #9FA0A0;
+      padding-left: .23rem;
+
+    }
+
+  }
+  .bottom {
+    @include goodsign;
+    background-color: #fff;
+    color: #231815;
+    .title {
+      padding-left: .28rem;
+      height: .83rem;
+      line-height: .83rem;
+      font-size: 0.32rem;
+    }
+    .item {
+      border: none !important;
+      img {
+        width: 50% !important;
+      }
+    }
+
+  }
+}
+
+//店铺详情end
+
+//店铺简介begin
+.store-desc {
+  .wrapper {
+    text-align: center;
+    position: relative;;
+    padding: .6rem .7rem;
+    background-color: #fff;
+    font-size: .32rem;
+    color: #595757;
+    height: 9rem;
+    p {
+      text-align: left;
+      line-height: .42rem;
+      margin-bottom: .3rem;
+      word-wrap: break-word;
+    }
+
+    .code {
+      position: absolute;
+      left: 50%;
+      top:50%;
+      transform: translate(-50%,-50%);
+      width: 4rem;
+      height: 4rem;
+      background: url("../images/brand/code-bg.png?v=18cfa") no-repeat center center;
+      background-size: contain;
+
+    }
+  }
+
+
+}
+
+//店铺简介end
+
 
 
 

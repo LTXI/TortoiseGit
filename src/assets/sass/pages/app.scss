@@ -235,6 +235,17 @@
                 transform: translate(-50%, -50%);
               }
             }
+            .pass::after{
+              content: "";
+              width: .3rem;
+              height: .3rem;
+              position: absolute;
+              right: 0;
+              bottom: 0;
+              z-index: 110;
+              background: url("../images/app/user/attestation_v_icon.png") no-repeat center center;
+              background-size: contain;
+            }
           }
         }
         .item-middle {
@@ -274,7 +285,7 @@
       margin-bottom: .24rem;
       color: #595757;
       .orderitem {
-        @include link-title-text-both(1.06rem, 1px);
+        @include link-item-icon(1.06rem, 1px);
       }
       .orderinfo {
         height: 1.22rem;
@@ -360,7 +371,7 @@
       margin-bottom: .24rem;
       color: #595757;
       .setitem {
-        @include link-title-text-both(0.88rem, 0px);
+        @include link-item-icon(0.88rem, 0px);
       }
     }
   }

@@ -1,0 +1,316 @@
+@import "../base/base.scss";
+@import "../base/navbar.scss";
+@import "brandsprites";
+@import "./app/mixin";
+
+//店铺详情begin
+.jm-header {
+  @include jm-header;
+}
+
+//商品详情begin
+.product-details {
+  .swiper-container {
+    border-bottom: 1px solid #e7e7e7;
+  }
+  .goods-info {
+    background-color: #f0f0f0;
+    font-size: 0.28rem;
+    .goods-title {
+      width: 100%;
+      color: #231815;
+      background-color: #fff;
+      h1 {
+        color: #231815;
+        font-size: 0.34rem;
+        //font-weight: 400;
+        line-height: 0.4rem;
+        max-height: 0.8rem;
+        overflow: hidden;
+      }
+    }
+    .goods-price {
+      padding-bottom: .28rem;
+      border-bottom: 1px solid #e7e7e7;
+      margin-bottom: 0rem;
+      background-color: #fff;
+    }
+    .serve {
+      position: relative;
+      background-color: #f0f0f0;
+      height: .99rem;
+      line-height: .99rem;
+      padding: 0 .33rem;
+      .serveitem {
+        display: inline-block;
+        height: .34rem;
+        font-size: .24rem;
+        line-height: .34rem;
+        padding-left: .35rem;
+        margin-right: .3rem;
+        color: #595757;
+        background: url("../images/store/security_icon.png") no-repeat left center;
+        background-size: .28rem .28rem;
+      }
+    }
+    .goods-part {
+      padding: 0 .33rem;
+      background-color: #fff;
+    }
+    .mar-t {
+      margin-top: .24rem;
+    }
+    .goods-base-info {
+      position: relative;
+      padding-top: .27rem;
+      padding-bottom: .27rem;
+      .spec-desc {
+        line-height: .32rem;
+        .part-note-msg {
+          font-size: .28rem;
+          color: #9FA0A0;
+          float: left;
+          white-space: normal;
+          height: auto;
+        }
+        .base-txt {
+          margin-left: .8rem;
+          margin-right: .5rem;
+          color: #231815;
+          line-height: .32rem;
+        }
+        .icon-popups {
+          position: absolute;
+          right: .21rem;
+          width: .6rem;
+          height: .82rem;
+          background: url("../images/store/dot-icon.png") no-repeat left center;
+          background-size: .35rem .08rem;
+          top: 0;
+        }
+      }
+    }
+    .goods-adds {
+      position: relative;
+      padding-top: .27rem;
+      padding-bottom: .27rem;
+      .send-to,.provide-srv {
+        .part-note-msg {
+          font-size: .28rem;
+          color: #9FA0A0;
+          float: left;
+          white-space: normal;
+          height: auto;
+        }
+        .icon-location {
+          display: inline-block;
+          height: .34rem;
+          font-size: .24rem;
+          line-height: .34rem;
+          padding-left: .35rem;
+
+          color: #595757;
+          background: url("../images/store/add_icon.png") no-repeat center center;
+          background-size: .23rem .33rem;
+
+        }
+        .base-txt {
+          margin-left: .8rem;
+          margin-right: .5rem;
+          color: #231815;
+          line-height: .32rem;
+        }
+        .icon-popups {
+          position: absolute;
+          right: .21rem;
+          width: .6rem;
+          height: .82rem;
+          background: url("../images/store/dot-icon.png") no-repeat left center;
+          background-size: .35rem .08rem;
+          top: 0;
+        }
+      }
+    }
+
+    .enter-brand {
+      @include brand-list-item;
+      background-color: #fff;
+      .item-right {
+        a {
+          display: inline-block;
+          width: 1.56rem;
+          height: .42rem;
+          line-height: .42rem;
+          background: url("../images/store/brand-enter-btn.png") no-repeat center center;
+          background-size: 1.55rem .41rem;
+          padding-left: .41rem;
+          font-size: .24rem;
+          margin: 0 0.2rem;
+
+        }
+      }
+
+    }
+    .recommend {
+      background-color: #fff;
+      padding: 0 .2rem;
+      .top {
+        position: relative;
+        //height: .76rem;
+        //line-height: .76rem;
+        padding: 0.3rem 0;
+        text-align: center;
+        .box {
+          position: relative;
+          height: .4rem;
+          line-height: 1;
+        }
+        .title {
+          display: inline-block;
+          color: #e50102;
+          font-size: .4rem;
+          padding: 0 .08rem;
+          &::after {
+            content: "";
+            width: 1.04rem;
+            height: 1px;
+            position: absolute;
+            background-color: #e50102;
+            top: 100%;
+            transform: translateY(-50%);
+
+          }
+          &::before {
+            content: "";
+            width: 1.04rem;
+            height: 1px;
+            position: absolute;
+            background-color: #e50102;
+            top: 100%;
+            transform: translate(-100%, -50%);
+
+          }
+        }
+      }
+      .recommend-list {
+        background-color: #fff;
+        li {
+          float: left;
+          width: 33.3%;
+          //height: 3.14rem;
+          //border: 1px solid red;
+          padding: 0 .07rem;
+          position: relative;
+          background-color: #fff;
+
+          .hot {
+            display: inline-block;
+            position: absolute;
+            text-align: center;
+            left: 0;
+            top: 0;
+            //width: .35rem;
+            padding: .05rem 0.1rem;
+            //min-width: 40px;
+            height: auto;
+            line-height: .23rem;
+            color: #fff;
+            font-size: .26rem;
+            //padding: 0 .04rem;
+            background-color: #c52443;
+            white-space: nowrap;
+          }
+          .imgbox {
+            position: relative;
+            border: 1px solid transparent;
+          }
+          .imgbox img {
+            width: 100%;
+          }
+          .infobox {
+            margin-top: .17rem;
+            width: 100%;
+            .brand-name {
+              display: block;
+              font-size: .3rem;
+              height: .4rem;
+              line-height: .4rem;
+            }
+            .price {
+              color: #e50000;
+              font-size: .28rem;
+              height: .6rem;
+              line-height: .6rem;
+            }
+            .oldprice {
+              color: #949494;
+              font-size: .24rem;
+              text-decoration: line-through;
+              padding-left: .2rem;
+            }
+          }
+
+        }
+      }
+
+    }
+    .more {
+      height: .8rem;
+      line-height: 0.8rem;
+      background-color: #e7e7e7;
+      text-align: center;
+      color: #231815;
+      font-size: .32rem;
+      text-align: center;
+    }
+  }
+}
+
+.page-footer {
+  .left, .right {
+    width: 50%;
+    float: left;
+  }
+  .left {
+    a {
+      width: 33.33%;
+      position: relative;
+    }
+    a .tip {
+      position: absolute;
+      left: 50%;
+      top: 15%;
+      width: .2rem;
+      height: .2rem;
+      border-radius: 50%;
+      color: #fff;
+      text-align: center;
+      line-height: 0.2rem;
+      background-color: #000;
+      font-size: .12rem;
+      transform: translateX(50%);
+
+
+    }
+  }
+  .right {
+    text-align: center;
+    background-color: red;
+    height: 0.9rem;
+    line-height: 0.9rem;
+    font-size: .36rem;
+    cursor: pointer;
+    span {
+      display: block;
+    }
+  }
+
+  .footer_inner {
+    background-image: none;
+  }
+}
+
+//商品详情end
+
+
+
