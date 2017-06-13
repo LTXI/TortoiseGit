@@ -110,7 +110,7 @@
           padding-left: .35rem;
 
           color: #595757;
-          background: url("../images/store/add_icon.png") no-repeat center center;
+          background: url("../images/store/adds_icon.png") no-repeat center center;
           background-size: .23rem .33rem;
 
         }
@@ -146,7 +146,7 @@
           padding-left: .41rem;
           font-size: .24rem;
           margin: 0 0.2rem;
-
+          white-space: nowrap;
         }
       }
 
@@ -277,7 +277,7 @@
       position: relative;
     }
     a .tip {
-      position: absolute;
+      /*position: absolute;
       left: 50%;
       top: 15%;
       width: .2rem;
@@ -287,10 +287,9 @@
       text-align: center;
       line-height: 0.2rem;
       background-color: #000;
-      font-size: .12rem;
-      transform: translateX(50%);
-
-
+      font-size: 12px;
+      transform: translateX(50%);*/
+      display: none;
     }
   }
   .right {
@@ -298,16 +297,88 @@
     background-color: red;
     height: 0.9rem;
     line-height: 0.9rem;
-    font-size: .36rem;
     cursor: pointer;
     span {
       display: block;
+    }
+    a{
+      width: 100%;
+      color: #fff;
+      font-size: .36rem;
     }
   }
 
   .footer_inner {
     background-image: none;
   }
+}
+
+//弹出层
+.mui-cover {
+  background-color: #fff;
+  position: fixed;
+  z-index: 999999;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  -webkit-transform: translate3d(100%,0,0);
+  transform: translate3d(100%,0,0);
+  -webkit-transition: -webkit-transform .2s cubic-bezier(0,0,.25,1);
+  transition: transform .2s cubic-bezier(0,0,.25,1);
+  display: none;
+}
+
+
+#s-activity-wrapper {
+  background-color: #f0f0f0;
+  font-size: 13px;
+  top: 35%;
+}
+#s-activity-wrapper {
+  color: #051b28;
+}
+#s-activity-wrapper{
+  header {
+    color: #051B28;
+    text-align: center;
+    height: 40px;
+    font-size: 16px;
+    line-height: 60px;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+  }
+  .body {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 48px;
+    background: #fff;
+  }
+}
+
+#s-activity-wrapper .body {
+  top: 0;
+}
+
+html .cover-normal {
+  width: 100%;
+  opacity: .5;
+  height: 100%;
+  position: fixed;
+  background-color: #666;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+html .mui-cover {
+  -webkit-transform: translate3d(0,100%,0);
+  transform: translate3d(0,100%,0);
+}
+html .mui-cover.show {
+  -webkit-transform: translate3d(0,0,0);
+  transform: translate3d(0,0,0);
+  top: 20%;
 }
 
 //商品详情end
