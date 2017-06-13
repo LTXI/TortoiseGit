@@ -1,0 +1,1 @@
+$(function(){$(".app-page-footer a").on("click",function(a){$(".app-page-footer a").removeClass("on"),$(a.currentTarget).addClass("on")})});

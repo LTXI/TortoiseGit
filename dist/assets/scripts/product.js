@@ -1,0 +1,1 @@
+$(function(){$(".icon-popups").on("click",function(n){}),$("body").on("click",".cover-normal",function(){})});

@@ -10,7 +10,7 @@
     <meta http-equiv="Pragma" content="no-cache" />
     <meta http-equiv="Expires" content="0" />
     <meta http-equiv="x-dns-prefetch-control" content="on" />
-    <title>我的品牌</title>
+    <title>客户列表</title>
     <link rel="stylesheet" href="../../styles/swiper.min.css" />
     <link rel="stylesheet" href="../../styles/framework.css" />
     <link rel="stylesheet" href="../../styles/app-base.css" />
@@ -23,7 +23,8 @@
     <!--样式模块公用放入-->
 
     <link rel="stylesheet" href="../../assets/styles/app.css">
-
+    <script src="../../assets/scripts/zepto.mdatetimer.js"></script>
+    <link rel="stylesheet" href="../../assets/styles/zepto.mdatetimer.css">
     <script >
 document.addEventListener('DOMContentLoaded', function () {
 (function initFontSize() {
@@ -48,6 +49,8 @@ document.addEventListener('DOMContentLoaded', function () {
 	})();
 });
 </script>
+
+
 </head>
 <body>
 <!--头部-->
@@ -56,78 +59,74 @@ document.addEventListener('DOMContentLoaded', function () {
         <a href="#">
             <div class="posl icon icon_back icon-fix"></div>
         </a>
-        <p class="title">我的品牌</p>
-        <a href="#">
+        <p class="title">客户列表</p>
+        <!--<a href="#">
             <div class="posr icon icon_share icon-fix"></div>
-        </a>
+        </a>-->
     </div>
 </div>
-<div id="content" class="page-content my-brand">
+<div id="content" class="page-content customer-list my-twitter">
+    <!--时间筛选-->
+    <div class="time-search">
+        <form action="#" method="get">
+            时间:<input type="text" id="picktime" value="" name="time1" readonly>至<input type="text" id="picktime2" value="" name="time2" readonly>
+            <input type="submit" value="查询" />
+        </form>
+    </div>
+    <!--查询结果列表-->
     <ul class="list">
         <li class="item">
+            <div class="top">
+                <div class="timebox">
+                    <span class="left">加入时间：</span>
+                    <span class="right">2017-12-12</span>
+                </div>
+            </div>
             <div class="itembox">
                 <div class="item-left">
                     <div class="imgbox">
-                        <div class="inbox">
-                            <img src="../../assets/images/app/team/logo.png" alt=""/>
-                        </div>
-                    </div>
+                        <img src="../../assets/images/app/team/avatar.png" alt=""/></div>
                 </div>
                 <div class="item-middle">
-                    <p class="title">雅诗兰黛</p>
-                    <p class="desc"><span>雅诗雅诗兰黛雅诗兰黛雅诗兰黛雅诗兰黛雅诗兰黛雅诗雅诗兰黛雅诗兰黛雅诗</span></p>
+                    <p class="">客户:<span>小米</span></p>
+                    <p class="">订单数量:<span class="red">15</span></p>
+                    <p class="">订单总额:<span class="red">￥75000</span></p>
                 </div>
-                <div class="item-right">
-                    <a class="btn_yellow" href="#">商品</a>
-                    <a class="btn_peach" href="#">合伙人</a>
-                </div>
+                <!--<div class="item-right">
+                    <a href="#"><span class="state">查看</span></a>
+                </div>-->
             </div>
         </li>
         <li class="item">
+            <div class="top">
+                <div class="timebox">
+                    <span class="left">加入时间：</span>
+                    <span class="right">2017-12-12</span>
+                </div>
+            </div>
             <div class="itembox">
                 <div class="item-left">
                     <div class="imgbox">
-                        <div class="inbox">
-                            <img src="../../assets/images/app/team/logo1.png" alt=""/>
-                        </div>
-                    </div>
+                        <img src="../../assets/images/app/team/avatar.png" alt=""/></div>
                 </div>
                 <div class="item-middle">
-                    <p class="title">雅诗兰黛</p>
-                    <p class="desc"><span>雅诗雅诗兰黛雅诗兰黛雅诗兰黛雅诗兰黛雅诗兰黛雅诗雅诗兰黛雅诗兰黛雅诗</span></p>
+                    <p class="">客户:<span>小米</span></p>
+                    <p class="">订单数量:<span class="red">15</span></p>
+                    <p class="">订单总额:<span class="red">￥75000</span></p>
                 </div>
-                <div class="item-right">
-                    <a class="btn_yellow" href="#">商品</a>
-                    <a class="btn_peach" href="#">合伙人</a>
-                </div>
+                <!--<div class="item-right">
+                    <a href="#"><span class="state">查看</span></a>
+                </div>-->
             </div>
         </li>
     </ul>
-</div>
 
-<!--尾部导航-->
-<div id="footer" class="app-page-footer">
-    <div class="footer_inner">
-        <a class="on" href="#">
-            <span class="line"><i class="icon icon-invite"></i></span>
-            <span class="text">邀请</span>
-        </a>
-        <a href="#">
-            <span class="line"><i class="icon icon-team"></i></span>
-            <span class="text">团队</span></a>
-        <a href="#">
-            <span class="line"><i class="icon icon-alliance"></i></span>
-            <span class="text">联盟</span></a>
-        <a href="#">
-            <span class="line"><i class="icon icon-my"></i></span>
-            <span class="text">我的</span>
-        </a>
-    </div>
-</div>
 
+</div>
 
 <!--脚步导入开始-->
 <!--js模块公用放入-->
 <script src="../../assets/scripts/app.js"></script>
+<script src="../../assets/scripts/datepick.js"></script>
 </body>
 </html>

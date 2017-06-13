@@ -1,0 +1,1 @@
+$(function(){!function(){var n={mode:2,format:2,years:[2e3,2010,2011,2012,2013,2014,2015,2016,2017],nowbtn:!0,onOk:function(){},onCancel:function(){}};$("#picktime, #picktime2").mdatetimer(n)}()});
