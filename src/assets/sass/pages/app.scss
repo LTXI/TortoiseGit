@@ -381,8 +381,12 @@
       margin-bottom: .24rem;
       color: #595757;
       .setitem {
-        @include link-item-icon(0.88rem, 0px);
+        @include link-item-icon(0.88rem, 1px);
+        &:last-child{
+          border-bottom:none;
+        }
       }
+
     }
   }
 
