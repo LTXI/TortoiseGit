@@ -646,7 +646,7 @@ $title_right_text_color: #9FA0A0;*/
 
 //黄色背景按钮
 @mixin yellow-bg-button() {
-  //line-height: 1;
+  line-height: 1.1;
   white-space: nowrap;
   padding: .1rem .3rem;
   display: inline-block;
@@ -657,7 +657,7 @@ $title_right_text_color: #9FA0A0;*/
 }
 //黄色背景按钮-长
 @mixin yellow-bg-button-long() {
-  //line-height: 1;
+  line-height: 1;
   white-space: nowrap;
   padding: .1rem .3rem;
   display: inline-block;
@@ -667,7 +667,7 @@ $title_right_text_color: #9FA0A0;*/
   background-Origin: border-box;
 }
 @mixin peach-bg-button() {
-  //line-height: 1;
+  line-height: 1.1;
   white-space: nowrap;
   padding: .1rem .3rem;
   display: inline-block;
