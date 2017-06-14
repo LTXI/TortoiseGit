@@ -127,6 +127,22 @@ document.addEventListener('DOMContentLoaded', function () {
 <!--脚步导入开始-->
 <!--js模块公用放入-->
 <script src="../../assets/scripts/app.js"></script>
-<script src="../../assets/scripts/datepick.js"></script>
+<!--<script src="../../assets/scripts/datepick.js"></script>-->
+<link rel="stylesheet" href="<?php echo JQ_URL; ?>styles/zepto.mdatetimer.css">
+<script>
+  $(function(){
+    var config = {
+      mode: 2,
+      format: 2,
+      years: [2000, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017],
+      nowbtn: true,
+      onOk: function () {
+      },
+      onCancel: function () {
+      }
+    };
+    $('#picktime, #picktime2').mdatetimer(config);
+  });
+</script>
 </body>
 </html>

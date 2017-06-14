@@ -1,1 +1,6 @@
-var jmApp={};$(function(){});
+
+var jmApp = {};
+$(function () {
+
+
+});

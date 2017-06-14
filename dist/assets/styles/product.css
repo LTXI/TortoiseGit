@@ -110,7 +110,6 @@ img {
 }
 
 body {
-  color: #feffff;
   width: 7.5rem;
   max-width: 1080px;
   margin: 0 auto;
@@ -148,7 +147,7 @@ body {
 }
 
 .icon {
-  background: url("../images/common/brand.png") no-repeat;
+  background: url("../images/common/brand.png?v=af6ce") no-repeat;
 }
 
 .icon_back {
@@ -225,7 +224,7 @@ body {
   position: absolute;
   left: 0;
   top: 0;
-  background-image: url("../images/common/brand.png");
+  background-image: url("../images/common/brand.png?v=af6ce");
   background-repeat: no-repeat;
   background-size: 119rem;
   -webkit-transform-origin: 0 0;
@@ -284,6 +283,8 @@ body {
   background-position: 0 -347rem;
 }
 
+/*$title_left_text_color: #595757;
+$title_right_text_color: #9FA0A0;*/
 .jm-header {
   background: #fff;
   height: 1.26rem;
@@ -369,7 +370,7 @@ body {
   padding-left: .35rem;
   margin-right: .3rem;
   color: #595757;
-  background: url("../images/store/security_icon.png") no-repeat left center;
+  background: url("../images/store/security_icon.png?v=90fc9") no-repeat left center;
   background-size: .28rem .28rem;
 }
 
@@ -412,7 +413,7 @@ body {
   right: .21rem;
   width: .6rem;
   height: .82rem;
-  background: url("../images/store/dot-icon.png") no-repeat left center;
+  background: url("../images/store/dot-icon.png?v=cf268") no-repeat left center;
   background-size: .35rem .08rem;
   top: 0;
 }
@@ -454,7 +455,7 @@ body {
   right: .21rem;
   width: .6rem;
   height: .82rem;
-  background: url("../images/store/dot-icon.png") no-repeat left center;
+  background: url("../images/store/dot-icon.png?v=cf268") no-repeat left center;
   background-size: .35rem .08rem;
   top: 0;
 }
@@ -561,21 +562,35 @@ body {
 
 .product-details .goods-info .enter-brand .item-middle {
   color: #231815;
+  width: 0;
 }
 
 .product-details .goods-info .enter-brand .item-middle .title {
   font-size: .34rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .product-details .goods-info .enter-brand .item-middle .desc {
   line-height: 1.1;
   font-size: .28rem;
+  word-break: break-all;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .product-details .goods-info .enter-brand .item-middle span {
   padding-right: .24rem;
   color: #9FA0A0;
   font-size: .28rem;
+}
+
+.product-details .goods-info .enter-brand .item-right {
+  padding-right: .1rem;
 }
 
 .product-details .goods-info .enter-brand .item-right .item {
@@ -588,7 +603,7 @@ body {
   display: inline-block;
   width: .44rem;
   height: .44rem;
-  background: url("../images/app/team/attention.png") no-repeat center center;
+  background: url("../images/app/team/attention.png?v=582c8") no-repeat center center;
   background-size: contain;
 }
 
@@ -600,23 +615,35 @@ body {
 }
 
 .product-details .goods-info .enter-brand .item-right .btn_yellow, .product-details .goods-info .enter-brand .item-right .btn_peach {
-  display: inline-block;
-  width: 1.2rem;
-  height: .42rem;
-  text-align: center;
-  font-size: .24rem;
+  width: auto;
+  height: auto;
 }
 
 .product-details .goods-info .enter-brand .item-right .btn_peach {
-  background: url("../images/app/peach.png") no-repeat center center;
-  background-size: contain;
+  /*background: url("../images/app/peach.png?v=43151") no-repeat center center;
+      background-size: contain;
+      margin-top: .1rem;*/
   margin-top: .1rem;
+  line-height: 1.1;
+  white-space: nowrap;
+  padding: .1rem .3rem;
+  display: inline-block;
+  background: #fff url("../images/common/btn_peach.png?v=43151") no-repeat center center;
+  background-size: contain;
+  font-size: 0.28rem;
+  background-Origin: border-box;
 }
 
 .product-details .goods-info .enter-brand .item-right .btn_yellow {
-  background: url("../images/app/yellow.png") no-repeat center center;
-  background-size: contain;
   margin-bottom: .1rem;
+  line-height: 1.1;
+  white-space: nowrap;
+  padding: .1rem .3rem;
+  display: inline-block;
+  background: #fff url("../images/common/btn_yellow.png?v=0edf6") no-repeat center center;
+  background-size: contain;
+  font-size: 0.28rem;
+  background-Origin: border-box;
 }
 
 .product-details .goods-info .enter-brand .item-right a {
@@ -624,7 +651,7 @@ body {
   width: 1.56rem;
   height: .42rem;
   line-height: .42rem;
-  background: url("../images/store/brand-enter-btn.png") no-repeat center center;
+  background: url("../images/store/brand-enter-btn.png?v=dac1d") no-repeat center center;
   background-size: 1.55rem .41rem;
   padding-left: .41rem;
   font-size: .24rem;

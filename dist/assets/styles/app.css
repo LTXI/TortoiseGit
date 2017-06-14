@@ -109,7 +109,6 @@ img {
 }
 
 body {
-  color: #feffff;
   width: 7.5rem;
   max-width: 1080px;
   margin: 0 auto;
@@ -138,7 +137,7 @@ body {
 }
 
 .icon {
-  background: url("../images/common/brand.png") no-repeat;
+  background: url("../images/common/brand.png?v=af6ce") no-repeat;
 }
 
 .icon_back {
@@ -215,7 +214,7 @@ body {
   position: absolute;
   left: 0;
   top: 0;
-  background-image: url("../images/common/brand.png");
+  background-image: url("../images/common/brand.png?v=af6ce");
   background-repeat: no-repeat;
   background-size: 119rem;
   -webkit-transform-origin: 0 0;
@@ -274,10 +273,12 @@ body {
   background-position: 0 -347rem;
 }
 
+/*$title_left_text_color: #595757;
+$title_right_text_color: #9FA0A0;*/
 .jm-header-navbar {
   height: 1rem;
   background: #f23030;
-  font-size: .36rem;
+  font-size: 0.42rem;
   padding-top: .2rem;
 }
 
@@ -346,42 +347,42 @@ body {
 }
 
 .app-page-footer .footer_inner a .icon-invite {
-  background: url("../images/app/icon/icon_invite_normal.png") no-repeat center center;
+  background: url("../images/app/icon/icon_invite_normal.png?v=a8adb") no-repeat center center;
   background-size: contain;
 }
 
 .app-page-footer .footer_inner a.on .icon-invite {
-  background: url("../images/app/icon/icon_invite_Pressed.png") no-repeat center center;
+  background: url("../images/app/icon/icon_invite_Pressed.png?v=59302") no-repeat center center;
   background-size: contain;
 }
 
 .app-page-footer .footer_inner a .icon-team {
-  background: url("../images/app/icon/icon_team_normal.png") no-repeat center center;
+  background: url("../images/app/icon/icon_team_normal.png?v=e8ad1") no-repeat center center;
   background-size: contain;
 }
 
 .app-page-footer .footer_inner a.on .icon-team {
-  background: url("../images/app/icon/icon_team_Pressed.png") no-repeat center center;
+  background: url("../images/app/icon/icon_team_Pressed.png?v=57e62") no-repeat center center;
   background-size: contain;
 }
 
 .app-page-footer .footer_inner a .icon-alliance {
-  background: url("../images/app/icon/icon_ alliance_normal.png") no-repeat center center;
+  background: url("../images/app/icon/icon_ alliance_normal.png?v=c4ffb") no-repeat center center;
   background-size: contain;
 }
 
 .app-page-footer .footer_inner a.on .icon-alliance {
-  background: url("../images/app/icon/icon_alliance_Pressed.png") no-repeat center center;
+  background: url("../images/app/icon/icon_alliance_Pressed.png?v=9d915") no-repeat center center;
   background-size: contain;
 }
 
 .app-page-footer .footer_inner a .icon-my {
-  background: url("../images/app/icon/icon_my_normal.png") no-repeat center center;
+  background: url("../images/app/icon/icon_my_normal.png?v=861bf") no-repeat center center;
   background-size: contain;
 }
 
 .app-page-footer .footer_inner a.on .icon-my {
-  background: url("../images/app/icon/icon_my_Pressed.png") no-repeat center center;
+  background: url("../images/app/icon/icon_my_Pressed.png?v=13612") no-repeat center center;
   background-size: contain;
 }
 
@@ -392,7 +393,7 @@ body {
 
 .listbox .itembox {
   background-color: #fff;
-  padding: 0.16rem .3rem 0 .3rem;
+  padding: 0.16rem .3rem 0.16rem .3rem;
   margin: .28rem 0;
 }
 
@@ -405,6 +406,7 @@ body {
 
 .listbox .itembox .item .left {
   float: left;
+  color: #595757;
 }
 
 .listbox .itembox .item .right {
@@ -417,26 +419,17 @@ body {
 }
 
 .listbox .itembox .item .state {
-  width: 1.4rem;
-  height: .54rem;
-  line-height: .54rem;
+  line-height: 1.1;
+  white-space: nowrap;
+  padding: .1rem .3rem;
   display: inline-block;
-  background-color: #fee564;
-  border-radius: 10rem;
-  text-align: center;
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-          transform: translateY(-50%);
-  right: 0;
-  -webkit-box-shadow: 0 0 5px 5px #fff5c7 inset;
-          box-shadow: 0 0 5px 5px #fff5c7 inset;
+  background: #fff url("../images/common/btn_yellow.png?v=0edf6") no-repeat center center;
+  background-size: contain;
+  font-size: 0.28rem;
+  background-Origin: border-box;
 }
 
 .listbox .itembox .done {
-  height: 1rem;
-  line-height: 1rem;
   text-align: center;
 }
 
@@ -451,8 +444,16 @@ body {
   font-size: .3rem;
 }
 
+.switch input[type="radio"]:checked + label i:before {
+  top: 50% !important;
+  left: 50% !important;
+  -webkit-transform: translate(-50%, -50%) !important;
+      -ms-transform: translate(-50%, -50%) !important;
+          transform: translate(-50%, -50%) !important;
+}
+
 .topnav {
-  background: #fff url("../images/app/teambg.png") no-repeat center center;
+  background: #fff url("../images/app/teambg.png?v=7ed52") no-repeat center center;
   background-size: cover;
   margin-bottom: 0.2rem;
 }
@@ -466,7 +467,7 @@ body {
 }
 
 .topnav .topbox {
-  font-size: .36rem;
+  font-size: 0.36rem;
   display: -webkit-box;
   display: -webkit-flex;
   display: -moz-box;
@@ -495,7 +496,7 @@ body {
   display: inline-block;
   width: .4rem;
   height: .4rem;
-  background: url("../images/app/sign.png") no-repeat center center;
+  background: url("../images/app/sign.png?v=5c80f") no-repeat center center;
   background-size: cover;
   vertical-align: middle;
 }
@@ -504,7 +505,8 @@ body {
   display: inline-block;
   line-height: .4rem;
   height: .4rem;
-  color: #000;
+  color: #231815;
+  font-weight: bold;
   vertical-align: middle;
 }
 
@@ -539,12 +541,12 @@ body {
 }
 
 .topnav .bottombox .left .icon1, .topnav .bottombox .right .icon1 {
-  background: url("../images/app/twitter/twitter_icon.png") no-repeat center center;
+  background: url("../images/app/twitter/twitter_icon.png?v=32d14") no-repeat center center;
   background-size: cover;
 }
 
 .topnav .bottombox .left .icon2, .topnav .bottombox .right .icon2 {
-  background: url("../images/app/twitter/code_icon.png") no-repeat center center;
+  background: url("../images/app/twitter/code_icon.png?v=27295") no-repeat center center;
   background-size: cover;
 }
 
@@ -624,6 +626,10 @@ body {
   color: #000;
   height: 1.10rem;
   padding: .24rem;
+}
+
+.invite-twitter .search-input form {
+  border: none !important;
 }
 
 .invite-twitter .search-input .inner {
@@ -753,7 +759,7 @@ body {
   -webkit-flex-basis: 4.1rem;
       -ms-flex-preferred-size: 4.1rem;
           flex-basis: 4.1rem;
-  padding-top: .2rem;
+  color: #595757;
 }
 
 .my-twitter .itembox .item-middle span {
@@ -771,20 +777,18 @@ body {
   -webkit-flex-basis: 1.4rem;
       -ms-flex-preferred-size: 1.4rem;
           flex-basis: 1.4rem;
-  padding-top: .2rem;
+  padding-top: .4rem;
 }
 
 .my-twitter .itembox .item-right .state {
-  width: 1.1rem;
-  height: .44rem;
-  line-height: .44rem;
+  line-height: 1.1;
+  white-space: nowrap;
+  padding: .1rem .3rem;
   display: inline-block;
-  background-color: #fee564;
-  border-radius: 10rem;
-  text-align: center;
-  -webkit-box-shadow: 0 0 5px 5px #fff5c7 inset;
-          box-shadow: 0 0 5px 5px #fff5c7 inset;
-  font-size: .28rem;
+  background: #fff url("../images/common/btn_yellow.png?v=0edf6") no-repeat center center;
+  background-size: contain;
+  font-size: 0.28rem;
+  background-Origin: border-box;
 }
 
 .my-brand .list {
@@ -899,21 +903,35 @@ body {
 
 .my-brand .itembox .item-middle {
   color: #231815;
+  width: 0;
 }
 
 .my-brand .itembox .item-middle .title {
   font-size: .34rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .my-brand .itembox .item-middle .desc {
   line-height: 1.1;
   font-size: .28rem;
+  word-break: break-all;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .my-brand .itembox .item-middle span {
   padding-right: .24rem;
   color: #9FA0A0;
   font-size: .28rem;
+}
+
+.my-brand .itembox .item-right {
+  padding-right: .1rem;
 }
 
 .my-brand .itembox .item-right .item {
@@ -926,7 +944,7 @@ body {
   display: inline-block;
   width: .44rem;
   height: .44rem;
-  background: url("../images/app/team/attention.png") no-repeat center center;
+  background: url("../images/app/team/attention.png?v=582c8") no-repeat center center;
   background-size: contain;
 }
 
@@ -938,23 +956,40 @@ body {
 }
 
 .my-brand .itembox .item-right .btn_yellow, .my-brand .itembox .item-right .btn_peach {
-  display: inline-block;
-  width: 1.2rem;
-  height: .42rem;
-  text-align: center;
-  font-size: .24rem;
+  width: auto;
+  height: auto;
 }
 
 .my-brand .itembox .item-right .btn_peach {
-  background: url("../images/app/peach.png") no-repeat center center;
-  background-size: contain;
+  /*background: url("../images/app/peach.png?v=43151") no-repeat center center;
+      background-size: contain;
+      margin-top: .1rem;*/
   margin-top: .1rem;
+  line-height: 1.1;
+  white-space: nowrap;
+  padding: .1rem .3rem;
+  display: inline-block;
+  background: #fff url("../images/common/btn_peach.png?v=43151") no-repeat center center;
+  background-size: contain;
+  font-size: 0.28rem;
+  background-Origin: border-box;
 }
 
 .my-brand .itembox .item-right .btn_yellow {
-  background: url("../images/app/yellow.png") no-repeat center center;
-  background-size: contain;
   margin-bottom: .1rem;
+  line-height: 1.1;
+  white-space: nowrap;
+  padding: .1rem .3rem;
+  display: inline-block;
+  background: #fff url("../images/common/btn_yellow.png?v=0edf6") no-repeat center center;
+  background-size: contain;
+  font-size: 0.28rem;
+  background-Origin: border-box;
+}
+
+.my-brand .itembox .btn_yellow, .my-brand .itembox .btn_peach {
+  width: 1.5rem !important;
+  text-align: center !important;
 }
 
 .my-alliance .list {
@@ -985,16 +1020,9 @@ body {
   -webkit-flex-wrap: nowrap;
       -ms-flex-wrap: nowrap;
           flex-wrap: nowrap;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-     -moz-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: start;
-  -webkit-align-items: flex-start;
-     -moz-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
   -webkit-align-content: flex-start;
       -ms-flex-line-pack: start;
           align-content: flex-start;
@@ -1011,6 +1039,7 @@ body {
   display: inline-block;
   width: 1.18rem;
   height: 1.18rem;
+  border: 1px solid #e7e7e7;
 }
 
 .my-alliance .itembox .item-left .imgbox img {
@@ -1022,12 +1051,16 @@ body {
   -webkit-flex-basis: 3.3rem;
       -ms-flex-preferred-size: 3.3rem;
           flex-basis: 3.3rem;
+  width: 0;
 }
 
 .my-alliance .itembox .item-middle p.title {
   color: #231815;
-  font-size: .4rem;
+  font-size: .34rem;
   padding-bottom: .1rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .my-alliance .itembox .item-middle span {
@@ -1058,29 +1091,37 @@ body {
       -ms-flex-preferred-size: 2.4rem;
           flex-basis: 2.4rem;
   padding-top: .1rem;
+  text-align: center;
 }
 
 .my-alliance .itembox .item-right .state {
-  width: 2.2rem;
-  min-width: 2.2rem;
-  height: .46rem;
-  line-height: .46rem;
+  line-height: 1.1;
+  white-space: nowrap;
+  padding: .1rem .3rem;
   display: inline-block;
-  background-color: #fee564;
-  border-radius: 10rem;
-  text-align: center;
-  -webkit-box-shadow: 0 0 5px 5px #fff5c7 inset;
-          box-shadow: 0 0 5px 5px #fff5c7 inset;
-  color: #595757;
-  font-size: .28rem;
+  background: #fff url("../images/common/btn_yellow.png?v=0edf6") no-repeat center center;
+  background-size: contain;
+  font-size: 0.28rem;
+  background-Origin: border-box;
+}
+
+.my-alliance .itembox .item-right .state.long {
+  line-height: 1;
+  white-space: nowrap;
+  padding: .1rem .3rem;
+  display: inline-block;
+  background: #fff url("../images/common/btn_yellow-long.png") no-repeat center center;
+  background-size: contain;
+  font-size: 0.28rem;
+  background-Origin: border-box;
 }
 
 .my-user .top {
   position: relative;
   height: 4.94rem;
   width: 100%;
-  background: url("../images/app/user/user-bg.png") no-repeat center center;
-  background-size: contain;
+  background: url("../images/app/user/user-bg.png?v=2ae53") no-repeat center center;
+  background-size: 100%;
   margin-bottom: .24rem;
 }
 
@@ -1139,7 +1180,7 @@ body {
   line-height: 1.2rem;
   text-align: center;
   position: relative;
-  background: url("../images/app/user/avatar-bg1.png") no-repeat center center;
+  background: url("../images/app/user/avatar-bg1.png?v=d3eee") no-repeat center center;
   background-size: contain;
 }
 
@@ -1153,7 +1194,7 @@ body {
       -ms-transform: translateY(-50%);
           transform: translateY(-50%);
   border-radius: 50%;
-  background: url("../images/app/user/avatar-bg2.png") no-repeat center center;
+  background: url("../images/app/user/avatar-bg2.png?v=78a9b") no-repeat center center;
   background-size: contain;
 }
 
@@ -1175,7 +1216,7 @@ body {
   right: 0;
   bottom: 0;
   z-index: 110;
-  background: url("../images/app/user/attestation_v_icon.png") no-repeat center center;
+  background: url("../images/app/user/attestation_v_icon.png?v=18294") no-repeat center center;
   background-size: contain;
 }
 
@@ -1211,7 +1252,7 @@ body {
   float: right;
   width: .35rem;
   height: .35rem;
-  background: url("../images/app/user/my_code.png") no-repeat center center;
+  background: url("../images/app/user/my_code.png?v=39753") no-repeat center center;
   background-size: contain;
 }
 
@@ -1252,12 +1293,12 @@ body {
 }
 
 .my-user .top .bottombox .left .icon1, .my-user .top .bottombox .right .icon1 {
-  background: url("../images/app/twitter/twitter_icon.png") no-repeat center center;
+  background: url("../images/app/twitter/twitter_icon.png?v=32d14") no-repeat center center;
   background-size: cover;
 }
 
 .my-user .top .bottombox .left .icon2, .my-user .top .bottombox .right .icon2 {
-  background: url("../images/app/twitter/code_icon.png") no-repeat center center;
+  background: url("../images/app/twitter/code_icon.png?v=27295") no-repeat center center;
   background-size: cover;
 }
 
@@ -1294,6 +1335,13 @@ body {
   color: #231815;
 }
 
+.my-user .order .orderitem a::after {
+  display: table;
+  line-height: 0;
+  content: "";
+  clear: both;
+}
+
 .my-user .order .orderitem .orderlink {
   float: right;
   vertical-align: middle;
@@ -1305,7 +1353,7 @@ body {
   display: inline-block;
   width: .18rem;
   height: .24rem;
-  background: url("../images/app/user/right_arrow.png") no-repeat center center;
+  background: url("../images/app/user/right_arrow.png?v=aacb8") no-repeat center center;
   background-size: contain;
   vertical-align: middle;
 }
@@ -1351,22 +1399,22 @@ body {
 }
 
 .my-user .order .orderinfo .icon-unpay {
-  background: url("../images/app/user/un_pay_icon.png") no-repeat center center;
+  background: url("../images/app/user/un_pay_icon.png?v=cd092") no-repeat center center;
   background-size: contain;
 }
 
 .my-user .order .orderinfo .icon-unems {
-  background: url("../images/app/user/un_ems_icon.png") no-repeat center center;
+  background: url("../images/app/user/un_ems_icon.png?v=30066") no-repeat center center;
   background-size: contain;
 }
 
 .my-user .order .orderinfo .icon-ems {
-  background: url("../images/app/user/ems_icon.png") no-repeat center center;
+  background: url("../images/app/user/ems_icon.png?v=9495f") no-repeat center center;
   background-size: contain;
 }
 
 .my-user .order .orderinfo .icon-done {
-  background: url("../images/app/user/done_icon.png") no-repeat center center;
+  background: url("../images/app/user/done_icon.png?v=89b84") no-repeat center center;
   background-size: contain;
 }
 
@@ -1423,12 +1471,12 @@ body {
 }
 
 .my-user .account .accounbox .left .icon1, .my-user .account .accounbox .right .icon1 {
-  background: url("../images/app/twitter/twitter_icon.png") no-repeat center center;
+  background: url("../images/app/twitter/twitter_icon.png?v=32d14") no-repeat center center;
   background-size: cover;
 }
 
 .my-user .account .accounbox .left .icon2, .my-user .account .accounbox .right .icon2 {
-  background: url("../images/app/twitter/code_icon.png") no-repeat center center;
+  background: url("../images/app/twitter/code_icon.png?v=27295") no-repeat center center;
   background-size: cover;
 }
 
@@ -1477,6 +1525,13 @@ body {
   color: #231815;
 }
 
+.my-user .set .setitem a::after {
+  display: table;
+  line-height: 0;
+  content: "";
+  clear: both;
+}
+
 .my-user .set .setitem .orderlink {
   float: right;
   vertical-align: middle;
@@ -1488,7 +1543,7 @@ body {
   display: inline-block;
   width: .18rem;
   height: .24rem;
-  background: url("../images/app/user/right_arrow.png") no-repeat center center;
+  background: url("../images/app/user/right_arrow.png?v=aacb8") no-repeat center center;
   background-size: contain;
   vertical-align: middle;
 }
@@ -1568,7 +1623,7 @@ body {
   margin-top: -0.12rem;
   width: .3rem;
   height: .3rem;
-  background: url("../images/app/user/delete_icon.png") no-repeat center center;
+  background: url("../images/app/user/delete_icon.png?v=abe0b") no-repeat center center;
   background-size: contain;
 }
 
@@ -1762,7 +1817,7 @@ body {
   display: inline-block;
   width: 2rem;
   height: 2rem;
-  background: url("../images/app/user/data_tip_icon.png") no-repeat center center;
+  background: url("../images/app/user/data_tip_icon.png?v=e4ee6") no-repeat center center;
   background-size: contain;
 }
 
@@ -1804,6 +1859,14 @@ body {
 
 .customer-list .itembox .item-left {
   padding: 0 2.56rem 0 .36rem;
+}
+
+.customer-list ~ .mt_mask {
+  z-index: 10000 !important;
+}
+
+.customer-list ~ .mt_poppanel {
+  z-index: 10001 !important;
 }
 
 .agent-detail .top-info {
@@ -1903,7 +1966,7 @@ body {
   position: absolute;
   left: 0;
   top: 50%;
-  background: url("../images/app/sign.png") no-repeat center center;
+  background: url("../images/app/sign.png?v=5c80f") no-repeat center center;
   background-size: contain;
   background-repeat: no-repeat;
   -webkit-transform: translate(-100%, -50%);
@@ -1918,7 +1981,7 @@ body {
   height: .31rem;
   position: absolute;
   top: 50%;
-  background: url("../images/app/sign.png") no-repeat center center;
+  background: url("../images/app/sign.png?v=5c80f") no-repeat center center;
   background-size: contain;
   background-repeat: no-repeat;
   -webkit-transform: translate(100%, -50%);

@@ -88,7 +88,7 @@ gulp.task('sass', function () {
     /*.pipe(cssver({
      useDate:true
      }))*/
-     //.pipe(cleancss())//压缩
+    //.pipe(cleancss())//压缩
 
     .pipe(sourcemaps.write('./maps'))//生成map文件的路径
     .pipe(gulp.dest(outAssetsPath + '/styles/'))
@@ -96,7 +96,6 @@ gulp.task('sass', function () {
     .pipe(assetRev({hashLen: 5}))
     .pipe(gulp.dest(outAssetsPath + '/styles/'))
 });
-
 
 gulp.task('pageshtml', function () {
   return gulp.src(['src/pages/**/*.html', '!src/pages/test/*.html'])
@@ -163,7 +162,7 @@ gulp.task('scripts', function () {
   return gulp.src(srcAssetsPath + '/scripts/**/*.*')
     .pipe(jshint('.jshintrc'))
     .pipe(plumber())
-    .pipe(uglify())
+    //.pipe(uglify())
     .pipe(gulp.dest(outAssetsPath + '/scripts'))
     .pipe(assetRev({hashLen: 5}))
     .pipe(gulp.dest(outAssetsPath + '/scripts'))
@@ -212,14 +211,6 @@ gulp.task('gt-copy', function () {
   gulp.start('gt-scripts', 'gt-images', 'gt-styles');
 });
 //瓜藤资源目录拷贝end
-
-
-
-
-
-
-
-
 
 //加版本begin
 //sprite

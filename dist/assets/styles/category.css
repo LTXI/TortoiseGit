@@ -110,7 +110,6 @@ img {
 }
 
 body {
-  color: #feffff;
   width: 7.5rem;
   max-width: 1080px;
   margin: 0 auto;
@@ -148,7 +147,7 @@ body {
 }
 
 .icon {
-  background: url("../images/common/brand.png") no-repeat;
+  background: url("../images/common/brand.png?v=af6ce") no-repeat;
 }
 
 .icon_back {
@@ -225,7 +224,7 @@ body {
   position: absolute;
   left: 0;
   top: 0;
-  background-image: url("../images/common/brand.png");
+  background-image: url("../images/common/brand.png?v=af6ce");
   background-repeat: no-repeat;
   background-size: 119rem;
   -webkit-transform-origin: 0 0;
@@ -284,6 +283,8 @@ body {
   background-position: 0 -347rem;
 }
 
+/*$title_left_text_color: #595757;
+$title_right_text_color: #9FA0A0;*/
 .category .category-topbar {
   background-color: #fff;
 }
@@ -303,7 +304,7 @@ body {
           transform: translateY(-50%);
   width: .36rem;
   height: .50rem;
-  background: transparent url("../images/common/icon_back.png") no-repeat center center;
+  background: transparent url("../images/common/icon_back.png?v=7073c") no-repeat center center;
   background-size: contain;
 }
 
@@ -317,7 +318,7 @@ body {
   height: .9rem;
   width: .85rem;
   padding-top: .5rem;
-  background: transparent url("../images/common/icon-msg.png") no-repeat center 25%;
+  background: transparent url("../images/common/icon-msg.png?v=fe717") no-repeat center 25%;
   background-size: .37rem .34rem;
 }
 
@@ -329,7 +330,7 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  background: transparent url("../images/common/icon-search.png") no-repeat scroll 100% 0/auto 0.6rem;
+  background: transparent url("../images/common/icon-search.png?v=55d06") no-repeat scroll 100% 0/auto 0.6rem;
 }
 
 .category .category-topbar .header-search-frm .header-search-txt {
@@ -390,7 +391,7 @@ body {
   position: absolute;
   left: 0;
   top: 50%;
-  background: url("../images/app/sign.png") no-repeat center center;
+  background: url("../images/app/sign.png?v=5c80f") no-repeat center center;
   background-size: contain;
   background-repeat: no-repeat;
   -webkit-transform: translate(-100%, -50%);
@@ -405,7 +406,7 @@ body {
   height: .31rem;
   position: absolute;
   top: 50%;
-  background: url("../images/app/sign.png") no-repeat center center;
+  background: url("../images/app/sign.png?v=5c80f") no-repeat center center;
   background-size: contain;
   background-repeat: no-repeat;
   -webkit-transform: translate(100%, -50%);

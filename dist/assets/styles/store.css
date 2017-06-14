@@ -110,7 +110,6 @@ img {
 }
 
 body {
-  color: #feffff;
   width: 7.5rem;
   max-width: 1080px;
   margin: 0 auto;
@@ -148,7 +147,7 @@ body {
 }
 
 .icon {
-  background: url("../images/common/brand.png") no-repeat;
+  background: url("../images/common/brand.png?v=af6ce") no-repeat;
 }
 
 .icon_back {
@@ -225,7 +224,7 @@ body {
   position: absolute;
   left: 0;
   top: 0;
-  background-image: url("../images/common/brand.png");
+  background-image: url("../images/common/brand.png?v=af6ce");
   background-repeat: no-repeat;
   background-size: 119rem;
   -webkit-transform-origin: 0 0;
@@ -284,6 +283,8 @@ body {
   background-position: 0 -347rem;
 }
 
+/*$title_left_text_color: #595757;
+$title_right_text_color: #9FA0A0;*/
 .jm-header-navbar {
   height: 1rem;
   background: #f23030;
@@ -304,7 +305,7 @@ body {
   top: .17rem;
   width: .3rem;
   height: .35rem;
-  background: url("../images/store/icon_arrow.png") no-repeat center center;
+  background: url("../images/store/icon_arrow.png?v=f343a") no-repeat center center;
   background-size: cover;
 }
 
@@ -317,7 +318,7 @@ body {
 .jm-store .store {
   position: relative;
   height: 2.9rem;
-  background: url("../images/store/store-bg.png") no-repeat center center;
+  background: url("../images/store/store-bg.png?v=08a3d") no-repeat center center;
   background-size: cover;
 }
 
@@ -341,7 +342,7 @@ body {
       -ms-flex: 0 0 1.24rem;
           flex: 0 0 1.24rem;
   height: 1.24rem;
-  background: url("../images/store/icon_store_bg.png") no-repeat center center;
+  background: url("../images/store/icon_store_bg.png?v=933f2") no-repeat center center;
   background-size: cover;
   text-align: center;
 }
@@ -388,7 +389,7 @@ body {
   right: 0;
   width: .8rem;
   height: .5rem;
-  background: url("../images/store/icon_code.png") no-repeat center center;
+  background: url("../images/store/icon_code.png?v=63b56") no-repeat center center;
   background-size: cover;
 }
 
@@ -421,7 +422,7 @@ body {
   display: inline-block;
   width: .4rem;
   height: .4rem;
-  background: url("../images/store/sign.png") no-repeat center center;
+  background: url("../images/store/sign.png?v=5c80f") no-repeat center center;
   background-size: cover;
   vertical-align: middle;
 }
@@ -438,7 +439,7 @@ body {
   display: inline-block;
   width: .3rem;
   height: .3rem;
-  background: url("../images/store/more.png") no-repeat center center;
+  background: url("../images/store/more.png?v=b8ca7") no-repeat center center;
   background-size: cover;
   vertical-align: middle;
 }
@@ -618,7 +619,7 @@ body {
           transform: translateY(-50%);
   line-height: .28rem;
   text-align: center;
-  background: url("../images/store/icon_discount.png") no-repeat center center;
+  background: url("../images/store/icon_discount.png?v=1bbe4") no-repeat center center;
   background-size: cover;
 }
 
@@ -630,7 +631,7 @@ body {
   width: .65rem;
   height: .65rem;
   border-radius: 50%;
-  background: #fdfdfd url("../images/store/icon_backtop.png") no-repeat center center;
+  background: #fdfdfd url("../images/store/icon_backtop.png?v=d566f") no-repeat center center;
   background-size: cover;
   z-index: 1210;
   -webkit-transform-origin: 0px 0px 0px;
@@ -714,7 +715,7 @@ body {
   display: inline-block;
   height: .72rem;
   width: .76rem;
-  background: #fdfdfd url("../images/store/store.png") no-repeat center center;
+  background: #fdfdfd url("../images/store/store.png?v=eb608") no-repeat center center;
   background-size: cover;
 }
 
@@ -747,7 +748,7 @@ body {
   z-index: 1;
   height: .5rem;
   padding-left: .46rem;
-  background: url("../images/store/likie_iocn.png") no-repeat 0.11rem center;
+  background: url("../images/store/likie_iocn.png?v=0023a") no-repeat 0.11rem center;
   background-color: #c72443;
   background-size: .24rem .24rem;
   color: #fff;
@@ -787,6 +788,13 @@ body {
   color: #231815;
 }
 
+.store-detail .mid .item a::after {
+  display: table;
+  line-height: 0;
+  content: "";
+  clear: both;
+}
+
 .store-detail .mid .item .orderlink {
   float: right;
   vertical-align: middle;
@@ -798,7 +806,7 @@ body {
   display: inline-block;
   width: .18rem;
   height: .24rem;
-  background: url("../images/app/user/right_arrow.png") no-repeat center center;
+  background: url("../images/app/user/right_arrow.png?v=aacb8") no-repeat center center;
   background-size: contain;
   vertical-align: middle;
 }
@@ -806,13 +814,13 @@ body {
 .store-detail .mid .provider-item .arrow-icon {
   width: .40rem;
   height: .38rem;
-  background-image: url("../images/common/icon-provider.png") !important;
+  background-image: url("../images/common/icon-provider.png?v=a5b69") !important;
 }
 
 .store-detail .mid .code-item .arrow-icon {
   width: .40rem;
   height: .38rem;
-  background-image: url("../images/common/icon_code.png") !important;
+  background-image: url("../images/common/icon_code.png?v=3ea28") !important;
 }
 
 .store-detail .mid .space-bottom {
