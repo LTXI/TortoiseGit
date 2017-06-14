@@ -2,6 +2,7 @@
 @import "brandsprites";
 @import "app/mixin";
 @import "app/app_common";
+@import "../base/app-base-override";
 
 .topnav {
   background: #fff url("../images/app/teambg.png") no-repeat center center;
@@ -80,6 +81,9 @@
     color: #000;
     height: 1.10rem;
     padding: .24rem;
+    form{
+      border: none !important; //去掉原来瓜藤
+    }
 
     .inner {
       width: 100%;
@@ -157,6 +161,11 @@
 
   .itembox {
     @include brand-list-item;
+    .btn_yellow, .btn_peach
+  {
+    width: 1.5rem !important;
+    text-align: center !important;
+  }
   }
 }
 
@@ -175,6 +184,7 @@
   .itembox {
     @include alliance-list-item;
   }
+
 }
 
   //我的联盟 end
@@ -186,7 +196,7 @@
       height: 4.94rem;
       width: 100%;
       background: url("../images/app/user/user-bg.png") no-repeat center center;
-      background-size: contain;
+      background-size: 100%;
       margin-bottom: .24rem;
       .userinfo {
         position: absolute;
@@ -629,6 +639,13 @@
     .itembox .item-left {
       padding: 0 2.56rem 0 .36rem;
     }
+    & ~ .mt_mask{
+      z-index: 10000 !important;//覆盖插件的
+    }
+    & ~  .mt_poppanel{
+      z-index: 10001 !important;//覆盖插件的
+    }
+
 
   }
 

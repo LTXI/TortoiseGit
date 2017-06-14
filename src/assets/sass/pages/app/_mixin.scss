@@ -1,3 +1,4 @@
+@import "variable";
 //左右两列  ，内容左右上下居中，父类需要font-size:0,position
 //html结构<div class="bottombox">
 //<div class="left">
@@ -67,7 +68,7 @@
 //</div>
 //</div>
 @mixin title-left-icon {
-  font-size: .36rem;
+  font-size: $font-size2; //.36rem;
   display: flex;
   align-items: center;
   height: 1rem;
@@ -88,7 +89,8 @@
       display: inline-block;
       line-height: .4rem;
       height: .4rem;
-      color: #000;
+      color: $font-color2; //#000;
+      font-weight: bold;
       vertical-align: middle;
     }
   }
@@ -98,7 +100,7 @@
 //<div class="brand-type">
 //<p class="title">我的代理品牌</p>
 //</div>
-@mixin title-text-both-icon($height:.9rem){
+@mixin title-text-both-icon($height:.9rem) {
   position: relative;
   height: $height;
   line-height: $height;
@@ -142,13 +144,11 @@
   }
 }
 
-
-
 //--文本标题（左右）
 
 // border-bottom: 1px solid #dbdbdb;
-$title_left_text_color: #595757;
-$title_right_text_color: #9FA0A0;
+/*$title_left_text_color: #595757;
+$title_right_text_color: #9FA0A0;*/
 
 //html结构 <div class="timebox">
 //<span class="left">加入时间：</span>
@@ -160,15 +160,14 @@ $title_right_text_color: #9FA0A0;
   position: relative;
   overflow: hidden;
   border-bottom: $border-bottom-width solid #e7e7e7;
-  //padding: 0 .28rem;
   .left {
     float: left;
-    color: $title_left_text_color;
+    color: $font-color3;
     font-size: .3rem;
   }
   .right {
     float: right;
-    color: $title_right_text_color;
+    color: $font-color5;
     font-size: .26rem;
   }
 }
@@ -189,7 +188,14 @@ $title_right_text_color: #9FA0A0;
   }
   a {
     display: block;
-    color: #231815
+    color: #231815;
+
+    &::after{
+      display: table;
+      line-height: 0;
+      content: "";
+      clear: both;
+    }
   }
   .orderlink {
     float: right;
@@ -248,7 +254,7 @@ $title_right_text_color: #9FA0A0;
 //</div>
 //</div>
 //$outbox-width 最外层的div的宽度  $inbox-width 内层的div的宽度
-@mixin  create-circle-image($outbox-width:1.18rem, $inbox-width:.9rem){
+@mixin create-circle-image($outbox-width:1.18rem, $inbox-width:.9rem) {
   .imgbox {
     background-color: #ddd;
     width: $outbox-width;
@@ -276,7 +282,6 @@ $title_right_text_color: #9FA0A0;
     }
   }
 }
-
 
 //我的推客列表
 //<div class="itembox">
@@ -318,29 +323,33 @@ $title_right_text_color: #9FA0A0;
   .item-middle {
     flex-basis: 4.1rem;
     //border: 1px solid green;
-    padding-top: .2rem;
+    color: $font-color3;
+
+    //padding-top: .2rem;
     span {
       padding-left: .25rem;
     }
+
     span.red {
-      color: #f23030;
+      color: $font-color7; //#f23030;
     }
   }
   .item-right {
     align-self: flex-start;
     flex-basis: 1.4rem;
     //border: 1px solid green;
-    padding-top: .2rem;
+    padding-top: .4rem;
     .state {
-      width: 1.1rem;
-      height: .44rem;
-      line-height: .44rem;
-      display: inline-block;
-      background-color: #fee564;
-      border-radius: 10rem;
-      text-align: center;
-      box-shadow: 0 0 5px 5px #fff5c7 inset;
-      font-size: .28rem;
+      //width: 1.1rem;
+      //height: .44rem;
+      //line-height: .44rem;
+      //display: inline-block;
+      //background-color: #fee564;
+      //border-radius: 10rem;
+      //text-align: center;
+      //box-shadow: 0 0 5px 5px #fff5c7 inset;
+      //font-size: .28rem;
+      @include yellow-bg-button;
     }
   }
 }
@@ -364,13 +373,13 @@ $title_right_text_color: #9FA0A0;
 //<a href="#"><span class="state">申请成为代理></span></a>
 //</div>
 //</div>
-@mixin  alliance-list-item {
+@mixin alliance-list-item {
   padding: .3rem 0;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  justify-content: flex-start;
-  align-items: flex-start;
+  justify-content: space-around;
+  //align-items: flex-start;
   align-content: flex-start;
   .item-left {
     flex-basis: 2rem;
@@ -380,6 +389,7 @@ $title_right_text_color: #9FA0A0;
       display: inline-block;
       width: 1.18rem;
       height: 1.18rem;
+      border: 1px solid $border-color;
       img {
         width: 100%;
       }
@@ -388,10 +398,12 @@ $title_right_text_color: #9FA0A0;
   .item-middle {
     padding-top: 0rem;
     flex-basis: 3.3rem;
+    width: 0;
     p.title {
-      color: #231815;
-      font-size: .4rem;
-      padding-bottom: .1rem
+      color: $font-color2;//#231815;
+      font-size: .34rem;
+      padding-bottom: .1rem;
+      @include ellipsis;
     }
     span {
       padding-left: .25rem;
@@ -415,22 +427,26 @@ $title_right_text_color: #9FA0A0;
     align-self: flex-start;
     flex-basis: 2.4rem;
     padding-top: .1rem;
+    text-align: center;
     .state {
-      width: 2.2rem;
-      min-width: 2.2rem;
-      height: .46rem;
-      line-height: .46rem;
-      display: inline-block;
-      background-color: #fee564;
-      border-radius: 10rem;
-      text-align: center;
-      box-shadow: 0 0 5px 5px #fff5c7 inset;
-      color: #595757;
-      font-size: .28rem;
+      //width: 2.2rem;
+      //min-width: 2.2rem;
+      //height: .46rem;
+      //line-height: .46rem;
+      //display: inline-block;
+      //background-color: #fee564;
+      //border-radius: 10rem;
+      //text-align: center;
+      //box-shadow: 0 0 5px 5px #fff5c7 inset;
+      //color: #595757;
+      //font-size: .28rem;
+      @include yellow-bg-button;
+    }
+    .state.long{
+      @include yellow-bg-button-long;
     }
   }
 }
-
 
 //我的品牌
 //<div class="itembox">
@@ -451,20 +467,23 @@ $title_right_text_color: #9FA0A0;
 //</div>
 //</div>
 @mixin brand-list-item {
-  @include layout-col-3(1.9rem,4.1rem, 1.4rem,center);
+  @include layout-col-3(1.9rem, 4.1rem, 1.4rem, center);
   padding: .3rem 0;
   .item-left {
     padding: 0 .5rem 0 .36rem;
-    @include create-circle-image(1.18rem,.9rem);
+    @include create-circle-image(1.18rem, .9rem);
   }
   .item-middle {
     color: #231815;
+    width: 0;//否则不出现省略号
     .title {
       font-size: .34rem;
+      @include ellipsis;
     }
     .desc {
       line-height: 1.1;
       font-size: .28rem;
+      @include  rows-ellipsis;//3行
     }
     span {
       padding-right: .24rem;
@@ -473,6 +492,7 @@ $title_right_text_color: #9FA0A0;
     }
   }
   .item-right {
+    padding-right: .1rem;
     .item {
       width: 1rem;
       text-align: center;
@@ -493,25 +513,31 @@ $title_right_text_color: #9FA0A0;
     }
 
     .btn_yellow, .btn_peach {
-      display: inline-block;
-      width: 1.2rem;
-      height: .42rem;
-      text-align: center;
-      font-size: .24rem;
+      ///*display: inline-block;
+      //width: 1.2rem;
+      //height: .42rem;
+      //text-align: center;
+      //font-size: .24rem;*/
+      width: auto;
+      height: auto;
+
     }
     .btn_peach {
-      background: url("../images/app/peach.png") no-repeat center center;
+      /*background: url("../images/app/peach.png") no-repeat center center;
       background-size: contain;
+      margin-top: .1rem;*/
       margin-top: .1rem;
+      @include peach-bg-button;
     }
     .btn_yellow {
-      background: url("../images/app/yellow.png") no-repeat center center;
-      background-size: contain;
+      ///* background: url("../images/app/yellow.png") no-repeat center center;
+      // background-size: contain;
+      // margin-bottom: .1rem;*/
       margin-bottom: .1rem;
+      @include yellow-bg-button;
     }
   }
 }
-
 
 //标题  返回 编辑 喜欢icon
 @mixin jm-header {
@@ -546,34 +572,45 @@ $title_right_text_color: #9FA0A0;
 }
 
 //垂直居中
-@mixin vertical-center{
+@mixin vertical-center {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
 }
+
 //水平居中
-@mixin horizontal-center{
+@mixin horizontal-center {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
 }
-@mixin center{
+
+@mixin center {
   position: absolute;
   left: 50%;
-  top:50%;
-  transform: translate(-50%,-50%);
-}
-//省略号
-@mixin  ellipsis{
-  overflow: hidden;
-  text-overflow:ellipsis;
-  white-space: nowrap;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
 
+//省略号
+@mixin ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+@mixin rows-ellipsis{
+  word-break: break-all;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+}
 
 //
 //推荐品牌 店铺详细用
-@mixin  goodsign {
+@mixin goodsign {
   position: relative;
   background: #f4f4f4;
   font-size: .36rem;
@@ -581,7 +618,7 @@ $title_right_text_color: #9FA0A0;
   .content {
     display: flex;
     justify-content: flex-start;
-    align-content:flex-start;
+    align-content: flex-start;
     flex-wrap: wrap;
     .item {
       background: #fff;
@@ -591,8 +628,8 @@ $title_right_text_color: #9FA0A0;
       border-top: none;
       border-left: none;
       position: relative;
-      img{
-        position:absolute;
+      img {
+        position: absolute;
         display: inline-block;
         width: 60%;
         margin: 0 auto;
@@ -606,6 +643,41 @@ $title_right_text_color: #9FA0A0;
     }
   }
 }
+
+//黄色背景按钮
+@mixin yellow-bg-button() {
+  //line-height: 1;
+  white-space: nowrap;
+  padding: .1rem .3rem;
+  display: inline-block;
+  background: #fff url("../images/common/btn_yellow.png") no-repeat center center;
+  background-size: contain;
+  font-size: $font-size4;
+  background-Origin: border-box;
+}
+//黄色背景按钮-长
+@mixin yellow-bg-button-long() {
+  //line-height: 1;
+  white-space: nowrap;
+  padding: .1rem .3rem;
+  display: inline-block;
+  background: #fff url("../images/common/btn_yellow-long.png") no-repeat center center;
+  background-size: contain;
+  font-size: $font-size4;
+  background-Origin: border-box;
+}
+@mixin peach-bg-button() {
+  //line-height: 1;
+  white-space: nowrap;
+  padding: .1rem .3rem;
+  display: inline-block;
+  background: #fff url("../images/common/btn_peach.png") no-repeat center center;
+  background-size: contain;
+  font-size: $font-size4;
+  background-Origin: border-box;
+}
+
+
 
 
 
