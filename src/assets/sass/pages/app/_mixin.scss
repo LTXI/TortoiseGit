@@ -18,6 +18,10 @@
   //父类属性设置
   & {
     font-size: 0; //将孩子inline-block, 有间距
+    border-bottom: 1px solid #dbdbdb;
+  }
+  &:last-child{
+    border-bottom:none;
   }
   .left, .right {
     display: inline-block;
