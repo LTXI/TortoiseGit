@@ -5,7 +5,7 @@
 <!--头部-->
 <div class="jm-header">
     <div class="jm-wrapper">
-        <a href="#m=agent&a=push">
+        <a href="#m=push&a=team">
             <div class="posl icon icon_back icon-fix"></div>
         </a>
         <p class="title">客户列表</p>
@@ -14,23 +14,14 @@
 <div id="content" class="page-content customer-list my-twitter">
     <!--时间筛选-->
     <div class="time-search">
-        <form action="#m=agent&a=child&uid=<?php echo $this->user_data->user_id;?>" method="get">
-            时间:<input type="text" id="picktime" value="" name="startTime" readonly>至<input type="text" id="picktime2" value="" name="endTime" readonly>
+        <form action="#m=push&a=child" method="get">
+            时间:<input type="text" id="picktime" value="" name="time1" readonly>至<input type="text" id="picktime2" value="" name="time2" readonly>
             <input type="submit" value="查询" />
         </form>
     </div>
     <!--查询结果列表-->
     <ul class="list">
-   		 <li class="item">
-            <div class="top">
-                <div class="timebox">
-                <?php $push = empty($this->user_data->alias) ? $this->user_data->user_name : $this->user_data->alias;?>
-                    <span class="left"><?php echo $push;?>的客户：</span>
-                    <span class="right"> </span>
-                </div>
-            </div>
-            </li>
-    <?php if (count($this->rows) > 0) : 
+     <?php if (count($this->rows) > 0) : 
     foreach ($this->rows as $row){
     ?>
         <li class="item">
@@ -67,7 +58,8 @@
     </ul>
 
 </div>
-<?php @include('footer.php'); ?>
+
+<?php @include('footer_app.php'); ?>
 <link rel="stylesheet" href="<?php echo JQ_URL; ?>styles/zepto.mdatetimer.css">
 <script>
 $(function(){

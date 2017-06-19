@@ -1,6 +1,6 @@
 <?php defined('JQ_EXEC') or die; ?>
 <?php @include('header.php'); ?>
-
+    
 
 <!--头部-->
 <div class="jm-header">
@@ -8,13 +8,13 @@
         <a href="#m=agent&a=push">
             <div class="posl icon icon_back icon-fix"></div>
         </a>
-        <p class="title">客户列表</p>
+        <p class="title">我的客户</p>
     </div>
 </div>
 <div id="content" class="page-content customer-list my-twitter">
     <!--时间筛选-->
     <div class="time-search">
-        <form action="#m=agent&a=child&uid=<?php echo $this->user_data->user_id;?>" method="get">
+        <form action="#m=agent&a=customer&uid=<?php echo $this->user_data->user_id;?>" method="get">
             时间:<input type="text" id="picktime" value="" name="startTime" readonly>至<input type="text" id="picktime2" value="" name="endTime" readonly>
             <input type="submit" value="查询" />
         </form>
@@ -66,8 +66,9 @@
    <?php endif; ?>
     </ul>
 
+
 </div>
-<?php @include('footer.php'); ?>
+<?php @include('footer_app.php'); ?>
 <link rel="stylesheet" href="<?php echo JQ_URL; ?>styles/zepto.mdatetimer.css">
 <script>
 $(function(){

@@ -153,6 +153,9 @@ gulp.task('watch', function () {
   gulp.watch(srcAssetsPath + '/images/**/*', ['images']);
   //看守html
   gulp.watch(['src/**/*.html', 'src/**/*.inc'], ['html']);
+
+  //themes
+  gulp.watch(srcAssetsPath + '/themes/**/*.js', ['themes']);
   livereload.listen();
   gulp.watch(['dist/**']).on('change', livereload.changed);
 });
@@ -174,6 +177,12 @@ gulp.task('vendor', function () {
     .pipe(gulp.dest(outAssetsPath + '/vendor'));
 });
 
+//拷贝php文件
+
+gulp.task('themes', function () {
+  return gulp.src('src/themes/**/*.js')
+    .pipe(gulp.dest('dist/themes'));
+});
 // 默认执行
 gulp.task('default2', function () {
   gulp.start('sass', 'scripts', 'images', 'html', ['gt-copy']);
@@ -187,6 +196,7 @@ gulp.task('default', function (done) {
     ['images'],
     ['html'],
     ['gt-copy'],
+    ['themes']
     done);
 });
 

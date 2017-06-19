@@ -21,14 +21,13 @@
     <script type="text/javascript" src="<?php echo JQ_URL; ?>scripts/zepto.custom.js?v=04062"></script>
     <link rel='stylesheet' href='<?php echo JQ_URL; ?>styles/app.css'/>
     <script type="text/javascript" src="<?php echo JQ_URL; ?>scripts/app.js"></script>
-    
-    <link rel="stylesheet" href="<?php echo JQ_URL; ?>styles/zepto.mdatetimer.css">
+     <link rel="stylesheet" href="<?php echo JQ_URL; ?>styles/zepto.mdatetimer.css">
     <script type="text/javascript" src="<?php echo JQ_URL; ?>scripts/zepto.mdatetimer.js"></script>
 </head>
 <body>
 <div class="screen-wrapper">
 	<div class="loading-icon icon-spinner icon-spin"></div>
-	<div class="screen-copyright">广州云脉电子商务有限公司</div>
+	<div class="screen-copyright">九件</div>
 </div>
 </body>
 </html>

@@ -1,7 +1,6 @@
 <?php defined('JQ_EXEC') or die; ?>
 <?php @include('header.php'); ?>
 
-
 <!--头部-->
 <div class="jm-header">
     <div class="jm-wrapper">
@@ -66,8 +65,9 @@
    <?php endif; ?>
     </ul>
 
+
 </div>
-<?php @include('footer.php'); ?>
+<?php @include('footer_app.php'); ?>
 <link rel="stylesheet" href="<?php echo JQ_URL; ?>styles/zepto.mdatetimer.css">
 <script>
 $(function(){
