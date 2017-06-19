@@ -2,34 +2,36 @@
 @import "../base/navbar.scss";
 @import "brandsprites";
 @import "./app/mixin";
+@import "app/app_common";
 
-.jm-header-navbar {
-  height: 1rem;
-  background: #f23030;
-  font-size: .36rem;
-  padding-top: .2rem;
-  .jm-wrapper {
-    position: relative;
-    height: .8rem;
-    line-height: .8rem;
-    .jm-back {
-      display: none;
-      position: absolute;
-      left: .16rem;
-      top: .17rem;
-      width: .3rem;
-      height: .35rem;
-      background: url("../images/store/icon_arrow.png") no-repeat center center;
-      background-size: cover;
+#qrcode_box {
+  position: fixed;
+  z-index: 9999;
+  top: 2rem;
+  right: 0;
+  left: 0;
+  margin: auto;
+  width: 5rem;
+  background-color: #fff;
+  /* display: none; */
+  .close_qrcode {
+    text-align: right;
+    padding: 0.2rem;
+    img {
+      height: .5rem;
+      width: 0.5rem;
     }
-    .title {
-      height: .8rem;
-      line-height: .8rem;
-      text-align: center;
+  }
+  .qrcode_img {
+    margin: 0 auto;
+    img {
+      width: 100%;
+      margin: 0 auto;
     }
   }
 }
 
+//店铺 begin
 .jm-store {
   .store {
     position: relative;
@@ -39,45 +41,41 @@
   }
   .box {
     position: absolute;
-    left: .7rem;
+    left: .78rem;
     top: .8rem;
-    height: 1.3rem;
+    height: 1.46rem;
     display: flex;
     .logobox {
-      position: relative;
-      flex: 0 0 1.24rem;
-      height: 1.24rem;
-      //border: 1px solid red;
-      background: url("../images/store/icon_store_bg.png") no-repeat center center;
-      background-size: cover;
-      text-align: center;
-
-      .pic {
-        display: inline-block;
-        width: 80%;
-        margin: 0 auto;
-        position: relative;
-        top: 50%;
-        transform: translateY(-50%);
+      flex: 0 0 1.4rem;
+    }
+    @include create-circle-image(1.4rem, 0rem);
+    .imgbox {
+      img {
+        background: url("../images/store/icon_store_bg.png") no-repeat center center;
+        background-size: 100% 100%;
       }
     }
     .desc {
-      flex: 0 0 3.48rem;
+      flex: 1 0 3.48rem;
       height: 1.24rem;
-      //border: 1px solid red;
-      font-size: .2rem;
-      color: #898c91;
-      padding-top: .2rem;
-      padding-left: .2rem;
+      padding-left: .23rem;
       .name {
+        width: 3.48rem;
         display: block;
-        font-size: .3rem;
-        color: #fff;
-        padding-bottom: .1rem;
+        height: 0.8rem;
+        line-height: 0.8rem;
+        font-size: .28rem;
+        color: #F4F4F2;
+        @include ellipsis;
       }
       .wel {
+        width: 3.48rem;
         display: block;
-        font-size: .2rem;
+        font-size: .23rem;
+        line-height: 0.28rem;
+        height: 0.28rem;
+        color: #A09E9F;
+        @include ellipsis;
       }
     }
   }
@@ -86,62 +84,24 @@
     position: absolute;
     top: 1.4rem;
     right: 0;
-    width: .8rem;
-    height: .5rem;
+    width: 1rem;
+    height: .56rem;
     background: url("../images/store/icon_code.png") no-repeat center center;
     background-size: cover;
-    //border: 1px solid red;
   }
 }
-
-.jm-goodsign .navbox, .jm-goodrecom .navbox {
-  font-size: .36rem;
-  display: flex;
-  align-items: center;
-  height: .8rem;
-  //border: 1px solid red;
-  justify-content: space-between;
-  margin: .26rem .2rem 0 .2rem;
-  .item {
-    //border: 1px solid yellow;
-    position: relative;
-    .icon {
-      display: inline-block;
-      width: .4rem;
-      height: .4rem;
-      background: url("../images/store/sign.png") no-repeat center center;
-      background-size: cover;
-      vertical-align: middle;
-    }
-    .title {
-      display: inline-block;
-      line-height: .4rem;
-      height: .4rem;
-      color: #000;
-      vertical-align: middle;
-    }
-    .moreicon {
-      display: inline-block;
-      width: .3rem;
-      height: .3rem;
-      background: url("../images/store/more.png") no-repeat center center;
-      background-size: cover;
-      vertical-align: middle;
-    }
-  }
-  .more .title {
-    font-size: .3rem;
-    color: #898989;
+//店铺 end
+.jm-goodsign, .jm-goodrecom{
+  .navbox{
+    @include title-left-icon();
   }
 }
 
 //品牌推荐
 .jm-goodsign {
-  @include goodsign;
-  /* position: relative;
-   background: #f4f4f4;
-   font-size: .36rem;
-   color: #00aa00;
+ //@include goodsign;
+   position: relative;
+   background: #F4F4F4;
    .content {
      display: flex;
      justify-content: flex-start;
@@ -149,26 +109,48 @@
      flex-wrap: wrap;
      .item {
        background: #fff;
-       flex: 0 1 33.333%;
-       height: 1.85rem;
-       border: 2px solid #f4f4f4;
-       border-top: none;
-       border-left: none;
+       flex: 0 1 2.5rem;
+       height: 1.88rem;
+       //border-left: 1px solid #f4f4f4;
        position: relative;
+       overflow: hidden;
        img {
+
          position: absolute;
          display: inline-block;
-         width: 60%;
+         width: 65%;
          margin: 0 auto;
          top: 50%;
          left: 50%;
          transform: translate(-50%, -50%);
        }
-       &:nth-child(3n) {
-         border-right: none;
+       &::before {
+         border-left: 1px solid #e1e1e1;
+         content: "";
+         height: 100%;
+         position: absolute;
+         left: 0;
+         top: 0;
+         transform: scaleX(0.5);
+         width: 1px;
+         z-index: 10;
+       }
+       &::after {
+         border-bottom: 1px solid #e1e1e1;
+         bottom: 0;
+         content: "";
+         height: 1px;
+         position: absolute;
+         right: 0;
+         transform: scaleY(.5);
+         width: 100%;
+         z-index: 10;
+       }
+       &:nth-child(3n+1) {
+         border-left: none;
        }
      }
-   }*/
+   }
 }
 
 //精品推荐
@@ -177,14 +159,14 @@
   background: #f4f4f4;
   font-size: .36rem;
   color: #00aa00;
-  padding: 0 .2rem;
+  padding: 0 0.2rem 0 0;
   .content {
     background: #f4f4f4;
     padding: 0 0.2rem;
     overflow: hidden;
     // border: 1px solid red;
     .pro_item {
-      font-size: 0.22rem;
+
       position: relative;
       float: left;
       margin-bottom: 0.2rem;
@@ -209,22 +191,21 @@
         }
       }
       .info {
-        overflow: hidden;
         padding: 0 .1rem 0 .1rem;
         .title {
-          height: 0.3rem;
+          overflow: hidden;
+          font-size: 0.24rem;
+          height: .75rem;
+          line-height: 1.5;
           margin-top: 0.16rem;
           margin-bottom: 0.08rem;
-          word-break: break-all;
-          overflow: hidden;
-          text-overflow: ellipsis;
-          color: #333;
-          white-space: nowrap;
+          @include rows-ellipsis(2);
         }
         .price {
           position: relative;
           margin-bottom: .08rem;
           vertical-align: middle;
+          font-size: .28rem;
           span {
             color: #cd3d3d;
           }
@@ -240,6 +221,7 @@
             text-align: center;
             background: url("../images/store/icon_discount.png") no-repeat center center;
             background-size: cover;
+            display:none;
           }
         }
       }
@@ -271,9 +253,9 @@
 }
 
 //店铺详情begin
-.jm-header {
+/*.jm-header {
   @include jm-header;
-}
+}*/
 
 .store-detail {
   .top {
@@ -298,26 +280,30 @@
         background-size: cover;
       }
       .title {
+        @include vertical-center;
         display: inline-block;
         padding-left: 1rem;
-        font-size: .32rem;
+        font-size: .28rem;
         color: #231815;
         width: 100%;
-        @include ellipsis;
+        line-height: 1.2;
+        @include rows-ellipsis(2);
 
       }
     }
     .right {
       @include vertical-center;
-      font-size: .28rem;
+
       float: right;
       right: 0;
       width: 1.12rem;
       height: .78rem;
       .uptext {
+        font-size: .24rem;
         position: relative;
         z-index: 1;
         height: .5rem;
+        line-height: .5rem;
 
         padding-left: .46rem;
         background: url("../images/store/likie_iocn.png") no-repeat .11rem center;
@@ -328,9 +314,11 @@
         border-bottom-left-radius: .1rem;
       }
       .downtext {
+        font-size: .18rem;
         position: relative;
         text-align: center;
         height: .5rem;
+        line-height: .5rem;
         margin-top: -.1rem;
         padding-top: .05rem;
         background-color: #fee662;
@@ -338,52 +326,70 @@
         border-top-left-radius: .1rem;
         border-bottom-left-radius: .1rem;
         z-index: 0;
-        font-size: .26rem;
       }
     }
   }
   .mid {
     .item {
       background-color: #fff;
-      @include link-item-icon(.83rem, 1px);
+      @include link-item-icon(.84rem, 0px);
+      .title{
+        font-size: .26rem;
+      }
 
     }
     .provider-item .arrow-icon {
-      width: .40rem;
-      height: .38rem;
+      width: .40rem !important;;
+      height: .38rem !important;;
       background-image: url("../images/common/icon-provider.png") !important;
 
     }
     .code-item .arrow-icon {
-      width: .40rem;
-      height: .38rem;
+      width: .40rem !important;;
+      height: .38rem !important;;
       background-image: url("../images/common/icon_code.png") !important;
     }
-    .space-bottom {
-      margin-bottom: .24rem;
-    }
-
     .time-item .time {
       color: #9FA0A0;
-      padding-left: .23rem;
-
+      padding-left: .6rem;
+      font-size: .26rem;
     }
-
   }
   .bottom {
-    @include goodsign;
+    //@include goodsign;
     background-color: #fff;
     color: #231815;
     .title {
       padding-left: .28rem;
       height: .83rem;
       line-height: .83rem;
-      font-size: 0.32rem;
+      font-size: 0.26rem;
     }
-    .item {
-      border: none !important;
-      img {
-        width: 50% !important;
+    .content{
+      overflow: hidden;
+    }
+
+    .item{
+      width: 33.33%;
+      float: left;
+      height: 1.53rem;
+      background-color: #fff;
+      padding: .2rem;
+      position: relative;
+      margin-bottom: .24rem;
+      overflow: hidden;
+    }
+    .box {
+      display: table;
+      width: 80%;
+      height: 80%;
+      .table-cell{
+        display: table-cell;
+        vertical-align: middle;
+        img{
+          width: 100%;
+        }
+
       }
     }
 
@@ -397,31 +403,32 @@
   .wrapper {
     text-align: center;
     position: relative;;
-    padding: .6rem .7rem;
+    padding: .6rem .8rem;
     background-color: #fff;
-    font-size: .32rem;
+    font-size: .24rem;
     color: #595757;
     height: 9rem;
     p {
       text-align: left;
-      line-height: .42rem;
-      margin-bottom: .3rem;
+      line-height: .36rem;
+      margin-bottom: .4rem;
       word-wrap: break-word;
     }
 
     .code {
       position: absolute;
+      display: inline-block;
+      top: 2.2rem;
+      bottom: 1.35rem;
       left: 50%;
-      top:50%;
-      transform: translate(-50%,-50%);
-      width: 4rem;
-      height: 4rem;
+     transform: translateX(-50%);
+      width: 4.35rem;
+      height: 4.35rem;
       background: url("../images/brand/code-bg.png?v=18cfa") no-repeat center center;
       background-size: contain;
 
     }
   }
-
 
 }
 

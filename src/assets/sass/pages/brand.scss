@@ -1,22 +1,30 @@
 @import "../base/base.scss";
 @import "brandsprites";
+@import "app/mixin";
+@import "app/app_common";
 
 body {
   background: #f4f4f4;
 }
 
+//返回头部 begin
 .jm-header {
   background: #fff;
   height: 1.26rem;
-  border-bottom: 1px solid #e7e7e7;
   padding-top: .26rem;
+  position: relative;
+
+  background: #efefef url("./images/common/header-bg.png") repeat-x 0 0;
+  background-size: 100% 44px;
+  min-height: 44px;
+
   .jm-wrapper {
     position: relative;
     .title {
       height: 1rem;
       line-height: 1rem;
       text-align: center;
-      font-size: .42rem;
+      font-size: .38rem;
       color: #000;
     }
     .posl, .posr, .poslike {
@@ -35,95 +43,30 @@ body {
     }
   }
 }
+//返回头部 end
 
 //品牌列表
 .brandlistbox {
   background: #fff;
-  color: #231816;
-  margin-bottom: 0.3rem;
-  .head {
-    position: relative;
-    height: .9rem;
-    line-height: .9rem;
-    text-align: center;
-    font-size: .3rem;
-    border-bottom: 1px solid #e7e7e7;
-    .title {
-      display: inline-block;
-    }
-    .licon {
-      display: inline-block;
-      vertical-align: middle;
-    }
-    .ricon {
-      display: inline-block;
-      vertical-align: middle;
-    }
+  color: #231815;
+  //margin-bottom: 0.3rem;
+  .brand-type {
+    @include title-text-both-icon;
+  }
+  .list {
+    background-color: #f4f4f4;
+
+  }
+  .item {
+    //margin-bottom: .25rem;
+    background-color: #fff;
   }
 
-  .list {
-    .brand-item {
-      color: #221713;
-      position: relative;
-      height: 1.8rem;
-      border-bottom: 1px solid #e7e7e7;
-      .img-item {
-        position: absolute;
-        width: 1.18rem;
-        height: 1.18rem;
-        left: .21rem;
-        top: .32rem;
-        background: #dddddd;
-        padding: .12rem;
-        img {
-          background: #fff;
-          border-radius: 50%;
-          width: .94rem;
-          height: .94rem;
-        }
-      }
-      .desc-item {
-        position: absolute;
-        width: 3rem;
-        height: 1.35rem;
-        left: 1.8rem;
-        top: .32rem;
-        overflow: hidden;
-        .name {
-          font-size: .3rem;
-        }
-        .desc {
-          font-size: .16rem;
-
-          color: #aeaeae;
-          line-height: .3rem;
-          width: 100%;
-          word-break: break-all;
-          display: -webkit-box;
-          -webkit-box-orient: vertical;
-          -webkit-line-clamp: 3;
-          overflow: hidden;
-          text-overflow: ellipsis;
-        }
-      }
-      .btn-item {
-        position: absolute;
-        width: 1.25rem;
-        height: 1.18rem;
-        right: .21rem;
-        top: .45rem;
-        .goodsbtn, .partnerbtn {
-          display: inline-block;
-          background-size: cover;
-          text-align: center;
-          line-height: .42rem;
-          height: .42rem;
-          font-size: .24rem;
-        }
-        .goodsbtn {
-          margin-bottom: .19rem;
-        }
-      }
+  .itembox {
+    @include brand-list-item;
+    .btn_yellow, .btn_peach {
+      width: 1.3rem !important;
+      text-align: center !important;
     }
   }
 }
@@ -136,12 +79,15 @@ body {
   .list {
     background: #fff;
     .shop-item {
-      color: #221713;
+      /*color: #221713;
       position: relative;
       height: 1.8rem;
-      border-bottom: 1px solid #e7e7e7;
-      .img-item {
-        position: absolute;
+      border-bottom: 1px solid #e7e7e7;*/
+      @include layout-col-3(1.9rem, 4.1rem, 1.4rem, center);
+      padding: .3rem 0;
+      .img-item , .item-left{
+        //border: 1px solid red;
+        /*position: absolute;
         width: 1.18rem;
         height: 1.18rem;
         left: .21rem;
@@ -154,10 +100,55 @@ body {
           border-radius: 50%;
           width: .94rem;
           height: .94rem;
+        }*/
+        @include create-circle-image(1.18rem, 0.12rem);
+
+        padding: 0 .45rem 0 .24rem;
+        .imgbox{
+          background-color: #FFF5C4;
+          position: relative;
+          &::after{
+            position: absolute;
+            top: -0.5px;
+            left: -0.5px;
+            width: 200%;
+            height: 200%;
+            content: '';
+            border: 1px solid green;
+            //border-radius: 6px;//圆角
+            transform: scale(0.5);
+            transform-origin: top left;
+          }
         }
+
       }
-      .desc-item {
-        position: absolute;
+
+      .desc-item , .item-middle{
+        //border: 1px solid red;
+        .name {
+          display: block;
+          font-size: .28rem;
+          margin-bottom: .1rem;
+        }
+        .phone {
+          display: block;
+          position: relative;
+          color: #6f6d6e;
+          font-size: .28rem;
+          padding-left: .4rem;
+          line-height: .35rem;
+          height: .35rem;
+          .pos {
+            display: inline-block;
+            position: absolute;
+            left: 0;
+            width: .35rem;
+            height: .35rem;
+            top: 50%;
+            transform: translateY(-50%);
+          }
+        }
+        /*position: absolute;
         width: 3rem;
         left: 1.8rem;
         top: .32rem;
@@ -184,10 +175,20 @@ body {
             top: 50%;
             transform: translateY(-50%);
           }
-        }
+        }*/
       }
-      .btn-item {
-        position: absolute;
+      .btn-item , .item-right{
+        //border: 1px solid red;
+
+        .code {
+          display: inline-block;
+          width: .41rem;
+          height: .41rem;
+          background-size: cover;
+          float: right;
+          right: .24rem;
+        }
+        /*position: absolute;
         width: .41rem;
         height: .41rem;
         right: .21rem;
@@ -198,7 +199,7 @@ body {
           width: .41rem;
           height: .41rem;
           background-size: cover;
-        }
+        }*/
       }
     }
   }
@@ -208,11 +209,11 @@ body {
 .partner {
   background-color: #fff;
   position: relative;
-  padding: .38rem .17rem;
+  padding: .36rem .24rem;
   overflow: hidden;
-  margin-bottom: 0.3rem;
+  //margin-bottom: 0.3rem;
   .logo {
-    float: left;
+    /*float: left;
     width: 1.18rem;
     height: 1.18rem;
     background: #ddd;
@@ -222,31 +223,44 @@ body {
       border-radius: 50%;
       width: .94rem;
       height: .94rem;
+    }*/
+    float: left;
+    width: 1.18rem;
+    height: 1.18rem;
+
+    @include create-circle-image(1.18rem,0.12rem);
+    .imgbox{
+      background-color: #DDDDDD;
     }
+
   }
   .twitter {
     float: left;
-    width: 3.14rem;
+    width: 3rem;
     margin-left: .3rem;
-    height: 1.18rem;
+    //height: 1.18rem;
     .name {
       display: block;
       color: #221715;
-      font-size: .30rem;
+      font-size: .28rem;
       line-height: .4rem;
+      @include ellipsis;
     }
     .sell {
       display: block;
       color: #acacac;
-      font-size: .28rem;
-      height: .43rem;
-      line-height: .43rem;
+      font-size: .22rem;
+      height: .3rem;
+      line-height: .3rem;
+      @include ellipsis;
     }
     .focus {
-      display: inline-block;
+      display: block;
       position: relative;
+      top: 0.1rem;
+
       color: #6f6d6e;
-      font-size: .24rem;
+      font-size: .20rem;
       padding-left: .4rem;
       .pos {
         display: inline-block;
@@ -264,7 +278,7 @@ body {
     float: right;
     width: 2.44rem;
     height: 1.10rem;
-    font-size: .26rem;
+    font-size: .22rem;
     .left {
       position: absolute;
       display: inline-block;
@@ -275,7 +289,7 @@ body {
         width: 1.1rem;
         height: 1.1rem;
         border-radius: 50%;
-        padding: .09rem;
+        padding: .1rem;
       }
       .incircle {
         position: relative;
@@ -284,17 +298,21 @@ body {
         width: .9rem;
         height: .9rem;
         border-radius: 50%;
+        font-size: 0;
+        display: flex;
+        align-content: center;
+        align-items:flex-start;
+        flex-wrap: wrap;
         span {
           position: relative;
-          display: inline-block;
+          display: block;
           text-align: center;
           width: 100%;
-          color: #332e10;
-          &.up {
-            bottom: -.05rem;
-          }
-          &.down {
-            top: -.05rem;
+
+          &.up, &.down {
+            font-size: .22rem;
+            line-height: 1.1;
+            color: #231815;
           }
         }
       }
@@ -313,9 +331,18 @@ body {
         padding-left: .6rem;
         line-height: .43rem;
         white-space: nowrap;
+        position: relative;
       }
-      .up {
-        border-bottom: 1px solid #fee45c;
+      .up::after {
+        border-bottom: 2px solid #fee45c;
+        bottom: -1px;
+        content: "";
+        height: 1px;
+        position: absolute;
+        right: 0;
+        transform: scaleY(.5);
+        width: 100%;
+        z-index: 10;
       }
     }
   }
@@ -373,7 +400,6 @@ body {
     align-content: flex-start;
     flex-wrap: wrap;
     .goods-item {
-      //border: 1px solid red;
       flex-basis: 3.37rem;
       height: 4.74rem;
       background-color: #fff;
@@ -383,19 +409,14 @@ body {
         margin-left: .2rem;
       }
       .hot{
-        display: inline-block;
         position: absolute;
         text-align: center;
         left: 0;
         top: 0;
-        width: .53rem;
-        min-width: 40px;
-        height: .35rem;
-        line-height: .35rem;
         background-color: #c72443;
+        font-size: 12px;
         color: #fff;
-        font-size: .26rem;
-        padding: 0 .04rem;
+        padding: 1px 2px;
       }
       .imgbox img{
         width: 100%;
@@ -407,9 +428,10 @@ body {
         padding: .1rem .1rem;
         .brand-name{
           display: block;
-          font-size: .3rem;
-          height: .4rem;
-          line-height: .4rem;
+          font-size: .24rem;
+          height: .5rem;
+          line-height: .5rem;
+          @include ellipsis;
         }
         .price{
           color: #e50000;
@@ -419,7 +441,7 @@ body {
         }
         .oldprice{
           color: #949494;
-          font-size: .24rem;
+          font-size: .22rem;
           text-decoration: line-through;
           padding-left: .2rem;
         }

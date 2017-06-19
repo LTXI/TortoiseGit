@@ -10,9 +10,9 @@
 <body>
 <!--头部-->
 
-<div class="jm-header">
+<div class="jm-header ">
     <div class="jm-wrapper">
-        <a href="#">
+        <a href="javascript:history.go(-1);">
             <div class="posl icon icon_back icon-fix"></div>
         </a>
         <p class="title">我的订单</p>
@@ -21,7 +21,7 @@
         </a>-->
     </div>
 </div>
-<div class="order_subnav">
+<div class="order_subnav mrg-bottom24">
     <ul class="order_subnav_list">
         <li class="current"><a href="#">全部</a></li>
         <li><a href="#">待付款</a></li>
@@ -30,19 +30,17 @@
         <li><a href="#">退货中</a></li>
     </ul>
 </div>
-<div id="content" class="page-content my_order">
+<div id="content" class="page-content my_order ">
     <ul>
-        <li class="orderlist">
-            <div class="top">
+        <li class="orderlist mrg-bottom24">
+            <div class="top bdr-bottom">
                 <span class="time">下单时间：<span>2017-05-07 19:36</span></span>
                 <i class="delete"></i>
             </div>
-            <div class="middle">
+            <div class="middle bdr-bottom">
                 <div class="item-left">
                     <div class="imgbox">
-                        <div class="inbox">
                             <img src="../../assets/images/app/team/logo1.png" alt=""/>
-                        </div>
                     </div>
                 </div>
                 <div class="item-middle">
@@ -61,17 +59,15 @@
                 <a class="cancel operation" href="#">取消订单</a>
             </div>
         </li>
-        <li class="orderlist">
-            <div class="top">
+        <li class="orderlist mrg-bottom24">
+            <div class="top bdr-bottom">
                 <span class="time">下单时间：<span>2017-05-07 19:36</span></span>
                 <i class="delete"></i>
             </div>
-            <div class="middle">
+            <div class="middle bdr-bottom">
                 <div class="item-left">
                     <div class="imgbox">
-                        <div class="inbox">
-                            <img src="../../assets/images/app/team/logo.png" alt=""/>
-                        </div>
+                        <img src="../../assets/images/app/team/logo1.png" alt=""/>
                     </div>
                 </div>
                 <div class="item-middle">
@@ -83,24 +79,22 @@
                     <span>$5000</span>
                 </div>
                 <div class="item-right">
-                    <a href="#"><span class="state">待发货</span></a>
+                    <a href="#"><span class="state">待付款</span></a>
                 </div>
             </div>
             <div class="bottom">
                 <a class="cancel operation" href="#">取消订单</a>
             </div>
         </li>
-        <li class="orderlist">
-            <div class="top">
+        <li class="orderlist mrg-bottom24">
+            <div class="top bdr-bottom">
                 <span class="time">下单时间：<span>2017-05-07 19:36</span></span>
                 <i class="delete"></i>
             </div>
-            <div class="middle">
+            <div class="middle bdr-bottom">
                 <div class="item-left">
                     <div class="imgbox">
-                        <div class="inbox">
-                            <img src="../../assets/images/app/team/logo1.png" alt=""/>
-                        </div>
+                        <img src="../../assets/images/app/team/logo1.png" alt=""/>
                     </div>
                 </div>
                 <div class="item-middle">
@@ -112,21 +106,14 @@
                     <span>$5000</span>
                 </div>
                 <div class="item-right">
-                    <a href="#"><span class="state">已完成</span></a>
+                    <a href="#"><span class="state">待付款</span></a>
                 </div>
             </div>
             <div class="bottom">
-                <a class="done operation" href="#">再次下单</a>
+                <a class="cancel operation" href="#">取消订单</a>
             </div>
         </li>
     </ul>
-    <!--暂无数据-->
-    <!--<div class="data-tips">
-        <div class="tipsbox">
-            <i class="icon"></i>
-            <p class="desc">还没有相关订单还没有相关订单还没有相关订单</p>
-        </div>
-    </div> -->
 </div>
 <!--脚步导入开始-->
 @@include('../../partical/script.inc')

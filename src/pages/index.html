@@ -1,29 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    @@include('../partical/meta.inc',{"title":"店铺首页"})
-    @@include('../partical/styles.inc', {
-    "links":"<link rel='stylesheet' href='../assets/styles/store.css?rev=@@hash'/>"
-    })
+    @@include('../partical/meta.inc',{"title":"静态页面列表"})
+    @@include('../partical/styles.inc', {"links":""})
+    @@include('../partical/fontsize.inc')
+    <link rel="stylesheet" href="../assets/styles/app.css">
+    <style type="text/css">
+.index{
+    font-size: .25rem;
+}
+        .index a {
+            display: block;
+            padding: .1rem 0 .1rem .3rem;
+        }
+
+    </style>
 </head>
 <body>
 <!--头部-->
 <div class="jm-header-navbar">
     <div class="jm-wrapper">
         <div class="jm-back"></div>
-        <p class="title">品牌合伙</p>
+        <p class="title">静态页面列表</p>
     </div>
 </div>
 <!--body内容信息-->
-<div id="content" class="page-content">
-    <img class="hidden" src="../assets/images/store/good2.png?rev=@@hash" alt="">
+<div id="content" class="page-content index">
+    <p>静态页面列表-app</p>
+    <ul>
+        <a href="./app/agentdetail.html"><li>1、代理详情</li></a>
+        <a href="./app/customer.html"><li>2、客户列表</li></a>
+        <a href="./app/datatip.html"><li>3、数据提示</li></a>
+        <a href="./app/invitetwitter.html"><li>4、邀请推客</li></a>
+        <a href="./app/my.html"><li>5、我的</li></a>
+        <a href="./app/myalliance.html"><li>6、我的联盟</li></a>
+        <a href="./app/mybrand.html"><li>7、我的品牌</li></a>
+        <a href="./app/myorder.html"><li>8、我的订单</li></a>
+        <a href="./app/myteam.html"><li>9、我的团队</li></a>
+        <a href="./app/mytwitter.html"><li>10、我的推客</li></a>
+        <a href="./app/newtwitter.html"><li>11、新的推客</li></a>
+        <a href="./app/wechatqr.html"><li>12、微信二维码名片</li></a>
+
+    </ul>
+    <p>静态页面列表-brand</p>
+    <ul>
+
+        <a href="./brand/brandlist.html"><li>2、品牌列表</li></a>
+        <a href="./brand/codeshop.html"><li>3、店铺二维码</li></a>
+        <a href="./brand/partnership.html"><li>4、品牌合伙人</li></a>
+        <a href="./joinus/joinus.html"><li>5、招募令</li></a>
+        <a href="./store/category.html"><li>6、商品分类</li></a>
+        <a href="./store/productdetails.html"><li>7、商品详情</li></a>
+        <a href="./store/store.html"><li>8、店铺首页</li></a>
+        <a href="./store/storedesc.html"><li>9、店铺简介</li></a>
+        <a href="./store/storedetail.html"><li>10、店铺详情</li></a>
+        <a href="./brand/brandgoods.html"><li>1、品牌商品(xx)</li></a>
+    </ul>
 </div>
 
 <!--底部导航-->
-@@include('../partical/footer.inc')
+<!--@@include('../partical/footer.inc')-->
 <!--脚步导入开始-->
-@@include('../partical/script.inc')
-<script src='../assets/scripts/store.js?rev=@@hash'></script>
-<script src='../assets/scripts/brand.js?rev=@@hash'></script>
+<!--@@include('../partical/script.inc')-->
+<!--<script src='../assets/scripts/store.js?rev=@@hash'></script>
+<script src='../assets/scripts/brand.js?rev=@@hash'></script>-->
 </body>
 </html>

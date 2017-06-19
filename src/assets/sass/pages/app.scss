@@ -4,6 +4,10 @@
 @import "app/app_common";
 @import "../base/app-base-override";
 
+.twitelist {
+  overflow-y: auto;
+}
+
 .topnav {
   background: #fff url("../images/app/teambg.png") no-repeat center center;
   background-size: cover;
@@ -13,6 +17,7 @@
   }
 }
 
+//新的推客
 .topnav {
   font-size: .36rem;
   .topbox {
@@ -40,48 +45,19 @@
 
 }
 
-//邀请推客 begin
-.jm-header {
-  background: #fff;
-  height: 1.26rem;
-  border-bottom: 1px solid #e7e7e7;
-  padding-top: .26rem;
-  .jm-wrapper {
-    position: relative;
-    .title {
-      height: 1rem;
-      line-height: 1rem;
-      text-align: center;
-      font-size: .42rem;
-      color: #000;
-    }
-    .posl, .posr, .poslike {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-    }
-    .posl {
-      left: .24rem;
-    }
-    .posr {
-      right: .24rem;
-    }
-    .poslike {
-      right: 1rem;
-    }
+.invite-twitter, .page-header-content {
+  .hold-div-top {
+    height: 2.36rem;
   }
-}
-
-.invite-twitter {
-  .top {
-    margin-bottom: .24rem;
+  .searchbox {
+    //margin-bottom: .24rem;
     background-color: #fff;
   }
   .search-input {
     color: #000;
     height: 1.10rem;
-    padding: .24rem;
-    form{
+    padding: .24rem .24rem;
+    form {
       border: none !important; //去掉原来瓜藤
     }
 
@@ -89,7 +65,7 @@
       width: 100%;
       position: relative;
       overflow: hidden;
-      border-radius: 10%/100%;
+      border-radius: 8%/100%;
     }
     button {
       width: 51px;
@@ -102,6 +78,7 @@
       transform: translateY(-50%);
       right: 0;
       background-color: #e7e7e7;
+
       i {
         font-size: .3rem;
         color: #231815;
@@ -120,6 +97,11 @@
     width: 100%;
     padding: 0 51px 0 15px;
   }
+  input::-webkit-input-placeholder, input:-ms-input-placeholder,
+  input:-moz-placeholder,
+  input::-moz-placeholder {
+    color: #231815;
+  }
 }
 
 //邀请推客 end
@@ -129,15 +111,13 @@
   .list {
     background-color: #f4f4f4;
     color: #595757;
-    font-size: .3rem;
   }
   .item {
-    margin-bottom: .25rem;
     background-color: #fff;
   }
   .timebox {
-    @include title-text-both(1rem, 1px);
-    padding: 0 .28rem;
+    @include title-text-both(1rem);
+    padding: 0 .36rem;
   }
   .itembox {
     @include twitter-list-item;
@@ -151,21 +131,16 @@
 .my-brand {
   .list {
     background-color: #f4f4f4;
-    color: #231815;
-    font-size: .3rem;
   }
   .item {
-    margin-bottom: .25rem;
     background-color: #fff;
   }
-
   .itembox {
     @include brand-list-item;
-    .btn_yellow, .btn_peach
-  {
-    width: 1.5rem !important;
-    text-align: center !important;
-  }
+    .btn_yellow, .btn_peach {
+      width: 1.3rem !important;
+      text-align: center !important;
+    }
   }
 }
 
@@ -174,11 +149,8 @@
 .my-alliance {
   .list {
     background-color: #f4f4f4;
-    color: #595757;
-    font-size: .3rem;
   }
   .item {
-    margin-bottom: .25rem;
     background-color: #fff;
   }
   .itembox {
@@ -187,517 +159,482 @@
 
 }
 
-  //我的联盟 end
+//我的联盟 end
 
-  //我的 begin
-  .my-user {
-    .top {
-      position: relative;
-      height: 4.94rem;
-      width: 100%;
-      background: url("../images/app/user/user-bg.png") no-repeat center center;
-      background-size: 100%;
-      margin-bottom: .24rem;
-      .userinfo {
-        position: absolute;
-        top: 1.05rem;
-
-        height: 1.22rem;
-        line-height: 1.22rem;
-        color: #fff;
-        padding: 0 .27rem;
-        width: 100%;
-        //border: 1px solid red;
-
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        justify-content: flex-start;
-        align-items: flex-start;
-        align-content: flex-start;
-        .item-left {
-          flex-basis: 1.4rem;
-          align-self: center;
-          padding: 0 .2rem 0 0;
-          .imgbox {
-            width: 1.2rem;
-            height: 1.2rem;
-            line-height: 1.2rem;
-            text-align: center;
-            position: relative;
-            background: url("../images/app/user/avatar-bg1.png") no-repeat center center;
-            background-size: contain;
-            .inbox {
-              display: inline-block;
-              width: 1rem;
-              height: 1rem;
-              position: relative;
-              top: 50%;
-              transform: translateY(-50%);
-              border-radius: 50%;
-              background: url("../images/app/user/avatar-bg2.png") no-repeat center center;
-              background-size: contain;
-              img {
-                width: 100%;
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-              }
-            }
-            .pass::after{
-              content: "";
-              width: .3rem;
-              height: .3rem;
-              position: absolute;
-              right: 0;
-              bottom: 0;
-              z-index: 110;
-              background: url("../images/app/user/attestation_v_icon.png") no-repeat center center;
-              background-size: contain;
-            }
-          }
-        }
-        .item-middle {
-          align-self: center;
-          flex-basis: 4.7rem;
-          color: #fff;
-          .tel, .brand {
-            display: block;
-            line-height: .43rem;
-            height: .43rem;
-          }
-        }
-        .item-right {
-          align-self: center;
-          flex-basis: .9rem;
-          .codeicon {
-            float: right;
-            float: right;
-            width: .35rem;
-            height: .35rem;
-            background: url("../images/app/user/my_code.png") no-repeat center center;
-            background-size: contain;
-          }
-        }
-      }
-
-      .bottombox {
-        position: absolute;
-        width: 100%;
-        top: 2.8rem;
-        @include col-2-center-text-img;
-      }
-
-    }
-    .order {
-      background-color: #fff;
-      margin-bottom: .24rem;
-      color: #595757;
-      .orderitem {
-        @include link-item-icon(1.06rem, 1px);
-      }
-      .orderinfo {
-        height: 1.22rem;
-        line-height: 1.22rem;
-        font-size: 0;
-        .item {
-          display: inline-block;
-          width: 25%;
-          font-size: .32rem;
-          color: #595757;
-          text-align: center;
-        }
-        a .icon {
-          display: inline-block;
-          width: .5rem;
-          height: .4rem;
-        }
-        a .icon.icon-unems {
-          width: .6rem;
-          height: .4rem;
-        }
-        a .line {
-          display: block;
-          margin-top: .22rem;
-          height: 0.4rem;
-          line-height: 0.4rem;
-        }
-        .text {
-          display: block;
-          height: 0.6rem;
-          line-height: 0.6rem;
-          color: #595757;
-          font-size: .3rem;
-        }
-        .icon-unpay {
-          background: url("../images/app/user/un_pay_icon.png") no-repeat center center;
-          background-size: contain;
-        }
-        .icon-unems {
-          background: url("../images/app/user/un_ems_icon.png") no-repeat center center;
-          background-size: contain;
-        }
-        .icon-ems {
-          background: url("../images/app/user/ems_icon.png") no-repeat center center;
-          background-size: contain;
-        }
-        .icon-done {
-          background: url("../images/app/user/done_icon.png") no-repeat center center;
-          background-size: contain;
-        }
-      }
-    }
-    .account {
-      color: #595757;
-      background-color: #fff;
-      margin-bottom: .24rem;
-      .accountitem {
-        padding: 0 .28rem;
-        height: 1.06rem;
-        line-height: 1.06rem;
-        border-bottom: 1px solid #e7e7e7;
-        .title {
-          float: left;
-        }
-      }
-      .accounbox {
-        position: relative;
-        width: 100%;
-        @include col-2-center-text-img(1.1rem, .28rem);
-        .line {
-          position: absolute;
-          width: 1px;
-          height: 0.5rem;
-          background-color: #dbdbdb;
-          left: 50%;
-          top: 50%;
-          transform: translate(-50%, -50%);
-        }
-      }
-    }
-    .set {
-      background-color: #fff;
-      margin-bottom: .24rem;
-      color: #595757;
-      .setitem {
-        @include link-item-icon(0.88rem, 1px);
-        &:last-child{
-          border-bottom:none;
-        }
-      }
-
-    }
-  }
-
-  //我的 end
-
-  //我的订单 begin
-  .order_subnav {
-    background-color: #fff;
-    white-space: nowrap;
-    font-size: 0;
+//我的 begin
+.my-user {
+  .top {
+    position: relative;
+    height: 4.94rem;
+    width: 100%;
+    background: url("../images/app/user/user-bg.png") no-repeat center center;
+    background-size: 100%;
     margin-bottom: .24rem;
-    .order_subnav_list li {
-      display: inline-block;
-      width: 20%;
-      text-align: center;
-      font-size: .32rem;
-      height: .88rem;
-      line-height: .88rem;
-      position: relative;
-      a {
-        display: inline-block;
-        color: #595757;
-      }
-      &::before {
-        content: "";
-        width: 1px;
-        background: #dbdbdb;
-        height: .4rem;
-        position: absolute;
-        left: 0;
-        top: 50%;
-        margin-top: -0.2rem;
-      }
-      &:first-child::before {
-        display: none;
-      }
+    .userinfo {
+      position: absolute;
+      top: 1.05rem;
 
-      &.current::after {
-        content: "";
-        position: absolute;
-        z-index: 0;
-        left: 0;
-        right: 0;
-        bottom: 0px;
-        background: #f33;
-        width: 100%;
-        height: 2px;
-      }
-    }
-  }
+      height: 1.22rem;
+      line-height: 1.22rem;
+      color: #fff;
+      padding: 0 .24rem;
+      width: 100%;
+      //border: 1px solid red;
 
-  .my_order {
-
-    ul .orderlist {
-      color: #595757;
-      background-color: #fff;
-      margin-bottom: .24rem;
-      .top {
-        position: relative;
-        height: .66rem;
-        line-height: .66rem;
-        border-bottom: 1px solid #dbdbdb;
-        padding: 0 .2rem;
-        vertical-align: middle;
-        .time {
-          font-size: .3rem;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+      align-items: flex-start;
+      align-content: flex-start;
+      .item-left {
+        flex-basis: 1.4rem;
+        align-self: center;
+        padding: 0 .2rem 0 0;
+        /*.imgbox {
+          position: relative;
+          width: 1.2rem;
+          height: 1.2rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
         }
-        .delete {
-          position: absolute;
-          top: 50%;
-          right: .25rem;
-          margin-top: -0.12rem;
+        img {
+          display: inline-block;
+          width: 100%;
+          height: 100%;
+          min-width: 100%;
+          border-radius: 50%;
+        }*/
+        @include create-circle-image(1.2rem, 0rem);
+        .pass::after {
+          content: "";
           width: .3rem;
           height: .3rem;
-          background: url("../images/app/user/delete_icon.png") no-repeat center center;
+          position: absolute;
+          right: 3px;
+          bottom: 0px;
+          z-index: 110;
+          background: url("../images/app/user/attestation_v_icon.png") no-repeat center center;
           background-size: contain;
         }
       }
-      .middle {
-        padding: .3rem 0;
+      .item-middle {
+        align-self: center;
+        flex-basis: 4.7rem;
+        color: #fff;
+        .tel {
+          font-size: .3rem;
+        }
+        .brand {
+          font-size: .24rem;
+        }
+        .tel, .brand {
+          display: block;
+          line-height: .43rem;
+          height: .43rem;
+
+        }
+      }
+      .item-right {
+        align-self: center;
+        flex-basis: .9rem;
+        .codeicon {
+          float: right;
+          width: .36rem;
+          height: .36rem;
+          background: url("../images/app/user/my_code.png") no-repeat center center;
+          background-size: contain;
+        }
+      }
+    }
+
+    .bottombox {
+      position: absolute;
+      width: 100%;
+      top: 3rem;
+      @include col-2-center-text-img;
+    }
+
+  }
+  .order {
+    background-color: #fff;
+
+    color: #595757;
+    .orderitem {
+      @include link-item-icon(1.06rem);
+    }
+    .orderinfo {
+      height: 1.22rem;
+      line-height: 1.22rem;
+      font-size: 0;
+      .item {
+        display: inline-block;
+        width: 25%;
+        color: #595757;
+        text-align: center;
+      }
+      a .icon {
+        display: inline-block;
+        height: .6rem;
+      }
+      a .icon.icon-unpay {
+        width: .38rem;
+      }
+      a .icon.icon-unems {
+        width: .64rem;
+      }
+      a .icon.icon-ems {
+        width: .41rem;
+      }
+      a .icon.icon-done {
+        width: .34rem;
+      }
+      a .line {
+        display: block;
+        height: 0.6rem;
+        line-height: 0.6rem;
+        width: 100%;
+        text-align: center;
+      }
+      .text {
+        display: block;
+        height: 0.6rem;
+        line-height: 0.6rem;
+        color: #595757;
+        font-size: .24rem;
+      }
+      .icon-unpay {
+        background: url("../images/app/user/un_pay_icon.png") no-repeat center bottom;
+        background-size: contain;
+      }
+      .icon-unems {
+        background: url("../images/app/user/un_ems_icon.png") no-repeat center bottom;
+        background-size: contain;
+      }
+      .icon-ems {
+        background: url("../images/app/user/ems_icon.png") no-repeat center bottom;
+        background-size: contain;
+      }
+      .icon-done {
+        background: url("../images/app/user/done_icon.png") no-repeat center bottom;
+        background-size: contain;
+      }
+    }
+  }
+  .account {
+    background-color: #fff;
+    .accountitem {
+      padding: 0 .28rem;
+      height: 1.06rem;
+      line-height: 1.06rem;
+      .title {
+        float: left;
+        font-size: .29rem;
+        color: #231815;
+      }
+    }
+    .accounbox {
+      position: relative;
+      width: 100%;
+      @include col-2-center-text-img(1.1rem, .3rem, .24rem);
+      .text {
+      }
+      .line {
+        position: absolute;
+        width: 1px;
+        height: 0.5rem;
+        background-color: #dbdbdb;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%) scaleX(0.5);
+      }
+    }
+  }
+  .set {
+    background-color: #fff;
+    color: #595757;
+    .setitem {
+      @include link-item-icon(0.88rem, 1px);
+    }
+
+  }
+}
+
+//我的 end
+
+//我的订单 begin
+.order_subnav {
+  background-color: #fff;
+  white-space: nowrap;
+  font-size: 0;
+  //margin-bottom: .24rem;
+  .order_subnav_list li {
+    display: inline-block;
+    width: 20%;
+    text-align: center;
+    font-size: .28rem;
+    height: .88rem;
+    line-height: .88rem;
+    position: relative;
+    a {
+      display: inline-block;
+      color: #231815;
+      font-size: .28rem;
+    }
+    &::before {
+      content: "";
+      width: 1px;
+      background: #dbdbdb;
+      height: .4rem;
+      position: absolute;
+      left: 0;
+      top: 50%;
+      margin-top: -0.2rem;
+      transform: scaleX(.5);
+    }
+    &:first-child::before {
+      display: none;
+    }
+
+    &.current::after {
+      content: "";
+      position: absolute;
+      z-index: 0;
+      left: 0;
+      right: 0;
+      bottom: 0px;
+      background: #f33;
+      width: 100%;
+      height: 2px;
+    }
+  }
+}
+
+.my_order {
+
+  ul .orderlist {
+    //color: #595757;
+    background-color: #fff;
+    //margin-bottom: .24rem;
+    .top {
+      position: relative;
+      height: .84rem;
+      line-height: .84rem;
+      //border-bottom: 1px solid #dbdbdb;
+      padding: 0 .24rem;
+      vertical-align: middle;
+      color: #231815;
+      .time {
+        font-size: .24rem;
+      }
+      .delete {
+        float: right;
+        right: .24rem;
+        width: .3rem;
+        height: .84rem;
+        background: url("../images/app/user/delete_icon.png") no-repeat center center;
+        background-size: contain;
+      }
+    }
+    .middle {
+      padding: .3rem 0;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+      align-items: flex-start;
+      align-content: flex-start;
+      .item-left {
+        flex-basis: 1.9rem;
+        align-self: center;
+        padding: 0 .3rem 0 .24rem;
+        @include create-circle-image(1.18rem, .12rem);
+        .imgbox {
+          background-color: #ddd;
+        }
+      }
+      .item-middle {
+        align-self: center;
+        flex-basis: 2.3rem;
+        color: #231815;
+        .title {
+          font-size: .28rem;
+          color: #231815;
+          height: .35rem;
+          line-height: .35rem;
+        }
+        .type {
+          color: #9FA0A0;
+          font-size: .24rem;
+          height: .29rem;
+          line-height: .29rem;
+        }
+        p.num {
+          padding-right: .24rem;
+          color: #595757;
+          font-size: .28rem;
+          height: .4rem;
+          line-height: .4rem;
+        }
+      }
+      .item-middle-price {
+        align-self: center;
+        flex-basis: 1.8rem;
+        color: #f23030;
+        font-size: .28rem;
+      }
+      .item-right {
+        align-self: center;
+        flex-basis: 1.5rem;
+        a {
+          display: block;
+          float: right;
+          padding-right: .24rem;
+        }
+        .state {
+          @include yellow-bg-button;
+        }
+      }
+    }
+    .bottom {
+      height: .84rem;
+      position: relative;
+      a.operation {
+        font-size: 0.48rem;
+        text-align: center;
+        width: 2.8rem;
+        padding: 6px .32rem;
+        border-radius: 8px;
+        position: absolute;
+        white-space: nowrap;
+        right: -.48rem;
+        top: 50%;
+        transform: translateY(-50%) scale(.5); //缩小的，值要放大到原来的2倍
+      }
+      a.cancel {
+        color: #595757;
+        border: 1px solid #dbdbdb;
+      }
+      a.done {
+        color: #f23030;
+        border: 1px solid #f23030;
+      }
+
+    }
+  }
+
+}
+
+//我的订单 end
+
+//无数据提示公用 begin
+.data-tips {
+  text-align: center;
+  width: 100%;
+  .tipsbox {
+    display: inline-block;
+    padding-top: 2rem;
+    width: 60%;
+    min-width: 2.4rem;
+    i.icon {
+      display: inline-block;
+      width: 2rem;
+      height: 2rem;
+      background: url("../images/app/user/data_tip_icon.png") no-repeat center center;
+      background-size: contain;
+    }
+    p.desc {
+      color: #595757;
+      font-size: .28rem;
+    }
+  }
+}
+
+//无数据提示 end
+
+//客户列表begin
+.customer-list {
+  .time-search {
+    font-size: .26rem;
+    form {
+      white-space: nowrap;
+      height: 1rem;
+      line-height: 1rem;
+    }
+    padding: 0 .24rem 0 .24rem;
+    color: #231815;
+    background-color: #fff;
+    input[type="text"] {
+      border: 1px solid #e6e6e6;
+      width: 2.2rem;
+      height: .5rem;
+      line-height: .5rem;
+      margin: 0 .1rem;
+      //transform: scale(.5);
+    }
+    input[type="submit"] {
+      //border: 1px solid #fee564;
+      padding: 0 .2rem;
+      height: .5rem;
+      line-height: .5rem;
+      background-color: #fee564;
+      border-radius: 5px;
+      font-size: .24rem;
+    }
+  }
+
+  //列表同我的推客，只向右偏移
+  .itembox .item-left {
+    padding: 0 2.56rem 0 .36rem;
+  }
+  & ~ .mt_mask {
+    z-index: 10000 !important; //覆盖插件的
+  }
+  & ~ .mt_poppanel {
+    z-index: 10001 !important; //覆盖插件的
+  }
+
+}
+
+//客户列表end
+
+//代理详情 begin
+.agent-detail {
+  .top-info {
+    background-color: #fff;
+    margin-bottom: 0.24rem;
+    li {
+      &:last-child .item {
+        border-bottom: none;
+      }
+      .item {
+        @include title-unlink-text-both(1rem, .28rem, .28rem);
+      }
+      .item.weChat-card {
+        padding: .37rem .24rem;
+        height: auto;
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
-        justify-content: flex-start;
-        align-items: flex-start;
-        align-content: flex-start;
-        border-bottom: 1px solid #dbdbdb;
         .item-left {
-          flex-basis: 1.9rem;
-          align-self: center;
-          padding: 0 .2rem 0 .36rem;
-          .imgbox {
-            background-color: #ddd;
-            width: 1.18rem;
-            height: 1.18rem;
-            line-height: 1.18rem;
-            text-align: center;
-            position: relative;
-            .inbox {
-              display: inline-block;
-              width: .9rem;
-              height: .9rem;
-              position: relative;
-              top: 50%;
-              transform: translateY(-50%);
-              border-radius: 50%;
-              overflow: hidden;
-              background-color: #fff;
-              img {
-                width: 100%;
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-              }
-            }
-          }
+          flex-basis: 1.5rem;
+          align-self: flex-start;
+          color: #231815;
+          line-height: 1;
+          font-size: .28rem;
         }
         .item-middle {
-          align-self: center;
-          flex-basis: 2.3rem;
-          color: #231815;
-          .title {
-            font-size: .34rem;
-            color: #231815;
-            height: .35rem;
-            line-height: .35rem;
-          }
-          .type {
-            color: #9FA0A0;
-            font-size: .28rem;
-            height: .29rem;
-            line-height: .29rem;
-          }
-          p.num {
-            padding-right: .24rem;
-            color: #595757;
-            font-size: .32rem;
-            height: .5rem;
-            line-height: .5rem;
-          }
+          @include create-square-image(1.2rem, 1.2rem);
         }
-        .item-middle-price {
-          align-self: center;
-          flex-basis: 1.8rem;
-          color: #f23030;
-        }
-        .item-right {
-          align-self: center;
-          flex-basis: 1.5rem;
-          //border: 1px solid green;
-          // padding-top: .2rem;
-          .state {
-            width: 1.3rem;
-            height: .44rem;
-            line-height: .44rem;
-            display: inline-block;
-            background-color: #fee564;
-            border-radius: 10rem;
-            text-align: center;
-            box-shadow: 0 0 5px 5px #fff5c7 inset;
-
-            font-size: .28rem;
-          }
-        }
-      }
-      .bottom {
-        height: .84rem;
-        position: relative;
-        a.operation {
-          font-size: 0.28rem;
-          text-align: center;
-          width: 1.4rem;
-          padding: 1px .16rem;
-          border-radius: 0.05rem;
-          position: absolute;
-          white-space: nowrap;
-          right: .25rem;
-          top: 50%;
-          transform: translateY(-50%);
-        }
-        a.cancel {
-          color: #595757;
-          border: 1px solid #dbdbdb;
-        }
-        a.done {
-          color: #f23030;
-          border: 1px solid #f23030;
-        }
-
-      }
-    }
-
-  }
-
-  //我的订单 end
-
-  //无数据提示公用 begin
-  .data-tips {
-    text-align: center;
-    width: 100%;
-    .tipsbox {
-      display: inline-block;
-      padding-top: 2rem;
-      width: 60%;
-      min-width: 2.4rem;
-      i.icon {
-        display: inline-block;
-        width: 2rem;
-        height: 2rem;
-        background: url("../images/app/user/data_tip_icon.png") no-repeat center center;
-        background-size: contain;
-      }
-      p.desc {
-        color: #595757;
-        font-size: .28rem;
       }
     }
   }
-
-  //无数据提示 end
-
-  //客户列表begin
-  .customer-list {
-    .time-search {
-      margin-bottom: .2rem;
-      form {
-        white-space: nowrap;
-        height: 1rem;
-        line-height: 1rem;
-      }
-      padding: 0 0 0 .1rem;
-      color: #231815;
-      background-color: #fff;
-      input[type="text"] {
-        border: 1px solid #e6e6e6;
-        width: 2.2rem;
-        height: .6rem;
-        line-height: .6rem;
-        margin: 0 .1rem;
-      }
-      input[type="submit"] {
-        border: 1px solid #fee564;
-        padding: 0 .2rem;
-        height: .6rem;
-        line-height: .6rem;
-        background-color: #fee564;
-        border-radius: 5px;
-        font-size: .24rem;
-      }
-    }
-
-    //列表同我的推客，只向右偏移
-    .itembox .item-left {
-      padding: 0 2.56rem 0 .36rem;
-    }
-    & ~ .mt_mask{
-      z-index: 10000 !important;//覆盖插件的
-    }
-    & ~  .mt_poppanel{
-      z-index: 10001 !important;//覆盖插件的
-    }
-
-
+  //标题
+  .brand-type {
+    @include title-text-both-icon;
   }
-
-  //客户列表end
-
-  //代理详情 begin
-  .agent-detail {
-    .top-info {
-      background-color: #fff;
-      margin-bottom: 0.24rem;
-      li {
-        // border-bottom: 1px solid #dbdbdb;
-        &:last-child .item {
-          border-bottom: none;
-        }
-        .item {
-          @include title-text-both(.85rem, 1px);
-          padding: 0 .28rem 0 .28rem;
-        }
-        .item.weChat-card {
-          padding: .37rem .28rem;
-          height: auto;
-          display: flex;
-          flex-direction: row;
-          flex-wrap: nowrap;
-          .item-left {
-            flex-basis: 1.5rem;
-            align-self: flex-start;
-            color: #231815;
-            line-height: 1;
-          }
-          .item-middle {
-            width: 1.2rem;
-            height: 1.2rem;
-            img {
-              display: inline-block;
-              width: 100%;
-            }
-          }
-        }
-      }
-    }
-    //标题
-    .brand-type {
-      @include title-text-both-icon;
-    }
-  }
-
+}
 
 //代理详情 end
 

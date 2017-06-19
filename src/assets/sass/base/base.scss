@@ -26,7 +26,7 @@ body {
   display: none;
 }
 
-.clearfix {
+/*.clearfix {
   *zoom: 1;
 }
 .clearfix:before,
@@ -38,10 +38,141 @@ body {
 }
 .clearfix:after {
   clear: both;
-}
+}*/
 
 
 //定义一个变量和一个mixin
+
+//底部间距 margin-bottom
+.mrg-bottom24{
+  margin-bottom: 0.24rem;
+}
+
+/*.rectangle{
+
+  background: #f0f0f0;
+  border:1px solid #000;
+  border-radius:8px;
+  transform: scale(0.5);
+  -webkit-transform: scale(0.5);
+}*/
+
+/*div, span, a, header {
+  -webkit-tap-highlight-color: rgba(255,255,255,0);
+}*/
+
+.pad-r{
+  padding-right: .24rem;
+}
+.pad-l{
+  padding-left: .24rem;
+}
+//1px像素begin
+.bdr-r {
+  position: relative;
+}
+.bdr-r::after {
+  border-right: 1px solid #e1e1e1;
+  content: "";
+  height: 100%;
+  position: absolute;
+  right: -1px;
+  top: 0;
+  transform: scaleX(0.5);
+  width: 1px;
+  z-index: 10;
+}
+.bdr-l {
+  position: relative;
+}
+.bdr-l::before {
+  border-left: 1px solid #e1e1e1;
+  content: "";
+  height: 100%;
+  position: absolute;
+  left: -1px;
+  top: 0;
+  transform: scaleX(0.5);
+  width: 1px;
+  z-index: 10;
+}
+.bdr-bottom {
+  position: relative;
+}
+.bdr-bottom::after {
+  border-bottom: 1px solid #e1e1e1;
+  bottom: 0;
+  content: "";
+  height: 1px;
+  position: absolute;
+  right: 0;
+  transform: scaleY(.5);
+  width: 100%;
+  z-index: 10;
+}
+.bdr-top {
+  position: relative;
+}
+
+.bdr-top:before {
+  height: 1px;
+  content: '';
+  width: 100%;
+  border-bottom: 1px solid #e1e1e1;
+  position: absolute;
+  top: -1px;
+  right: 0;
+  transform: scaleY(0.5);
+  z-index: 10;
+}
+
+//四边1px additional-item-thumb是img的class
+.img-item-thumb:after {
+  position: absolute;
+  top: -0.5px;
+  left: -0.5px;
+  width: 200%;
+  height: 200%;
+  content: '';
+  border: 1px solid #e3e5e9;
+  border-radius: 6px;//圆角
+  transform: scale(0.5);
+  transform-origin: top left;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5) {
+  .bdr-r::after {
+    transform: scaleX(0.7);
+  }
+  .bdr-bottom::after{
+    transform: scaleY(0.7);
+  }
+  .bdr-top:before{
+    transform: scaleY(0.7);
+  }
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2) {
+  .bdr-r::after {
+    transform: scaleX(0.5);
+  }
+  .bdr-bottom::after{
+    transform: scaleY(0.5);
+  }
+  .bdr-top:before{
+    transform: scaleY(0.5);
+  }
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 3) {
+  .bdr-r::after {
+    transform: scaleX(0.333);
+  }
+  .bdr-bottom::after{
+    transform: scaleY(0.333);
+  }
+  .bdr-top:before{
+    transform: scaleY(0.333);
+  }
+}
+//1px像素end
 
 
 
