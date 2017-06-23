@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    @@include('../../partical/meta.inc',{"title":"个人设置"})
+    @@include('../../partical/styles.inc', {"links":""})
+    <link rel="stylesheet" href="../../assets/styles/app.css">
+    @@include('../../partical/fontsize.inc')
+</head>
+<body>
+<!--头部-->
+@@include('../../partical/appheadernav.inc',{"title":"个人设置"})
+<div id="content" class="page-content personal">
+    <!--查询结果列表-->
+    <ul class="list mrg-bottom24">
+        <li class="setinfoitem avatar bdr-bottom ">
+            <a href="#"> <span class="box" ><div class="imgbox"><img src="../../assets/images/app/team/agent_logo1.png" alt=""></div></span>
+                <span class="orderlink">修改头像<i class="arrow-icon"></i></span>
+            </a>
+        </li>
+        <li class="setinfoitem bdr-bottom">
+            <a href="#">昵称
+                <span class="orderlink">飞哥的店<i class="arrow-icon"></i></span>
+            </a>
+        </li>
+        <li class="setinfoitem bdr-bottom">
+            <a href="#">性别
+                <span class="orderlink">未设置<i class="arrow-icon"></i></span>
+            </a>
+        </li>
+        <li class="setinfoitem bdr-bottom">
+            <a href="#">出生日期
+                <span class="orderlink"><i class="arrow-icon"></i></span>
+            </a>
+        </li>
+    </ul>
+
+    <ul class="list mrg-bottom24">
+
+        <li class="setinfoitem bdr-bottom">
+            <a href="#">手机号码
+                <span class="orderlink">未版定<i class="arrow-icon"></i></span>
+            </a>
+        </li>
+        <li class="setinfoitem bdr-bottom">
+            <a href="#">登录密码
+                <span class="orderlink"><i class="arrow-icon"></i></span>
+            </a>
+        </li>
+
+    </ul>
+    <ul class="list mrg-bottom24">
+        <li class="setinfoitem bdr-bottom">
+            <a href="#">收获地址
+                <span class="orderlink"><i class="arrow-icon"></i></span>
+            </a>
+        </li>
+    </ul>
+
+    <div class="quit"><a href="#">退出当前帐号</a></div>
+
+
+</div>
+
+<!--脚步导入开始-->
+@@include('../../partical/script.inc')
+<script src="../../assets/scripts/app.js"></script>
+</body>
+</html>

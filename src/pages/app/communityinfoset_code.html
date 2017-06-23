@@ -1,0 +1,160 @@
+<html data-dpr="3" style="font-size: 66.8px;height: 100%;">
+<head>
+    @@include('../../partical/meta.inc',{"title":"微信二维码名片"})
+    @@include('../../partical/styles.inc', {"links":""})
+    <link rel="stylesheet" href="../../assets/styles/app.css">
+    @@include('../../partical/fontsize.inc')
+</head>
+<body cz-shortcut-listen="true" style="height: 100%;">
+<div id="header" class="page-header"></div>
+<style> .auth_warp {
+    padding: .3rem;
+}
+
+.head-title {
+    height: .7rem;
+    line-height: .7rem;
+    color: #333;
+    font-size: .32rem;
+    margin-bottom: .5rem;
+}
+
+.auth_warp {
+    padding-top: 1.4rem;
+    border-bottom: none;
+}
+
+.store_logo {
+    text-align: center;
+    width: 3.75rem;
+    height: 3.75rem;
+    margin: 0 auto;
+    font-size: 0;
+}
+
+.store_logo img {
+    max-width: 100%;
+    height: 100%;
+}
+
+.upload-button {
+    margin: .6rem 0;
+}
+
+#filebuttom {
+    width: 5rem;
+    height: .8rem;
+    line-height: .8rem;
+    margin: 0 auto;
+    background-color: #13B7F6;
+    font-size: .32rem;
+    color: #fff;
+}
+
+.mod_btns .mod_btn.bg_2 {
+    background: #F23030;
+    color: #fff;
+    height: .8rem;
+    line-height: .8rem;
+    width: 5rem;
+    margin: 0 auto;
+}
+.mod_btns {
+    display: -webkit-box;
+    display: box;
+    display: -webkit-flex;
+    display: flex;
+    overflow: hidden;
+    width: 5rem;
+    margin: 0 auto;
+}
+.mod_btns .mod_btn {
+    font-size: .32rem;
+}
+
+.btn:visited {
+    color: #fff;
+    text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.6);
+}
+
+#loadingDiv {
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    z-index: 10000;
+    left: 0px;
+    top: 0px;
+    display: none;
+}
+
+#loadingDiv img {
+    position: fixed;
+    top: 150px;
+    left: 50%;
+    margin-left: -64px;
+}</style>
+<script type="text/javascript" src="http://vshop.guaten.com/scripts/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="http://vshop.guaten.com/js/uploadpic.js"></script>
+<div class="jm-header header-fixed">
+    <div class="jm-wrapper"><a href="javascript:history.go(-1);">
+        <div class="posl icon icon_back icon-fix"></div>
+    </a>
+        <p class="title">微信二维码名片</p></div>
+</div>
+
+<div id="content" class="page-content" style="height: 100%;background-color: #fff;">
+    <div class="hold-space-top"></div>
+    <div id="wrapper" class="auth_warp">
+        <form name="app-submit" method="post" id="myupload" action="" data-action="m=agent&amp;a=wechatqr">
+            <div class="store_logo"><img src="http://vshop.guaten.com//images/userimg/wechatqr_uid79_1497859105.jpg">
+            </div>
+            <div class="upload-button"><a id="filebuttom" class="btn btn-info">重新上传</a><input type="file"
+                                                                                              id="fileupload"
+                                                                                              style="display:none"
+                                                                                              name="image"></div>
+            <div class="mod_btns"><input type="hidden" name="submit" value="1"><input type="hidden" name="user_id"
+                                                                                      value="79"><input type="hidden"
+                                                                                                        id="wechatqr"
+                                                                                                        name="wechatqr"
+                                                                                                        value="/images/userimg/wechatqr_uid79_1497859105.jpg"><a
+                    class="mod_btn bg_2" href="javascript:void(0);" onclick="javascript:App.submit();">提交保存</a></div>
+        </form>
+    </div>
+</div>
+<div id="loadingDiv"><img src="http://vshop.guaten.com/images/store/loading.gif" alt=""></div>
+<script>$(function () {
+  $("#filebuttom").click(function () {
+    $("#fileupload").click();
+  });
+  $("#fileupload").change(function () {
+    var formdata = new FormData(document.forms.namedItem("myupload"));
+    formdata.append("image", $("#fileupload").val());
+    $.ajax({
+      url: "index.php?m=agent&a=wechatqrupload",
+      type: "POST",
+      data: formdata,
+      processData: false,
+      contentType: false,
+      beforeSend: function () {
+        $("#loadingDiv").show();
+      },
+      complete: function () {
+        $("#loadingDiv").hide();
+      },
+      success: function (data) {
+        if (data.status == 1) {
+          $(".store_logo img").attr('src', data.imagePath);
+          $("#wechatqr").val(data.imagePath);
+        } else {
+          alert(data.msg);
+        }
+      },
+      error: function (data) {
+        alert("上传失败");
+      }
+    });
+  });
+})</script>
+</body>
+</html>

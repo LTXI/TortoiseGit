@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" style="height: 100%;">
+<head>
+    @@include('../../partical/meta.inc',{"title":"微信号码输入"})
+    @@include('../../partical/styles.inc', {"links":""})
+    <link rel="stylesheet" href="../../assets/styles/app.css">
+    @@include('../../partical/fontsize.inc')
+
+
+</head>
+<body style="height: 100%;">
+<!--头部-->
+<div class="jm-header header-fixed">
+    <div class="jm-wrapper">
+        <a href="javascript:history.go(-1);">
+            <div class="posl icon icon_back icon-fix"></div>
+        </a>
+            <p class="title">微信号码输入</p>
+        <!--<a href="#">
+            <div class="posr icon icon_share icon-fix"></div>
+        </a>-->
+    </div>
+</div>
+<div id="content" class="page-content community" style="height: 100%;">
+    <div class="hold-space-top"></div>
+    <div class="form-wrapper">
+        <div class="form-info">
+            <form name="form-edit" action="#">
+                <div class="form-item bdr-bottom">
+                    <label for="wechat" class="bdr-r">微信号</label>
+                    <input type="text" id="wechat" name="wechat" placeholder="请输入您的微信号码"/>
+                </div>
+
+                <div class="form-item-btn"><a href="javascript:void(0);" onclick="javascript:App.submit();">确定</a></div>
+                <input type="hidden" name="submit" value="wechat">
+            </form>
+        </div>
+    </div>
+
+
+</div>
+
+<!--脚步导入开始-->
+@@include('../../partical/script.inc')
+<script src="../../assets/scripts/app.js"></script>
+</body>
+</html>

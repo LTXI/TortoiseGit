@@ -98,6 +98,7 @@
       height: .4rem;
       color: $font-color2;
       vertical-align: middle;
+      padding-left: .14rem;
     }
   }
 }
@@ -228,7 +229,7 @@ $title_right_text_color: #9FA0A0;*/
   .orderlink {
     float: right;
     vertical-align: middle;
-    color: #848689;
+    color: #9FA0A0;
     font-size: .29rem;
     .arrow-icon {
       padding-left: .4rem;
@@ -282,6 +283,7 @@ $title_right_text_color: #9FA0A0;*/
 //$outbox-width 最外层的div的宽度  $inbox-width 内层的div的宽度
 @mixin create-circle-image($radius-width:1.18rem,  $padding-width:0rem) {
   .imgbox {
+    position: relative;
     display: inline-block;
     width: $radius-width;
     height: $radius-width;

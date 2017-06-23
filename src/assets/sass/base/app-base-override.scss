@@ -1,8 +1,20 @@
-//原样式冲突，复写
+//原样式冲突，复写原来瓜藤的样式
 
 //订单， 支付方式，radio 图标居中
 .switch input[type="radio"]:checked + label i:before {
   top: 50% !important;
   left: 50% !important;;
   transform: translate(-50%,-50%) !important;;
+}
+
+//切页  下面红横线
+.topbar-tabs a{
+  height: 0.9rem;
+  line-height: 0.9rem;
+}
+
+//分类页  搜索宽塌陷
+.category-topbar .topbar-inner {
+  height: 0.90rem;//0.6rem
+
 }

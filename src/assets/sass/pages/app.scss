@@ -45,12 +45,8 @@
 
 }
 
-.invite-twitter, .page-header-content {
-  .hold-div-top {
-    height: 2.36rem;
-  }
+.invite-twitter {
   .searchbox {
-    //margin-bottom: .24rem;
     background-color: #fff;
   }
   .search-input {
@@ -97,10 +93,26 @@
     width: 100%;
     padding: 0 51px 0 15px;
   }
-  input::-webkit-input-placeholder, input:-ms-input-placeholder,
-  input:-moz-placeholder,
+  input::-webkit-input-placeholder {
+    color: #231815;
+  }
+  input:-ms-input-placeholder {
+    color: #231815;
+  }
+  input:-moz-placeholder {
+    color: #231815;
+  }
   input::-moz-placeholder {
     color: #231815;
+  }
+}
+
+.invite-twitter, .new-twitter {
+  .itembox {
+    .state {
+      margin-top: -0.1rem !important; //微调对齐
+
+    }
   }
 }
 
@@ -137,6 +149,9 @@
   }
   .itembox {
     @include brand-list-item;
+    .item-middle {
+      align-self: flex-start; //中间部分上对齐
+    }
     .btn_yellow, .btn_peach {
       width: 1.3rem !important;
       text-align: center !important;
@@ -347,7 +362,7 @@
         background-color: #dbdbdb;
         left: 50%;
         top: 50%;
-        transform: translate(-50%, -50%) scaleX(0.5);
+        transform: scaleX(0.5) translate(-50%, -50%);
       }
     }
   }
@@ -355,7 +370,7 @@
     background-color: #fff;
     color: #595757;
     .setitem {
-      @include link-item-icon(0.88rem, 1px);
+      @include link-item-icon(0.92rem, 1px);
     }
 
   }
@@ -638,6 +653,207 @@
 
 //代理详情 end
 
+//社区设置begin
+//设置单项
+.setinfoitem {
+  @include link-item-icon(1rem, 0px);
+  .lefticon {
+    padding-left: 33px;
+  }
+  .title {
+    font-size: .25rem;
+  }
+  .orderlink {
+    font-size: .25rem;
+  }
+}
+
+.community {
+  background-color: #fff;
+  overflow: hidden;
+  height: auto;
+  .form-info {
+    height: 100%;
+    padding: 1rem 0rem;
+    width: 5rem;
+    margin: 0 auto;
+    .form-item {
+      padding: 0.1rem 0;
+      height: .8rem;
+      line-height: .8rem;
+      label {
+        height: .6rem;
+        line-height: .6rem;
+        float: left;
+        width: 1.2rem;
+        font-size: .32rem;
+        color: #231815;
+        padding-left: .1rem;
+        white-space: nowrap;
+      }
+      input {
+        float: left;
+        width: 3.8rem;
+        color: #9FA0A0;
+        text-indent: .35rem;
+        font-size: .28rem;
+        height: .6rem;
+        line-height: .6rem;
+      }
+    }
+    .form-item-btn {
+      text-align: center;
+      margin-top: 30px;
+      a {
+        border-radius: .15rem;
+        display: block;
+        width: 5rem;
+        height: .8rem;
+        line-height: .8rem;
+        margin: 0 auto;
+        color: #fff;
+        font-size: .32rem;
+        background: #F23030;
+      }
+    }
+  }
+}
+
+//社区设置end
+
+//个人设置begin
+.personal {
+  .avatar.setinfoitem {
+    @include link-item-icon(1.6rem, 0px);
+
+    span.box {
+      position: relative;
+      display: inline-block;
+      //vertical-align: middle;
+      @include vertical-center;
+      @include create-circle-image(1.17rem, 0rem)
+    }
+  }
+  .setinfoitem {
+    background-color: #fff;
+  }
+  .quit {
+    margin: .7rem auto;
+    width: 3.93rem;
+    a {
+      display: block;
+      height: .84rem;
+      line-height: .84rem;
+      text-align: center;
+      width: 3.93rem;
+      border: 1px solid red;
+      border-radius: 5px;
+      font-size: .3rem;
+      color: red;
+    }
+  }
+
+}
+
+//个人设置end
+
+//手机密码验证码 begin
+.secure {
+  background-color: #fff;
+  //overflow: hidden;
+  height: auto;
+  .form-info {
+    height: 100%;
+    padding: 1rem 0rem;
+    width: 5.4rem;
+    margin: 0 auto;
+    font-size: .3rem;
+
+    .form-item {
+      border-radius: .1rem;
+      overflow: hidden;
+      margin-bottom: .4rem;
+      background-color: #CACACA;
+      input[type="text"] {
+        float: left;
+        background-color: #CACACA;
+        height: .75rem;
+        line-height: .75rem;
+        text-indent: .2rem;
+        width: 4.6rem;
+        font-size: .3rem;
+        color: #fff;
+      }
+      span {
+        float: right;
+        width: .7rem;
+        height: .75rem;
+        background: #CACACA url("../images/common/icon_set_phone.png") no-repeat center center;
+        background-size: .30rem .31rem;
+      }
+      .authcodebnt {
+        float: right;
+        text-align: center;
+        width: 1.9rem;
+        background: #DFDFDF;
+        color: #000000;
+        height: .75rem;
+        line-height: .75rem;
+      }
+    }
+    .form-item.authcode {
+      background: #CACACA;
+    }
+    .form-item.authcode input[type="text"] {
+      width: 3.4rem;
+    }
+
+    .form-item-btn {
+      text-align: center;
+      margin-top: 1.4rem;
+      a {
+        border-radius: .5rem;
+        display: block;
+        width: 3.42rem;
+        height: .74rem;
+        line-height: .74rem;
+        margin: 0 auto;
+        color: #fff;
+        font-size: .38rem;
+        background: #F23030;
+      }
+    }
+    input::-webkit-input-placeholder {
+      color: #fff;
+    }
+    input:-ms-input-placeholder {
+      color: #fff;
+    }
+    input:-moz-placeholder {
+      color: #fff;
+    }
+    input::-moz-placeholder {
+      color: #fff;
+    }
+  }
+  .form-info.password {
+    .form-item {
+      width: 5.4rem;
+      input[type="password"] {
+        background-color: #CACACA;
+        height: .75rem;
+        line-height: .75rem;
+        text-indent: .2rem;
+        width: 4.6rem;
+        font-size: .3rem;
+        color: #fff;
+      }
+    }
+
+  }
+}
+
+//手机密码验证码 end
 
 
 

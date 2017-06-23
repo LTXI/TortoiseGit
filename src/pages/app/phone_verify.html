@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" style="height: 100%;">
+<head>
+    @@include('../../partical/meta.inc',{"title":"手机验证码"})
+    @@include('../../partical/styles.inc', {"links":""})
+    <link rel="stylesheet" href="../../assets/styles/app.css">
+    @@include('../../partical/fontsize.inc')
+
+
+</head>
+<body style="height: 100%;">
+<!--头部-->
+<div class="jm-header header-fixed">
+    <div class="jm-wrapper">
+        <a href="javascript:history.go(-1);">
+            <div class="posl icon icon_back icon-fix"></div>
+        </a>
+            <p class="title">手机验证码</p>
+        <!--<a href="#">
+            <div class="posr icon icon_share icon-fix"></div>
+        </a>-->
+    </div>
+</div>
+<div id="content" class="page-content secure" style="height: 100%;" >
+    <div class="hold-space-top"></div>
+   <div class="form-wrapper">
+       <div class="form-info">
+           <form name="form-edit" action="#">
+               <div class="form-item bdr-bottom">
+                   <input type="text" name="phone" placeholder="请输入手机号码"/>
+                   <span></span>
+               </div>
+               <div class="form-item bdr-bottom authcode">
+                   <input type="text" name="authcode"  placeholder="获取验证码"/>
+                   <a class="authcodebnt" href="javascript:void(0);" onclick="">获取验证码</a>
+               </div>
+
+               <div class="form-item-btn"><a href="javascript:void(0);" onclick="">下一步</a></div>
+               <input type="hidden" name="submit" value="qq">
+           </form>
+       </div>
+   </div>
+</div>
+
+<!--脚步导入开始-->
+@@include('../../partical/script.inc')
+<script src="../../assets/scripts/app.js"></script>
+</body>
+</html>

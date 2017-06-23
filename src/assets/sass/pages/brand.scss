@@ -8,7 +8,7 @@ body {
 }
 
 //返回头部 begin
-.jm-header {
+/*.jm-header {
   background: #fff;
   height: 1.26rem;
   padding-top: .26rem;
@@ -42,7 +42,7 @@ body {
       right: 1rem;
     }
   }
-}
+}*/
 //返回头部 end
 
 //品牌列表
@@ -55,15 +55,16 @@ body {
   }
   .list {
     background-color: #f4f4f4;
-
   }
   .item {
     //margin-bottom: .25rem;
     background-color: #fff;
   }
-
   .itembox {
     @include brand-list-item;
+    .item-middle{
+      align-self: flex-start;//中间部分上对齐
+    }
     .btn_yellow, .btn_peach {
       width: 1.3rem !important;
       text-align: center !important;
@@ -79,10 +80,6 @@ body {
   .list {
     background: #fff;
     .shop-item {
-      /*color: #221713;
-      position: relative;
-      height: 1.8rem;
-      border-bottom: 1px solid #e7e7e7;*/
       @include layout-col-3(1.9rem, 4.1rem, 1.4rem, center);
       padding: .3rem 0;
       .img-item , .item-left{
@@ -105,7 +102,7 @@ body {
 
         padding: 0 .45rem 0 .24rem;
         .imgbox{
-          background-color: #FFF5C4;
+          background-color: #DDDDDD;
           position: relative;
           &::after{
             position: absolute;
@@ -114,10 +111,16 @@ body {
             width: 200%;
             height: 200%;
             content: '';
-            border: 1px solid green;
+            //border: 1px solid green;
             //border-radius: 6px;//圆角
             transform: scale(0.5);
             transform-origin: top left;
+          }
+          .noimg {
+            background: #DDDDDD;
+            border-radius: 50%;
+            width: .94rem;
+            height: .94rem;
           }
         }
 
@@ -349,10 +352,10 @@ body {
 }
 
 //商店二维码
-#code {
-  body {
-    background: #fff;
-  }
+//#code {
+  //body {
+    //background: #fff;
+  //}
   .codeshop {
     background: #fff;
     min-height: 100%;
@@ -384,7 +387,7 @@ body {
       }
     }
   }
-}
+//}
 
 //品牌商品
 .brandgoods {

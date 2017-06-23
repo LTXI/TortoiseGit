@@ -94,6 +94,12 @@
 .jm-goodsign, .jm-goodrecom{
   .navbox{
     @include title-left-icon();
+    .item {
+      padding-left: .21rem;
+    }
+    .more{
+      padding-right: .21rem;
+    }
   }
 }
 
@@ -157,76 +163,7 @@
 .jm-goodrecom {
   position: relative;
   background: #f4f4f4;
-  font-size: .36rem;
   color: #00aa00;
-  padding: 0 0.2rem 0 0;
-  .content {
-    background: #f4f4f4;
-    padding: 0 0.2rem;
-    overflow: hidden;
-    // border: 1px solid red;
-    .pro_item {
-
-      position: relative;
-      float: left;
-      margin-bottom: 0.2rem;
-      width: 50%;
-      background: #fff;
-      &:nth-child(n) {
-        margin-right: 0.2rem;
-      }
-      &:nth-child(2n) {
-        margin-right: -0.2rem;
-      }
-      .cover {
-        overflow: hidden;
-        padding-top: 100%;
-        position: relative;
-        .photo {
-          height: 100%;
-          left: 0;
-          position: absolute;
-          top: 0;
-          width: 100%;
-        }
-      }
-      .info {
-        padding: 0 .1rem 0 .1rem;
-        .title {
-          overflow: hidden;
-          font-size: 0.24rem;
-          height: .75rem;
-          line-height: 1.5;
-          margin-top: 0.16rem;
-          margin-bottom: 0.08rem;
-          @include rows-ellipsis(2);
-        }
-        .price {
-          position: relative;
-          margin-bottom: .08rem;
-          vertical-align: middle;
-          font-size: .28rem;
-          span {
-            color: #cd3d3d;
-          }
-          .spe {
-            display: inline-block;
-            position: absolute;
-            top: 50%;
-            right: 0;
-            width: 1rem;
-            height: .28rem;
-            transform: translateY(-50%);
-            line-height: .28rem;
-            text-align: center;
-            background: url("../images/store/icon_discount.png") no-repeat center center;
-            background-size: cover;
-            display:none;
-          }
-        }
-      }
-    }
-  }
 }
 
 .jm-backtop {
@@ -234,15 +171,16 @@
   position: fixed;
   right: .2rem;
   bottom: 1rem;
-  width: .65rem;
-  height: .65rem;
+  width: 63px;
+  height: 63px;
   border-radius: 50%;
   background: #fdfdfd url("../images/store/icon_backtop.png") no-repeat center center;
   background-size: cover;
   z-index: 1210;
   transform-origin: 0px 0px 0px;
   opacity: 1;
-  transform: scale(1, 1);
+  transform: scale(.8);
+  transform-origin: center center;
   &.none {
     display: block;
   }
@@ -263,6 +201,7 @@
     height: 1.66rem;
     background-color: #fff;
     margin-bottom: .24rem;
+
     .left {
       @include vertical-center;
       display: inline-block;
@@ -270,30 +209,30 @@
       width: 5rem;
       height: 1rem;
       line-height: 1rem;
-
-      .icon {
+      .imgbox {
         @include vertical-center;
         display: inline-block;
-        height: .72rem;
+        height: .76rem;
         width: .76rem;
-        background: #fdfdfd url("../images/store/store.png") no-repeat center center;
-        background-size: cover;
+          img{
+            width: 100%;
+            height: 100%;
+        }
       }
       .title {
         @include vertical-center;
-        display: inline-block;
         padding-left: 1rem;
         font-size: .28rem;
         color: #231815;
         width: 100%;
         line-height: 1.2;
+        display: inline-block;
         @include rows-ellipsis(2);
-
       }
     }
     .right {
       @include vertical-center;
-
+      margin-top: -.1rem;
       float: right;
       right: 0;
       width: 1.12rem;
@@ -344,12 +283,13 @@
       background-image: url("../images/common/icon-provider.png") !important;
 
     }
+
     .code-item .arrow-icon {
       width: .40rem !important;;
       height: .38rem !important;;
       background-image: url("../images/common/icon_code.png") !important;
     }
-    .time-item .time {
+    .time-item .time, .provider-item .orderlink {
       color: #9FA0A0;
       padding-left: .6rem;
       font-size: .26rem;

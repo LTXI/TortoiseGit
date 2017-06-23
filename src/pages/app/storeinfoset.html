@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    @@include('../../partical/meta.inc',{"title":"店铺设置"})
+    @@include('../../partical/styles.inc', {"links":""})
+    <link rel="stylesheet" href="../../assets/styles/app.css">
+    @@include('../../partical/fontsize.inc')
+
+
+</head>
+<body>
+<!--头部-->
+<div class="jm-header">
+    <div class="jm-wrapper">
+        <a href="javascript:history.go(-1);">
+            <div class="posl icon icon_back icon-fix"></div>
+        </a>
+        <p class="title">店铺设置</p>
+        <a href="#">
+            <div class=" posr icon icon_header-nav-short"></div>
+        </a>
+    </div>
+
+    <div class="nav">
+        <span class="triangle"></span>
+        <ul>
+            <li class="navltem bdr-bottom"><i class="navicon  icon_header_nav_home"></i>首页</li>
+            <li class="navltem bdr-bottom"><i class="navicon  icon_header_nav_home"></i>分类</li>
+            <li class="navltem bdr-bottom"><i class="navicon  icon_header_nav_home"></i>首页</li>
+            <li class="navltem bdr-bottom"><i class="navicon  icon_header_nav_home"></i>首页</li>
+            <li class="navltem"><i class="navicon  icon_header_nav_home"></i>首页</li>
+        </ul>
+
+    </div>
+</div>
+<div id="content" class="page-content community">
+    <!--查询结果列表-->
+    <ul class="list">
+        <li class="setinfoitem bdr-bottom">
+            <a href="#"> <span class="title">店铺名称</span>
+                <span class="orderlink">飞哥的店<i class="arrow-icon"></i></span>
+            </a>
+        </li>
+        <li class="setinfoitem bdr-bottom">
+            <a href="#"> <span class="title">联系电话</span>
+                <span class="orderlink">123456789<i class="arrow-icon"></i></span>
+            </a>
+        </li>
+        <li class="setinfoitem bdr-bottom">
+            <a href="#"> <span class="title">店铺LOGO</span>
+                <span class="orderlink"><i class="arrow-icon"></i></span>
+            </a>
+        </li>
+        <li class="setinfoitem bdr-bottom">
+            <a href="#"> <span class="title">店铺简介</span>
+                <span class="orderlink"><i class="arrow-icon"></i></span>
+            </a>
+        </li>
+    </ul>
+
+
+</div>
+
+<!--脚步导入开始-->
+@@include('../../partical/script.inc')
+<script src="../../assets/scripts/app.js"></script>
+</body>
+</html>
