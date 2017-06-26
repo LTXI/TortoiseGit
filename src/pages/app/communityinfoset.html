@@ -9,33 +9,27 @@
 
 </head>
 <body>
+
 <!--头部-->
-<div class="jm-header">
-    <div class="jm-wrapper">
-        <a href="javascript:history.go(-1);">
-            <div class="posl icon icon_back icon-fix"></div>
-        </a>
-        <p class="title">社区设置</p>
-        <!--<a href="#">
-            <div class="posr icon icon_share icon-fix"></div>
-        </a>-->
-    </div>
-</div>
+@@include('../../partical/appheadernav.inc',{
+"header-fixed":"header-fixed",
+"title":"社区设置"
+})
 <div id="content" class="page-content community">
     <!--查询结果列表-->
     <ul class="list">
         <li class="setinfoitem bdr-bottom">
-            <a href="#"></span> <span class="title lefticon icon_community_qq">QQ号</span>
+            <a href="./communityinfoset_qq.html"></span> <span class="title lefticon icon_community_qq">QQ号</span>
                 <span class="orderlink">335544<i class="arrow-icon"></i></span>
             </a>
         </li>
         <li class="setinfoitem bdr-bottom">
-            <a href="#"></span> <span class="title lefticon icon_community_wechat">微信号</span>
+            <a href="./communityinfoset_wechat.html"></span> <span class="title lefticon icon_community_wechat">微信号</span>
                 <span class="orderlink">未设置<i class="arrow-icon"></i></span>
             </a>
         </li>
         <li class="setinfoitem bdr-bottom">
-            <a href="#"></span> <span class="title lefticon icon_community_code">微信二维码名片</span>
+            <a href="./communityinfoset_code.html"></span> <span class="title lefticon icon_community_code">微信二维码名片</span>
                 <span class="orderlink">未设置<i class="arrow-icon"></i></span>
             </a>
         </li>

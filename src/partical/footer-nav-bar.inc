@@ -1,4 +1,4 @@
-<!--尾部导航-->
+<!--老版本尾部导航-->
 <div id="footer" class="app-page-footer">
     <div class="footer_inner bdr-top">
         <a class="on" href="./newtwitter.html">

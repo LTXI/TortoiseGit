@@ -9,7 +9,8 @@
 }
 
 .topnav {
-  background: #fff url("../images/app/teambg.png") no-repeat center center;
+  /* background: #fff url("../images/app/teambg.png") no-repeat center center;*/
+  background: #fff;
   background-size: cover;
   margin-bottom: 0.2rem;
   .navbox {
@@ -28,6 +29,20 @@
     @include col-2-center-text-img;
   }
 }
+
+//团队begin
+.my-team {
+  .topbox {
+    @include title-left-icon;
+  }
+  .bottombox {
+    background-color: #fff;
+    overflow: hidden;
+    @include col-center-text-new(2rem, 1rem, 33.33%, .28rem, .26rem, .56rem, .56rem);
+  }
+}
+
+// 团队end
 
 .more {
   text-align: center;
@@ -68,17 +83,25 @@
       height: .6rem;
       border: none;
       vertical-align: middle;
-      background-size: contain;
       position: absolute;
+
       top: 50%;
       transform: translateY(-50%);
       right: 0;
       background-color: #e7e7e7;
+      span.icon-twitter-search {
+        display: inline-block;
+        background: #E7E7E7 url("../images/app/twitter/icon_search_twitter.png") no-repeat center center;
+        background-size: 100% .3rem;
+        width: .29rem;
+        height: 100%;
 
-      i {
-        font-size: .3rem;
-        color: #231815;
       }
+
+      /*i {
+        //font-size: .3rem;
+        //color: #231815;
+      }*/
     }
   }
   input[type="search"] {
@@ -110,9 +133,24 @@
 .invite-twitter, .new-twitter {
   .itembox {
     .state {
-      margin-top: -0.1rem !important; //微调对齐
+      // margin-top: -0.1rem !important; //微调对齐
 
     }
+  }
+}
+
+//邀请推客
+.new-twitter {
+  .banner {
+    height: 4.07rem;
+  }
+  .topbox {
+    @include title-left-icon;
+  }
+  .bottombox {
+    background-color: #fff;
+    overflow: hidden;
+    @include col-center-img-new(2rem, 1.33rem, 50%, .24rem, .82rem, .65rem);
   }
 }
 
@@ -153,8 +191,8 @@
       align-self: flex-start; //中间部分上对齐
     }
     .btn_yellow, .btn_peach {
-      width: 1.3rem !important;
-      text-align: center !important;
+      //width: 1.3rem !important;
+      //text-align: center !important;
     }
   }
 }
@@ -206,21 +244,6 @@
         flex-basis: 1.4rem;
         align-self: center;
         padding: 0 .2rem 0 0;
-        /*.imgbox {
-          position: relative;
-          width: 1.2rem;
-          height: 1.2rem;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-        }
-        img {
-          display: inline-block;
-          width: 100%;
-          height: 100%;
-          min-width: 100%;
-          border-radius: 50%;
-        }*/
         @include create-circle-image(1.2rem, 0rem);
         .pass::after {
           content: "";
@@ -268,9 +291,8 @@
       position: absolute;
       width: 100%;
       top: 3rem;
-      @include col-2-center-text-img;
+      @include col-2-center-text-img(2rem, .32rem, .22rem);
     }
-
   }
   .order {
     background-color: #fff;
@@ -280,30 +302,41 @@
       @include link-item-icon(1.06rem);
     }
     .orderinfo {
-      height: 1.22rem;
-      line-height: 1.22rem;
+      //height: 1.22rem;
+      //line-height: 1.22rem;
+      padding: .56rem 0 .45rem 0;
       font-size: 0;
       .item {
         display: inline-block;
-        width: 25%;
+        width: 20%;
         color: #595757;
         text-align: center;
+      }
+      .item-order {
+        padding-left: .12rem;
+        background: url("../images/app/user/part_line.png") no-repeat left center;
+        background-size: .12rem 1.13rem;
       }
       a .icon {
         display: inline-block;
         height: .6rem;
+        width: 1rem;
+        min-width: 30px;
       }
       a .icon.icon-unpay {
-        width: .38rem;
+        //width: .38rem;
       }
       a .icon.icon-unems {
-        width: .64rem;
+        //width: .64rem;
       }
       a .icon.icon-ems {
-        width: .41rem;
+        // width: .41rem;
       }
       a .icon.icon-done {
-        width: .34rem;
+        //width: .34rem;
+      }
+      a .icon.icon-order {
+        //width: .38rem;
       }
       a .line {
         display: block;
@@ -311,29 +344,50 @@
         line-height: 0.6rem;
         width: 100%;
         text-align: center;
+        position: relative;
+      }
+      .status {
+        display: inline-block;
+        width: .3rem;
+        height: .3rem;
+        min-width: 15px;
+        min-height: 15px;
+        border-radius: 50%;
+        background-color: #F23030;
+        color: #fff;
+        position: absolute;
+        left: 60%;
+        font-size: .16rem;
+        text-align: center;
+        line-height: .3rem;
+
       }
       .text {
         display: block;
         height: 0.6rem;
-        line-height: 0.6rem;
+        line-height: 0.8rem;
         color: #595757;
         font-size: .24rem;
       }
       .icon-unpay {
-        background: url("../images/app/user/un_pay_icon.png") no-repeat center bottom;
-        background-size: contain;
+        background: url("../images/app/user/un_pay_icon.png") no-repeat center center;
+        background-size: .38rem .32rem;
       }
       .icon-unems {
-        background: url("../images/app/user/un_ems_icon.png") no-repeat center bottom;
-        background-size: contain;
+        background: url("../images/app/user/un_ems_icon.png") no-repeat center center;
+        background-size: .64rem .35rem;
       }
       .icon-ems {
-        background: url("../images/app/user/ems_icon.png") no-repeat center bottom;
-        background-size: contain;
+        background: url("../images/app/user/ems_icon.png") no-repeat center center;
+        background-size: .41rem .42rem;
       }
       .icon-done {
-        background: url("../images/app/user/done_icon.png") no-repeat center bottom;
-        background-size: contain;
+        background: url("../images/app/user/done_icon.png") no-repeat center center;
+        background-size: .34rem .38rem;
+      }
+      .icon-order {
+        background: url("../images/app/user/order_icon.png") no-repeat center bottom;
+        background-size: .38rem .53rem;
       }
     }
   }
@@ -427,15 +481,14 @@
 }
 
 .my_order {
-
-  ul .orderlist {
+  ul.orderlist .orderitem {
     //color: #595757;
     background-color: #fff;
     //margin-bottom: .24rem;
     .top {
       position: relative;
-      height: .84rem;
-      line-height: .84rem;
+      height: .64rem;
+      line-height: .64rem;
       //border-bottom: 1px solid #dbdbdb;
       padding: 0 .24rem;
       vertical-align: middle;
@@ -446,8 +499,8 @@
       .delete {
         float: right;
         right: .24rem;
-        width: .3rem;
-        height: .84rem;
+        width: .22rem;
+        height: .64rem;
         background: url("../images/app/user/delete_icon.png") no-repeat center center;
         background-size: contain;
       }
@@ -543,6 +596,91 @@
 
 //我的订单 end
 
+//佣金订单begin
+.my-commission-order {
+  ul.orderlist .orderitem {
+    background-color: #fff;
+    .top {
+      position: relative;
+      height: .64rem;
+      line-height: .64rem;
+      padding: 0 .24rem;
+      vertical-align: middle;
+      color: #231815;
+      .time {
+        font-size: .24rem;
+      }
+      .delete {
+        float: right;
+        right: .24rem;
+        width: .22rem;
+        height: .64rem;
+        background: url("../images/app/user/delete_icon.png") no-repeat center center;
+        background-size: contain;
+      }
+    }
+
+    .item-middle {
+      position: relative;
+      .name {
+        display: inline-block;
+        color: #231815;
+        font-size: .28rem;
+        width: 3.3rem;
+        height: .34rem;
+        line-height: .34rem;
+        @include ellipsis;
+      }
+    }
+
+    .middle {
+      background-color: #fff;
+      height: 2.77rem;
+      @include layout-col-3(1.36rem, 5.42rem, 0rem, flex-start);
+      padding: .24rem .24rem 0 .24rem;
+      .item-left {
+        position: relative;
+        @include create-square-image(.82rem, .82rem, 0rem);
+        padding-right: .46rem;
+        .imgbox{
+          position: relative;
+          /*&::after {
+            position: absolute;
+            top: -0.5px;
+            left: -0.5px;
+            width: 200%;
+            height: 200%;
+            content: '';
+            border: 1px solid #e3e5e9;
+            border-radius: 6px; //圆角
+            transform: scale(0.5);
+            transform-origin: top left;
+          }*/
+        }
+      }
+      .item-middle {
+        position: relative;
+        p {
+          color: #231815;
+          font-size: .24rem;
+          height: .5rem;
+          line-height: .5rem;
+        }
+        .order-name {
+          height: .34rem;
+          line-height: .34rem;
+          margin-bottom: .2rem;
+          @include ellipsis;
+        }
+        .red {
+          color: #F23030;
+        }
+      }
+    }
+  }
+}
+
+//佣金订单end
 //无数据提示公用 begin
 .data-tips {
   text-align: center;
@@ -569,7 +707,7 @@
 //无数据提示 end
 
 //客户列表begin
-.customer-list {
+.customer-list , .my-twitter{
   .time-search {
     font-size: .26rem;
     form {
@@ -577,29 +715,39 @@
       height: 1rem;
       line-height: 1rem;
     }
-    padding: 0 .24rem 0 .24rem;
+    padding: 0 .24rem 0 .38rem;
     color: #231815;
     background-color: #fff;
     input[type="text"] {
       border: 1px solid #e6e6e6;
-      width: 2.2rem;
-      height: .5rem;
-      line-height: .5rem;
-      margin: 0 .1rem;
-      //transform: scale(.5);
+      width: 1.9rem;
+      height: .48rem;
+      line-height: .48rem;
+      margin: 0 .17rem;
+      border-radius: 5px;
+      vertical-align: middle;
+      font-size: .20rem;
     }
     input[type="submit"] {
-      //border: 1px solid #fee564;
-      padding: 0 .2rem;
-      height: .5rem;
-      line-height: .5rem;
-      background-color: #fee564;
+      width: 1.31rem;
+      height: .48rem;
+      line-height: .48rem;
+      background-color: #F23030;
       border-radius: 5px;
-      font-size: .24rem;
+      font-size: .22rem;
+      color: #fff;
+      margin-left: 0.1rem;
+      //处理其他css样式的破坏
+      vertical-align: middle;
+      padding: 0;
+      border: none;
+      font-family: "STHeiti", "Microsoft YaHei", Helvetica, Arial, sans-serif;;
     }
+    vertical-align: middle;
   }
-
+}
   //列表同我的推客，只向右偏移
+.customer-list{
   .itembox .item-left {
     padding: 0 2.56rem 0 .36rem;
   }
@@ -658,7 +806,7 @@
 .setinfoitem {
   @include link-item-icon(1rem, 0px);
   .lefticon {
-    padding-left: 33px;
+    padding-left: .64rem;
   }
   .title {
     font-size: .25rem;
@@ -857,3 +1005,1076 @@
 
 
 
+//九件社区begin
+.bbs {
+  .banner {
+    height: 2.82rem;
+  }
+
+  .quick-entry-nav {
+    padding: .3rem .3rem;
+    position: relative;
+    background-color: #fff;
+    height: 4.6rem;
+  }
+  .quick-entry-link {
+    position: relative;
+    width: 25%;
+    float: left;
+    text-align: center;
+    display: block;
+    height: 2rem;
+  }
+  .quick-box {
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 1.6rem;
+    span {
+      overflow: hidden;
+      display: flex;
+      -webkit-line-clamp: 1;
+      justify-content: center;
+      line-clamp: 1;
+      height: 2em;
+      font-size: .26rem;
+      color: #585657;
+    }
+    img {
+      height: 1.16rem;
+      width: 1.16rem;
+    }
+  }
+
+  .container {
+    .itembox {
+      background-color: #fff;
+      padding: .4rem 0;
+      @include layout-col-3(1.38rem, 3.5rem, 2.5rem, flex-start);
+      .item-left {
+        padding: 0 .26rem 0 .24rem;
+        @include create-square-image(.82rem, .82rem, 0rem);
+      }
+      .item-middle {
+        p {
+          color: #231815;
+          font-size: .22rem;
+          line-height: .48rem;
+          height: .48rem;
+        }
+        p.title {
+          font-size: .28rem;
+          color: #9FA0A0;
+          margin-bottom: .2rem;
+          .label {
+            display: inline-block;
+            width: .07rem;
+            height: .25rem;
+            background-color: #FEDE3B;
+            vertical-align: middle;
+            border-radius: 2px;
+            margin-right: .1rem;
+          }
+        }
+        span {
+          padding-left: .24rem;
+          font-size: .28rem;
+          color: #9FA0A0;
+          font-family: NSimSun, 'San Francisco', 'Microsoft YaHei';
+        }
+      }
+      .item-right {
+        padding-right: .24rem;
+        .time {
+          white-space: nowrap;
+          color: #9FA0A0;
+          font-size: .21rem;
+          font-family: NSimSun, 'San Francisco', 'Microsoft YaHei';
+          padding-left: .3rem;
+          background: url("../images/app/bbs/icon_bbs_clock.png") no-repeat left center;
+          background-size: .23rem .21rem;
+        }
+        .code-box {
+          margin-top: .3rem;
+          float: right;
+          right: .24rem;
+          text-align: right;
+          height: 1.07rem;
+          width: 2rem;
+          img {
+            display: inline-block;
+            width: .71rem;
+            height: .72rem;
+          }
+          span {
+            text-align: right;
+            display: block;
+            font-size: .28rem;
+            color: #9FA0A0;
+            white-space: nowrap;
+          }
+
+        }
+      }
+    }
+
+  }
+}
+
+//九件社区end
+
+//首页 begin
+.home {
+  .header {
+    position: relative;
+    height: 6.3rem;
+    background: #fff url('../images/app/home/home_header_bg.png') no-repeat center center;
+
+    border: 1px solid transparent; //overflow: hidden;
+    background-size: 100% 100%;
+
+    .content {
+      position: relative;
+      // border: 1px solid #fff;
+      margin: 0.8rem .30rem 0 .28rem;
+      //height: 100%;
+      height: 4.13rem;
+      .name {
+        position: absolute;
+        left: 0;
+        top: 0;
+        color: #fff;
+        font-size: .26rem;
+      }
+      p.title {
+        @include horizontal-center;
+        width: 2.33rem;
+        height: .40rem;
+        background: transparent url('../images/app/home/home_title_bg.png') no-repeat center center;
+        background-size: 100% 100%;
+
+        text-align: center;
+        top: .55rem;
+
+        span {
+          width: 100%;
+          font-size: .24rem;
+          color: #231815;
+          vertical-align: top;
+          line-height: .30rem;
+          height: .33rem;
+        }
+      }
+      p.phone {
+        @include horizontal-center;
+        width: 2.46rem;
+        height: .48rem;
+        background: transparent url('../images/app/home/home_phone_bg.png') no-repeat center center;
+        background-size: 100% 100%;
+        text-align: center;
+
+        color: #fff;
+
+        top: 1.18rem;
+      }
+      span.code {
+        position: absolute;
+        right: 0;
+        top: 1.22rem;
+        display: inline-block;
+        width: .31rem;
+        height: .31rem;
+        background: transparent url('../images/app/home/home_code.png') no-repeat center center;
+        background-size: 100% 100%;
+      }
+      .mid-head {
+        position: absolute;
+        top: 1.5rem;
+        height: 1.4rem;
+        width: 100%;
+        @include create-circle-image(1.4rem);
+        background: transparent url('../images/app/home/home_partner.png') no-repeat right center;
+        background-size: 5.53rem .47rem;
+      }
+
+    }
+    .bottom {
+      position: relative;
+      width: 100%;
+      bottom: 0;
+      height: 1.37rem;
+      .item {
+        position: relative;
+        width: 3.70rem;
+        background: transparent url('../images/app/home/home_mask.png') no-repeat right center;
+        background-size: 100% 100%;
+        height: 1.37rem;
+      }
+      .item-l {
+        float: left;
+      }
+      .item-r {
+        float: right;
+      }
+      .bottombox {
+        @include col-center-text-new(1.37rem, 1rem, 100%, .4rem, .28rem, .56rem, .4rem);
+        .num {
+          font-weight: 700;
+          color: #FDDD3A !important;
+        }
+        .text {
+          color: #fff !important;;
+        }
+        background-color: transparent;
+      }
+      .item .icon-home-order, .item .icon-home-money {
+        position: absolute;
+        bottom: .3rem;
+        left: .72rem;
+        display: inline-block;
+        background-size: contain;
+        width: .51rem;
+        height: .48rem;
+        /*width: .32rem;
+        height: .48rem;*/
+      }
+      .icon-home-order {
+        background: transparent url('../images/app/home/icon_home_order.png') no-repeat center bottom;
+
+      }
+      .icon-home-money {
+        background: transparent url('../images/app/home/icon_home_money.png') no-repeat center bottom;
+      }
+    }
+  }
+  .box-enter {
+    background-color: #fff;
+    padding: .26rem 0;
+    @include col-center-img-new(1.86rem, 1.52rem, 33.33%, .24rem, 1.03rem, .5rem);
+  }
+}
+
+//首页 end
+
+//品牌联盟begin
+.brand-alliance {
+  .imgshowbox {
+    position: relative;
+    margin-bottom: -1rem;
+    height: 100%;
+    img {
+      max-width: 100%;
+    }
+    .btn {
+      position: absolute;
+      bottom: 2.5rem;
+      width: 3rem;
+      height: .93rem;
+      line-height: .93rem;
+      font-size: .38rem;
+      text-align: center;
+      color: #000000;
+      border-radius: 1.2rem;
+      @include horizontal-center;
+
+      background: transparent url('../images/app/alliance/btn_enter_bg.png') no-repeat center center;
+      background-size: 100% 100%;
+    }
+  }
+
+  //品牌联盟列表申请加入
+  .itembox {
+    background-color: #fff;
+    @include layout-col-3(1.6rem, 5.42rem, 0rem);
+    padding: .4rem .24rem;
+    .item-left {
+      @include create-square-image(1.17rem, 1.17rem, 0rem);
+      align-self: flex-start;
+
+    }
+    .item-middle {
+      position: relative;
+      .name {
+        display: inline-block;
+        color: #231815;
+        font-size: .28rem;
+        width: 3.3rem;
+        height: .34rem;
+        line-height: .34rem;
+        @include ellipsis;
+      }
+      .btn-apply {
+        display: inline-block;
+        text-align: center;
+        width: 1.79rem;
+        height: .45rem;
+        line-height: .45rem;
+        background: transparent url('../images/app/alliance/btn_apply_bg.png') no-repeat center center;
+        background-size: 100% 100%;
+        float: right;
+        font-size: .22rem;
+        color: #231815;
+      }
+      .info {
+        margin-top: .6rem;
+        @include col-center-text-new(1.06rem, .8rem, 33.33%, .42rem, .2rem, .5rem, .3rem);
+        span.num {
+          vertical-align: top;
+          color: #FD5D00 !important;
+          .sign {
+            font-style: normal;
+            font-size: .3rem;
+            height: .26rem;
+            line-height: .6rem;
+          }
+        }
+        span.text {
+          display: inline-block;
+          width: 1.18rem;
+          border-radius: 5px;
+          color: #9FA0A0 !important;
+          background-color: #F4F4F4;
+        }
+      }
+    }
+  }
+}
+
+//品牌联盟end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//所有店铺 store.css相关begin-------------------------------------
+#qrcode_box {
+  position: fixed;
+  z-index: 9999;
+  top: 2rem;
+  right: 0;
+  left: 0;
+  margin: auto;
+  width: 5rem;
+  background-color: #fff;
+  /* display: none; */
+  .close_qrcode {
+    text-align: right;
+    padding: 0.2rem;
+    img {
+      height: .5rem;
+      width: 0.5rem;
+    }
+  }
+  .qrcode_img {
+    margin: 0 auto;
+    img {
+      width: 100%;
+      margin: 0 auto;
+    }
+  }
+}
+
+//店铺 begin
+.jm-store {
+  .store {
+    position: relative;
+    height: 2.9rem;
+    background: url("../images/store/store-bg.png") no-repeat center center;
+    background-size: cover;
+  }
+  .box {
+    position: absolute;
+    left: .78rem;
+    top: .8rem;
+    height: 1.46rem;
+    display: flex;
+    .logobox {
+      flex: 0 0 1.4rem;
+    }
+    @include create-circle-image(1.4rem, 0rem);
+    .imgbox {
+      img {
+        background: url("../images/store/icon_store_bg.png") no-repeat center center;
+        background-size: 100% 100%;
+      }
+    }
+    .desc {
+      flex: 1 0 3.48rem;
+      height: 1.24rem;
+      padding-left: .23rem;
+      .name {
+        width: 3.48rem;
+        display: block;
+        height: 0.8rem;
+        line-height: 0.8rem;
+        font-size: .28rem;
+        color: #F4F4F2;
+        @include ellipsis;
+      }
+      .wel {
+        width: 3.48rem;
+        display: block;
+        font-size: .23rem;
+        line-height: 0.28rem;
+        height: 0.28rem;
+        color: #A09E9F;
+        @include ellipsis;
+      }
+    }
+  }
+
+  .friend {
+    position: absolute;
+    top: 1.4rem;
+    right: 0;
+    width: 1rem;
+    height: .56rem;
+    background: url("../images/store/icon_code.png") no-repeat center center;
+    background-size: cover;
+  }
+}
+//店铺 end
+.jm-goodsign, .jm-goodrecom{
+  .navbox{
+    @include title-left-icon();
+    .item {
+      padding-left: .21rem;
+    }
+    .more{
+      padding-right: .21rem;
+    }
+  }
+}
+
+//品牌推荐
+.jm-goodsign {
+  //@include goodsign;
+  position: relative;
+  background: #F4F4F4;
+  .content {
+    background-color: #fff;
+    display: flex;
+    justify-content: flex-start;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    .item {
+      background: #fff;
+      flex: 0 1 2.5rem;
+      height: 1.88rem;
+      //border-left: 1px solid #f4f4f4;
+      position: relative;
+      overflow: hidden;
+      img {
+
+        position: absolute;
+        display: inline-block;
+        width: 65%;
+        margin: 0 auto;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      &::before {
+        border-left: 1px solid #e1e1e1;
+        content: "";
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        transform: scaleX(0.5);
+        width: 1px;
+        z-index: 10;
+      }
+      &::after {
+        border-bottom: 1px solid #e1e1e1;
+        bottom: 0;
+        content: "";
+        height: 1px;
+        position: absolute;
+        right: 0;
+        transform: scaleY(.5);
+        width: 100%;
+        z-index: 10;
+      }
+      &:nth-child(3n+1) {
+        border-left: none;
+      }
+    }
+  }
+}
+
+//精品推荐
+.jm-goodrecom {
+  position: relative;
+  background: #f4f4f4;
+  color: #00aa00;
+}
+
+.jm-backtop {
+  display: none;
+  position: fixed;
+  right: 9px;
+  bottom: 1rem;
+  width: 39px;
+  height: 39px;
+  border-radius: 50%;
+  background: #fdfdfd url("../images/store/icon_backtop.png") no-repeat center center;
+  background-size: cover;
+  z-index: 1210;
+  /*transform-origin: 0px 0px 0px;
+  opacity: 1;
+  transform: scale(.8);
+  transform-origin: center center;*/
+  &.none {
+    display: block;
+  }
+}
+
+#jm-goodsign .content {
+
+}
+
+//店铺详情begin
+/*.jm-header {
+  @include jm-header;
+}*/
+
+.store-detail {
+  .top {
+    position: relative;
+    height: 1.66rem;
+    background-color: #fff;
+    margin-bottom: .24rem;
+
+    .left {
+      @include vertical-center;
+      display: inline-block;
+      padding-left: .5rem;
+      width: 5rem;
+      height: 1rem;
+      line-height: 1rem;
+      .imgbox {
+        @include vertical-center;
+        display: inline-block;
+        height: .76rem;
+        width: .76rem;
+        img{
+          width: 100%;
+          height: 100%;
+        }
+      }
+      .title {
+        @include vertical-center;
+        padding-left: 1rem;
+        font-size: .28rem;
+        color: #231815;
+        width: 100%;
+        line-height: 1.2;
+        display: inline-block;
+        @include rows-ellipsis(2);
+      }
+    }
+    .right {
+      @include vertical-center;
+      margin-top: -.1rem;
+      float: right;
+      right: 0;
+      width: 1.12rem;
+      height: .78rem;
+      .uptext {
+        font-size: .24rem;
+        position: relative;
+        z-index: 1;
+        height: .5rem;
+        line-height: .5rem;
+
+        padding-left: .46rem;
+        background: url("../images/store/likie_iocn.png") no-repeat .11rem center;
+        background-color: #c72443;
+        background-size: .24rem .24rem;
+        color: #fff;
+        border-top-left-radius: .1rem;
+        border-bottom-left-radius: .1rem;
+      }
+      .downtext {
+        font-size: .18rem;
+        position: relative;
+        text-align: center;
+        height: .5rem;
+        line-height: .5rem;
+        margin-top: -.1rem;
+        padding-top: .05rem;
+        background-color: #fee662;
+        color: #231815;
+        border-top-left-radius: .1rem;
+        border-bottom-left-radius: .1rem;
+        z-index: 0;
+      }
+    }
+  }
+  .mid {
+    .item {
+      background-color: #fff;
+      @include link-item-icon(.84rem, 0px);
+      .title{
+        font-size: .26rem;
+      }
+
+    }
+    .provider-item .arrow-icon {
+      width: .40rem !important;;
+      height: .38rem !important;;
+      background-image: url("../images/common/icon-provider.png") !important;
+
+    }
+
+    .code-item .arrow-icon {
+      width: .40rem !important;;
+      height: .38rem !important;;
+      background-image: url("../images/common/icon_code.png") !important;
+    }
+    .time-item .time, .provider-item .orderlink {
+      color: #9FA0A0;
+      padding-left: .6rem;
+      font-size: .26rem;
+    }
+  }
+  .bottom {
+    //@include goodsign;
+    background-color: #fff;
+    color: #231815;
+    .title {
+      padding-left: .28rem;
+      height: .83rem;
+      line-height: .83rem;
+      font-size: 0.26rem;
+    }
+    .content{
+      overflow: hidden;
+    }
+
+    .item{
+      width: 33.33%;
+      float: left;
+      height: 1.53rem;
+      background-color: #fff;
+      padding: .2rem;
+      position: relative;
+      margin-bottom: .24rem;
+      overflow: hidden;
+    }
+    .box {
+      display: table;
+      width: 80%;
+      height: 80%;
+      .table-cell{
+        display: table-cell;
+        vertical-align: middle;
+        img{
+          width: 100%;
+        }
+
+      }
+    }
+
+  }
+}
+
+//店铺详情end
+
+//店铺简介begin
+.store-desc {
+  .wrapper {
+    text-align: center;
+    position: relative;;
+    padding: .6rem .8rem;
+    background-color: #fff;
+    font-size: .24rem;
+    color: #595757;
+    height: 9rem;
+    p {
+      text-align: left;
+      line-height: .36rem;
+      margin-bottom: .4rem;
+      word-wrap: break-word;
+    }
+
+    .code {
+      position: absolute;
+      display: inline-block;
+      top: 2.2rem;
+      bottom: 1.35rem;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 4.35rem;
+      height: 4.35rem;
+      background: url("../images/brand/code-bg.png?v=18cfa") no-repeat center center;
+      background-size: contain;
+
+    }
+  }
+}
+//店铺简介end
+//所有店铺 store.css相关end--------------------------------
+
+
+//所有品牌 brand.css相关begin------------------------
+
+//品牌列表
+.brandlistbox {
+  background: #fff;
+  color: #231815;
+  //margin-bottom: 0.3rem;
+  .brand-type {
+    @include title-text-both-icon;
+  }
+  .list {
+    background-color: #f4f4f4;
+  }
+  .item {
+    //margin-bottom: .25rem;
+    background-color: #fff;
+  }
+  .itembox {
+    @include brand-list-item;
+    .item-middle{
+      align-self: flex-start;//中间部分上对齐
+    }
+    .btn_yellow, .btn_peach {
+      //width: 1.3rem !important;
+      // text-align: center !important;
+    }
+  }
+}
+
+//品牌合伙人
+.partnership {
+  background: #f4f4f4;
+  color: #231816;
+  margin-bottom: 0.3rem;
+  .list {
+    background: #fff;
+    .shop-item {
+      @include layout-col-3(1.9rem, 4.1rem, 1.4rem, center);
+      padding: .3rem 0;
+      .img-item , .item-left{
+
+        @include create-circle-image(1.18rem, 0.12rem);
+
+        padding: 0 .45rem 0 .24rem;
+        .imgbox{
+          background-color: #DDDDDD;
+          position: relative;
+          &::after{
+            position: absolute;
+            top: -0.5px;
+            left: -0.5px;
+            width: 200%;
+            height: 200%;
+            content: '';
+            //border: 1px solid green;
+            //border-radius: 6px;//圆角
+            transform: scale(0.5);
+            transform-origin: top left;
+          }
+          .noimg {
+            background: #DDDDDD;
+            border-radius: 50%;
+            width: .94rem;
+            height: .94rem;
+          }
+        }
+
+      }
+
+      .desc-item , .item-middle{
+        //border: 1px solid red;
+        .name {
+          display: block;
+          font-size: .28rem;
+          margin-bottom: .1rem;
+        }
+        .phone {
+          display: block;
+          position: relative;
+          color: #6f6d6e;
+          font-size: .28rem;
+          padding-left: .4rem;
+          line-height: .35rem;
+          height: .35rem;
+          .pos {
+            display: inline-block;
+            position: absolute;
+            left: 0;
+            width: .35rem;
+            height: .35rem;
+            top: 50%;
+            transform: translateY(-50%);
+          }
+        }
+      }
+      .btn-item , .item-right{
+
+        .code {
+          display: inline-block;
+          width: .41rem;
+          height: .41rem;
+          background-size: cover;
+          float: right;
+          right: .24rem;
+        }
+      }
+    }
+  }
+}
+
+//品牌合伙人 品牌商品头部公用
+.partner {
+  background-color: #fff;
+  position: relative;
+  padding: .36rem .24rem;
+  overflow: hidden;
+  //margin-bottom: 0.3rem;
+  .logo {
+    float: left;
+    width: 1.18rem;
+    height: 1.18rem;
+
+    @include create-circle-image(1.18rem,0.12rem);
+    .imgbox{
+      background-color: #DDDDDD;
+    }
+  }
+  .twitter {
+    float: left;
+    width: 3rem;
+    margin-left: .3rem;
+    //height: 1.18rem;
+    .name {
+      display: block;
+      color: #221715;
+      font-size: .28rem;
+      line-height: .4rem;
+      @include ellipsis;
+    }
+    .sell {
+      display: block;
+      color: #acacac;
+      font-size: .22rem;
+      height: .3rem;
+      line-height: .3rem;
+      @include ellipsis;
+    }
+    .focus {
+      display: block;
+      position: relative;
+      top: 0.1rem;
+
+      color: #6f6d6e;
+      font-size: .20rem;
+      padding-left: .4rem;
+      .pos {
+        display: inline-block;
+        position: absolute;
+        left: 0;
+        width: .3rem;
+        height: .3rem;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+  }
+  .payback {
+    position: relative;
+    float: right;
+    width: 2.44rem;
+    height: 1.10rem;
+    font-size: .22rem;
+    .left {
+      position: absolute;
+      display: inline-block;
+      z-index: 10;
+      .outcircle {
+        background: #fff5c4;
+        display: inline-block;
+        width: 1.1rem;
+        height: 1.1rem;
+        border-radius: 50%;
+        padding: .1rem;
+      }
+      .incircle {
+        position: relative;
+        background: #fee358;
+        display: inline-block;
+        width: .9rem;
+        height: .9rem;
+        border-radius: 50%;
+        font-size: 0;
+        display: flex;
+        align-content: center;
+        align-items:flex-start;
+        flex-wrap: wrap;
+        span {
+          position: relative;
+          display: block;
+          text-align: center;
+          width: 100%;
+
+          &.up, &.down {
+            font-size: .22rem;
+            line-height: 1.1;
+            color: #231815;
+          }
+        }
+      }
+    }
+    .bottom {
+      position: absolute;
+      left: .5rem;
+      top: .1rem;
+      z-index: 0;
+      display: inline-block;
+      height: .9rem;
+      width: 2rem;
+      .up, .down {
+        background: #fff5c4;
+        height: .43rem;
+        padding-left: .6rem;
+        line-height: .43rem;
+        white-space: nowrap;
+        position: relative;
+      }
+      .up::after {
+        border-bottom: 2px solid #fee45c;
+        bottom: -1px;
+        content: "";
+        height: 1px;
+        position: absolute;
+        right: 0;
+        transform: scaleY(.5);
+        width: 100%;
+        z-index: 10;
+      }
+    }
+  }
+}
+
+//商店二维码
+//#code {
+//body {
+//background: #fff;
+//}
+.codeshop {
+  background: #fff;
+  min-height: 100%;
+  padding: 1.4rem 1.4rem 1.1rem 1.4rem;
+  text-align: center;
+  .code {
+    position: relative;
+    display: inline-block;
+    width: 4.5rem;
+    height: 4.5rem;
+    background: url("../images/brand/code-bg.png") no-repeat center center;
+    background-size: contain;
+    img {
+      width: 2.87rem;
+      height: 2.84rem;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+  .code2 {
+    display: inline-block;
+    width: 4.50rem;
+    height: 3rem;
+    margin-top: .48rem;
+    img {
+      width: 100%;
+    }
+  }
+}
+//}
+
+//品牌商品
+.brandgoods {
+  background: #f4f4f4;
+  color: #231816;
+  .goods-box {
+    display: flex;
+    flex-direction: row;
+    width: 6.96rem;
+    margin: 0.26rem .28rem .28rem .28rem;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    .goods-item {
+      flex-basis: 3.37rem;
+      height: 4.74rem;
+      background-color: #fff;
+      margin-bottom: .2rem;
+      position: relative;
+      &:nth-child(2n) {
+        margin-left: .2rem;
+      }
+      .hot{
+        position: absolute;
+        text-align: center;
+        left: 0;
+        top: 0;
+        background-color: #c72443;
+        font-size: 12px;
+        color: #fff;
+        padding: 1px 2px;
+      }
+      .imgbox img{
+        width: 100%;
+      }
+      .infobox{
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        padding: .1rem .1rem;
+        .brand-name{
+          display: block;
+          font-size: .24rem;
+          height: .5rem;
+          line-height: .5rem;
+          @include ellipsis;
+        }
+        .price{
+          color: #e50000;
+          font-size: .28rem;
+          height: .6rem;
+          line-height: .6rem;
+        }
+        .oldprice{
+          color: #949494;
+          font-size: .22rem;
+          text-decoration: line-through;
+          padding-left: .2rem;
+        }
+      }
+    }
+  }
+}
+
+
+//所有品牌 brand.css相关end--------------------------

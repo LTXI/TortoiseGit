@@ -9,27 +9,16 @@
 </head>
 <body>
 <!--头部-->
-    <div class="jm-header bdr-bottom">
-        <div class="jm-wrapper">
-            <a href="javascript:history.go(-1);">
-                <div class="posl icon icon_back icon-fix"></div>
-            </a>
-            <p class="title">邀请推客</p>
-            <a href="#">
-                <div class="posr icon icon_share icon-fix"></div>
-            </a>
-        </div>
-</div>
-
-
+@@include('../../partical/appheadernav.inc',{
+"header-fixed":"header-fixed",
+"title":"邀请推客"
+})
 <div id="content" class="page-content invite-twitter">
-    <!-- 头部等顶部部分占位 -->
-    <!--<div class="hold-div-top"></div>-->
     <div class="searchbox mrg-bottom24">
         <div class="search-input">
-            <form action="#">
+            <form name="search" action="#">
                 <div class="inner ">
-                    <button><i class=" icon-search"></i></button>
+                    <button><span class="icon-twitter-search"></span></button>
                     <input type="search" id="search-input" name="key" autocomplete="off" placeholder="搜索会员">
                 </div>
             </form>
@@ -39,7 +28,7 @@
         <li class="itembox">
             <div class="item user">
                 <span class="left">用户：</span>
-                <span class="right">12345678911</span>
+                <span class="right phone">12345678911</span>
             </div>
             <div class="item ">
                 <span class="left">招募时间：</span>
@@ -56,7 +45,7 @@
         <li class="itembox">
             <div class="item user">
                 <span class="left">用户：</span>
-                <span class="right">12345678911</span>
+                <span class="right phone">12345678911</span>
             </div>
             <div class="item ">
                 <span class="left">招募时间：</span>
@@ -73,7 +62,7 @@
         <li class="itembox">
             <div class="item user">
                 <span class="left">用户：</span>
-                <span class="right">12345678911</span>
+                <span class="right phone">12345678911</span>
             </div>
             <div class="item ">
                 <span class="left">招募时间：</span>
@@ -90,7 +79,7 @@
         <li class="itembox">
             <div class="item user">
                 <span class="left">用户：</span>
-                <span class="right">12345678911</span>
+                <span class="right phone">12345678911</span>
             </div>
             <div class="item ">
                 <span class="left">招募时间：</span>
@@ -107,7 +96,7 @@
         <li class="itembox">
             <div class="item user">
                 <span class="left">用户：</span>
-                <span class="right">12345678911</span>
+                <span class="right phone">12345678911</span>
             </div>
             <div class="item ">
                 <span class="left">招募时间：</span>
@@ -126,7 +115,7 @@
 </div>
 
 <!--尾部导航-->
-@@include('../../partical/footer-nav-bar.inc')
+@@include('../../partical/footer-nav-bar-new.inc')
 
 
 <!--脚步导入开始-->

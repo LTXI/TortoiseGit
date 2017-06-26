@@ -9,20 +9,13 @@
 </head>
 <body>
 <!--头部-->
-<div class="jm-header">
-    <div class="jm-wrapper">
-        <a href="javascript:history.go(-1);">
-            <div class="posl icon icon_back icon-fix"></div>
-        </a>
-        <p class="title">我的品牌</p>
-        <a href="#">
-            <div class="posr icon icon_share icon-fix"></div>
-        </a>
-    </div>
-</div>
+@@include('../../partical/appheadernav.inc',{
+"header-fixed":"header-fixed",
+"title":"我的品牌"
+})
 <div id="content" class="page-content my-brand">
     <ul class="list">
-        <li class="item mrg-bottom24">
+        <li class="item bdr-bottom">
             <div class="itembox">
                 <div class="item-left">
                     <div class="imgbox">
@@ -39,7 +32,7 @@
                 </div>
             </div>
         </li>
-        <li class="item mrg-bottom24">
+        <li class="item bdr-bottom">
             <div class="itembox">
                 <div class="item-left">
                     <div class="imgbox">
@@ -60,7 +53,7 @@
 </div>
 
 <!--尾部导航-->
-@@include('../../partical/footer-nav-bar.inc')
+@@include('../../partical/footer-nav-bar-new.inc')
 
 
 <!--脚步导入开始-->

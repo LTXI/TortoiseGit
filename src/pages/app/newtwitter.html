@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html lang="en" id="code">
+<html lang="en" class="twitter-spe">
 <head>
-    @@include('../../partical/meta.inc',{"title":"新的推客"})
+    @@include('../../partical/meta.inc',{"title":"邀请"})
     @@include('../../partical/styles.inc', {"links":""})
     <link rel="stylesheet" href="../../assets/styles/app.css">
 
@@ -9,37 +9,43 @@
 </head>
 <body>
 <!--头部-->
-<!--头部-->
-<div class="jm-header-navbar header-fixed">
-    <div class="jm-wrapper">
-        <div class="jm-back"></div>
-        <p class="title">新的推客</p>
-    </div>
-</div>
+@@include('../../partical/appheadernav.inc',{
+"header-fixed":"header-fixed transparent-bg scroll",
+"title":"邀请"
+})
 
 <div id="content" class="page-content new-twitter">
-    <!-- 头部等顶部部分占位 -->
-    <div class="hold-div-top"></div>
+    <div class="banner">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <a
+                        class="swiper-slide swiper-slide-active" href="javascript:void(0);"><img
+                        src="../../assets/images/app/twitter/banner.png"></a>
+            </div>
+
+        </div>
+    </div>
     <div class="topnav">
-        <div class="topbox bdr-bottom">
+        <div class="topbox">
             <div class="item">
                 <span class="icon"></span>
                 <span class="title">新的推客</span>
             </div>
         </div>
-        <div class="bottombox">
-            <div class="left">
-                <a class="item" href="./invitetwitter.html">
-                    <i class="icon icon1"></i>
-                    <span class="text">邀请推客</span>
-                </a>
-            </div>
-            <div class="right">
-                <a class="item" href="#">
-                    <i class="icon icon2"></i>
-                    <span class="text">邀请二维码</span>
-                </a>
-            </div>
+        <div class="bottombox mrg-bottom24">
+            <a class="item-link" href="./invitetwitter.html">
+                    <span class="link-box">
+                        <img class="i" src="../../assets/images/app/twitter/icon_twitter.png">
+                        <span class="text">邀请推客</span>
+                    </span>
+            </a>
+            <a class="item-link" href="#">
+                    <span class="link-box">
+                        <img class="i" src="../../assets/images/app/twitter/icon_code.png">
+                        <span class="text">邀请二维码</span>
+                    </span>
+            </a>
+
         </div>
     </div>
 
@@ -64,7 +70,7 @@
         <li class="itembox">
             <div class="item user">
                 <span class="left">用户：</span>
-                <span class="right">12345678911</span>
+                <span class="right phone">12345678911</span>
             </div>
             <div class="item ">
                 <span class="left">招募时间：</span>
@@ -75,13 +81,13 @@
                 <span class="right state">已完成</span>
             </div>
             <div class="done">
-                <a href="#" class="btn">撤 销</a>
+                <a href="#" class="btn">撤销</a>
             </div>
         </li>
         <li class="itembox">
             <div class="item user">
                 <span class="left">用户：</span>
-                <span class="right">12345678911</span>
+                <span class="right phone">12345678911</span>
             </div>
             <div class="item ">
                 <span class="left">招募时间：</span>
@@ -92,13 +98,13 @@
                 <span class="right state">已完成</span>
             </div>
             <div class="done">
-                <a href="#" class="btn">撤 销</a>
+                <a href="#" class="btn">撤销</a>
             </div>
         </li>
         <li class="itembox">
             <div class="item user">
                 <span class="left">用户：</span>
-                <span class="right">12345678911</span>
+                <span class="right phone">12345678911</span>
             </div>
             <div class="item ">
                 <span class="left">招募时间：</span>
@@ -109,49 +115,15 @@
                 <span class="right state">已完成</span>
             </div>
             <div class="done">
-                <a href="#" class="btn">撤 销</a>
+                <a href="#" class="btn">撤销</a>
             </div>
         </li>
-        <li class="itembox">
-            <div class="item user">
-                <span class="left">用户：</span>
-                <span class="right">12345678911</span>
-            </div>
-            <div class="item ">
-                <span class="left">招募时间：</span>
-                <span class="right time">2017-12-12</span>
-            </div>
-            <div class="item">
-                <span class="left">招募状态：</span>
-                <span class="right state">已完成</span>
-            </div>
-            <div class="done">
-                <a href="#" class="btn">撤 销</a>
-            </div>
-        </li>
-        <li class="itembox">
-            <div class="item user">
-                <span class="left">用户：</span>
-                <span class="right">12345678911</span>
-            </div>
-            <div class="item ">
-                <span class="left">招募时间：</span>
-                <span class="right time">2017-12-12</span>
-            </div>
-            <div class="item">
-                <span class="left">招募状态：</span>
-                <span class="right state">已完成</span>
-            </div>
-            <div class="done">
-                <a href="#" class="btn">撤 销</a>
-            </div>
-        </li>
+
     </ul>
 </div>
 
 <!--尾部导航-->
-@@include('../../partical/footer-nav-bar.inc')
-
+@@include('../../partical/footer-nav-bar-new.inc')
 
 <!--脚步导入开始-->
 @@include('../../partical/script.inc')

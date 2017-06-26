@@ -96,12 +96,33 @@
 }</style>
 <script type="text/javascript" src="http://vshop.guaten.com/scripts/jquery-1.8.3.min.js"></script>
 <script type="text/javascript" src="http://vshop.guaten.com/js/uploadpic.js"></script>
+
+
 <div class="jm-header header-fixed">
-    <div class="jm-wrapper"><a href="javascript:history.go(-1);">
-        <div class="posl icon icon_back icon-fix"></div>
-    </a>
-        <p class="title">微信二维码名片</p></div>
+    <div class="jm-wrapper">
+        <a href="javascript:history.go(-1);">
+            <div class="posl icon icon_back icon-fix"></div>
+        </a>
+        <p class="title">微信二维码名片</p>
+        <a href="#">
+            <div class=" posr icon icon_header-nav-short"></div>
+        </a>
+    </div>
 </div>
+<!--如果布局fixed，将占据垂直空间1.26rem-->
+<!--<div class="hold-space-top"></div>-->
+<!--导航栏-->
+<div class="header-nav-bar">
+    <span class="triangle"></span>
+    <ul>
+        <a href="http://www.baidu.com"><li class="navltem bdr-bottom"><i class="navicon  icon_header_nav_home"></i>首页</li></a>
+        <a href="#"><li class="navltem bdr-bottom"><i class="navicon  icon_header_nav_home"></i>分类</li></a>
+        <a href="#"><li class="navltem bdr-bottom"><i class="navicon  icon_header_nav_home"></i>首页</li></a>
+        <a href="#"><li class="navltem bdr-bottom"><i class="navicon  icon_header_nav_home"></i>首页</li></a>
+        <a href="#"><li class="navltem"><i class="navicon  icon_header_nav_home"></i>首页</li></a>
+    </ul>
+</div>
+
 
 <div id="content" class="page-content" style="height: 100%;background-color: #fff;">
     <div class="hold-space-top"></div>
@@ -156,5 +177,7 @@
     });
   });
 })</script>
+
+<script src="../../assets/scripts/app.js"></script>
 </body>
 </html>

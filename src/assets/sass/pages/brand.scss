@@ -7,43 +7,6 @@ body {
   background: #f4f4f4;
 }
 
-//返回头部 begin
-/*.jm-header {
-  background: #fff;
-  height: 1.26rem;
-  padding-top: .26rem;
-  position: relative;
-
-  background: #efefef url("./images/common/header-bg.png") repeat-x 0 0;
-  background-size: 100% 44px;
-  min-height: 44px;
-
-  .jm-wrapper {
-    position: relative;
-    .title {
-      height: 1rem;
-      line-height: 1rem;
-      text-align: center;
-      font-size: .38rem;
-      color: #000;
-    }
-    .posl, .posr, .poslike {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-    }
-    .posl {
-      left: .24rem;
-    }
-    .posr {
-      right: .24rem;
-    }
-    .poslike {
-      right: 1rem;
-    }
-  }
-}*/
-//返回头部 end
 
 //品牌列表
 .brandlistbox {
@@ -66,8 +29,8 @@ body {
       align-self: flex-start;//中间部分上对齐
     }
     .btn_yellow, .btn_peach {
-      width: 1.3rem !important;
-      text-align: center !important;
+      //width: 1.3rem !important;
+     // text-align: center !important;
     }
   }
 }
@@ -83,21 +46,7 @@ body {
       @include layout-col-3(1.9rem, 4.1rem, 1.4rem, center);
       padding: .3rem 0;
       .img-item , .item-left{
-        //border: 1px solid red;
-        /*position: absolute;
-        width: 1.18rem;
-        height: 1.18rem;
-        left: .21rem;
-        top: .32rem;
-        background: #ffffff;
-        padding: .12rem;
-        border: 1px solid #ddd;
-        img, .noimg {
-          background: #fff5c4;
-          border-radius: 50%;
-          width: .94rem;
-          height: .94rem;
-        }*/
+
         @include create-circle-image(1.18rem, 0.12rem);
 
         padding: 0 .45rem 0 .24rem;
@@ -151,37 +100,8 @@ body {
             transform: translateY(-50%);
           }
         }
-        /*position: absolute;
-        width: 3rem;
-        left: 1.8rem;
-        top: .32rem;
-        overflow: hidden;
-        .name {
-          display: inline-block;
-          font-size: .3rem;
-          margin-bottom: .1rem;
-        }
-        .phone {
-          display: inline-block;
-          position: relative;
-          color: #6f6d6e;
-          font-size: .24rem;
-          padding-left: .4rem;
-          line-height: .35rem;
-          height: .35rem;
-          .pos {
-            display: inline-block;
-            position: absolute;
-            left: 0;
-            width: .35rem;
-            height: .35rem;
-            top: 50%;
-            transform: translateY(-50%);
-          }
-        }*/
       }
       .btn-item , .item-right{
-        //border: 1px solid red;
 
         .code {
           display: inline-block;
@@ -191,18 +111,6 @@ body {
           float: right;
           right: .24rem;
         }
-        /*position: absolute;
-        width: .41rem;
-        height: .41rem;
-        right: .21rem;
-        top: 50%;
-        transform: translateY(-50%);
-        .code {
-          display: inline-block;
-          width: .41rem;
-          height: .41rem;
-          background-size: cover;
-        }*/
       }
     }
   }
@@ -216,17 +124,6 @@ body {
   overflow: hidden;
   //margin-bottom: 0.3rem;
   .logo {
-    /*float: left;
-    width: 1.18rem;
-    height: 1.18rem;
-    background: #ddd;
-    padding: .12rem;
-    img, .noimg {
-      background: #fff;
-      border-radius: 50%;
-      width: .94rem;
-      height: .94rem;
-    }*/
     float: left;
     width: 1.18rem;
     height: 1.18rem;
@@ -235,7 +132,6 @@ body {
     .imgbox{
       background-color: #DDDDDD;
     }
-
   }
   .twitter {
     float: left;

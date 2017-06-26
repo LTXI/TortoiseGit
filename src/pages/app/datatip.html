@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" id="code">
 <head>
-    @@include('../../partical/meta.inc',{"title":"数据提示"})
+    @@include('../../partical/meta.inc',{"title":"提示"})
     @@include('../../partical/styles.inc', {"links":""})
     <link rel="stylesheet" href="../../assets/styles/app.css">
 
@@ -9,18 +9,10 @@
 </head>
 <body>
 <!--头部-->
-
-<div class="jm-header">
-    <div class="jm-wrapper">
-        <a href="#">
-            <div class="posl icon icon_back icon-fix"></div>
-        </a>
-        <p class="title">数据提示div</p>
-        <!--<a href="#">
-            <div class="posr icon icon_share icon-fix"></div>
-        </a>-->
-    </div>
-</div>
+@@include('../../partical/appheadernav.inc',{
+"header-fixed":"header-fixed",
+"title":"提示"
+})
 
 
 <!--暂无数据结构-->

@@ -10,29 +10,11 @@
 </head>
 <body>
 <!--头部-->
-<div class="jm-header">
-    <div class="jm-wrapper">
-        <a href="javascript:history.go(-1);">
-            <div class="posl icon icon_back icon-fix"></div>
-        </a>
-        <p class="title">店铺设置</p>
-        <a href="#">
-            <div class=" posr icon icon_header-nav-short"></div>
-        </a>
-    </div>
+@@include('../../partical/appheadernav.inc',{
+"header-fixed":"header-fixed",
+"title":"店铺设置"
+})
 
-    <div class="nav">
-        <span class="triangle"></span>
-        <ul>
-            <li class="navltem bdr-bottom"><i class="navicon  icon_header_nav_home"></i>首页</li>
-            <li class="navltem bdr-bottom"><i class="navicon  icon_header_nav_home"></i>分类</li>
-            <li class="navltem bdr-bottom"><i class="navicon  icon_header_nav_home"></i>首页</li>
-            <li class="navltem bdr-bottom"><i class="navicon  icon_header_nav_home"></i>首页</li>
-            <li class="navltem"><i class="navicon  icon_header_nav_home"></i>首页</li>
-        </ul>
-
-    </div>
-</div>
 <div id="content" class="page-content community">
     <!--查询结果列表-->
     <ul class="list">
@@ -58,8 +40,9 @@
         </li>
     </ul>
 
-
 </div>
+
+@@include('../../partical/footer-nav-bar-new.inc')
 
 <!--脚步导入开始-->
 @@include('../../partical/script.inc')

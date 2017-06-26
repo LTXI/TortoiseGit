@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" id="code">
+<head>
+    @@include('../../partical/meta.inc',{"title":"我的"})
+    @@include('../../partical/styles.inc', {"links":""})
+    <link rel="stylesheet" href="../../assets/styles/app.css">
+    @@include('../../partical/fontsize.inc')
+</head>
+<body>
+
+<div id="content" class="page-content my-user">
+    <div class="top">
+        <div class="userinfo">
+            <div class="item-left">
+                <div class="imgbox pass">
+                    <img src="../../assets/images/app/user/user-bg.png" alt="">
+                </div>
+            </div>
+            <div class="item-middle">
+                <span class="tel">132465897789</span>
+                <span class="brand">品牌：LV/CK</span>
+            </div>
+            <div class="item-right">
+                <a href="#"><i class="codeicon"></i></a>
+            </div>
+        </div>
+        <div class="bottombox">
+            <div class="left">
+                <a class="item" href="./my_commission_order.html">
+                    <i class="num">58</i>
+                    <span class="text">佣金订单</span>
+                </a>
+            </div>
+            <div class="right">
+                <a class="item" href="#">
+                    <i class="num">16</i>
+                    <span class="text">佣金金额</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="order mrg-bottom24">
+        <div class="orderinfo">
+            <a class="item" href="#">
+                <span class="line"><i class="icon icon-unpay"></i></span>
+                <span class="text">待支付</span>
+            </a>
+            <a class="item" href="#">
+                <span class="line"><i class="icon icon-unems "></i></span>
+                <span class="text">待发货</span>
+            </a>
+            <a class="item" href="#">
+                <span class="line">
+                    <i class="icon icon-ems"></i>
+                    <em class="status">3</em>
+                </span>
+                <span class="text">已发货</span>
+            </a>
+            <a class="item" href="#">
+                <span class="line"><i class="icon icon-done"></i>
+                </span>
+                <span class="text">已完成</span>
+            </a>
+            <a class="item item-order" href="./myorder.html">
+                <span class="line"><i class="icon icon-order"></i></span>
+                <span class="text">我的订单</span>
+            </a>
+        </div>
+    </div>
+    <ul class="set mrg-bottom24">
+        <li class="setitem bdr-bottom">
+            <a href="./personalset.html"> <span class="title">个人设置</span>
+                <span class="orderlink"><i class="arrow-icon"></i></span></a>
+        </li>
+
+    </ul>
+</div>
+
+<!--尾部导航-->
+@@include('../../partical/footer-nav-bar-new.inc')
+
+
+<!--脚步导入开始-->
+@@include('../../partical/script.inc')
+<script src="../../assets/scripts/app.js"></script>
+</body>
+</html>

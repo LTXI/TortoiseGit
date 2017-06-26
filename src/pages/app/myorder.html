@@ -9,18 +9,11 @@
 </head>
 <body>
 <!--头部-->
+@@include('../../partical/appheadernav.inc',{
+"header-fixed":"header-fixed",
+"title":"我的订单"
+})
 
-<div class="jm-header ">
-    <div class="jm-wrapper">
-        <a href="javascript:history.go(-1);">
-            <div class="posl icon icon_back icon-fix"></div>
-        </a>
-        <p class="title">我的订单</p>
-        <!--<a href="#">
-            <div class="posr icon icon_share icon-fix"></div>
-        </a>-->
-    </div>
-</div>
 <div class="order_subnav mrg-bottom24">
     <ul class="order_subnav_list">
         <li class="current"><a href="#">全部</a></li>
@@ -31,15 +24,15 @@
     </ul>
 </div>
 <div id="content" class="page-content my_order ">
-    <ul>
-        <li class="orderlist mrg-bottom24">
+    <ul class="orderlist">
+        <li class="orderitem mrg-bottom24">
             <div class="top bdr-bottom">
                 <span class="time">下单时间：<span>2017-05-07 19:36</span></span>
                 <i class="delete"></i>
             </div>
             <div class="middle bdr-bottom">
                 <div class="item-left">
-                    <div class="imgbox">
+                    <div class="imgbox img-item-thumb">
                             <img src="../../assets/images/app/team/logo1.png" alt=""/>
                     </div>
                 </div>
@@ -59,7 +52,7 @@
                 <a class="cancel operation" href="#">取消订单</a>
             </div>
         </li>
-        <li class="orderlist mrg-bottom24">
+        <li class="orderitem mrg-bottom24">
             <div class="top bdr-bottom">
                 <span class="time">下单时间：<span>2017-05-07 19:36</span></span>
                 <i class="delete"></i>
@@ -86,7 +79,7 @@
                 <a class="cancel operation" href="#">取消订单</a>
             </div>
         </li>
-        <li class="orderlist mrg-bottom24">
+        <li class="orderitem mrg-bottom24">
             <div class="top bdr-bottom">
                 <span class="time">下单时间：<span>2017-05-07 19:36</span></span>
                 <i class="delete"></i>

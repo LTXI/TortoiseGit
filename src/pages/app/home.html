@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    @@include('../../partical/meta.inc',{"title":"首页"})
+    @@include('../../partical/styles.inc', {"links":""})
+    <link rel="stylesheet" href="../../assets/styles/app.css">
+    @@include('../../partical/fontsize.inc')
+</head>
+<body>
+
+<div id="content" class="page-content home">
+    <div class="header mrg-bottom24">
+        <div class="content">
+            <span class="name">店铺</span>
+            <p class="title"><span>九件合伙人</span></p>
+            <p class="phone"><span>123456789</span></p>
+            <span class="code"></span>
+            <div class="mid-head">
+                <div class="imgbox">
+                    <img src="../../assets/images/app/home/icon_home_head.png" alt=""/>
+                </div>
+            </div>
+        </div>
+        <ul class="bottom">
+            <li class="item item-l">
+                <span class="icon-home-order"></span>
+                <div class="bottombox">
+                    <a class="item-link" href="./my_commission_order.html">
+                    <span class="link-box">
+                        <span class="num">208</span>
+                        <span class="text">佣金订单</span>
+                    </span>
+                    </a>
+                </div>
+            </li>
+            <li class="item item-r">
+                <span class="icon-home-money"></span>
+                <div class="bottombox">
+                    <a class="item-link" href="#">
+                    <span class="link-box">
+                        <span class="num">118</span>
+                        <span class="text">佣金金额</span>
+                    </span>
+                    </a>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="box-enter mrg-bottom24">
+        <nav class="quick-entry-nav">
+            <a class="item-link" href="./newtwitter.html">
+                <span class="link-box"><img
+                        src="../../assets/images/app/home/icon_home_invite.png"><span class="text">邀请</span></span>
+            </a>
+            <a class="item-link" href="./myteam.html">
+                <span class="link-box"><img src="../../assets/images/app/home/icon_home_team.png"><span class="text">团队</span></span>
+            </a>
+            <a class="item-link" href="./brandalliance.html">
+                <span class="link-box"><img
+                        src="../../assets/images/app/home/icon_home_alliance.png"><span class="text">联盟</span></span>
+            </a>
+            <a class="item-link" href="./communityinfoset.html">
+                <span class="link-box"><img
+                        src="../../assets/images/app/home/icon_home_bbs.png"><span class="text">社区设置</span></span>
+            </a>
+            <a class="item-link" href="./storeinfoset.html">
+                <span class="link-box"><img src="../../assets/images/app/home/icon_home_shop_set.png"><span class="text">店铺设置</span></span>
+            </a>
+            <a class="item-link" href="">
+                <span class="link-box"><img
+                        src="../../assets/images/app/home/icon_home_shop_look.png"><span class="text">查看店铺</span></span>
+            </a>
+        </nav>
+    </div>
+</div>
+
+
+<!--尾部-->
+@@include('../../partical/footer-nav-bar-new.inc')
+<script type="text/javascript">
+  $(document).ready(function () {
+    var mySwiper = new Swiper('.swiper-container', {
+      direction: 'horizontal',
+      loop: true,
+      // 如果需要分页器
+      pagination: '.swiper-pagination',
+    })
+  })
+</script>
+
+<!--脚步导入开始-->
+@@include('../../partical/script.inc')
+<script src="../../assets/scripts/app.js"></script>
+</body>
+</html>

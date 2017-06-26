@@ -66,6 +66,112 @@
   }
 }
 
+
+//上(图片)下（文本）水平 垂直居中
+//参数
+//$out-height   外总高度
+//$in-height     内容总高度
+//$num-font-size $text-font-size 上字体大小
+//$itemWidth   占比宽度
+
+//<a class="item-link" href="#">
+//<span class="link-box">
+//<img class="i" src="">
+//<span class="text">我的品牌</span>
+//</span>
+//</a>
+@mixin col-center-img-new($out-height:2rem, $in-height:1rem,$itemWidth:50%, $text-font-size:.24rem, $img-height:.82rem,$text-font-height:.56rem ) {
+  background-color: #fff;
+  overflow: hidden;
+  a.item-link{
+    float: left;
+    width: $itemWidth;
+    text-align: center;
+    height: $out-height;
+    position: relative;
+  }
+  .link-box {
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: $in-height;
+    span {
+      overflow: hidden;
+      display: flex;
+      -webkit-line-clamp: 1;
+      justify-content: center;
+      line-clamp: 1;
+    }
+    img {
+      height: $img-height;
+      width: $img-height;
+    }
+    span.text{
+      height: $text-font-height;
+      line-height: $text-font-height;
+      color: #231815;
+      font-size: .26rem;
+    }
+  }
+}
+
+//上下两行（文本）水平 垂直居中
+//参数
+//$out-height   外总高度
+//$in-height     内容总高度
+//$num-font-size $text-font-size 上字体大小
+//$itemWidth   占比宽度
+
+//<a class="item-link" href="#">
+//<span class="link-box">
+//<span class="num">58</span>
+//<span class="text">我的客户</span>
+//</span>
+//</a>
+@mixin col-center-text-new($out-height:2rem, $in-height:1rem,$itemWidth:50%, $num-font-size:.29rem,$text-font-size:.26rem, $num-font-height:.56rem,$text-font-height:.56rem ) {
+  background-color: #fff;
+  overflow: hidden;
+  a.item-link{
+    float: left;
+    width: $itemWidth;
+    text-align: center;
+    height: $out-height;
+    position: relative;
+  }
+  .link-box {
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: $in-height;
+    span {
+      overflow: hidden;
+      display: flex;
+      -webkit-line-clamp: 1;
+      justify-content: center;
+      line-clamp: 1;
+    }
+    span.num {
+      height: $num-font-height;
+      line-height: $num-font-height;
+      color: #F23030;
+      font-size: $num-font-size;
+    }
+    span.text{
+      height: $text-font-height;
+      line-height: $text-font-height;
+      color: #231815;
+      font-size: $text-font-size;
+    }
+  }
+}
+
+
 //标题，左边有图标(我的团队 新推客)
 //html 结构 <div class="topbox">
 //<div class="item ">
@@ -79,14 +185,13 @@
   align-items: center;
   height: 1rem;
   justify-content: space-between;
-  //border-bottom: 1px solid #e7e7e7;
   .item {
     position: relative;
-    padding-left: .28rem;
+    padding-left: .31rem;
     .icon {
       display: inline-block;
-      width: .38rem;
-      height: .38rem;
+      width: .37rem;
+      height: .37rem;
       background: url("../images/app/sign.png") no-repeat center center;
       background-size: cover;
       vertical-align: middle;
@@ -98,7 +203,7 @@
       height: .4rem;
       color: $font-color2;
       vertical-align: middle;
-      padding-left: .14rem;
+      padding-left: .17rem;
     }
   }
 }
@@ -212,13 +317,12 @@ $title_right_text_color: #9FA0A0;*/
   .title {
     float: left;
     color: #231815;
-    font-size: .29rem;
+    font-size: .28rem;
   }
   a {
     display: block;
     color: #231815;
     width: 100%;
-
     &::after{
       display: table;
       line-height: 0;
@@ -307,13 +411,15 @@ $title_right_text_color: #9FA0A0;*/
 //$outbox-width 最外层的div的宽度  $inbox-width 内层的div的宽度
 @mixin create-square-image($width:1.18rem, $height:1.1rem,  $padding-width:0rem) {
   .imgbox {
-    display: inline-block;
+    position: relative;
+    //display: inline-block;
     width: $width;
     height: $height;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: $padding-width;
+
     img {
       display: inline-block;
       max-width: 100%;
@@ -345,6 +451,7 @@ $title_right_text_color: #9FA0A0;*/
   justify-content: flex-start;
   align-items: flex-start;
   align-content: flex-start;
+  position: relative;
   .item-left {
     flex-basis: 2rem;
     padding: 0 .36rem;
@@ -354,6 +461,9 @@ $title_right_text_color: #9FA0A0;*/
     flex-basis: 4.1rem;
     color: #231815;
     font-size: .26rem;
+    p{
+      color: #231815;
+    }
     span {
       padding-left: .25rem;
     }
@@ -362,6 +472,7 @@ $title_right_text_color: #9FA0A0;*/
     }
   }
   .item-right {
+    position: relative;
     align-self: flex-start;
     flex-basis: 1.4rem;
     .state {
@@ -617,6 +728,7 @@ $title_right_text_color: #9FA0A0;*/
     align-items: center;
     justify-content: center;
     padding: $padding-width;
+    position: relative;
     img {
       display: inline-block;
       max-width: 100%;
@@ -683,17 +795,16 @@ $title_right_text_color: #9FA0A0;*/
 
 //黄色背景按钮
 @mixin yellow-bg-button() {
-  //line-height: 1.1;
   white-space: nowrap;
-  padding: .1rem .3rem;
   text-align: center;
-  vertical-align: middle;
   display: inline-block;
-  background: #fff url("../images/common/btn_yellow.png") no-repeat center center;
-  background-size: contain;
-  font-size: 0.24rem;//$font-size4;
-  background-Origin: border-box;
+  background: #fff url("../images/common/btn_yellow.png") no-repeat 0 0;
+  background-size: 100%;
+  font-size: 0.24rem;
   color: #231815;
+  width: 1.19rem;//原图大小
+  height: .42rem;
+  line-height: .42rem;
 }
 //黄色背景按钮-长
 @mixin yellow-bg-button-long() {
@@ -709,16 +820,19 @@ $title_right_text_color: #9FA0A0;*/
 @mixin peach-bg-button() {
   //line-height: 1.1;
 
+
+
+
   white-space: nowrap;
-  padding: .1rem .3rem;
   text-align: center;
-  vertical-align: middle;
   display: inline-block;
-  background: #fff url("../images/common/btn_peach.png") no-repeat center center;
-  background-size: contain;
-  font-size: 0.24rem;//$font-size4;
-  background-Origin: border-box;
+  background: #fff url("../images/common/btn_peach.png") no-repeat 0 0;
+  background-size: 100%;
+  font-size: 0.24rem;
   color: #231815;
+  width: 1.19rem;//原图大小
+  height: .42rem;
+  line-height: .42rem;
 }
 
 

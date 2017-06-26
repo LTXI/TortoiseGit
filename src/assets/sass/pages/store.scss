@@ -169,18 +169,18 @@
 .jm-backtop {
   display: none;
   position: fixed;
-  right: .2rem;
+  right: 9px;
   bottom: 1rem;
-  width: 63px;
-  height: 63px;
+  width: 39px;
+  height: 39px;
   border-radius: 50%;
   background: #fdfdfd url("../images/store/icon_backtop.png") no-repeat center center;
   background-size: cover;
   z-index: 1210;
-  transform-origin: 0px 0px 0px;
+  /*transform-origin: 0px 0px 0px;
   opacity: 1;
   transform: scale(.8);
-  transform-origin: center center;
+  transform-origin: center center;*/
   &.none {
     display: block;
   }

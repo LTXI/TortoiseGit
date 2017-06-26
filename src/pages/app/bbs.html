@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    @@include('../../partical/meta.inc',{"title":"九件社区"})
+    @@include('../../partical/styles.inc', {"links":""})
+    <link rel="stylesheet" href="../../assets/styles/app.css">
+    @@include('../../partical/fontsize.inc')
+
+
+</head>
+<body>
+<!--头部-->
+@@include('../../partical/appheadernav.inc',{
+"header-fixed":"header-fixed",
+"title":"九件社区"
+})
+
+<div id="content" class="page-content bbs">
+    <div class="banner mrg-bottom24">
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <a
+                    class="swiper-slide swiper-slide-active" href="javascript:void(0);"><img
+                    src="../../assets/images/app/bbs/banner.png"></a>
+            <a
+                    class="swiper-slide swiper-slide-active" href="javascript:void(0);"><img
+                    src="../../assets/images/app/bbs/banner2.png"></a>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+</div>
+
+    <div class="box-enter mrg-bottom24">
+        <nav class="quick-entry-nav">
+            <a class="quick-entry-link" href="">
+                <span class="quick-box"><img src="../../assets/images/app/bbs/icon_bbs_nav_1.png"><span>吃喝</span></span>
+            </a>
+            <a class="quick-entry-link" href="">
+                <span class="quick-box"><img src="../../assets/images/app/bbs/icon_bbs_nav_2.png"><span>出行</span></span>
+            </a>
+            <a class="quick-entry-link" href="">
+                <span class="quick-box"><img src="../../assets/images/app/bbs/icon_bbs_nav_3.png"><span>装逼</span></span>
+            </a>
+            <a class="quick-entry-link" href="">
+                <span class="quick-box"><img src="../../assets/images/app/bbs/icon_bbs_nav_4.png"><span>外表</span></span>
+            </a>
+            <a class="quick-entry-link" href="">
+                <span class="quick-box"><img src="../../assets/images/app/bbs/icon_bbs_nav_5.png"><span>性</span></span>
+            </a>
+            <a class="quick-entry-link" href="">
+                <span class="quick-box"><img
+                        src="../../assets/images/app/bbs/icon_bbs_nav_6.png"><span>日常所需</span></span>
+                <a class="quick-entry-link" href="">
+                    <span class="quick-box"><img
+                            src="../../assets/images/app/bbs/icon_bbs_nav_7.png"><span>健康</span></span>
+                </a>
+                <a class="quick-entry-link" href="">
+                    <span class="quick-box"><img
+                            src="../../assets/images/app/bbs/icon_bbs_nav_8.png"><span>下一代</span></span>
+                </a>
+        </nav>
+    </div>
+
+    <div class="container mrg-bottom24">
+        <ul>
+            <li class="itembox mrg-bottom24">
+                <div class="item-left">
+                    <div class="imgbox">
+                        <img src="../../assets/images/app/bbs/icon_bbs_head.png" alt=""/></div>
+                </div>
+                <div class="item-middle">
+                    <p class="title"><i class="label"></i>社区代理飞哥</p>
+                    <p class="">QQ号:<span>1</span></p>
+                    <p class="">微信号:<span class="red">15</span></p>
+                    <p class="">微信二维码:</p>
+                </div>
+                <div class="item-right">
+                    <span class="time">2015-2-05 16:12:53</span>
+                    <a href="#">
+                        <span class="code-box"><img src="../../assets/images/app/bbs/icon_bbs_code.png"><span>点击扫描二维码</span></span>
+                    </a>
+                </div>
+            </li>
+        </ul>
+        <li class="itembox mrg-bottom24">
+            <div class="item-left">
+                <div class="imgbox">
+                    <img src="../../assets/images/app/bbs/icon_bbs_head.png" alt=""/></div>
+            </div>
+            <div class="item-middle">
+                <p class="title"><i class="label"></i>社区代理飞哥</p>
+                <p class="">QQ号:<span>1</span></p>
+                <p class="">微信号:<span class="red">15</span></p>
+                <p class="">微信二维码:</p>
+            </div>
+            <div class="item-right">
+                <span class="time">2015-2-05 16:12:53</span>
+                <a href="#">
+                    <span class="code-box"><img src="../../assets/images/app/bbs/icon_bbs_code.png"><span>点击扫描二维码</span></span>
+                </a>
+            </div>
+        </li>
+        </ul>
+        <li class="itembox mrg-bottom24">
+            <div class="item-left">
+                <div class="imgbox">
+                    <img src="../../assets/images/app/bbs/banner.png" alt=""/></div>
+            </div>
+            <div class="item-middle">
+                <p class="title"><i class="label"></i>社区代理飞哥</p>
+                <p class="">QQ号:<span>1</span></p>
+                <p class="">微信号:<span class="red">15</span></p>
+                <p class="">微信二维码:</p>
+            </div>
+            <div class="item-right">
+                <span class="time">2015-2-05 16:12:53</span>
+                <a href="#">
+                    <span class="code-box"><img src="../../assets/images/app/bbs/icon_bbs_code.png"><span>点击扫描二维码</span></span>
+                </a>
+            </div>
+        </li>
+        </ul>
+    </div>
+
+</div>
+
+
+<!--尾部-->
+@@include('../../partical/footer-nav-bar-new.inc')
+<script type="text/javascript">
+  $(document).ready(function () {
+    var mySwiper = new Swiper('.swiper-container', {
+      direction: 'horizontal',
+      loop: true,
+      // 如果需要分页器
+      pagination: '.swiper-pagination',
+    })
+  })
+</script>
+
+<!--脚步导入开始-->
+@@include('../../partical/script.inc')
+<script src="../../assets/scripts/app.js"></script>
+</body>
+</html>

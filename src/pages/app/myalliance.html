@@ -9,13 +9,10 @@
 </head>
 <body>
 <!--头部-->
-<!--头部-->
-<div class="jm-header-navbar">
-    <div class="jm-wrapper">
-        <div class="jm-back"></div>
-        <p class="title">我的联盟</p>
-    </div>
-</div>
+@@include('../../partical/appheadernav.inc',{
+"header-fixed":"header-fixed",
+"title":"我的联盟"
+})
 
 <div id="content" class="page-content my-alliance">
     <!-- 头部等顶部部分占位 -->
@@ -105,7 +102,7 @@
 </div>
 
 <!--尾部导航-->
-@@include('../../partical/footer-nav-bar.inc')
+@@include('../../partical/footer-nav-bar-new.inc')
 
 
 <!--脚步导入开始-->
