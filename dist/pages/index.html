@@ -10,7 +10,7 @@
     <meta http-equiv="Pragma" content="no-cache" />
     <meta http-equiv="Expires" content="0" />
     <meta http-equiv="x-dns-prefetch-control" content="on" />
-    <title>店铺首页</title>
+    <title>静态页面列表</title>
     <link rel="stylesheet" href="../../styles/swiper.min.css" />
     <link rel="stylesheet" href="../../styles/framework.css" />
     <link rel="stylesheet" href="../../styles/app-base.css" />
@@ -21,44 +21,90 @@
     <script type="text/javascript" src="../../scripts/zepto.custom.js?v=04062"></script>-->
 
     <!--样式模块公用放入-->
-<link rel='stylesheet' href='../assets/styles/store.css?rev=c5328f04f5f451b57850b1102a00acd3'/>
+
+    <script >
+document.addEventListener('DOMContentLoaded', function () {
+(function initFontSize() {
+		var resizeEvent = 'orientationchange' in window ? 'orientationchange' : 'resize';
+
+		function changeSize() {
+			const designWidth = 750; //设计稿尺寸是640px
+			const designWidth2 = 1080;
+			var html = document.documentElement; //根元素
+			var deviceWidth = html.clientWidth; //屏幕逻辑宽度
+			var base = 100;
+
+			if (deviceWidth > designWidth2) {
+				deviceWidth = designWidth2;
+			}
+			html.style.fontSize = (deviceWidth / designWidth) * base + "px";
+			//console.log(html.style.fontSize);
+			//alert(html.style.fontSize+"==="+deviceWidth);
+		}
+		changeSize();
+		window.addEventListener(resizeEvent, changeSize, false);
+	})();
+});
+</script>
+    <link rel="stylesheet" href="../assets/styles/app.css">
+    <style type="text/css">
+.index{
+    font-size: .25rem;
+}
+        .index a {
+            display: block;
+            padding: .1rem 0 .1rem .3rem;
+        }
+
+    </style>
 </head>
 <body>
 <!--头部-->
 <div class="jm-header-navbar">
     <div class="jm-wrapper">
         <div class="jm-back"></div>
-        <p class="title">品牌合伙</p>
+        <p class="title">静态页面列表</p>
     </div>
 </div>
 <!--body内容信息-->
-<div id="content" class="page-content">
-    <img class="hidden" src="../assets/images/store/good2.png?rev=406061afc055a35924e442e74f2a4aec" alt="">
+<div id="content" class="page-content index">
+    <p>静态页面列表-app</p>
+    <ul>
+        <a href="./app/agentdetail.html"><li>1、代理详情</li></a>
+        <a href="./app/customer.html"><li>2、客户列表</li></a>
+        <a href="./app/datatip.html"><li>3、数据提示</li></a>
+        <a href="./app/invitetwitter.html"><li>4、邀请推客</li></a>
+        <a href="./app/my.html"><li>5、我的</li></a>
+        <a href="./app/myalliance.html"><li>6、我的联盟</li></a>
+        <a href="./app/mybrand.html"><li>7、我的品牌</li></a>
+        <a href="./app/myorder.html"><li>8、我的订单</li></a>
+        <a href="./app/myteam.html"><li>9、我的团队</li></a>
+        <a href="./app/mytwitter.html"><li>10、我的推客</li></a>
+        <a href="./app/newtwitter.html"><li>11、新的推客</li></a>
+        <a href="./app/wechatqr.html"><li>12、微信二维码名片</li></a>
+
+    </ul>
+    <p>静态页面列表-brand</p>
+    <ul>
+
+        <a href="./brand/brandlist.html"><li>2、品牌列表</li></a>
+        <a href="./brand/codeshop.html"><li>3、店铺二维码</li></a>
+        <a href="./brand/partnership.html"><li>4、品牌合伙人</li></a>
+        <a href="./joinus/joinus.html"><li>5、招募令</li></a>
+        <a href="./store/category.html"><li>6、商品分类</li></a>
+        <a href="./store/productdetails.html"><li>7、商品详情</li></a>
+        <a href="./store/store.html"><li>8、店铺首页</li></a>
+        <a href="./store/storedesc.html"><li>9、店铺简介</li></a>
+        <a href="./store/storedetail.html"><li>10、店铺详情</li></a>
+        <a href="./brand/brandgoods.html"><li>1、品牌商品(xx)</li></a>
+    </ul>
 </div>
 
 <!--底部导航-->
-<!--尾部导航-->
-<div id="footer" class="page-footer">
-    <div class="footer_inner">
-        <a class="on" href="#">
-            <span class="line"><i class="icon-home"></i></span>
-            <span class="text">首页</span>
-        </a>
-        <a href="#">
-            <span class="line"><i class="icon-reorder"></i></span>
-            <span class="text">分类</span></a>
-        <a href="#">
-            <span class="line"><i class="icon-shopping-cart"></i></span>
-            <span class="text">购物车</span></a>
-        <a href="#">
-            <span class="line"><i class="icon-user"></i></span>
-            <span class="text">个人中心</span>
-        </a>
-    </div>
-</div>
+
 <!--脚步导入开始-->
-<!--js模块公用放入-->
-<script src='../assets/scripts/store.js?rev=fed61978d04338c2e06798639123e909'></script>
-<script src='../assets/scripts/brand.js?rev=81051bcc2cf1bedf378224b0a93e2877'></script>
+
+<!--<script src='../assets/scripts/store.js?rev=fed61978d04338c2e06798639123e909'></script>
+<script src='../assets/scripts/brand.js?rev=81051bcc2cf1bedf378224b0a93e2877'></script>-->
 </body>
 </html>

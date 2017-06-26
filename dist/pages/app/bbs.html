@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+       <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+    <meta content="telephone=no" name="format-detection" />
+    <meta name="google" value="notranslate" />
+    <meta name="root-url" value="<?php echo JQ_URL; ?>" />
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <meta http-equiv="x-dns-prefetch-control" content="on" />
+    <title>九件社区</title>
+    <link rel="stylesheet" href="../../styles/swiper.min.css" />
+    <link rel="stylesheet" href="../../styles/framework.css" />
+    <link rel="stylesheet" href="../../styles/app-base.css" />
+    <link rel="stylesheet" href="../../styles/ricky.css?v=04062" />
+   <script type="text/javascript" src="../../scripts/zepto.min.js"></script>
+    <script type="text/javascript" src="../../scripts/zepto.swiper.min.js"></script>
+   <!--<script type="text/javascript" src="../../scripts/zepto.app.js?v=04063"></script>
+    <script type="text/javascript" src="../../scripts/zepto.custom.js?v=04062"></script>-->
+
+    <!--样式模块公用放入-->
+
+    <link rel="stylesheet" href="../../assets/styles/app.css">
+    <script >
+document.addEventListener('DOMContentLoaded', function () {
+(function initFontSize() {
+		var resizeEvent = 'orientationchange' in window ? 'orientationchange' : 'resize';
+
+		function changeSize() {
+			const designWidth = 750; //设计稿尺寸是640px
+			const designWidth2 = 1080;
+			var html = document.documentElement; //根元素
+			var deviceWidth = html.clientWidth; //屏幕逻辑宽度
+			var base = 100;
+
+			if (deviceWidth > designWidth2) {
+				deviceWidth = designWidth2;
+			}
+			html.style.fontSize = (deviceWidth / designWidth) * base + "px";
+			//console.log(html.style.fontSize);
+			//alert(html.style.fontSize+"==="+deviceWidth);
+		}
+		changeSize();
+		window.addEventListener(resizeEvent, changeSize, false);
+	})();
+});
+</script>
+
+
+</head>
+<body>
+<!--头部-->
+<!--头部-->
+<div class="jm-header header-fixed">
+    <div class="jm-wrapper">
+        <a href="javascript:history.go(-1);">
+            <div class="posl icon icon_back icon-fix"></div>
+        </a>
+        <p class="title">九件社区</p>
+        <a href="#">
+            <div class=" posr icon icon_header-nav-short"></div>
+        </a>
+    </div>
+</div>
+<!--如果布局fixed，将占据垂直空间1.26rem-->
+<div class="hold-space-top"></div>
+<!--导航栏-->
+<div class="header-nav-bar">
+        <span class="triangle"></span>
+        <ul>
+            <a href="http://www.baidu.com"><li class="navltem bdr-bottom"><i class="navicon  icon_header_nav_home"></i>首页</li></a>
+        </ul>
+    </div>
+
+
+<div id="content" class="page-content bbs">
+    <div class="banner mrg-bottom24">
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <a
+                    class="swiper-slide swiper-slide-active" href="javascript:void(0);"><img
+                    src="../../assets/images/app/bbs/banner.png"></a>
+            <a
+                    class="swiper-slide swiper-slide-active" href="javascript:void(0);"><img
+                    src="../../assets/images/app/bbs/banner2.png"></a>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+</div>
+
+    <div class="box-enter mrg-bottom24">
+        <nav class="quick-entry-nav">
+            <a class="quick-entry-link" href="">
+                <span class="quick-box"><img src="../../assets/images/app/bbs/icon_bbs_nav_1.png"><span>吃喝</span></span>
+            </a>
+            <a class="quick-entry-link" href="">
+                <span class="quick-box"><img src="../../assets/images/app/bbs/icon_bbs_nav_2.png"><span>出行</span></span>
+            </a>
+            <a class="quick-entry-link" href="">
+                <span class="quick-box"><img src="../../assets/images/app/bbs/icon_bbs_nav_3.png"><span>装逼</span></span>
+            </a>
+            <a class="quick-entry-link" href="">
+                <span class="quick-box"><img src="../../assets/images/app/bbs/icon_bbs_nav_4.png"><span>外表</span></span>
+            </a>
+            <a class="quick-entry-link" href="">
+                <span class="quick-box"><img src="../../assets/images/app/bbs/icon_bbs_nav_5.png"><span>性</span></span>
+            </a>
+            <a class="quick-entry-link" href="">
+                <span class="quick-box"><img
+                        src="../../assets/images/app/bbs/icon_bbs_nav_6.png"><span>日常所需</span></span>
+                <a class="quick-entry-link" href="">
+                    <span class="quick-box"><img
+                            src="../../assets/images/app/bbs/icon_bbs_nav_7.png"><span>健康</span></span>
+                </a>
+                <a class="quick-entry-link" href="">
+                    <span class="quick-box"><img
+                            src="../../assets/images/app/bbs/icon_bbs_nav_8.png"><span>下一代</span></span>
+                </a>
+        </nav>
+    </div>
+
+    <div class="container mrg-bottom24">
+        <ul>
+            <li class="itembox mrg-bottom24">
+                <div class="item-left">
+                    <div class="imgbox">
+                        <img src="../../assets/images/app/bbs/icon_bbs_head.png" alt=""/></div>
+                </div>
+                <div class="item-middle">
+                    <p class="title"><i class="label"></i>社区代理飞哥</p>
+                    <p class="">QQ号:<span>1</span></p>
+                    <p class="">微信号:<span class="red">15</span></p>
+                    <p class="">微信二维码:</p>
+                </div>
+                <div class="item-right">
+                    <span class="time">2015-2-05 16:12:53</span>
+                    <a href="#">
+                        <span class="code-box"><img src="../../assets/images/app/bbs/icon_bbs_code.png"><span>点击扫描二维码</span></span>
+                    </a>
+                </div>
+            </li>
+        </ul>
+        <li class="itembox mrg-bottom24">
+            <div class="item-left">
+                <div class="imgbox">
+                    <img src="../../assets/images/app/bbs/icon_bbs_head.png" alt=""/></div>
+            </div>
+            <div class="item-middle">
+                <p class="title"><i class="label"></i>社区代理飞哥</p>
+                <p class="">QQ号:<span>1</span></p>
+                <p class="">微信号:<span class="red">15</span></p>
+                <p class="">微信二维码:</p>
+            </div>
+            <div class="item-right">
+                <span class="time">2015-2-05 16:12:53</span>
+                <a href="#">
+                    <span class="code-box"><img src="../../assets/images/app/bbs/icon_bbs_code.png"><span>点击扫描二维码</span></span>
+                </a>
+            </div>
+        </li>
+        </ul>
+        <li class="itembox mrg-bottom24">
+            <div class="item-left">
+                <div class="imgbox">
+                    <img src="../../assets/images/app/bbs/banner.png" alt=""/></div>
+            </div>
+            <div class="item-middle">
+                <p class="title"><i class="label"></i>社区代理飞哥</p>
+                <p class="">QQ号:<span>1</span></p>
+                <p class="">微信号:<span class="red">15</span></p>
+                <p class="">微信二维码:</p>
+            </div>
+            <div class="item-right">
+                <span class="time">2015-2-05 16:12:53</span>
+                <a href="#">
+                    <span class="code-box"><img src="../../assets/images/app/bbs/icon_bbs_code.png"><span>点击扫描二维码</span></span>
+                </a>
+            </div>
+        </li>
+        </ul>
+    </div>
+
+</div>
+
+
+<!--尾部-->
+<!--新尾部导航2017-6-23 transparent-bg  scroll-->
+<div id="footer" class=" new-app-page-footer">
+    <ul class="footer_inner ">
+        <li class="footer_item home">
+            <a class="" href="./home.html">
+               <i class="icon-newfooter-home"></i>
+                <span class="text">首页</span>
+            </a>
+        </li>
+        <li class="footer_item bbs">
+            <a class="" href="./bbs.html">
+                <i class="icon-newfooter-bbs"></i>
+                <span class="text">社区</span>
+            </a>
+        </li>
+        <li class="footer_item my">
+            <a class="" href="./my-new.html">
+                <i class="icon-newfooter-my"></i>
+                <span class="text">我的九件</span>
+            </a>
+        </li>
+    </ul>
+</div>
+<script type="text/javascript">
+  $(document).ready(function () {
+    var mySwiper = new Swiper('.swiper-container', {
+      direction: 'horizontal',
+      loop: true,
+      // 如果需要分页器
+      pagination: '.swiper-pagination',
+    })
+  })
+</script>
+
+<!--脚步导入开始-->
+<!--js模块公用放入-->
+<script src="../../assets/scripts/app.js"></script>
+</body>
+</html>

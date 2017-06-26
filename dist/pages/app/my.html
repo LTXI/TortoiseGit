@@ -54,8 +54,8 @@ document.addEventListener('DOMContentLoaded', function () {
     <div class="top">
         <div class="userinfo">
             <div class="item-left">
-                <div class="imgbox">
-                    <div class="inbox pass"><img src="../../assets/images/app/user/avatar.png" alt=""></div>
+                <div class="imgbox pass">
+                    <img src="../../assets/images/app/user/user-bg.png" alt="">
                 </div>
             </div>
             <div class="item-middle">
@@ -82,8 +82,8 @@ document.addEventListener('DOMContentLoaded', function () {
         </div>
     </div>
 
-    <div class="order">
-        <div class="orderitem">
+    <div class="order mrg-bottom24">
+        <div class="orderitem bdr-bottom">
             <a href="#"> <span class="title">我的订单</span>
             <span class="orderlink">查看所有订单<i class="arrow-icon"></i></span></a>
         </div>
@@ -106,11 +106,11 @@ document.addEventListener('DOMContentLoaded', function () {
             </a>
         </div>
     </div>
-    <div class="account">
-        <div class="accountitem">
-            <span class="title">我的订单</span>
-        </div>
-        <div class="accounbox">
+    <!--<ul class="account mrg-bottom24">
+        <li class="accountitem bdr-bottom">
+            <span class="title">我的账户</span>
+        </li>
+        <li class="accounbox">
             <div class="left">
                 <a class="item" href="#">
                     <i class="num">￥58</i>
@@ -118,41 +118,54 @@ document.addEventListener('DOMContentLoaded', function () {
                 </a>
             </div>
             <div class="right">
-                <a class="item" href="#">
+                <a class="item " href="#">
                     <i class="num">16</i>
                     <span class="text">积分</span>
                 </a>
             </div>
             <div class="line"></div>
-        </div>
+        </li>
 
-    </div>
-    <div class="set">
-        <div class="setitem">
+    </ul>-->
+    <ul class="set mrg-bottom24">
+        <li class="setitem bdr-bottom">
             <a href="#"> <span class="title">资料设置</span>
                 <span class="orderlink"><i class="arrow-icon"></i></span></a>
-        </div>
-    </div>
+        </li>
+        <li class="setitem bdr-bottom">
+            <a href="#"> <span class="title">资料设置</span>
+                <span class="orderlink"><i class="arrow-icon"></i></span></a>
+        </li>
+        <li class="setitem bdr-bottom">
+            <a href="#"> <span class="title">资料设置</span>
+                <span class="orderlink"><i class="arrow-icon"></i></span></a>
+        </li>
+    </ul>
 </div>
 
 <!--尾部导航-->
-<div id="footer" class="app-page-footer">
-    <div class="footer_inner">
-        <a class="on" href="#">
-            <span class="line"><i class="icon icon-invite"></i></span>
-            <span class="text">邀请</span>
-        </a>
-        <a href="#">
-            <span class="line"><i class="icon icon-team"></i></span>
-            <span class="text">团队</span></a>
-        <a href="#">
-            <span class="line"><i class="icon icon-alliance"></i></span>
-            <span class="text">联盟</span></a>
-        <a href="#">
-            <span class="line"><i class="icon icon-my"></i></span>
-            <span class="text">我的</span>
-        </a>
-    </div>
+<!--新尾部导航2017-6-23 transparent-bg  scroll-->
+<div id="footer" class=" new-app-page-footer">
+    <ul class="footer_inner ">
+        <li class="footer_item home">
+            <a class="" href="./home.html">
+               <i class="icon-newfooter-home"></i>
+                <span class="text">首页</span>
+            </a>
+        </li>
+        <li class="footer_item bbs">
+            <a class="" href="./bbs.html">
+                <i class="icon-newfooter-bbs"></i>
+                <span class="text">社区</span>
+            </a>
+        </li>
+        <li class="footer_item my">
+            <a class="" href="./my-new.html">
+                <i class="icon-newfooter-my"></i>
+                <span class="text">我的九件</span>
+            </a>
+        </li>
+    </ul>
 </div>
 
 

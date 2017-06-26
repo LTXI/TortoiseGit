@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" id="code">
+<html lang="en" class="twitter-spe">
 <head>
        <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
@@ -10,7 +10,7 @@
     <meta http-equiv="Pragma" content="no-cache" />
     <meta http-equiv="Expires" content="0" />
     <meta http-equiv="x-dns-prefetch-control" content="on" />
-    <title>新的推客</title>
+    <title>邀请</title>
     <link rel="stylesheet" href="../../styles/swiper.min.css" />
     <link rel="stylesheet" href="../../styles/framework.css" />
     <link rel="stylesheet" href="../../styles/app-base.css" />
@@ -52,34 +52,60 @@ document.addEventListener('DOMContentLoaded', function () {
 <body>
 <!--头部-->
 <!--头部-->
-<div class="jm-header-navbar">
+<div class="jm-header header-fixed transparent-bg scroll">
     <div class="jm-wrapper">
-        <div class="jm-back"></div>
-        <p class="title">新的推客</p>
+        <a href="javascript:history.go(-1);">
+            <div class="posl icon icon_back icon-fix"></div>
+        </a>
+        <p class="title">邀请</p>
+        <a href="#">
+            <div class=" posr icon icon_header-nav-short"></div>
+        </a>
     </div>
 </div>
+<!--如果布局fixed，将占据垂直空间1.26rem-->
+<div class="hold-space-top"></div>
+<!--导航栏-->
+<div class="header-nav-bar">
+        <span class="triangle"></span>
+        <ul>
+            <a href="http://www.baidu.com"><li class="navltem bdr-bottom"><i class="navicon  icon_header_nav_home"></i>首页</li></a>
+        </ul>
+    </div>
+
 
 <div id="content" class="page-content new-twitter">
+    <div class="banner">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <a
+                        class="swiper-slide swiper-slide-active" href="javascript:void(0);"><img
+                        src="../../assets/images/app/twitter/banner.png"></a>
+            </div>
+
+        </div>
+    </div>
     <div class="topnav">
         <div class="topbox">
-            <div class="item ">
+            <div class="item">
                 <span class="icon"></span>
                 <span class="title">新的推客</span>
             </div>
         </div>
-        <div class="bottombox">
-            <div class="left">
-                <a class="item" href="#">
-                    <i class="icon icon1"></i>
-                    <span class="text">邀请推客</span>
-                </a>
-            </div>
-            <div class="right">
-                <a class="item" href="#">
-                    <i class="icon icon2"></i>
-                    <span class="text">邀请二维码</span>
-                </a>
-            </div>
+        <div class="bottombox mrg-bottom24">
+            <a class="item-link" href="./invitetwitter.html">
+                    <span class="link-box">
+                        <img class="i" src="../../assets/images/app/twitter/icon_twitter.png">
+                        <span class="text">邀请推客</span>
+                    </span>
+            </a>
+            <a class="item-link" href="#">
+                    <span class="link-box">
+                        <img class="i" src="../../assets/images/app/twitter/icon_code.png">
+                        <span class="text">邀请二维码</span>
+                    </span>
+            </a>
+
         </div>
     </div>
 
@@ -87,7 +113,7 @@ document.addEventListener('DOMContentLoaded', function () {
         <li class="itembox">
             <div class="item user">
                 <span class="left">用户：</span>
-                <span class="right">12345678911</span>
+                <span class="right phone">12345678911</span>
             </div>
             <div class="item ">
                 <span class="left">招募时间：</span>
@@ -98,13 +124,13 @@ document.addEventListener('DOMContentLoaded', function () {
                 <span class="right state">已完成</span>
             </div>
             <div class="done">
-                <a href="#" class="btn">撤 销</a>
+                <a href="#" class="btn">撤销</a>
             </div>
         </li>
         <li class="itembox">
             <div class="item user">
                 <span class="left">用户：</span>
-                <span class="right">12345678911</span>
+                <span class="right phone">12345678911</span>
             </div>
             <div class="item ">
                 <span class="left">招募时间：</span>
@@ -115,13 +141,13 @@ document.addEventListener('DOMContentLoaded', function () {
                 <span class="right state">已完成</span>
             </div>
             <div class="done">
-                <a href="#" class="btn">撤 销</a>
+                <a href="#" class="btn">撤销</a>
             </div>
         </li>
         <li class="itembox">
             <div class="item user">
                 <span class="left">用户：</span>
-                <span class="right">12345678911</span>
+                <span class="right phone">12345678911</span>
             </div>
             <div class="item ">
                 <span class="left">招募时间：</span>
@@ -132,36 +158,54 @@ document.addEventListener('DOMContentLoaded', function () {
                 <span class="right state">已完成</span>
             </div>
             <div class="done">
-                <a href="#" class="btn">撤 销</a>
+                <a href="#" class="btn">撤销</a>
             </div>
         </li>
+        <li class="itembox">
+            <div class="item user">
+                <span class="left">用户：</span>
+                <span class="right phone">12345678911</span>
+            </div>
+            <div class="item ">
+                <span class="left">招募时间：</span>
+                <span class="right time">2017-12-12</span>
+            </div>
+            <div class="item">
+                <span class="left">招募状态：</span>
+                <span class="right state">已完成</span>
+            </div>
+            <div class="done">
+                <a href="#" class="btn">撤销</a>
+            </div>
+        </li>
+
     </ul>
-    <!--更多-->
-    <div class="more">
-        更多...
-    </div>
 </div>
 
 <!--尾部导航-->
-<div id="footer" class="app-page-footer">
-    <div class="footer_inner">
-        <a class="on" href="#">
-            <span class="line"><i class="icon icon-invite"></i></span>
-            <span class="text">邀请</span>
-        </a>
-        <a href="#">
-            <span class="line"><i class="icon icon-team"></i></span>
-            <span class="text">团队</span></a>
-        <a href="#">
-            <span class="line"><i class="icon icon-alliance"></i></span>
-            <span class="text">联盟</span></a>
-        <a href="#">
-            <span class="line"><i class="icon icon-my"></i></span>
-            <span class="text">我的</span>
-        </a>
-    </div>
+<!--新尾部导航2017-6-23 transparent-bg  scroll-->
+<div id="footer" class=" new-app-page-footer">
+    <ul class="footer_inner ">
+        <li class="footer_item home">
+            <a class="" href="./home.html">
+               <i class="icon-newfooter-home"></i>
+                <span class="text">首页</span>
+            </a>
+        </li>
+        <li class="footer_item bbs">
+            <a class="" href="./bbs.html">
+                <i class="icon-newfooter-bbs"></i>
+                <span class="text">社区</span>
+            </a>
+        </li>
+        <li class="footer_item my">
+            <a class="" href="./my-new.html">
+                <i class="icon-newfooter-my"></i>
+                <span class="text">我的九件</span>
+            </a>
+        </li>
+    </ul>
 </div>
-
 
 <!--脚步导入开始-->
 <!--js模块公用放入-->

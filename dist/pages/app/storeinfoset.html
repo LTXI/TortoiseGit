@@ -52,7 +52,8 @@ document.addEventListener('DOMContentLoaded', function () {
 </head>
 <body>
 <!--头部-->
-<div class="jm-header">
+<!--头部-->
+<div class="jm-header header-fixed">
     <div class="jm-wrapper">
         <a href="javascript:history.go(-1);">
             <div class="posl icon icon_back icon-fix"></div>
@@ -62,19 +63,18 @@ document.addEventListener('DOMContentLoaded', function () {
             <div class=" posr icon icon_header-nav-short"></div>
         </a>
     </div>
-
-    <div class="nav">
+</div>
+<!--如果布局fixed，将占据垂直空间1.26rem-->
+<div class="hold-space-top"></div>
+<!--导航栏-->
+<div class="header-nav-bar">
         <span class="triangle"></span>
         <ul>
-            <li class="navltem bdr-bottom"><i class="navicon  icon_header_nav_home"></i>首页</li>
-            <li class="navltem bdr-bottom"><i class="navicon  icon_header_nav_home"></i>分类</li>
-            <li class="navltem bdr-bottom"><i class="navicon  icon_header_nav_home"></i>首页</li>
-            <li class="navltem bdr-bottom"><i class="navicon  icon_header_nav_home"></i>首页</li>
-            <li class="navltem"><i class="navicon  icon_header_nav_home"></i>首页</li>
+            <a href="http://www.baidu.com"><li class="navltem bdr-bottom"><i class="navicon  icon_header_nav_home"></i>首页</li></a>
         </ul>
-
     </div>
-</div>
+
+
 <div id="content" class="page-content community">
     <!--查询结果列表-->
     <ul class="list">
@@ -100,7 +100,30 @@ document.addEventListener('DOMContentLoaded', function () {
         </li>
     </ul>
 
+</div>
 
+<!--新尾部导航2017-6-23 transparent-bg  scroll-->
+<div id="footer" class=" new-app-page-footer">
+    <ul class="footer_inner ">
+        <li class="footer_item home">
+            <a class="" href="./home.html">
+               <i class="icon-newfooter-home"></i>
+                <span class="text">首页</span>
+            </a>
+        </li>
+        <li class="footer_item bbs">
+            <a class="" href="./bbs.html">
+                <i class="icon-newfooter-bbs"></i>
+                <span class="text">社区</span>
+            </a>
+        </li>
+        <li class="footer_item my">
+            <a class="" href="./my-new.html">
+                <i class="icon-newfooter-my"></i>
+                <span class="text">我的九件</span>
+            </a>
+        </li>
+    </ul>
 </div>
 
 <!--脚步导入开始-->

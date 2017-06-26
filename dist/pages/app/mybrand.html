@@ -51,26 +51,35 @@ document.addEventListener('DOMContentLoaded', function () {
 </head>
 <body>
 <!--头部-->
-<div class="jm-header">
+<!--头部-->
+<div class="jm-header header-fixed">
     <div class="jm-wrapper">
-        <a href="#">
+        <a href="javascript:history.go(-1);">
             <div class="posl icon icon_back icon-fix"></div>
         </a>
         <p class="title">我的品牌</p>
         <a href="#">
-            <div class="posr icon icon_share icon-fix"></div>
+            <div class=" posr icon icon_header-nav-short"></div>
         </a>
     </div>
 </div>
+<!--如果布局fixed，将占据垂直空间1.26rem-->
+<div class="hold-space-top"></div>
+<!--导航栏-->
+<div class="header-nav-bar">
+        <span class="triangle"></span>
+        <ul>
+            <a href="http://www.baidu.com"><li class="navltem bdr-bottom"><i class="navicon  icon_header_nav_home"></i>首页</li></a>
+        </ul>
+    </div>
+
 <div id="content" class="page-content my-brand">
     <ul class="list">
-        <li class="item">
+        <li class="item bdr-bottom">
             <div class="itembox">
                 <div class="item-left">
                     <div class="imgbox">
-                        <div class="inbox">
                             <img src="../../assets/images/app/team/logo.png" alt=""/>
-                        </div>
                     </div>
                 </div>
                 <div class="item-middle">
@@ -83,13 +92,11 @@ document.addEventListener('DOMContentLoaded', function () {
                 </div>
             </div>
         </li>
-        <li class="item">
+        <li class="item bdr-bottom">
             <div class="itembox">
                 <div class="item-left">
                     <div class="imgbox">
-                        <div class="inbox">
                             <img src="../../assets/images/app/team/logo1.png" alt=""/>
-                        </div>
                     </div>
                 </div>
                 <div class="item-middle">
@@ -106,23 +113,28 @@ document.addEventListener('DOMContentLoaded', function () {
 </div>
 
 <!--尾部导航-->
-<div id="footer" class="app-page-footer">
-    <div class="footer_inner">
-        <a class="on" href="#">
-            <span class="line"><i class="icon icon-invite"></i></span>
-            <span class="text">邀请</span>
-        </a>
-        <a href="#">
-            <span class="line"><i class="icon icon-team"></i></span>
-            <span class="text">团队</span></a>
-        <a href="#">
-            <span class="line"><i class="icon icon-alliance"></i></span>
-            <span class="text">联盟</span></a>
-        <a href="#">
-            <span class="line"><i class="icon icon-my"></i></span>
-            <span class="text">我的</span>
-        </a>
-    </div>
+<!--新尾部导航2017-6-23 transparent-bg  scroll-->
+<div id="footer" class=" new-app-page-footer">
+    <ul class="footer_inner ">
+        <li class="footer_item home">
+            <a class="" href="./home.html">
+               <i class="icon-newfooter-home"></i>
+                <span class="text">首页</span>
+            </a>
+        </li>
+        <li class="footer_item bbs">
+            <a class="" href="./bbs.html">
+                <i class="icon-newfooter-bbs"></i>
+                <span class="text">社区</span>
+            </a>
+        </li>
+        <li class="footer_item my">
+            <a class="" href="./my-new.html">
+                <i class="icon-newfooter-my"></i>
+                <span class="text">我的九件</span>
+            </a>
+        </li>
+    </ul>
 </div>
 
 
