@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en" id="code">
+<head>
+    @@include('../../partical/meta.inc',{"title":"社区详细"})
+    @@include('../../partical/styles.inc', {"links":""})
+    <link rel="stylesheet" href="../../assets/styles/app.css">
+    @@include('../../partical/fontsize.inc')
+</head>
+<body>
+
+<div id="content" class="page-content bbs-detail-new">
+    <div class="head">
+        <div class="content">
+            <div class="imgbox">
+                <img src="../../assets/images/app/bbs/icon_bbs_nav_1.png" alt="">
+            </div>
+            <p class="theme">美食饮料</p>
+            <span class="attention"><span class="plus">+</span>关注</span>
+            <p class="desc">萨芬啊发生 艾丝凡阿飞安</p>
+        </div>
+    </div>
+    <div class="posts-head mrg-bottom24">
+        <span class="tips">看帖</span>
+        <div class="switchbox">
+            <input class="switchbox switch switch-animbg" type="checkbox" checked />
+        </div>
+    </div>
+
+    <ul class="posts-list">
+        <li class="posts-item clearfix mrg-bottom24">
+            <div class="left-side">
+                <div class="imgbox">
+                <img src="../../assets/images/app/bbs/bbs_msg_dead_normal.png" alt="">
+            </div>
+            </div>
+            <div class="right-side">
+                <p class="username">九妹</p>
+                <span class="spe-post">精华</span>
+                <p class="title">夏日水果榜单夏日水果榜单</p>
+                <div class="clearfix contentbox">
+                    <p class="content ">夏日水果榜单夏日水果榜单夏日水果榜单夏日水果榜单夏日水果榜单夏日水果榜单
+                    </p>
+                    <span class="open-arrow">
+                        <span class="text open-text">全文</span>
+                        <span class="text close-text">收起</span>
+                        <i class="arrow"></i>
+                    </span>
+                </div>
+                <div class="picbox clearfix ">
+                    <div class="picitem">
+                        <img class="pic" src="../../assets/images/app/bbs/bbs_msg_pic.png" alt="图片">
+                    </div>
+                    <div class="picitem">
+                        <img class="pic" src="../../assets/images/app/bbs/bbs_msg_pic.png" alt="图片">
+                    </div>
+                    <div class="picitem">
+                        <img class="pic" src="../../assets/images/app/bbs/bbs_msg_pic.png" alt="图片">
+                    </div>
+                    <div class="picitem">
+                        <img class="pic" src="../../assets/images/app/bbs/bbs_msg_pic.png" alt="图片">
+                    </div>
+                </div>
+
+                <div class="bottom clearfix">
+                    <span class="count">晒单 | 1465人阅读</span>
+                    <span class="like surelike">100</span>
+                </div>
+            </div>
+
+        </li>
+        <li class="posts-item clearfix mrg-bottom24">
+            <div class="left-side">
+                <div class="imgbox">
+                    <img src="../../assets/images/app/bbs/bbs_msg_dead_normal.png" alt="">
+                </div>
+            </div>
+            <div class="right-side">
+                <p class="username">九妹</p>
+                <span class="spe-post">精华</span>
+                <p class="title">夏日水果榜单夏日水果榜单</p>
+                <div class="clearfix open contentbox">
+                    <p class="content ">夏日水果榜单夏日水果榜单夏日水果榜单夏日水果榜单夏日水果榜单夏日水果榜单
+                    </p>
+                    <span class="open-arrow">
+                        <span class="text open-text">全文</span>
+                        <span class="text close-text">收起</span>
+                        <i class="arrow"></i>
+                    </span>
+                </div>
+                <div class="picbox clearfix">
+                    <div class="picitem">
+                        <img class="pic" src="../../assets/images/app/bbs/bbs_msg_pic.png" alt="图片">
+                    </div>
+                    <div class="picitem">
+                        <img class="pic" src="../../assets/images/app/bbs/bbs_msg_pic.png" alt="图片">
+                    </div>
+                </div>
+
+                <div class="bottom clearfix">
+                    <span class="count">晒单 | 1465人阅读</span>
+                    <span class="like surelike">100</span>
+                </div>
+            </div>
+        </li>
+    </ul>
+
+</div>
+
+<!--尾部导航-->
+@@include('../../partical/footer-nav-bar-new.inc')
+
+<script>
+    $(function () {
+      $(".posts-list").on("click",'.open-arrow', function (e) {
+        var parent = $(e.currentTarget).parent('.contentbox');
+        if(parent.hasClass("open")){
+          parent.removeClass("open");
+        }else{
+          parent.addClass("open");
+        }
+      })
+    })
+</script>
+<!--脚步导入开始-->
+@@include('../../partical/script.inc')
+<script src="../../assets/scripts/app.js"></script>
+</body>
+</html>

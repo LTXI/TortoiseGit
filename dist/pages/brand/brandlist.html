@@ -11,6 +11,8 @@
     <meta http-equiv="Expires" content="0" />
     <meta http-equiv="x-dns-prefetch-control" content="on" />
     <title>品牌列表</title>
+    <script src="../../scripts/mui.min.js"></script>
+    <link rel="stylesheet" href="../../styles/mui.min.css" />
     <link rel="stylesheet" href="../../styles/swiper.min.css" />
     <link rel="stylesheet" href="../../styles/framework.css" />
     <link rel="stylesheet" href="../../styles/app-base.css" />
@@ -53,7 +55,7 @@ document.addEventListener('DOMContentLoaded', function () {
 <!--头部-->
 <div class="jm-header">
     <div class="jm-wrapper">
-        <a href="#">
+        <a href="javascript:history.go(-1);">
             <div class="posl icon icon_back icon-fix"></div>
         </a>
         <p class="title">品牌列表</p>
@@ -62,116 +64,95 @@ document.addEventListener('DOMContentLoaded', function () {
         </a>
     </div>
 </div>
+<!--此文件结构替换较多，需要该php文件-->
 <div id="content" class="page-content">
-    <div class="brandlistbox">
-        <div class="head">
-            <div class="licon icon icon_star icon-fix"></div>
+    <div class="brandlistbox ">
+        <div class="brand-type head">
+            <!--<div class="licon icon icon_star icon-fix"></div>
             <p class="title">热门品牌</p>
-            <div class="ricon icon icon_star icon-fix"></div>
+            <div class="ricon icon icon_star icon-fix"></div>-->
+            <p class="title">热门品牌</p>
         </div>
         <ul class="list">
-            <li class="brand-item">
-                <div class="img-item">
-                    <img src="../../assets/images/store/logo1.png" alt="">
-                </div>
-                <div class="desc-item">
-                    <span class="name">雅诗兰黛</span>
-                    <div class="desc">
-                        <span>雅诗雅诗兰黛雅诗兰黛雅诗兰黛雅诗兰黛雅诗兰黛</span>
+            <li class="item mrg-bottom24">
+                <div class="itembox">
+                    <div class="item-left">
+                        <div class="imgbox">
+                            <img src="../../assets/images/app/team/logo33.png" alt=""/>
+                        </div>
                     </div>
-                </div>
-                <div class="btn-item">
-                    <a class="goodsbtn icon btn_yellow" href="#">商品</a>
-                    <a class="partnerbtn icon btn_peach" href="#">合伙人</a>
+                    <div class="item-middle">
+                        <p class="title">雅诗兰黛</p>
+                        <p class="desc"><span>雅诗雅诗兰黛雅诗兰黛雅诗兰黛雅诗兰黛雅诗兰黛雅诗雅诗兰黛雅诗兰黛雅诗</span></p>
+                    </div>
+                    <div class="item-right">
+                        <a class="btn_yellow" href="#">商品</a>
+                        <a class="btn_peach" href="#">合伙人</a>
+                    </div>
                 </div>
             </li>
-            <li class="brand-item">
-                <div class="img-item">
-                    <img src="../../assets/images/store/logo1.png" alt="">
-                </div>
-                <div class="desc-item">
-                    <span class="name">雅诗兰黛</span>
-                    <div class="desc">
-                        <span>雅诗雅诗兰黛雅诗兰黛雅诗兰黛雅诗兰黛雅诗兰黛</span>
+            <li class="item mrg-bottom24">
+                <div class="itembox">
+                    <div class="item-left">
+                        <div class="imgbox">
+                            <img src="../../assets/images/app/team/logo1.png" alt=""/>
+                        </div>
                     </div>
-                </div>
-                <div class="btn-item">
-                    <a class="goodsbtn icon btn_yellow" href="#">商品</a>
-                    <a class="partnerbtn icon btn_peach" href="#">合伙人</a>
+                    <div class="item-middle">
+                        <p class="title">雅诗兰黛</p>
+                        <p class="desc"><span>雅诗雅诗兰黛雅诗兰黛雅诗兰黛雅诗兰黛雅诗兰黛雅诗雅诗兰黛雅诗兰黛雅诗</span></p>
+                    </div>
+                    <div class="item-right">
+                        <a class="btn_yellow" href="#">商品</a>
+                        <a class="btn_peach" href="#">合伙人</a>
+                    </div>
                 </div>
             </li>
-            <li class="brand-item">
-                <div class="img-item">
-                    <img src="../../assets/images/store/logo1.png" alt="">
-                </div>
-                <div class="desc-item">
-                    <span class="name">雅诗兰黛</span>
-                    <div class="desc">
-                        <span>雅诗雅诗兰黛雅诗兰黛雅诗兰黛雅诗兰黛雅诗兰黛</span>
+        </ul>
+    </div>
+    <div class="brandlistbox ">
+        <div class="brand-type head">
+            <p class="title">国际品牌</p>
+        </div>
+        <ul class="list">
+            <li class="item mrg-bottom24">
+                <div class="itembox">
+                    <div class="item-left">
+                        <div class="imgbox">
+                            <img src="../../assets/images/app/team/logo.png" alt=""/>
+                        </div>
+                    </div>
+                    <div class="item-middle">
+                        <p class="title">雅诗兰黛</p>
+                        <p class="desc"><span>雅诗雅诗兰黛雅诗兰黛雅诗兰黛雅诗兰黛雅诗兰黛雅诗雅诗兰黛雅诗兰黛雅诗</span></p>
+                    </div>
+                    <div class="item-right">
+                        <a class="btn_yellow" href="#">商品</a>
+                        <a class="btn_peach" href="#">合伙人</a>
                     </div>
                 </div>
-                <div class="btn-item">
-                    <a class="goodsbtn icon btn_yellow" href="#">商品</a>
-                    <a class="partnerbtn icon btn_peach" href="#">合伙人</a>
+            </li>
+            <li class="item mrg-bottom24">
+                <div class="itembox">
+                    <div class="item-left">
+                        <div class="imgbox">
+                            <img src="../../assets/images/app/team/logo1.png" alt=""/>
+                        </div>
+                    </div>
+                    <div class="item-middle">
+                        <p class="title">雅诗兰黛</p>
+                        <p class="desc"><span>雅诗雅诗兰黛雅诗兰黛雅诗兰黛雅诗兰黛雅诗兰黛雅诗雅诗兰黛雅诗兰黛雅诗</span></p>
+                    </div>
+                    <div class="item-right">
+                        <a class="btn_yellow" href="#">商品</a>
+                        <a class="btn_peach" href="#">合伙人</a>
+                    </div>
                 </div>
             </li>
         </ul>
     </div>
 
-    <div class="brandlistbox">
-        <div class="head">
-            <div class="licon icon icon_star icon-fix"></div>
-            <p class="title">国际品牌</p>
-            <div class="ricon icon icon_star icon-fix"></div>
-        </div>
-        <ul class="list">
-            <li class="brand-item">
-                <div class="img-item">
-                    <img src="../../assets/images/store/logo1.png" alt="">
-                </div>
-                <div class="desc-item">
-                    <span class="name">雅诗兰黛</span>
-                    <div class="desc">
-                        <span>雅诗雅诗兰黛雅诗兰黛雅诗兰黛雅诗兰黛雅诗兰黛</span>
-                    </div>
-                </div>
-                <div class="btn-item">
-                    <a class="goodsbtn icon btn_yellow" href="#">商品</a>
-                    <a class="partnerbtn icon btn_peach" href="#">合伙人</a>
-                </div>
-            </li>
-            <li class="brand-item">
-                <div class="img-item">
-                    <img src="../../assets/images/store/logo1.png" alt="">
-                </div>
-                <div class="desc-item">
-                    <span class="name">雅诗兰黛</span>
-                    <div class="desc">
-                        <span>雅诗雅诗兰黛雅诗兰黛雅诗兰黛雅诗兰黛雅诗兰黛</span>
-                    </div>
-                </div>
-                <div class="btn-item">
-                    <a class="goodsbtn icon btn_yellow" href="#">商品</a>
-                    <a class="partnerbtn icon btn_peach" href="#">合伙人</a>
-                </div>
-            </li>
-            <li class="brand-item">
-                <div class="img-item">
-                    <img src="../../assets/images/store/logo1.png" alt="">
-                </div>
-                <div class="desc-item">
-                    <span class="name">雅诗兰黛</span>
-                    <div class="desc">
-                        <span>雅诗雅诗兰黛雅诗兰黛雅诗兰黛雅诗兰黛雅诗兰黛</span>
-                    </div>
-                </div>
-                <div class="btn-item">
-                    <a class="goodsbtn icon btn_yellow" href="#">商品</a>
-                    <a class="partnerbtn icon btn_peach" href="#">合伙人</a>
-                </div>
-            </li>
-        </ul>
-    </div>
+
 </div>
 
 <!--脚步导入开始-->

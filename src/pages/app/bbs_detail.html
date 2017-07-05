@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    @@include('../../partical/meta.inc',{"title":"社区代理详情"})
+    @@include('../../partical/styles.inc', {"links":""})
+    <link rel="stylesheet" href="../../assets/styles/app.css">
+    @@include('../../partical/fontsize.inc')
+
+
+</head>
+<body>
+<!--头部-->
+@@include('../../partical/appheadernav.inc',{
+"header-fixed":"header-fixed",
+"title":"社区代理详情"
+})
+
+<div id="content" class="page-content bbs-detail">
+    <div class="container mrg-bottom24">
+        <ul>
+                <li class="itembox mrg-bottom24">
+
+                    <div class="item-left">
+                        <div class="imgbox">
+                            <img src="../../assets/images/app/bbs/icon_bbs_head.png" alt=""/></div>
+                    </div>
+                    <div class="item-middle">
+                        <p class="title"><i class="label"></i>社区代理飞哥</p>
+                        <p class="">QQ号:<span>1</span></p>
+                        <p class="">微信号:<span class="red">15</span></p>
+                        <p class="">更新时间:<span class="red">2015-2-05 </span></p>
+
+                    </div>
+                </li>
+        </ul>
+    </div>
+    <div class="share mrg-bottom24">
+        <p class="title">XX微信二维码</p>
+
+        <div class="code">
+            <div class="imgbox">
+                <img src="../../assets/images/app/bbs/partnership_code.jpg" alt=""/>
+            </div>
+        </div>
+        <p class="desc">扫一扫上面的二维码</p>
+    </div>
+    <div class="share mrg-bottom24">
+        <p class="title">合伙人群微信二维码</p>
+
+        <div class="code">
+            <div class="imgbox">
+                <img src="../../assets/images/app/bbs/partnership_code.jpg" alt=""/>
+            </div>
+        </div>
+        <p class="desc">扫一扫上面的二维码</p>
+    </div>
+</div>
+
+<!--脚步导入开始-->
+@@include('../../partical/script.inc')
+<script src="../../assets/scripts/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+@charset "UTF-8";
+/**其添加 begin**/
+.form-update-store_desc {
+  height: 100%;
+  width: 6.5rem;
+  margin: 0 auto;
+  padding-bottom: 1rem;
+}
+
+.form-update-store_desc .bdr-bottom {
+  height: 1rem;
+  line-height: 1rem;
+  margin-top: .2rem;
+}
+
+.form-update-store_desc .bdr-bottom label {
+  font-size: .32rem;
+}
+
+.form-update-store_desc .store_describe_textarea {
+  border: 0 none;
+  padding: .2rem .1rem;
+  font-size: .28rem;
+  width: 100%;
+  height: 3rem;
+}
+
+.form-update-store_desc .form-item-btn {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.form-update-store_desc .form-item-btn a {
+  border-radius: .15rem;
+  display: block;
+  width: 5rem;
+  height: .8rem;
+  line-height: .8rem;
+  margin: 0 auto;
+  color: #fff;
+  font-size: .32rem;
+  background: #F23030;
+}
+
+/**其他添加 end**/
+.share-form {
+  display: none;
+}
+
+.goods-info, .goods-item, .pro_item {
+  position: relative;
+}
+
+.sharebox {
+  position: absolute;
+  right: 0.24rem;
+  bottom: 0.2rem;
+  z-index: 2;
+}
+
+.sharebox .share_link {
+  float: right;
+  color: #9FA0A0;
+  font-size: .20rem;
+  border: 1px solid #eee;
+  padding: 0.05rem 0.15rem;
+  border-radius: .05rem;
+}
+
+.goods-info .sharebox {
+  bottom: 0.2rem;
+  right: 0.5rem;
+}
+
+.goods-info .sharebox .share_link {
+  padding: 0.05rem 0.15rem;
+}
+
+.jm-goodrecom .pro_type_grid .pro_item {
+  border: 1px solid #ddd;
+  position: relative;
+  display: block;
+}
+
+/*# sourceMappingURL=maps/other_css.css.map */

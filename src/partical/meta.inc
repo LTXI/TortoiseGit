@@ -8,6 +8,8 @@
     <meta http-equiv="Expires" content="0" />
     <meta http-equiv="x-dns-prefetch-control" content="on" />
     <title>@@title</title>
+    <script src="../../scripts/mui.min.js"></script>
+    <link rel="stylesheet" href="../../styles/mui.min.css" />
     <link rel="stylesheet" href="../../styles/swiper.min.css" />
     <link rel="stylesheet" href="../../styles/framework.css" />
     <link rel="stylesheet" href="../../styles/app-base.css" />

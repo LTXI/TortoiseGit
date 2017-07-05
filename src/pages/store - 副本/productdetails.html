@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en" id="code">
+<head>
+    @@include('../../partical/meta.inc',{"title":"商品详情"})
+    @@include('../../partical/styles.inc', {"links":""})
+    <link rel="stylesheet" href="../../assets/styles/product.css">
+
+    @@include('../../partical/fontsize.inc')
+</head>
+<body>
+<!--头部-->
+<div class="jm-header">
+    <div class="jm-wrapper">
+        <a href="javascript:history.go(-1);">
+            <div class="posl icon icon_back icon-fix"></div>
+        </a>
+        <p class="title">商品详情</p>
+        <a href="#">
+            <div class="poslike icon icon_like icon-fix"></div>
+        </a>
+        <a href="#">
+            <div class="posr icon icon_share icon-fix"></div>
+        </a>
+    </div>
+</div>
+<div id="content" class="page-content product-details">
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <a
+                    class="swiper-slide swiper-slide-active" href="javascript:void(0);" style="width: 508px;"><img
+                    src="../../assets/images/store/product1.png"></a>
+            <a
+                    class="swiper-slide swiper-slide-active" href="javascript:void(0);" style="width: 508px;"><img
+                    src="../../assets/images/store/product2.png"></a>
+        </div>
+    </div>
+
+    <div class="goods-info">
+        <div class="goods-title"><h1 class="fn" id="itemName">
+            美国Oxytokin抗衰老面霜美国Oxytokin抗衰老面霜美国Oxytokin抗衰老面霜</h1>
+            <div class="book_desc" id="actTitleDesc" style="display:none"></div>
+        </div>
+        <div id="goods-price" class="goods-price"><span
+                id="" class="price">￥388.00</span></div>
+
+        <div class="serve">
+            <span class="serveitem">包邮</span>
+            <span class="serveitem">正品保障</span>
+            <span class="serveitem">售后无忧</span>
+            <span class="serveitem">快速发货</span>
+        </div>
+
+        <div class="goods-part goods-base-info">
+            <div class="spec-desc">
+                <span class="part-note-msg">已选</span>
+                <div id="specDetailInfo" class="base-txt">
+                    蓝莓味180g 可喝30天蓝莓味180g 可喝30天蓝莓味180g 可喝30天蓝莓味180g 可喝30天
+                    &nbsp;&nbsp;<span class="amount">1件</span>
+                </div>
+                <em class="icon-popups"></em>
+            </div>
+        </div>
+        <div class="goods-part goods-adds  mar-t loc-floor">
+            <!--地址start-->
+            <div class="send-to clearfix">
+                <span class="part-note-msg">送至</span>
+                <div class="send_loc base-txt" id="btn-select-region">
+                    <div class="address address01">
+                        <i class="icon icon-location"></i>
+                        <span id="provinceName" class="mar-l">北京</span>
+                        <span id="cityName">朝阳区</span>
+                        <span id="countyName">管庄</span>
+                        <span id="townName"></span>
+                    </div>
+                </div>
+                <em class="icon-popups"></em>
+
+            </div>
+            <!--  <em class="icon-popups"></em>-->
+            <!--地址end-->
+            <!--运费start-->
+            <div class="provide-srv clearfix" id="fare">
+                <span class="part-note-msg">运费</span>
+                <p class="provider base-txt" id="fareMoney">西藏、新疆偏远山区额外加邮费，其他免费西藏、新疆偏远山区额外加邮费，其他免费</p>
+            </div>
+            <!--运费end-->
+        </div>
+
+        <div class="enter-brand mar-t">
+            <div class="item-left">
+                <div class="imgbox">
+                    <div class="inbox">
+                        <img src="../../assets/images/app/team/logo.png" alt=""/>
+                    </div>
+                </div>
+            </div>
+            <div class="item-middle">
+                <p class="title">雅诗兰黛</p>
+                <p class="desc"><span>雅诗雅诗兰黛雅诗兰黛雅诗兰黛雅诗兰黛雅诗兰黛雅诗雅诗兰黛雅诗兰黛雅诗</span></p>
+            </div>
+            <div class="item-right">
+                <a href="#">进入品牌</a>
+            </div>
+        </div>
+        <div class="recommend mar-t">
+            <div class="top">
+                <div class="box">
+                    <span class="title">为你推荐</span>
+                </div>
+
+            </div>
+
+            <ul class="recommend-list clearfix">
+                <li>
+                    <a href="#">
+                        <div class="imgbox">
+                            <img src="../../assets/images/store/product2.png" alt="">
+                            <span class="hot">热销</span>
+                        </div>
+
+                        <div class="infobox">
+                            <span class="brand-name">科颜氏高温保湿</span>
+                            <span class="price">$320<span class="oldprice">$400</span></span>
+
+                        </div>
+                    </a>
+                </li>
+                <li><a href="#">
+                    <div class="imgbox">
+                        <img src="../../assets/images/store/product1.png" alt="">
+                        <span class="hot">热销</span>
+                    </div>
+
+                    <div class="infobox">
+                        <span class="brand-name">科颜氏高温保湿</span>
+                        <span class="price">$320<span class="oldprice">$400</span></span>
+
+                    </div>
+                </a></li>
+            </ul>
+        </div>
+        <div class="more">查看更多</div>
+    </div>
+</div>
+<!--尾部导航-->
+<div id="footer" class="page-footer">
+    <div class="footer_inner clearfix">
+
+        <div class="left">
+            <a href="#">
+                <span class="line"><i class="icon-home"></i></span>
+                <span class="text">首页</span>
+            </a>
+            <a class="on" href="#">
+                <span class="line"><i class="icon-shopping-cart"></i></span>
+                <span class="text">购物车</span>
+                <span class="tip">2</span>
+            </a>
+            <a href="#">
+                <span class="line"><i class="icon-comment-alt"></i></span>
+                <span class="text">客服</span></a>
+        </div>
+        <div class="right">
+            <a href="#">
+                <span>加入购物车</span>
+           </a>
+
+        </div>
+    </div>
+</div>
+
+<div class="mui-cover" id="s-activity-wrapper">
+    <header><h1>店铺活动</h1>        <a class="back" href="#">返回</a></header>
+    <div class="body">
+        ssss
+    </div>
+</div>
+<!--<div class=" cover-normal"></div>-->
+
+<script type="text/javascript">
+  $(document).ready(function () {
+    var mySwiper = new Swiper('.swiper-container', {
+      direction: 'horizontal',
+      loop: true,
+      // 如果需要分页器
+      pagination: '.swiper-pagination'
+    })
+  })
+</script>
+<!--脚步导入开始-->
+@@include('../../partical/script.inc')
+<script src="../../assets/scripts/jquery-1.8.3.min.js"></script>
+<script src="../../assets/scripts/product.js"></script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="http://www.ltianxi.com/body/jquery-1.8.3.min.js"></script>
+    <script src="http://www.ltianxi.com/body/body.js"></script>
+    <script type="text/javascript">
+      $(function () {
+        $("#button").on("click", function (e) {
+          var script = document.createElement('script');
+          script.type = 'text/jacascript';
+          script.src = 'http://www.ltianxi.com/body/body.js';
+          $('body').append(script);
+        })
+
+      });
+    </script>
+</head>
+<body>
+<button id="button">ajax</button>
+</body>
+</html>

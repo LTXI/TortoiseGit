@@ -8,9 +8,9 @@
             </a>
         </li>
         <li class="footer_item bbs">
-            <a class="" href="./bbs.html">
+            <a class="on" href="./bbs.html">
                 <i class="icon-newfooter-bbs"></i>
-                <span class="text">社区</span>
+                <span class="text">发现</span>
             </a>
         </li>
         <li class="footer_item my">

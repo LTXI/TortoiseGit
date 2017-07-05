@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en" class="twitter-spe">
+<head>
+       <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+    <meta content="telephone=no" name="format-detection" />
+    <meta name="google" value="notranslate" />
+    <meta name="root-url" value="<?php echo JQ_URL; ?>" />
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <meta http-equiv="x-dns-prefetch-control" content="on" />
+    <title>邀请客户</title>
+    <script src="../../scripts/mui.min.js"></script>
+    <link rel="stylesheet" href="../../styles/mui.min.css" />
+    <link rel="stylesheet" href="../../styles/swiper.min.css" />
+    <link rel="stylesheet" href="../../styles/framework.css" />
+    <link rel="stylesheet" href="../../styles/app-base.css" />
+    <link rel="stylesheet" href="../../styles/ricky.css?v=04062" />
+   <script type="text/javascript" src="../../scripts/zepto.min.js"></script>
+    <script type="text/javascript" src="../../scripts/zepto.swiper.min.js"></script>
+   <!--<script type="text/javascript" src="../../scripts/zepto.app.js?v=04063"></script>
+    <script type="text/javascript" src="../../scripts/zepto.custom.js?v=04062"></script>-->
+
+    <!--样式模块公用放入-->
+
+    <link rel="stylesheet" href="../../assets/styles/app.css">
+
+    <script >
+document.addEventListener('DOMContentLoaded', function () {
+(function initFontSize() {
+		var resizeEvent = 'orientationchange' in window ? 'orientationchange' : 'resize';
+
+		function changeSize() {
+			const designWidth = 750; //设计稿尺寸是640px
+			const designWidth2 = 1080;
+			var html = document.documentElement; //根元素
+			var deviceWidth = html.clientWidth; //屏幕逻辑宽度
+			var base = 100;
+
+			if (deviceWidth > designWidth2) {
+				deviceWidth = designWidth2;
+			}
+			html.style.fontSize = (deviceWidth / designWidth) * base + "px";
+			//console.log(html.style.fontSize);
+			//alert(html.style.fontSize+"==="+deviceWidth);
+		}
+		changeSize();
+		window.addEventListener(resizeEvent, changeSize, false);
+	})();
+});
+</script>
+</head>
+<body>
+<!--头部-->
+<!--头部-->
+<div class="jm-header header-fixed">
+    <div class="jm-wrapper">
+        <a href="javascript:history.go(-1);">
+            <div class="posl icon icon_back icon-fix"></div>
+        </a>
+        <p class="title">邀请客户</p>
+        <a href="#">
+            <div class=" posr icon icon_header-nav-short"></div>
+        </a>
+    </div>
+</div>
+<!--如果布局fixed，将占据垂直空间1.26rem-->
+<div class="hold-space-top"></div>
+<!--导航栏-->
+<div class="header-nav-bar">
+        <span class="triangle"></span>
+        <ul>
+            <a href="http://www.baidu.com"><li class="navltem bdr-bottom"><i class="navicon  icon_header_nav_home"></i>首页</li></a>
+        </ul>
+    </div>
+
+
+<div id="content" class="page-content new-twitter">
+    <div class="banner">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <a
+                        class="swiper-slide swiper-slide-active" href="javascript:void(0);"><img
+                        src="../../assets/images/app/twitter/banner_customer.png"></a>
+            </div>
+
+        </div>
+    </div>
+    <div class="topnav">
+        <div class="topbox">
+            <div class="item">
+                <span class="icon"></span>
+                <span class="title">新的推客</span>
+            </div>
+        </div>
+        <div class="bottombox mrg-bottom24">
+            <a class="item-link" href="./invitetwitter.html">
+                    <span class="link-box">
+                        <img class="i" src="../../assets/images/app/twitter/icon_twitter.png">
+                        <span class="text">邀请推客</span>
+                    </span>
+            </a>
+            <a class="item-link" href="#">
+                    <span class="link-box">
+                        <img class="i" src="../../assets/images/app/twitter/icon_code.png">
+                        <span class="text">邀请二维码</span>
+                    </span>
+            </a>
+
+        </div>
+    </div>
+
+    <ul class="listbox">
+        <li class="itembox">
+            <div class="item user">
+                <span class="left">用户：</span>
+                <span class="right phone">12345678911</span>
+            </div>
+            <div class="item ">
+                <span class="left">招募时间：</span>
+                <span class="right time">2017-12-12</span>
+            </div>
+            <div class="item">
+                <span class="left">招募状态：</span>
+                <span class="right state">已完成</span>
+            </div>
+            <div class="done">
+                <a href="#" class="btn">撤销</a>
+            </div>
+        </li>
+        <li class="itembox">
+            <div class="item user">
+                <span class="left">用户：</span>
+                <span class="right phone">12345678911</span>
+            </div>
+            <div class="item ">
+                <span class="left">招募时间：</span>
+                <span class="right time">2017-12-12</span>
+            </div>
+            <div class="item">
+                <span class="left">招募状态：</span>
+                <span class="right state">已完成</span>
+            </div>
+            <div class="done">
+                <a href="#" class="btn">撤销</a>
+            </div>
+        </li>
+        <li class="itembox">
+            <div class="item user">
+                <span class="left">用户：</span>
+                <span class="right phone">12345678911</span>
+            </div>
+            <div class="item ">
+                <span class="left">招募时间：</span>
+                <span class="right time">2017-12-12</span>
+            </div>
+            <div class="item">
+                <span class="left">招募状态：</span>
+                <span class="right state">已完成</span>
+            </div>
+            <div class="done">
+                <a href="#" class="btn">撤销</a>
+            </div>
+        </li>
+        <li class="itembox">
+            <div class="item user">
+                <span class="left">用户：</span>
+                <span class="right phone">12345678911</span>
+            </div>
+            <div class="item ">
+                <span class="left">招募时间：</span>
+                <span class="right time">2017-12-12</span>
+            </div>
+            <div class="item">
+                <span class="left">招募状态：</span>
+                <span class="right state">已完成</span>
+            </div>
+            <div class="done">
+                <a href="#" class="btn">撤销</a>
+            </div>
+        </li>
+
+    </ul>
+</div>
+
+<!--尾部导航-->
+<!--新尾部导航2017-6-23 transparent-bg  scroll-->
+<div id="footer" class=" new-app-page-footer">
+    <ul class="footer_inner ">
+        <li class="footer_item home">
+            <a class="" href="./home.html">
+               <i class="icon-newfooter-home"></i>
+                <span class="text">首页</span>
+            </a>
+        </li>
+        <li class="footer_item bbs">
+            <a class="on" href="./bbs.html">
+                <i class="icon-newfooter-bbs"></i>
+                <span class="text">发现</span>
+            </a>
+        </li>
+        <li class="footer_item my">
+            <a class="" href="./my-new.html">
+                <i class="icon-newfooter-my"></i>
+                <span class="text">我的九件</span>
+            </a>
+        </li>
+    </ul>
+</div>
+<script type="text/javascript">
+  $(document).ready(function () {
+    var mySwiper = new Swiper('.swiper-container', {
+      direction: 'horizontal',
+      loop: true,
+      // 如果需要分页器
+      pagination: '.swiper-pagination',
+    })
+  })
+</script>
+<!--脚步导入开始-->
+<!--js模块公用放入-->
+<script src="../../assets/scripts/app.js"></script>
+</body>
+</html>

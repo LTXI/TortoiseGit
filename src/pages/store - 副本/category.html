@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+    @@include('../../partical/meta.inc',{"title":"商品分类"})
+    @@include('../../partical/styles.inc', {"links":""})
+    <link rel="stylesheet" href="../../assets/styles/category.css?rev=@@hash">
+    @@include('../../partical/fontsize.inc')
+</head>
+<body cz-shortcut-listen="true">
+<div id="header" class="page-header"></div>
+<div id="content" class="page-content category">
+    <div class="category-topbar">
+        <div class="topbar-warp">
+            <a href="javascript:history.go(-1);">
+                <div class="icon_back"></div>
+            </a>
+            <div class="topbar-inner">
+                <form onsubmit="return false;" class="header-search-frm" action=""><input type="search"
+                                                                                          placeholder="搜索瓜藤商品"
+                                                                                          id="topSearchTxt"
+                                                                                          class="header-search-txt"
+                                                                                          name="keyword"><input
+                        type="submit" onclick="javascript:App.search();" value="搜索" class="search-submit"></form>
+            </div>
+            <a href="#">
+                <div class="msg-box">
+                    <div class="msg">消息</div>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="category-sidebar">
+        <div class="sidebar-scroll">
+            <ul class="sidebar-items">
+                <li class="cur"><a href="#m"><span>热门推荐</span></a></li>
+                <li><a href="#"><span>日本馆</span></a></li>
+                <li><a href="#"><span>生活家居</span></a></li>
+                <li><a href="#"><span>全球购</span></a></li>
+                <li><a href="#"><span>健康有机</span></a></li>
+                <li><a href="#"><span>生态厨房</span></a></li>
+                <li><a href="#"><span>养生保健</span></a></li>
+
+            </ul>
+        </div>
+    </div>
+    <div class="category-pro-list">
+        <div class="category-pro-wrapper">
+            <div class="banner">
+                <img src="../../assets/images/store/banner.png" alt="banner">
+            </div>
+
+            <div class="category-pro-item">
+                <div class="top-item">
+                    <p class="title">我的代理品牌</p>
+                </div>
+                <ul class="category-list clearfix">
+                    <li class="pro_item">
+                        <a class="item_inner" href="#">
+                            <div class="cover"><img class="photo"
+                                                    src="../../assets/images/store/logo4.png">
+                            </div>
+                            <div class="info">
+                                <div class="title">欧洲第一线大品牌</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="pro_item">
+                        <a class="item_inner" href="#">
+                            <div class="cover"><img class="photo"
+                                                    src="../../assets/images/store/logo5.png">
+                            </div>
+                            <div class="info">
+                                <div class="title">巴马百岁源健</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="pro_item">
+                        <a class="item_inner" href="#">
+                            <div class="cover"><img class="photo"
+                                                    src="../../assets/images/store/logo4.png">
+                            </div>
+                            <div class="info">
+                                <div class="title">巴马百岁源健包巴健包巴马百岁源健包巴健包</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="pro_item">
+                        <a class="item_inner" href="#">
+                            <div class="cover"><img class="photo"
+                                                    src="../../assets/images/store/logo4.png">
+                            </div>
+                            <div class="info">
+                                <div class="title">巴马百</div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="category-pro-item">
+                <div class="top-item">
+                    <p class="title">分类</p>
+                </div>
+                <ul class="category-list clearfix">
+                    <li class="pro_item">
+                        <a class="item_inner" href="#">
+                            <div class="cover"><img class="photo"
+                                                    src="../../assets/images/store/logo7.png">
+                            </div>
+                            <div class="info">
+                                <div class="title">巴马源健</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="pro_item">
+                        <a class="item_inner" href="#">
+                            <div class="cover"><img class="photo"
+                                                    src="../../assets/images/store/logo8.png">
+                            </div>
+                            <div class="info">
+                                <div class="title">巴马百岁</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="pro_item">
+                        <a class="item_inner" href="#">
+                            <div class="cover"><img class="photo"
+                                                    src="../../assets/images/store/logo7.png">
+                            </div>
+                            <div class="info">
+                                <div class="title">巴马百岁</div>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="pro_item">
+                        <a class="item_inner" href="#">
+                            <div class="cover"><img class="photo"
+                                                    src="../../assets/images/store/logo8.png">
+                            </div>
+                            <div class="info">
+                                <div class="title">巴马百岁源健包巴健包巴马百岁源健包巴健包</div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!--尾部导航-->
+<div id="footer" class="page-footer">
+    <div class="footer_inner">
+        <a href="#">
+            <span class="line"><i class="icon-home"></i></span>
+            <span class="text">首页</span>
+        </a>
+        <a class="on" href="#">
+            <span class="line"><i class="icon-reorder"></i></span>
+            <span class="text">分类</span></a>
+        <a href="#">
+            <span class="line"><i class="icon-shopping-cart"></i></span>
+            <span class="text">购物车</span></a>
+        <a href="#">
+            <span class="line"><i class="icon-user"></i></span>
+            <span class="text">个人中心</span>
+        </a>
+    </div>
+</div>
+</body>
+</body>
+</html>

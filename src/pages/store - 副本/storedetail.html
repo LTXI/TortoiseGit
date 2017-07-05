@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    @@include('../../partical/meta.inc',{"title":"店铺详情"})
+    @@include('../../partical/styles.inc', {"links":""})
+    <link rel="stylesheet" href="../../assets/styles/app.css">
+</head>
+<body>
+@@include('../../partical/fontsize.inc')
+<!--头部-->
+<!--头部-->
+<div class="jm-header">
+    <div class="jm-wrapper">
+        <a href="javascript:history.go(-1);">
+            <div class="posl icon icon_back icon-fix"></div>
+        </a>
+        <p class="title">店铺详情</p>
+        <a href="#">
+            <div class="poslike icon icon_like icon-fix"></div>
+        </a>
+        <a href="#">
+            <div class="posr icon icon_share icon-fix"></div>
+        </a>
+    </div>
+</div>
+<!--body内容信息-->
+<div id="content" class="page-content store-detail">
+    <div class="top">
+        <div class="left">
+            <span class="imgbox">
+                <img src="http://vshop.guaten.com/data/store_logo/2_1497856144.jpg" alt="">
+            </span>
+            <span class="title">店铺名称店铺名称店铺名称店铺名称店铺名称店铺名称</span>
+        </div>
+        <div class="right">
+            <div class="uptext">关注</div>
+            <div class="downtext">2.5万人</div>
+        </div>
+    </div>
+
+    <div class="mid">
+        <div class="item provider-item bdr-bottom">
+            <a href="#">
+                <span class="title">联系供应商</span>
+                <span class="orderlink"><i class="arrow-icon"></i></span>
+            </a>
+        </div>
+        <div class="item code-item mrg-bottom24 bdr-bottom">
+            <a href="#">
+                <span class="title">店铺二维码</span>
+                <span class="orderlink"><i class="arrow-icon"></i></span>
+            </a>
+        </div>
+        <div class="item desc-item bdr-bottom">
+            <a href="#">
+                <span class="title">店铺简介</span>
+                <span class="orderlink"><i class="arrow-icon"></i></span>
+            </a>
+        </div>
+        <div class="item time-item mrg-bottom24 bdr-bottom">
+            <span class="title">开店时间 </span>
+            <span class="orderlink .time">2014-1-7</span>
+        </div>
+    </div>
+    <div class="bottom">
+        <div class="title bdr-bottom">授权品牌</div>
+        <ul class="content">
+            <li class="item">
+                <div class="box">
+                    <p class="table-cell"><a href="#"><img src="../../assets/images/store/logo1.png" alt=""></a></p>
+                </div>
+            </li>
+            <li class="item">
+                <div class="box">
+                    <p class="table-cell"><a href="#"><img src="../../assets/images/store/logo2.png" alt=""></a></p>
+                </div>
+            </li>
+            <li class="item">
+                <div class="box">
+                    <p class="table-cell"><a href="#"><img src="../../assets/images/store/logo3.png" alt=""></a></p>
+                </div>
+            </li>
+            <li class="item">
+                <div class="box">
+                    <p class="table-cell"><a href="#"><img src="../../assets/images/store/logo4.png" alt=""></a></p>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+
+
+<!--返回头部-->
+<a href="#top" id="jm-backtop" class="jm-backtop"></a>
+<!--底部导航-->
+@@include('../../partical/footer.inc')
+<!--脚步导入开始-->
+@@include('../../partical/script.inc')
+</body>
+</html>

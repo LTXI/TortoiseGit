@@ -10,7 +10,7 @@
 <body>
 <!--头部-->
 @@include('../../partical/appheadernav.inc',{
-"header-fixed":"header-fixed transparent-bg scroll",
+"header-fixed":"header-fixed",
 "title":"邀请"
 })
 
@@ -124,7 +124,16 @@
 
 <!--尾部导航-->
 @@include('../../partical/footer-nav-bar-new.inc')
-
+<script type="text/javascript">
+  $(document).ready(function () {
+    var mySwiper = new Swiper('.swiper-container', {
+      direction: 'horizontal',
+      loop: true,
+      // 如果需要分页器
+      pagination: '.swiper-pagination',
+    })
+  })
+</script>
 <!--脚步导入开始-->
 @@include('../../partical/script.inc')
 <script src="../../assets/scripts/app.js"></script>

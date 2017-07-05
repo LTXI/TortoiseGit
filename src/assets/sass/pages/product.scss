@@ -133,10 +133,29 @@
     }
 
     .enter-brand {
-      @include brand-list-item;
       background-color: #fff;
+      @include layout-col-3(1.9rem, 3rem, 1.8rem,center);
+      padding: 0.26rem 0;
+      .item-left {
+        padding: 0 .5rem 0 .24rem;
+        @include  create-square-image(1.18rem, 1.18rem, 0);
+      }
+      .item-middle {
+        .title{
+          width: 3rem;
+          font-size: .28rem;
+          color: #231815;
+          @include ellipsis
+        }
+        .desc {
+          color: #9FA0A0;
+          font-size: .22rem;
+          width: 3rem;
+          @include  ellipsis;
+        }
+      }
       .item-right {
-        a {
+        .enter-btn{
           display: inline-block;
           width: 1.56rem;
           height: .42rem;
@@ -149,7 +168,6 @@
           white-space: nowrap;
         }
       }
-
     }
     .recommend {
       background-color: #fff;

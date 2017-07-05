@@ -56,7 +56,7 @@ const postcss_plugins = [
   })
 ];
 const gulpautoprefixer_options = {
-  browsers: ['last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4', 'Firefox > 20', 'Chrome  > 20'],
+  browsers: ['last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 3', 'Firefox > 10', 'Chrome  > 10'],
   cascade: true, //是否美化属性值 默认：true
   remove: false //是否去掉不必要的前缀 默认：true
 };
@@ -180,7 +180,7 @@ gulp.task('vendor', function () {
 //拷贝php文件
 
 gulp.task('themes', function () {
-  return gulp.src('src/themes/**/*.js')
+  return gulp.src('src/themes/**/*.php')
     .pipe(gulp.dest('dist/themes'));
 });
 // 默认执行
@@ -196,7 +196,7 @@ gulp.task('default', function (done) {
     ['images'],
     ['html'],
     ['gt-copy'],
-    ['themes']
+    ['themes'],
     done);
 });
 

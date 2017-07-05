@@ -89,6 +89,21 @@
     background: url("../images/store/icon_code.png") no-repeat center center;
     background-size: cover;
   }
+  .friend_text {
+    position: absolute;
+    top: 1.4rem;
+    right: 0;
+    //width: 1.3rem;
+    padding: 0 .2rem;
+    height: .56rem;
+    line-height: .56rem;
+    color: #F4F4F2;
+    background: #F23030;
+    font-size: .12rem;
+    border-top-left-radius: .2rem;
+    border-bottom-left-radius: .2rem;
+
+  }
 }
 //店铺 end
 .jm-goodsign, .jm-goodrecom{
@@ -347,7 +362,7 @@
     background-color: #fff;
     font-size: .24rem;
     color: #595757;
-    height: 9rem;
+    height: 12.10rem;
     p {
       text-align: left;
       line-height: .36rem;

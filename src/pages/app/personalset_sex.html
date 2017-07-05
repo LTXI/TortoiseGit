@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" style="height: 100%;">
+<head>
+    @@include('../../partical/meta.inc',{"title":"性别设置"})
+    @@include('../../partical/styles.inc', {"links":""})
+    <link rel="stylesheet" href="../../assets/styles/app.css">
+    @@include('../../partical/fontsize.inc')
+
+
+</head>
+<body style="height: 100%;">
+<!--头部-->
+@@include('../../partical/appheadernav.inc',{
+"header-fixed":"header-fixed",
+"title":"性别设置"
+})
+<div id="content" class="page-content community" style="height: 90%;background-color: #fff;">
+    <div class="form-wrapper">
+        <div class="form-info">
+            <form name="form-edit" action="#">
+                <div class="form-item    ">
+                    <label for="sex" class="">性别</label>
+                    <select name="sex" id="sex">
+                        <option value="0" selected="selected">女</option>
+                        <option value="1">男</option>
+                    </select>
+                </div>
+
+                <div class="form-item-btn"><a href="javascript:void(0);" onclick="javascript:App.submit();">确定</a></div>
+                <input type="hidden" name="submit" value="sex">
+            </form>
+        </div>
+    </div>
+
+</div>
+
+<!--脚步导入开始-->
+@@include('../../partical/script.inc')
+<script src="../../assets/scripts/app.js"></script>
+</body>
+</html>

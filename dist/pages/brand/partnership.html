@@ -11,6 +11,8 @@
     <meta http-equiv="Expires" content="0" />
     <meta http-equiv="x-dns-prefetch-control" content="on" />
     <title>品牌合伙人</title>
+    <script src="../../scripts/mui.min.js"></script>
+    <link rel="stylesheet" href="../../styles/mui.min.css" />
     <link rel="stylesheet" href="../../styles/swiper.min.css" />
     <link rel="stylesheet" href="../../styles/framework.css" />
     <link rel="stylesheet" href="../../styles/app-base.css" />
@@ -52,7 +54,7 @@ document.addEventListener('DOMContentLoaded', function () {
 <!--头部-->
 <div class="jm-header">
     <div class="jm-wrapper">
-        <a href="#">
+        <a href="javascript:history.go(-1);">
             <div class="posl icon icon_back icon-fix"></div>
         </a>
         <p class="title">品牌合伙人</p>
@@ -65,11 +67,11 @@ document.addEventListener('DOMContentLoaded', function () {
 <div id="content" class="page-content">
     <div class="partnership">
         <!--合伙人及店铺介绍-->
-        <div class="partner">
+        <!--<div class="partner">
             <div class="logo">
-                <!--头像 移除hidden类-->
+                &lt;!&ndash;头像 移除hidden类&ndash;&gt;
                 <img class="hidden" src="../../assets/images/store/logo1.png" alt="">
-                <!--无头像-->
+                &lt;!&ndash;无头像&ndash;&gt;
                 <div class="noimg"></div>
             </div>
             <div class="twitter">
@@ -91,70 +93,50 @@ document.addEventListener('DOMContentLoaded', function () {
                     <div class="down">推销：10%</div>
                 </div>
             </div>
+        </div>-->
+        <div class="partner mrg-bottom24">
+            <div class="logo">
+                <div class="imgbox">
+                    <img src="../../assets/images/brand/default.png"></div>
+            </div>
+            <div class="twitter">
+                <span class="name">科颜氏</span>
+                <span class="sell">在售商品45个</span>
+                <span class="focus"><i class="pos  icon icon_attention icon-fix"></i>已关注</span>
+            </div>
+            <div class="payback">
+                <div class="left">
+                    <div class="outcircle">
+                        <div class="incircle">
+                            <span class="up">推广</span>
+                            <span class="down">佣金</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="bottom">
+                    <div class="up">直销：20%</div>
+                    <div class="down">推销：10%</div>
+                </div>
+            </div>
         </div>
+
         <!--内容列表-->
         <ul class="list">
-            <li class="shop-item">
-                <div class="img-item">
-                    <img class="hidden" src="../../assets/images/store/logo1.png" alt="">
-                    <div class="noimg"></div>
+            <li class="shop-item bdr-bottom">
+                <div class="img-item item-left">
+                    <div class="imgbox">
+                        <img class="thumb" src="../../assets/images/store/logo1.png" alt="">
+                    </div>
                 </div>
-                <div class="desc-item">
+                <div class="desc-item item-middle">
                     <span class="name">代理商名称</span>
                     <span class="phone"><i class="pos  icon icon_phone icon-fix"></i>12345678911</span>
                 </div>
-                <div class="btn-item">
+                <div class="btn-item item-right">
                     <a class="code icon icon_code icon-fix" href="#"></a>
                 </div>
             </li>
-            <li class="shop-item">
-                <div class="img-item">
-                    <img src="../../assets/images/store/logo1.png" alt="">
-                </div>
-                <div class="desc-item">
-                    <span class="name">代理商名称</span>
-                    <span class="phone"><i class="pos  icon icon_phone icon-fix"></i>12345678911</span>
-                </div>
-                <div class="btn-item">
-                    <a class="code icon icon_code icon-fix" href="#"></a>
-                </div>
-            </li>
-            <li class="shop-item">
-                <div class="img-item">
-                    <img src="../../assets/images/store/logo1.png" alt="">
-                </div>
-                <div class="desc-item">
-                    <span class="name">代理商名称</span>
-                    <span class="phone"><i class="pos  icon icon_phone icon-fix"></i>12345678911</span>
-                </div>
-                <div class="btn-item">
-                    <a class="code icon icon_code icon-fix" href="#"></a>
-                </div>
-            </li>
-            <li class="shop-item">
-                <div class="img-item">
-                    <img src="../../assets/images/store/logo1.png" alt="">
-                </div>
-                <div class="desc-item">
-                    <span class="name">代理商名称</span>
-                    <span class="phone"><i class="pos  icon icon_phone icon-fix"></i>12345678911</span>
-                </div>
-                <div class="btn-item">
-                    <a class="code icon icon_code icon-fix" href="#"></a>
-                </div>
-            </li>
-            <li class="shop-item">
-                <div class="img-item">
-                    <img src="../../assets/images/store/logo1.png" alt="">
-                </div>
-                <div class="desc-item">
-                    <span class="name">代理商名称</span>
-                    <span class="phone"><i class="pos  icon icon_phone icon-fix"></i>12345678911</span>
-                </div>
-                <div class="btn-item">
-                    <a class="code icon icon_code icon-fix" href="#"></a>
-                </div>
-            </li>
+
         </ul>
     </div>
 </div>

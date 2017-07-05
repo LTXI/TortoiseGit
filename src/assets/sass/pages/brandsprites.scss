@@ -99,7 +99,26 @@
   background-size: .47rem .47rem;
 }
 //头部导航 end
+//店铺设置begin
+.icon_community_store {
+  background: url("../images/common/icon_community_store.png") no-repeat left center;
+  background-size: .47rem .47rem;
+}
 
+.icon_community_storePhone {
+  background: url("../images/common/icon_community_storePhone.png") no-repeat left center;
+  background-size: .47rem .47rem;
+}
+.icon_community_storeLogo {
+  background: url("../images/common/icon_community_storeLogo.png") no-repeat left center;
+  background-size: .47rem .47rem;
+}
+
+.icon_community_storeDesc {
+  background: url("../images/common/icon_community_storeDesc.png") no-repeat left center;
+  background-size: .47rem .47rem;
+}
+//店铺设置end
 
 
 //新版底部导航begin
@@ -118,6 +137,10 @@
 .on .icon-newfooter-home {
   background: url("../images/common/icon_newfooter_home_pressed.png") no-repeat center bottom;
   background-size: .47rem .47rem;
+}
+.on .icon-newfooter-bbs {
+  background: url("../images/common/icon_newfooter_bbs_pressed.png") no-repeat center bottom;
+  background-size: .94rem .94rem;
 }
 
 .on .icon-newfooter-my {

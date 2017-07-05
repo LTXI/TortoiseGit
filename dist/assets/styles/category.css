@@ -155,6 +155,7 @@ body {
   right: -1px;
   top: 0;
   -webkit-transform: scaleX(0.5);
+     -moz-transform: scaleX(0.5);
       -ms-transform: scaleX(0.5);
           transform: scaleX(0.5);
   width: 1px;
@@ -173,6 +174,7 @@ body {
   left: -1px;
   top: 0;
   -webkit-transform: scaleX(0.5);
+     -moz-transform: scaleX(0.5);
       -ms-transform: scaleX(0.5);
           transform: scaleX(0.5);
   width: 1px;
@@ -191,6 +193,7 @@ body {
   position: absolute;
   right: 0;
   -webkit-transform: scaleY(0.5);
+     -moz-transform: scaleY(0.5);
       -ms-transform: scaleY(0.5);
           transform: scaleY(0.5);
   width: 100%;
@@ -210,6 +213,7 @@ body {
   top: -1px;
   right: 0;
   -webkit-transform: scaleY(0.5);
+     -moz-transform: scaleY(0.5);
       -ms-transform: scaleY(0.5);
           transform: scaleY(0.5);
   z-index: 10;
@@ -225,9 +229,11 @@ body {
   border: 1px solid #e3e5e9;
   border-radius: 6px;
   -webkit-transform: scale(0.5);
+     -moz-transform: scale(0.5);
       -ms-transform: scale(0.5);
           transform: scale(0.5);
   -webkit-transform-origin: top left;
+     -moz-transform-origin: top left;
       -ms-transform-origin: top left;
           transform-origin: top left;
 }
@@ -235,16 +241,19 @@ body {
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5) {
   .bdr-r::after {
     -webkit-transform: scaleX(0.7);
+       -moz-transform: scaleX(0.7);
         -ms-transform: scaleX(0.7);
             transform: scaleX(0.7);
   }
   .bdr-bottom::after {
     -webkit-transform: scaleY(0.7);
+       -moz-transform: scaleY(0.7);
         -ms-transform: scaleY(0.7);
             transform: scaleY(0.7);
   }
   .bdr-top:before {
     -webkit-transform: scaleY(0.7);
+       -moz-transform: scaleY(0.7);
         -ms-transform: scaleY(0.7);
             transform: scaleY(0.7);
   }
@@ -253,16 +262,19 @@ body {
 @media only screen and (-webkit-min-device-pixel-ratio: 2) {
   .bdr-r::after {
     -webkit-transform: scaleX(0.5);
+       -moz-transform: scaleX(0.5);
         -ms-transform: scaleX(0.5);
             transform: scaleX(0.5);
   }
   .bdr-bottom::after {
     -webkit-transform: scaleY(0.5);
+       -moz-transform: scaleY(0.5);
         -ms-transform: scaleY(0.5);
             transform: scaleY(0.5);
   }
   .bdr-top:before {
     -webkit-transform: scaleY(0.5);
+       -moz-transform: scaleY(0.5);
         -ms-transform: scaleY(0.5);
             transform: scaleY(0.5);
   }
@@ -271,16 +283,19 @@ body {
 @media only screen and (-webkit-min-device-pixel-ratio: 3) {
   .bdr-r::after {
     -webkit-transform: scaleX(0.333);
+       -moz-transform: scaleX(0.333);
         -ms-transform: scaleX(0.333);
             transform: scaleX(0.333);
   }
   .bdr-bottom::after {
     -webkit-transform: scaleY(0.333);
+       -moz-transform: scaleY(0.333);
         -ms-transform: scaleY(0.333);
             transform: scaleY(0.333);
   }
   .bdr-top:before {
     -webkit-transform: scaleY(0.333);
+       -moz-transform: scaleY(0.333);
         -ms-transform: scaleY(0.333);
             transform: scaleY(0.333);
   }
@@ -379,10 +394,12 @@ body {
   background-size: 119rem;
   -webkit-transform-origin: 0 0;
   -webkit-transform: scale(0.01);
-  -ms-transform-origin: 0 0;
-      transform-origin: 0 0;
-  -ms-transform: scale(0.01);
-      transform: scale(0.01);
+  -moz-transform-origin: 0 0;
+   -ms-transform-origin: 0 0;
+       transform-origin: 0 0;
+  -moz-transform: scale(0.01);
+   -ms-transform: scale(0.01);
+       transform: scale(0.01);
 }
 
 /*.icon-fix:after {
@@ -448,13 +465,33 @@ body {
   background-size: .47rem .47rem;
 }
 
+.icon_community_store {
+  background: url("../images/common/icon_community_store.png") no-repeat left center;
+  background-size: .47rem .47rem;
+}
+
+.icon_community_storePhone {
+  background: url("../images/common/icon_community_storePhone.png") no-repeat left center;
+  background-size: .47rem .47rem;
+}
+
+.icon_community_storeLogo {
+  background: url("../images/common/icon_community_storeLogo.png") no-repeat left center;
+  background-size: .47rem .47rem;
+}
+
+.icon_community_storeDesc {
+  background: url("../images/common/icon_community_storeDesc.png") no-repeat left center;
+  background-size: .47rem .47rem;
+}
+
 .icon-newfooter-home {
   background: url("../images/common/icon_newfooter_home_normal.png?v=5ac17") no-repeat center bottom;
   background-size: .47rem .47rem;
 }
 
 .icon-newfooter-bbs {
-  background: url("../images/common/icon_newfooter_bbs_normal.png?v=29e7a") no-repeat center bottom;
+  background: url("../images/common/icon_newfooter_bbs_normal.png?v=e3d41") no-repeat center bottom;
   background-size: .94rem .94rem;
 }
 
@@ -466,6 +503,11 @@ body {
 .on .icon-newfooter-home {
   background: url("../images/common/icon_newfooter_home_pressed.png?v=78217") no-repeat center bottom;
   background-size: .47rem .47rem;
+}
+
+.on .icon-newfooter-bbs {
+  background: url("../images/common/icon_newfooter_bbs_pressed.png?v=0e500") no-repeat center bottom;
+  background-size: .94rem .94rem;
 }
 
 .on .icon-newfooter-my {
@@ -523,6 +565,7 @@ $title_right_text_color: #9FA0A0;*/
   left: 0.21rem;
   top: 50%;
   -webkit-transform: translateY(-50%);
+     -moz-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
           transform: translateY(-50%);
   width: .36rem;
@@ -618,6 +661,7 @@ $title_right_text_color: #9FA0A0;*/
   background-size: contain;
   background-repeat: no-repeat;
   -webkit-transform: translate(-100%, -50%);
+     -moz-transform: translate(-100%, -50%);
       -ms-transform: translate(-100%, -50%);
           transform: translate(-100%, -50%);
 }
@@ -633,6 +677,7 @@ $title_right_text_color: #9FA0A0;*/
   background-size: contain;
   background-repeat: no-repeat;
   -webkit-transform: translate(100%, -50%);
+     -moz-transform: translate(100%, -50%);
       -ms-transform: translate(100%, -50%);
           transform: translate(100%, -50%);
   right: 0;
@@ -686,6 +731,7 @@ $title_right_text_color: #9FA0A0;*/
   position: absolute;
   left: 50%;
   -webkit-transform: translateX(-50%);
+     -moz-transform: translateX(-50%);
       -ms-transform: translateX(-50%);
           transform: translateX(-50%);
 }

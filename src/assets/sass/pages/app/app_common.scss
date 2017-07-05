@@ -15,6 +15,8 @@
       height: .8rem;
       line-height: .8rem;
       text-align: center;
+      font-size: $font-size1; //.36rem;
+      color: #fff;
     }
     .jm-back {
       display: none;
@@ -102,6 +104,11 @@
 //头部背景透明，移除底部垂直空间
 .transparent-bg.header-fixed + .hold-space-top, .hold-space-top {
   height: 0;
+}
+//头部100%背景透明
+.transparent100{
+  background:transparent !important;
+  opacity:1 !important;
 }
 //背景透明  添加透明图  去除底线
 .transparent-bg {
@@ -359,8 +366,9 @@
     background-color: #fff;
     color: #000;
     border-top: 1px solid #E3E3E3;
+    font-size: 0;
     .footer_item {
-      display: inline-block;
+      //display: inline-block;
       flex: 1 1 33.3%;
       height: 1rem;
       position: relative;
@@ -370,6 +378,8 @@
         height: 100%;
         text-align: center;
         font-size: 0;
+        line-height: normal;
+        color: #000000;
       }
       i[class^='icon-'] {
         position: relative;

@@ -154,6 +154,7 @@ body {
   right: -1px;
   top: 0;
   -webkit-transform: scaleX(0.5);
+     -moz-transform: scaleX(0.5);
       -ms-transform: scaleX(0.5);
           transform: scaleX(0.5);
   width: 1px;
@@ -172,6 +173,7 @@ body {
   left: -1px;
   top: 0;
   -webkit-transform: scaleX(0.5);
+     -moz-transform: scaleX(0.5);
       -ms-transform: scaleX(0.5);
           transform: scaleX(0.5);
   width: 1px;
@@ -190,6 +192,7 @@ body {
   position: absolute;
   right: 0;
   -webkit-transform: scaleY(0.5);
+     -moz-transform: scaleY(0.5);
       -ms-transform: scaleY(0.5);
           transform: scaleY(0.5);
   width: 100%;
@@ -209,6 +212,7 @@ body {
   top: -1px;
   right: 0;
   -webkit-transform: scaleY(0.5);
+     -moz-transform: scaleY(0.5);
       -ms-transform: scaleY(0.5);
           transform: scaleY(0.5);
   z-index: 10;
@@ -224,9 +228,11 @@ body {
   border: 1px solid #e3e5e9;
   border-radius: 6px;
   -webkit-transform: scale(0.5);
+     -moz-transform: scale(0.5);
       -ms-transform: scale(0.5);
           transform: scale(0.5);
   -webkit-transform-origin: top left;
+     -moz-transform-origin: top left;
       -ms-transform-origin: top left;
           transform-origin: top left;
 }
@@ -234,16 +240,19 @@ body {
 @media only screen and (-webkit-min-device-pixel-ratio: 1.5) {
   .bdr-r::after {
     -webkit-transform: scaleX(0.7);
+       -moz-transform: scaleX(0.7);
         -ms-transform: scaleX(0.7);
             transform: scaleX(0.7);
   }
   .bdr-bottom::after {
     -webkit-transform: scaleY(0.7);
+       -moz-transform: scaleY(0.7);
         -ms-transform: scaleY(0.7);
             transform: scaleY(0.7);
   }
   .bdr-top:before {
     -webkit-transform: scaleY(0.7);
+       -moz-transform: scaleY(0.7);
         -ms-transform: scaleY(0.7);
             transform: scaleY(0.7);
   }
@@ -252,16 +261,19 @@ body {
 @media only screen and (-webkit-min-device-pixel-ratio: 2) {
   .bdr-r::after {
     -webkit-transform: scaleX(0.5);
+       -moz-transform: scaleX(0.5);
         -ms-transform: scaleX(0.5);
             transform: scaleX(0.5);
   }
   .bdr-bottom::after {
     -webkit-transform: scaleY(0.5);
+       -moz-transform: scaleY(0.5);
         -ms-transform: scaleY(0.5);
             transform: scaleY(0.5);
   }
   .bdr-top:before {
     -webkit-transform: scaleY(0.5);
+       -moz-transform: scaleY(0.5);
         -ms-transform: scaleY(0.5);
             transform: scaleY(0.5);
   }
@@ -270,16 +282,19 @@ body {
 @media only screen and (-webkit-min-device-pixel-ratio: 3) {
   .bdr-r::after {
     -webkit-transform: scaleX(0.333);
+       -moz-transform: scaleX(0.333);
         -ms-transform: scaleX(0.333);
             transform: scaleX(0.333);
   }
   .bdr-bottom::after {
     -webkit-transform: scaleY(0.333);
+       -moz-transform: scaleY(0.333);
         -ms-transform: scaleY(0.333);
             transform: scaleY(0.333);
   }
   .bdr-top:before {
     -webkit-transform: scaleY(0.333);
+       -moz-transform: scaleY(0.333);
         -ms-transform: scaleY(0.333);
             transform: scaleY(0.333);
   }

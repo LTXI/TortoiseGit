@@ -3,10 +3,10 @@
 @import "app/mixin";
 @import "app/app_common";
 
+
 body {
   background: #f4f4f4;
 }
-
 
 //品牌列表
 .brandlistbox {
@@ -257,6 +257,7 @@ body {
     min-height: 100%;
     padding: 1.4rem 1.4rem 1.1rem 1.4rem;
     text-align: center;
+    height: 12.10rem;
     .code {
       position: relative;
       display: inline-block;
@@ -330,6 +331,7 @@ body {
           font-size: .24rem;
           height: .5rem;
           line-height: .5rem;
+          color: #333;
           @include ellipsis;
         }
         .price{
@@ -338,6 +340,7 @@ body {
           height: .6rem;
           line-height: .6rem;
         }
+
         .oldprice{
           color: #949494;
           font-size: .22rem;

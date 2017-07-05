@@ -11,6 +11,8 @@
     <meta http-equiv="Expires" content="0" />
     <meta http-equiv="x-dns-prefetch-control" content="on" />
     <title>品牌商品</title>
+    <script src="../../scripts/mui.min.js"></script>
+    <link rel="stylesheet" href="../../styles/mui.min.css" />
     <link rel="stylesheet" href="../../styles/swiper.min.css" />
     <link rel="stylesheet" href="../../styles/framework.css" />
     <link rel="stylesheet" href="../../styles/app-base.css" />
@@ -22,7 +24,7 @@
 
     <!--样式模块公用放入-->
 
-    <link rel="stylesheet" href="../../assets/styles/brand.css?rev=b50c798145188d6bf50ab73563a716e5">
+    <link rel="stylesheet" href="../../assets/styles/brand.css?rev=6f2f271a49d8410fc0a7f44f4eb06ab7">
     <script >
 document.addEventListener('DOMContentLoaded', function () {
 (function initFontSize() {
@@ -52,7 +54,7 @@ document.addEventListener('DOMContentLoaded', function () {
 <!--头部-->
 <div class="jm-header">
     <div class="jm-wrapper">
-        <a href="#">
+        <a href="javascript:history.go(-1);">
             <div class="posl icon icon_back icon-fix"></div>
         </a>
         <p class="title">品牌商品</p>
@@ -65,13 +67,18 @@ document.addEventListener('DOMContentLoaded', function () {
 <div id="content" class="page-content">
     <div class="brandgoods">
         <!--合伙人及店铺介绍-->
-        <div class="partner">
+        <div class="partner mrg-bottom24">
             <div class="logo">
                 <!--头像 移除hidden类-->
-                <img class="hidden" src="../../assets/images/store/logo1.png?rev=29bd6d5e483415b8a8d0994ae20b23dd" alt="">
+                <!--<img class="hidden" src="../../assets/images/store/logo1.png?rev=29bd6d5e483415b8a8d0994ae20b23dd" alt="">-->
                 <!--无头像-->
-                <div class="noimg"></div>
+                <!--<div class="noimg"></div>-->
+                <div class="imgbox">
+                    <img src="../../assets/images/store/logo1.png" >
+                    <!--<img src="../../assets/images/store/default.png" >-->
+                </div>
             </div>
+
             <div class="twitter">
                 <span class="name">科颜氏</span>
                 <span class="sell">在售商品45个</span>
@@ -100,10 +107,14 @@ document.addEventListener('DOMContentLoaded', function () {
                 </div>
                     <span class="hot">热销</span>
                     <div class="infobox">
-                        <span class="brand-name">科颜氏高温保湿</span>
-                        <span class="price">$320<span class="oldprice">$400</span></span>
-
-                    </div></a>
+                        <span class="brand-name">科颜氏高温保湿科颜氏高温保湿科颜氏高温保湿科颜氏高温保湿</span>
+                        <div class="price">$320<span class="oldprice">$400</span></div>
+                    </div>
+                    <div class="sharebox">
+                        <form id="share" action="#" method="post"><input type="hidden" name="title" value="韩国怡思"><input type="hidden" name="desc" value="韩国怡思美C+维他精华爽肤水 ￥298.00"><input type="hidden" name="pic" value="http://www.guaten.com/images/201702/1486677149426303362.jpg"><input type="hidden" name="href" value="http://192.168.2.133/#m=goods&amp;goods_id=376"></form>
+                        <span class="share_link">分享</span>
+                    </div>
+                </a>
             </li>
             <li class="goods-item">
                 <a href="#"><div class="imgbox">
@@ -136,5 +147,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
 <!--脚步导入开始-->
 <!--js模块公用放入-->
+<script src="../../assets/scripts/app.js"></script>
 </body>
 </html>

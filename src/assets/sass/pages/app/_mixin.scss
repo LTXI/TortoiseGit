@@ -15,6 +15,7 @@
 //</div>
 //</div>
 @mixin col-2-center-text-img($height:2rem,$num-font-size:.29rem,$text-font-size:.29rem) {
+  font-size: 0;
   //父类属性设置
   & {
     font-size: 0; //将孩子inline-block, 有间距
@@ -24,8 +25,9 @@
     border-bottom:none;
   }
   .left, .right {
+    //border: 1px solid red;
     display: inline-block;
-    width: 50%;
+    width: 49.9%;// android 老版本会换行50%，原因不详
     height: $height;
     text-align: center;
     position: relative;
@@ -83,7 +85,7 @@
 @mixin col-center-img-new($out-height:2rem, $in-height:1rem,$itemWidth:50%, $text-font-size:.24rem, $img-height:.82rem,$text-font-height:.56rem ) {
   background-color: #fff;
   overflow: hidden;
-  a.item-link{
+  .item-link{
     float: left;
     width: $itemWidth;
     text-align: center;
@@ -134,7 +136,7 @@
 @mixin col-center-text-new($out-height:2rem, $in-height:1rem,$itemWidth:50%, $num-font-size:.29rem,$text-font-size:.26rem, $num-font-height:.56rem,$text-font-height:.56rem ) {
   background-color: #fff;
   overflow: hidden;
-  a.item-link{
+  .item-link{
     float: left;
     width: $itemWidth;
     text-align: center;
@@ -340,7 +342,7 @@ $title_right_text_color: #9FA0A0;*/
       display: inline-block;
       width: .18rem;
       height: .24rem;
-      background: url("../images/app/user/right_arrow.png") no-repeat center center;
+      background: url("../images/app/user/right_arrow.png") no-repeat right center;
       background-size: contain;
       vertical-align: middle;
     }
@@ -367,16 +369,22 @@ $title_right_text_color: #9FA0A0;*/
   align-items: flex-start;
   align-content: flex-start;
   .item-left {
-    flex-basis: $left-width;
+    //flex-basis: $left-width;
+    flex: 0 1 $left-width;
     align-self: $align-self;
+    //border: 1px solid orange;
   }
   .item-middle {
+    //flex-basis: $mid-width;
+    flex: 1 1 $mid-width;
+    //border: 1px solid green;
     align-self: $align-self;
-    flex-basis: $mid-width;
   }
   .item-right {
+   // flex-basis: $right-width;
+    flex: 0 1 $right-width;
+    //border: 1px solid #F23030;
     align-self: $align-self;
-    flex-basis: $right-width;
   }
 }
 
@@ -397,9 +405,11 @@ $title_right_text_color: #9FA0A0;*/
     padding: $padding-width;
     img {
       display: inline-block;
-      width: 100%;
-      min-width: 100%;
-      height: 100%;
+     // width: 100%;
+      //min-width: 100%;
+      //height: 100%;
+      width: $radius-width - $padding-width;
+      height: $radius-width - $padding-width;
       border-radius: 50%;
     }
   }
@@ -421,9 +431,10 @@ $title_right_text_color: #9FA0A0;*/
     padding: $padding-width;
 
     img {
-      display: inline-block;
+      //display: inline-block;
       max-width: 100%;
     }
+
   }
 }
 
@@ -453,12 +464,17 @@ $title_right_text_color: #9FA0A0;*/
   align-content: flex-start;
   position: relative;
   .item-left {
-    flex-basis: 2rem;
+    //border: 1px solid green;
+    flex: 0 1 1.9rem;
+
     padding: 0 .36rem;
+
     @include create-circle-image(1.18rem, 0rem);
   }
   .item-middle {
-    flex-basis: 4.1rem;
+    //border: 1px solid yellow;
+
+    flex: 1 1 5.1rem;
     color: #231815;
     font-size: .26rem;
     p{
@@ -472,16 +488,18 @@ $title_right_text_color: #9FA0A0;*/
     }
   }
   .item-right {
+    //border: 1px solid red;
     position: relative;
     align-self: flex-start;
-    flex-basis: 1.4rem;
+    flex: 0 1 1.4rem;
+    padding-right: .24rem;
     .state {
       @include yellow-bg-button;
     }
   }
 }
 
-//我的联盟
+//我的联盟(老版本 已废弃)
 //<div class="itembox">
 //<div class="item-left">
 //<div class="imgbox">
@@ -579,7 +597,7 @@ $title_right_text_color: #9FA0A0;*/
 //</div>
 //</div>
 @mixin brand-list-item {
-  @include layout-col-3(1.9rem, 3.1rem, 2.4rem, center);
+  @include layout-col-3(1.9rem, 3.1rem, 1.4rem, center);
   padding: .3rem 0;
   .item-left {
     padding: 0 .45rem 0 .24rem;
@@ -630,20 +648,22 @@ $title_right_text_color: #9FA0A0;*/
     }
 
     .btn_yellow, .btn_peach {
-      float: right;
+      //float: right;
 
-      width: auto;
-      height: auto;
+     // width: auto;
+      //height: auto;
 
     }
     .btn_peach {
-
-      margin-top: .05rem;
+      margin-top: .2rem;
       @include peach-bg-button;
+      display: block;
     }
     .btn_yellow {
+
       //margin-bottom: .rem;
       @include yellow-bg-button;
+      display: block;
     }
   }
 }
@@ -833,6 +853,14 @@ $title_right_text_color: #9FA0A0;*/
   width: 1.19rem;//原图大小
   height: .42rem;
   line-height: .42rem;
+}
+
+@mixin borderRadius($radius:20px) {
+  border-radius: $radius;
+  border-top-left-radius: $radius;
+  border-top-right-radius: $radius;
+  border-bottom-left-radius: $radius;
+  border-bottom-right-radius: $radius;
 }
 
 

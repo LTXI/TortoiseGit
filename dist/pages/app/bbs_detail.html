@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+       <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+    <meta content="telephone=no" name="format-detection" />
+    <meta name="google" value="notranslate" />
+    <meta name="root-url" value="<?php echo JQ_URL; ?>" />
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <meta http-equiv="x-dns-prefetch-control" content="on" />
+    <title>社区代理详情</title>
+    <script src="../../scripts/mui.min.js"></script>
+    <link rel="stylesheet" href="../../styles/mui.min.css" />
+    <link rel="stylesheet" href="../../styles/swiper.min.css" />
+    <link rel="stylesheet" href="../../styles/framework.css" />
+    <link rel="stylesheet" href="../../styles/app-base.css" />
+    <link rel="stylesheet" href="../../styles/ricky.css?v=04062" />
+   <script type="text/javascript" src="../../scripts/zepto.min.js"></script>
+    <script type="text/javascript" src="../../scripts/zepto.swiper.min.js"></script>
+   <!--<script type="text/javascript" src="../../scripts/zepto.app.js?v=04063"></script>
+    <script type="text/javascript" src="../../scripts/zepto.custom.js?v=04062"></script>-->
+
+    <!--样式模块公用放入-->
+
+    <link rel="stylesheet" href="../../assets/styles/app.css">
+    <script >
+document.addEventListener('DOMContentLoaded', function () {
+(function initFontSize() {
+		var resizeEvent = 'orientationchange' in window ? 'orientationchange' : 'resize';
+
+		function changeSize() {
+			const designWidth = 750; //设计稿尺寸是640px
+			const designWidth2 = 1080;
+			var html = document.documentElement; //根元素
+			var deviceWidth = html.clientWidth; //屏幕逻辑宽度
+			var base = 100;
+
+			if (deviceWidth > designWidth2) {
+				deviceWidth = designWidth2;
+			}
+			html.style.fontSize = (deviceWidth / designWidth) * base + "px";
+			//console.log(html.style.fontSize);
+			//alert(html.style.fontSize+"==="+deviceWidth);
+		}
+		changeSize();
+		window.addEventListener(resizeEvent, changeSize, false);
+	})();
+});
+</script>
+
+
+</head>
+<body>
+<!--头部-->
+<!--头部-->
+<div class="jm-header header-fixed">
+    <div class="jm-wrapper">
+        <a href="javascript:history.go(-1);">
+            <div class="posl icon icon_back icon-fix"></div>
+        </a>
+        <p class="title">社区代理详情</p>
+        <a href="#">
+            <div class=" posr icon icon_header-nav-short"></div>
+        </a>
+    </div>
+</div>
+<!--如果布局fixed，将占据垂直空间1.26rem-->
+<div class="hold-space-top"></div>
+<!--导航栏-->
+<div class="header-nav-bar">
+        <span class="triangle"></span>
+        <ul>
+            <a href="http://www.baidu.com"><li class="navltem bdr-bottom"><i class="navicon  icon_header_nav_home"></i>首页</li></a>
+        </ul>
+    </div>
+
+
+<div id="content" class="page-content bbs-detail">
+    <div class="container mrg-bottom24">
+        <ul>
+                <li class="itembox mrg-bottom24">
+
+                    <div class="item-left">
+                        <div class="imgbox">
+                            <img src="../../assets/images/app/bbs/icon_bbs_head.png" alt=""/></div>
+                    </div>
+                    <div class="item-middle">
+                        <p class="title"><i class="label"></i>社区代理飞哥</p>
+                        <p class="">QQ号:<span>1</span></p>
+                        <p class="">微信号:<span class="red">15</span></p>
+                        <p class="">更新时间:<span class="red">2015-2-05 </span></p>
+
+                    </div>
+                </li>
+        </ul>
+    </div>
+    <div class="share mrg-bottom24">
+        <p class="title">XX微信二维码</p>
+
+        <div class="code">
+            <div class="imgbox">
+                <img src="../../assets/images/app/bbs/partnership_code.jpg" alt=""/>
+            </div>
+        </div>
+        <p class="desc">扫一扫上面的二维码</p>
+    </div>
+    <div class="share mrg-bottom24">
+        <p class="title">合伙人群微信二维码</p>
+
+        <div class="code">
+            <div class="imgbox">
+                <img src="../../assets/images/app/bbs/partnership_code.jpg" alt=""/>
+            </div>
+        </div>
+        <p class="desc">扫一扫上面的二维码</p>
+    </div>
+</div>
+
+<!--脚步导入开始-->
+<!--js模块公用放入-->
+<script src="../../assets/scripts/app.js"></script>
+</body>
+</html>
