@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+    <meta content="telephone=no" name="format-detection" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <meta http-equiv="x-dns-prefetch-control" content="on" />
+    <title>首页</title>
+<link rel="stylesheet" href="./flex.css">
+    <script >
+      document.addEventListener('DOMContentLoaded', function () {
+        (function initFontSize() {
+          var resizeEvent = 'orientationchange' in window ? 'orientationchange' : 'resize';
+          function changeSize() {
+            const designWidth = 750; //设计稿尺寸是640px
+            const designWidth2 = 1080;
+            var html = document.documentElement; //根元素
+            var deviceWidth = html.clientWidth; //屏幕逻辑宽度
+            var base = 100;
+
+            if (deviceWidth > designWidth2) {
+              deviceWidth = designWidth2;
+            }
+            html.style.fontSize = (deviceWidth / designWidth) * base + "px";
+          }
+          changeSize();
+          window.addEventListener(resizeEvent, changeSize, false);
+        })();
+      });
+    </script>
+
+
+</head>
+<body>
+
+<div id="content" class="page-content home">
+
+
+</div>
+
+
+<!--尾部-->
+<!--新尾部导航2017-6-23 transparent-bg  scroll-->
+<div id="footer" class=" new-app-page-footer">
+    <ul class="footer_inner ">
+        <li class="footer_item home">
+            <a class="" href="./home.html">
+                <i class="icon-newfooter-home"></i>
+                <span class="text">首页</span>
+            </a>
+        </li>
+        <li class="footer_item bbs">
+            <a class="" href="./bbs.html">
+                <i class="icon-newfooter-bbs"></i>
+                <span class="text">社区</span>
+            </a>
+        </li>
+        <li class="footer_item my">
+            <a class="" href="./my-new.html">
+                <i class="icon-newfooter-my"></i>
+                <span class="text">我的九件</span>
+            </a>
+        </li>
+    </ul>
+</div>
+
+</body>
+</html>

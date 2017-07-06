@@ -139,18 +139,33 @@
 }
 
 .icon_community_qq {
-  background: url("../images/common/icon_community_qq.png") no-repeat left center;
-  background-size: .47rem .47rem;
+  /*background: url("../images/common/icon_community_qq.png") no-repeat left center;
+  background-size: .47rem .47rem;*/
+  background: url("../images/common/set.png") no-repeat;
+  background-size: 1.43rem 0.47rem;
+  height: 0.47rem;
+  width: 0.47rem;
+  background-position: -0.96rem 0;
 }
 
 .icon_community_wechat {
-  background: url("../images/common/icon_community_wechat.png") no-repeat left center;
-  background-size: .47rem .47rem;
+  /* background: url("../images/common/icon_community_wechat.png") no-repeat left center;
+  background-size: .47rem .47rem;*/
+  background: url("../images/common/set.png") no-repeat;
+  background-size: 1.43rem 0.47rem;
+  height: 0.47rem;
+  width: 0.47rem;
+  background-position: -0.48rem 0;
 }
 
 .icon_community_code {
-  background: url("../images/common/icon_community_code.png") no-repeat left center;
-  background-size: .47rem .47rem;
+  /*background: url("../images/common/icon_community_code.png") no-repeat left center;
+  background-size: .47rem .47rem;*/
+  background: url("../images/common/set.png") no-repeat;
+  background-size: 1.43rem 0.47rem;
+  height: 0.47rem;
+  width: 0.47rem;
+  background-position: 0 0;
 }
 
 .icon_community_store {
@@ -203,4 +218,4 @@
   background-size: .38rem .47rem;
 }
 
-/*# sourceMappingURL=maps/brandsprites.css.map */
+/*# sourceMappingURL=maps/brandsprites副本.css.map */

@@ -311,7 +311,7 @@ body {
 }
 
 .icon {
-  background: url("../images/common/brand.png?v=af6ce") no-repeat;
+  background: url("../images/common/brand.png") no-repeat;
 }
 
 .icon_back {
@@ -389,7 +389,7 @@ body {
   position: absolute;
   left: 0;
   top: 0;
-  background-image: url("../images/common/brand.png?v=af6ce");
+  background-image: url("../images/common/brand.png");
   background-repeat: no-repeat;
   background-size: 119rem;
   -webkit-transform-origin: 0 0;
@@ -451,17 +451,17 @@ body {
 }
 
 .icon_community_qq {
-  background: url("../images/common/icon_community_qq.png?v=d91a7") no-repeat left center;
+  background: url("../images/common/icon_community_qq.png") no-repeat left center;
   background-size: .47rem .47rem;
 }
 
 .icon_community_wechat {
-  background: url("../images/common/icon_community_wechat.png?v=2e431") no-repeat left center;
+  background: url("../images/common/icon_community_wechat.png") no-repeat left center;
   background-size: .47rem .47rem;
 }
 
 .icon_community_code {
-  background: url("../images/common/icon_community_code.png?v=9c6ac") no-repeat left center;
+  background: url("../images/common/icon_community_code.png") no-repeat left center;
   background-size: .47rem .47rem;
 }
 
@@ -486,32 +486,32 @@ body {
 }
 
 .icon-newfooter-home {
-  background: url("../images/common/icon_newfooter_home_normal.png?v=5ac17") no-repeat center bottom;
+  background: url("../images/common/icon_newfooter_home_normal.png") no-repeat center bottom;
   background-size: .47rem .47rem;
 }
 
 .icon-newfooter-bbs {
-  background: url("../images/common/icon_newfooter_bbs_normal.png?v=e3d41") no-repeat center bottom;
+  background: url("../images/common/icon_newfooter_bbs_normal.png") no-repeat center bottom;
   background-size: .94rem .94rem;
 }
 
 .icon-newfooter-my {
-  background: url("../images/common/icon_newfooter_my_normal.png?v=ddecd") no-repeat center bottom;
+  background: url("../images/common/icon_newfooter_my_normal.png") no-repeat center bottom;
   background-size: .38rem .47rem;
 }
 
 .on .icon-newfooter-home {
-  background: url("../images/common/icon_newfooter_home_pressed.png?v=78217") no-repeat center bottom;
+  background: url("../images/common/icon_newfooter_home_pressed.png") no-repeat center bottom;
   background-size: .47rem .47rem;
 }
 
 .on .icon-newfooter-bbs {
-  background: url("../images/common/icon_newfooter_bbs_pressed.png?v=0e500") no-repeat center bottom;
+  background: url("../images/common/icon_newfooter_bbs_pressed.png") no-repeat center bottom;
   background-size: .94rem .94rem;
 }
 
 .on .icon-newfooter-my {
-  background: url("../images/common/icon_newfooter_my_pressed.png?v=0a9b3") no-repeat center bottom;
+  background: url("../images/common/icon_newfooter_my_pressed.png") no-repeat center bottom;
   background-size: .38rem .47rem;
 }
 
@@ -579,7 +579,7 @@ $title_right_text_color: #9FA0A0;*/
   top: .17rem;
   width: .3rem;
   height: .35rem;
-  background: url("../images/store/icon_arrow.png?v=f343a") no-repeat center center;
+  background: url("../images/store/icon_arrow.png") no-repeat center center;
   background-size: cover;
 }
 
@@ -688,7 +688,7 @@ $title_right_text_color: #9FA0A0;*/
 }
 
 .icon_header-nav-short {
-  background: transparent url("../images/common/icon_header_nav_short.png?v=e97e2") no-repeat center center;
+  background: transparent url("../images/common/icon_header_nav_short.png") no-repeat center center;
   background-size: 15px 3px;
   width: 15px;
   height: 100%;
@@ -747,7 +747,7 @@ $title_right_text_color: #9FA0A0;*/
 }
 
 .icon_header_nav_home {
-  background: url("../images/common/icon_header_nav_home.png?v=99eec") no-repeat center center;
+  background: url("../images/common/icon_header_nav_home.png") no-repeat center center;
   background-size: 16px auto;
 }
 
@@ -809,42 +809,42 @@ $title_right_text_color: #9FA0A0;*/
 }
 
 .app-page-footer .footer_inner a .icon-invite {
-  background: url("../images/app/icon/icon_invite_normal.png?v=a8adb") no-repeat center center;
+  background: url("../images/app/icon/icon_invite_normal.png") no-repeat center center;
   background-size: .46rem .45rem;
 }
 
 .app-page-footer .footer_inner a.on .icon-invite {
-  background: url("../images/app/icon/icon_invite_Pressed.png?v=59302") no-repeat center center;
+  background: url("../images/app/icon/icon_invite_Pressed.png") no-repeat center center;
   background-size: .46rem .45rem;
 }
 
 .app-page-footer .footer_inner a .icon-team {
-  background: url("../images/app/icon/icon_team_normal.png?v=e8ad1") no-repeat center center;
+  background: url("../images/app/icon/icon_team_normal.png") no-repeat center center;
   background-size: .44rem .45rem;
 }
 
 .app-page-footer .footer_inner a.on .icon-team {
-  background: url("../images/app/icon/icon_team_Pressed.png?v=57e62") no-repeat center center;
+  background: url("../images/app/icon/icon_team_Pressed.png") no-repeat center center;
   background-size: .44rem .45rem;
 }
 
 .app-page-footer .footer_inner a .icon-alliance {
-  background: url("../images/app/icon/icon_ alliance_normal.png?v=c4ffb") no-repeat center center;
+  background: url("../images/app/icon/icon_ alliance_normal.png") no-repeat center center;
   background-size: .58rem .45rem;
 }
 
 .app-page-footer .footer_inner a.on .icon-alliance {
-  background: url("../images/app/icon/icon_alliance_Pressed.png?v=9d915") no-repeat center center;
+  background: url("../images/app/icon/icon_alliance_Pressed.png") no-repeat center center;
   background-size: .58rem .45rem;
 }
 
 .app-page-footer .footer_inner a .icon-my {
-  background: url("../images/app/icon/icon_my_normal.png?v=861bf") no-repeat center center;
+  background: url("../images/app/icon/icon_my_normal.png") no-repeat center center;
   background-size: .21rem .45rem;
 }
 
 .app-page-footer .footer_inner a.on .icon-my {
-  background: url("../images/app/icon/icon_my_Pressed.png?v=13612") no-repeat center center;
+  background: url("../images/app/icon/icon_my_Pressed.png") no-repeat center center;
   background-size: .21rem .45rem;
 }
 
@@ -896,7 +896,7 @@ $title_right_text_color: #9FA0A0;*/
   white-space: nowrap;
   text-align: center;
   display: inline-block;
-  background: #fff url("../images/common/btn_yellow.png?v=0edf6") no-repeat 0 0;
+  background: #fff url("../images/common/btn_yellow.png") no-repeat 0 0;
   background-size: 100%;
   font-size: 0.24rem;
   color: #231815;
@@ -1060,7 +1060,7 @@ $title_right_text_color: #9FA0A0;*/
 .jm-store .store {
   position: relative;
   height: 2.9rem;
-  background: url("../images/store/store-bg.png?v=08a3d") no-repeat center center;
+  background: url("../images/store/store-bg.jpg") no-repeat center center;
   background-size: cover;
 }
 
@@ -1115,7 +1115,7 @@ $title_right_text_color: #9FA0A0;*/
 }
 
 .jm-store .box .imgbox img {
-  background: url("../images/store/icon_store_bg.png?v=933f2") no-repeat center center;
+  background: url("../images/store/icon_store_bg.png") no-repeat center center;
   background-size: 100% 100%;
 }
 
@@ -1159,7 +1159,7 @@ $title_right_text_color: #9FA0A0;*/
   right: 0;
   width: 1rem;
   height: .56rem;
-  background: url("../images/store/icon_code.png?v=63b56") no-repeat center center;
+  background: url("../images/store/icon_code.png") no-repeat center center;
   background-size: cover;
 }
 
@@ -1205,7 +1205,7 @@ $title_right_text_color: #9FA0A0;*/
   display: inline-block;
   width: .37rem;
   height: .37rem;
-  background: url("../images/app/sign.png?v=7d55b") no-repeat center center;
+  background: url("../images/app/sign.png") no-repeat center center;
   background-size: cover;
   vertical-align: middle;
 }
@@ -1325,7 +1325,7 @@ $title_right_text_color: #9FA0A0;*/
   width: 39px;
   height: 39px;
   border-radius: 50%;
-  background: #fdfdfd url("../images/store/icon_backtop.png?v=3014c") no-repeat center center;
+  background: #fdfdfd url("../images/store/icon_backtop.png") no-repeat center center;
   background-size: cover;
   z-index: 1210;
   /*transform-origin: 0px 0px 0px;
@@ -1421,7 +1421,7 @@ $title_right_text_color: #9FA0A0;*/
   height: .5rem;
   line-height: .5rem;
   padding-left: .46rem;
-  background: url("../images/store/likie_iocn.png?v=0023a") no-repeat 0.11rem center;
+  background: url("../images/store/likie_iocn.png") no-repeat 0.11rem center;
   background-color: #c72443;
   background-size: .24rem .24rem;
   color: #fff;
@@ -1482,7 +1482,7 @@ $title_right_text_color: #9FA0A0;*/
   display: inline-block;
   width: .18rem;
   height: .24rem;
-  background: url("../images/app/user/right_arrow.png?v=aacb8") no-repeat right center;
+  background: url("../images/app/user/right_arrow.png") no-repeat right center;
   background-size: contain;
   vertical-align: middle;
 }
@@ -1494,13 +1494,13 @@ $title_right_text_color: #9FA0A0;*/
 .store-detail .mid .provider-item .arrow-icon {
   width: .40rem !important;
   height: .38rem !important;
-  background-image: url("../images/common/icon-provider.png?v=a5b69") !important;
+  background-image: url("../images/common/icon-provider.png") !important;
 }
 
 .store-detail .mid .code-item .arrow-icon {
   width: .40rem !important;
   height: .38rem !important;
-  background-image: url("../images/common/icon_code.png?v=3ea28") !important;
+  background-image: url("../images/common/icon_code.png") !important;
 }
 
 .store-detail .mid .time-item .time, .store-detail .mid .provider-item .orderlink {

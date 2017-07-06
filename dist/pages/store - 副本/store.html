@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+       <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+    <meta content="telephone=no" name="format-detection" />
+    <meta name="google" value="notranslate" />
+    <meta name="root-url" value="<?php echo JQ_URL; ?>" />
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <meta http-equiv="x-dns-prefetch-control" content="on" />
+    <title>店铺首页</title>
+    <script src="../../scripts/mui.min.js"></script>
+    <link rel="stylesheet" href="../../styles/mui.min.css" />
+    <link rel="stylesheet" href="../../styles/swiper.min.css" />
+    <link rel="stylesheet" href="../../styles/framework.css" />
+    <link rel="stylesheet" href="../../styles/app-base.css" />
+    <link rel="stylesheet" href="../../styles/ricky.css?v=04062" />
+   <script type="text/javascript" src="../../scripts/zepto.min.js"></script>
+    <script type="text/javascript" src="../../scripts/zepto.swiper.min.js"></script>
+   <!--<script type="text/javascript" src="../../scripts/zepto.app.js?v=04063"></script>
+    <script type="text/javascript" src="../../scripts/zepto.custom.js?v=04062"></script>-->
+
+    <!--样式模块公用放入-->
+<link rel='stylesheet' href='../../assets/styles/app.css'/>
+    <!--<link rel='stylesheet' href='../../assets/styles/store.css'/>-->
+</head>
+<body>
+<script >
+document.addEventListener('DOMContentLoaded', function () {
+(function initFontSize() {
+		var resizeEvent = 'orientationchange' in window ? 'orientationchange' : 'resize';
+
+		function changeSize() {
+			const designWidth = 750; //设计稿尺寸是640px
+			const designWidth2 = 1080;
+			var html = document.documentElement; //根元素
+			var deviceWidth = html.clientWidth; //屏幕逻辑宽度
+			var base = 100;
+
+			if (deviceWidth > designWidth2) {
+				deviceWidth = designWidth2;
+			}
+			html.style.fontSize = (deviceWidth / designWidth) * base + "px";
+			//console.log(html.style.fontSize);
+			//alert(html.style.fontSize+"==="+deviceWidth);
+		}
+		changeSize();
+		window.addEventListener(resizeEvent, changeSize, false);
+	})();
+});
+</script>
+<!--头部-->
+<div class="jm-header-navbar">
+    <div class="jm-wrapper">
+        <div class="jm-back"></div>
+        <p class="title">品牌合伙</p>
+    </div>
+</div>
+<!--body内容信息-->
+<div id="content" class="page-content">
+    <div class="jm-store mrg-bottom24">
+        <div class="store">
+            <div class="box">
+                <div class="logobox imgbox">
+                    <img class="pic" src="../../assets/images/store/good1.png" alt="店铺头像">
+                </div>
+                <div class="desc">
+                    <span class="name">店铺名称</span>
+                    <span class="wel">HELLO</span>
+                    <span class="wel">欢迎来xxx店铺</span>
+                </div>
+            </div>
+            <a href="#">
+                <div class="friend"></div>
+            </a>
+        </div>
+    </div>
+    <!--推荐品牌-->
+    <div class="jm-goodsign">
+        <div class="navbox">
+            <div class="item ">
+                <span class="icon"></span>
+                <span class="title">推荐品牌</span>
+            </div>
+            <!--<a href="#">
+                <div class="item more">
+                    <span class="title">更多品牌</span>
+                    <span class="moreicon"></span>
+                </div>
+            </a>-->
+        </div>
+        <ul class="content">
+            <li class="item imgbox">
+                <a href="#"><img src="../../assets/images/common/brand.png" alt=""/></a>
+            </li>
+            <li class="item imgbox">
+                <a href="#"><img src="../../assets/images/store/logo2.png" alt=""/></a>
+            </li>
+            <li class="item imgbox">
+                <a href="#"><img src="../../assets/images/store/logo3.png"
+                                 alt=""/></a>
+            </li>
+            <li class="item imgbox">
+                <a href="#"><img src="../../assets/images/store/logo4.png" alt=""/></a>
+            </li>
+        </ul>
+    </div>
+    <!--精品推荐-->
+    <div class="jm-goodrecom">
+        <div class="navbox">
+            <div class="item">
+                <span class="icon"></span>
+                <span class="title">精品推荐</span>
+            </div>
+            <a href="#">
+                <div class="item more">
+                    <span class="title">更多商品</span>
+                    <span class="moreicon"></span>
+                </div>
+            </a>
+        </div>
+        <div class="content-list pro_list pro_type_grid">
+            <div class="pro_item"><a class="item_inner" href="#m=goods&amp;goods_id=376">
+                <div class="cover"><img class="photo"
+                                        src="http://vshop.guaten.com/images/201702/1486677149426303362.jpg"></div>
+                <div class="info">
+                    <div class="title">韩国怡思美C+维他精华爽肤水</div>
+                    <div class="price"><strong><em>￥287.00</em></strong></div>
+                </div>
+            </a></div>
+            <div class="pro_item"><a class="item_inner" href="#m=goods&amp;goods_id=371">
+                <div class="cover"><img class="photo"
+                                        src="http://vshop.guaten.com/images/201702/1487293904543595188.jpg"></div>
+                <div class="info">
+                    <div class="title">好杞来枸杞原液（盒装）</div>
+                    <div class="price"><strong><em>￥443.00</em></strong></div>
+                </div>
+            </a></div>
+            <div class="pro_item"><a class="item_inner" href="#m=goods&amp;goods_id=361">
+                <div class="cover"><img class="photo"
+                                        src="http://vshop.guaten.com/images/201611/1479923162748996415.jpg"></div>
+                <div class="info">
+                    <div class="title">金滤嘴生物活性科技烟嘴</div>
+                    <div class="price"><strong><em>￥661.00</em></strong></div>
+                </div>
+            </a></div>
+        </div>
+    </div>
+</div>
+<!--返回头部-->
+<a href="#top" id="jm-backtop" class="jm-backtop"></a>
+<!--底部导航-->
+<!--尾部导航-->
+<div id="footer" class="page-footer">
+    <div class="footer_inner">
+        <a class="on" href="#">
+            <span class="line"><i class="icon-home"></i></span>
+            <span class="text">首页</span>
+        </a>
+        <a href="#">
+            <span class="line"><i class="icon-reorder"></i></span>
+            <span class="text">分类</span></a>
+        <a href="#">
+            <span class="line"><i class="icon-shopping-cart"></i></span>
+            <span class="text">购物车</span></a>
+        <a href="#">
+            <span class="line"><i class="icon-user"></i></span>
+            <span class="text">个人中心</span>
+        </a>
+    </div>
+</div>
+<!--脚步导入开始-->
+<!--js模块公用放入-->
+<script src="../../scripts/jquery-1.8.3.min.js"></script>
+<script src="../../assets/scripts/store.js"></script>
+</body>
+</html>

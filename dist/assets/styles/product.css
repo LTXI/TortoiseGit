@@ -311,7 +311,7 @@ body {
 }
 
 .icon {
-  background: url("../images/common/brand.png?v=af6ce") no-repeat;
+  background: url("../images/common/brand.png") no-repeat;
 }
 
 .icon_back {
@@ -389,7 +389,7 @@ body {
   position: absolute;
   left: 0;
   top: 0;
-  background-image: url("../images/common/brand.png?v=af6ce");
+  background-image: url("../images/common/brand.png");
   background-repeat: no-repeat;
   background-size: 119rem;
   -webkit-transform-origin: 0 0;
@@ -451,17 +451,17 @@ body {
 }
 
 .icon_community_qq {
-  background: url("../images/common/icon_community_qq.png?v=d91a7") no-repeat left center;
+  background: url("../images/common/icon_community_qq.png") no-repeat left center;
   background-size: .47rem .47rem;
 }
 
 .icon_community_wechat {
-  background: url("../images/common/icon_community_wechat.png?v=2e431") no-repeat left center;
+  background: url("../images/common/icon_community_wechat.png") no-repeat left center;
   background-size: .47rem .47rem;
 }
 
 .icon_community_code {
-  background: url("../images/common/icon_community_code.png?v=9c6ac") no-repeat left center;
+  background: url("../images/common/icon_community_code.png") no-repeat left center;
   background-size: .47rem .47rem;
 }
 
@@ -486,32 +486,32 @@ body {
 }
 
 .icon-newfooter-home {
-  background: url("../images/common/icon_newfooter_home_normal.png?v=5ac17") no-repeat center bottom;
+  background: url("../images/common/icon_newfooter_home_normal.png") no-repeat center bottom;
   background-size: .47rem .47rem;
 }
 
 .icon-newfooter-bbs {
-  background: url("../images/common/icon_newfooter_bbs_normal.png?v=e3d41") no-repeat center bottom;
+  background: url("../images/common/icon_newfooter_bbs_normal.png") no-repeat center bottom;
   background-size: .94rem .94rem;
 }
 
 .icon-newfooter-my {
-  background: url("../images/common/icon_newfooter_my_normal.png?v=ddecd") no-repeat center bottom;
+  background: url("../images/common/icon_newfooter_my_normal.png") no-repeat center bottom;
   background-size: .38rem .47rem;
 }
 
 .on .icon-newfooter-home {
-  background: url("../images/common/icon_newfooter_home_pressed.png?v=78217") no-repeat center bottom;
+  background: url("../images/common/icon_newfooter_home_pressed.png") no-repeat center bottom;
   background-size: .47rem .47rem;
 }
 
 .on .icon-newfooter-bbs {
-  background: url("../images/common/icon_newfooter_bbs_pressed.png?v=0e500") no-repeat center bottom;
+  background: url("../images/common/icon_newfooter_bbs_pressed.png") no-repeat center bottom;
   background-size: .94rem .94rem;
 }
 
 .on .icon-newfooter-my {
-  background: url("../images/common/icon_newfooter_my_pressed.png?v=0a9b3") no-repeat center bottom;
+  background: url("../images/common/icon_newfooter_my_pressed.png") no-repeat center bottom;
   background-size: .38rem .47rem;
 }
 
@@ -599,7 +599,7 @@ $title_right_text_color: #9FA0A0;*/
   padding-left: .35rem;
   margin-right: .3rem;
   color: #595757;
-  background: url("../images/store/security_icon.png?v=90fc9") no-repeat left center;
+  background: url("../images/store/security_icon.png") no-repeat left center;
   background-size: .28rem .28rem;
 }
 
@@ -642,7 +642,7 @@ $title_right_text_color: #9FA0A0;*/
   right: .21rem;
   width: .6rem;
   height: .82rem;
-  background: url("../images/store/dot-icon.png?v=cf268") no-repeat left center;
+  background: url("../images/store/dot-icon.png") no-repeat left center;
   background-size: .35rem .08rem;
   top: 0;
 }
@@ -684,7 +684,7 @@ $title_right_text_color: #9FA0A0;*/
   right: .21rem;
   width: .6rem;
   height: .82rem;
-  background: url("../images/store/dot-icon.png?v=cf268") no-repeat left center;
+  background: url("../images/store/dot-icon.png") no-repeat left center;
   background-size: .35rem .08rem;
   top: 0;
 }
@@ -813,7 +813,7 @@ $title_right_text_color: #9FA0A0;*/
   width: 1.56rem;
   height: .42rem;
   line-height: .42rem;
-  background: url("../images/store/brand-enter-btn.png?v=dac1d") no-repeat center center;
+  background: url("../images/store/brand-enter-btn.png") no-repeat center center;
   background-size: 1.55rem .41rem;
   padding-left: .41rem;
   font-size: .24rem;

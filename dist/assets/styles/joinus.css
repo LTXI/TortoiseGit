@@ -383,7 +383,7 @@ html, body {
   position: relative;
   margin-top: .6rem;
   height: 2.56rem;
-  background: url("../images/joinus/bg_bottom.png?v=be1f5") no-repeat center center;
+  background: url("../images/joinus/bg_bottom.png") no-repeat center center;
   background-size: 7.5rem 1.6rem;
   text-align: center;
 }

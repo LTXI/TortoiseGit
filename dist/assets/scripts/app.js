@@ -15,10 +15,12 @@ $(function () {
   //头部导航
   (function topHeaderNav() {
     $(document).on('click', '.icon_header-nav-short', function (e) {
+      //console.log($(e.target) + "1111");
       $(".header-nav-bar").toggle();
       e.stopImmediatePropagation();
     });
     $(document).on('click', function (e) {
+      // console.log($(e.target) + "22222");
       $(".header-nav-bar").hide();
     });
   })();
@@ -46,7 +48,7 @@ $(function () {
   })();
 /**
  * <div class="ShareObject ">
- <form id="share" class="share-form" >
+ <form class="share-form" >
  <input type="hidden" name="title" value="<?php echo $row->goods_name; ?>" />
  <input type="hidden" name="desc" value="<?php echo $row->goods_name.' ￥'.$final_price; ?>" />
  <input type="hidden" name="pic" value="<?php echo fixImagePath($row->goods_thumb);?>" />
@@ -56,15 +58,28 @@ $(function () {
  </div>
  * **/
    function doneShare() {
-     //品牌商品分享 ---brand_goods.php 品牌商品详细页 ---goods_share.php
+     //品牌商品分享 ---brand_goods.php
+     //品牌商品详细页 ---goods_share.php
+     //store_no_link.php   store_goodslist_no_link.php push_agentinfo.php
      $(document).on('click','.ShareObject', function (e) {
        e.preventDefault();
        var form = $(e.currentTarget).find('form');
        var params = app_share.getShareParam($(form));
        app_share.appshare(params, params.ishref);
      });
+
      //页面头部点击分享
      //店铺二维码 --brand-qrcode.php
+   /**<div class="ShareObject ">
+       <form id="share" >
+       <input type="hidden" name="title" value="<?php echo $row->goods_name; ?>" />
+       <input type="hidden" name="desc" value="<?php echo $row->goods_name.' ￥'.$final_price; ?>" />
+       <input type="hidden" name="pic" value="<?php echo fixImagePath($row->goods_thumb);?>" />
+       <input type="hidden" name="href" value="<?php echo JQ_URL.'#m=goods&goods_id='.$row->goods_id; ?>" />
+       </form>
+       <span class="share_link">分享</span>
+       </div>
+    **/
      $(document).on('click','.jm-header .jm-wrapper .icon_share, .share_store', function (e) {
        e.preventDefault();
        var form = $("#share");
@@ -87,16 +102,21 @@ app_share.shares = null;
 app_share.init = function () {
   // 监听plusready事件
   document.addEventListener("plusready", function () {
-    //mui.toast("eee2222");
+    alert("eee2222");
     plus.share.getServices(function (s) {
       app_share.shares = {};
-      //mui.toast("sss=="+s);
+      //alert("sss=="+s);
       for (var i in s) {
         var t = s[i];
         app_share.shares[t.id] = t;
+        //mui.toast("shares===" + t.id + "  >  " + t);
+        //alert(t.id + "  >>  " + t);
       }
+      console.log(app_share.shares['weixin']);
+      //alert("weixin==="+app_share.shares['weixin']);
     }, function (e) {
-      mui.toast('无分享服务');
+      //mui.toast("无享服务！");
+      plus.nativeUI.alert('无分享服务!');
     });
   }, false);
 };
@@ -108,7 +128,7 @@ app_share.init = function () {
 app_share.shareMessage =function (msg, s) {
   s.send(
     msg,
-    function (e) {
+    function () {
       mui.toast("分享到\"" + s.description + "\"成功！ ");
     },
     function (e) {
@@ -126,7 +146,8 @@ app_share.shareMessage =function (msg, s) {
 
 app_share.shareAction = function(sb, ishref, msginfo) {
   if (!sb || !sb.s) {
-    mui.toast('无效的分享服务');
+    //mui.toast("无效的分享服务！");
+    plus.nativeUI.alert('无效的分享服务!');
     return;
   }
   var msg = {
@@ -149,8 +170,7 @@ app_share.shareAction = function(sb, ishref, msginfo) {
     sb.s.authorize(function () {
       app_share.shareMessage(msg, sb.s);
     }, function (e) {
-      //plus.nativeUI.alert("认证授权失败：" + e.code + " - " + e.message);
-      mui.toast('认证授权失败');
+      plus.nativeUI.alert("认证授权失败：" + e.code + " - " + e.message);
     });
   }
 };
@@ -161,7 +181,7 @@ app_share.shareAction = function(sb, ishref, msginfo) {
  * @param  {Boolean} ishref  是否分享链接
  */
 app_share.appshare = function (msgdata, ishref) {
-  //mui.toast('appshare begin');
+  mui.toast('appshare begin');
   // 分享参数
   if (ishref) {
     var msginfo = {
@@ -179,6 +199,8 @@ app_share.appshare = function (msgdata, ishref) {
   var shareBts = [];
   // 更新分享列表
   var ss = app_share.shares['weixin'];
+  //console.log("ssss==" + ss.nativeClient);
+  //mui.toast("ss.nativeClient==" + ss.nativeClient);
   ss && ss.nativeClient && (shareBts.push({
     title: '微信朋友圈',
     s: ss,
@@ -190,6 +212,7 @@ app_share.appshare = function (msgdata, ishref) {
   }));
 
   // 弹出分享列表
+  //mui.toast("shareBts.length===" + shareBts.length);
   shareBts.length > 0 ? plus.nativeUI.actionSheet({
         title: '分享',
         cancel: '取消',
@@ -227,7 +250,6 @@ $(document).ready(function() { app_share.init(); });
  * href   连接
  */
 function ShareHandleParam(title, desc, pic, href){
-  console.log("ShareHandleParam()");
   var ishref = (href == null || href =="") ? false : true;
   var params = {
     'title': title,
