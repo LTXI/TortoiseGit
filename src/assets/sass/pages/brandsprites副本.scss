@@ -1,0 +1,166 @@
+@import "../base/size";
+
+
+
+@mixin set{background:url("../images/common/set.png") no-repeat;background-size:$_143 $_47;};
+@mixin icon_community_code{height:$_47;width:$_47;background-position:0 0;};
+@mixin icon_community_wechat{height:$_47;width:$_47;background-position:0 -$_48 0;};
+@mixin icon_community_qq{height:$_47;width:$_47;background-position:0 -$_96 0;};
+
+.icon{
+  background:url("../images/common/brand.png") no-repeat ;
+  //background-size:.4rem 1.2rem;
+}
+.icon_back{height:.4rem;width:.2rem;/*height:.43rem;width:.25rem;*/background-position:0 0;}
+.icon_star{height:.37rem;width:.37rem;background-position:0 -.44rem;}
+.icon_share{height:.38rem;width:.40rem;background-position:0 -.82rem;}
+
+.btn_peach{height:.42rem;width:1.19rem;background-position:0  -1.21rem;}
+.btn_yellow{height:.42rem;width:1.19rem;background-position:0  -1.64rem;}
+
+.icon_attention{height:.30rem;width:.30rem;background-position:0 -2.07rem;}
+.icon_attention_normal{height:.30rem;width:.30rem;background-position:0 -2.38rem;}
+.icon_code{height:.41rem;width:.41rem;background-position:0 -2.69rem;}
+.icon_phone{height:.35rem;width:.35rem;background-position:0 -3.11rem;}
+.icon_like{height:.35rem;width:.37rem;background-position:0 -3.47rem;}
+
+//处理数字小数时导致的像素误差 begin
+.icon-fix {
+  background: none;
+  position: relative;
+  overflow: hidden;
+  &:after {
+    content: "";
+    display: block;
+    width: 10000%;
+    height: 10000%;
+    position: absolute;
+    left: 0;
+    top:0;
+    background-image: url("../images/common/brand.png");
+    background-repeat: no-repeat;
+    background-size: 119rem;//background-size: 119rem是精灵图的宽，不是icon的宽
+    -webkit-transform-origin: 0 0;
+    -webkit-transform: scale(.01);
+    transform-origin: 0 0;
+    transform: scale(0.01);
+  }
+}
+/*.icon-fix:after {
+  content: '';
+  display: block;
+  width: 10000%;
+  height: 10000%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-image: url("../images/common/sprite.png");
+  background-repeat: no-repeat;
+  background-size: 40rem;
+  -webkit-transform-origin: 0 0;
+  -webkit-transform: scale(.01);
+  transform-origin: 0 0;
+  transform: scale(.01);
+}*/
+
+//位置坐标  扩大了100倍
+//background-size: 40rem是精灵图的宽，不是icon的宽
+.icon_back:after{
+  background-position: 0 0;
+}
+.icon_star:after{
+  background-position: 0 -44rem;
+}
+.icon_share:after {
+  background-position: 0 -82rem;
+}
+
+.icon_attention:after {
+  background-position: 0 -207rem;
+}
+.icon_attention_normal:after {
+  background-position: 0 -238rem;
+}
+.icon_phone:after {
+  background-position: 0 -311rem;
+}
+.icon_code:after {
+  background-position: 0 -269rem;
+}
+
+.icon_like:after {
+  background-position: 0 -347rem;
+}
+
+
+//处理数字小数时导致的像素误差 end
+//头部导航 begin
+.icon_community_qq{
+  /*background: url("../images/common/icon_community_qq.png") no-repeat left center;
+  background-size: .47rem .47rem;*/
+  @include set;
+  @include icon_community_qq;
+}
+.icon_community_wechat{
+ /* background: url("../images/common/icon_community_wechat.png") no-repeat left center;
+  background-size: .47rem .47rem;*/
+  @include set;
+  @include icon_community_wechat;
+}
+.icon_community_code{
+  /*background: url("../images/common/icon_community_code.png") no-repeat left center;
+  background-size: .47rem .47rem;*/
+  @include set;
+  @include icon_community_code;
+}
+//头部导航 end
+//店铺设置begin
+.icon_community_store {
+  background: url("../images/common/icon_community_store.png") no-repeat left center;
+  background-size: .47rem .47rem;
+}
+
+.icon_community_storePhone {
+  background: url("../images/common/icon_community_storePhone.png") no-repeat left center;
+  background-size: .47rem .47rem;
+}
+.icon_community_storeLogo {
+  background: url("../images/common/icon_community_storeLogo.png") no-repeat left center;
+  background-size: .47rem .47rem;
+}
+
+.icon_community_storeDesc {
+  background: url("../images/common/icon_community_storeDesc.png") no-repeat left center;
+  background-size: .47rem .47rem;
+}
+//店铺设置end
+
+
+//新版底部导航begin
+.icon-newfooter-home {
+  background: url("../images/common/icon_newfooter_home_normal.png") no-repeat center bottom;
+  background-size: .47rem .47rem;
+}
+.icon-newfooter-bbs {
+  background: url("../images/common/icon_newfooter_bbs_normal.png") no-repeat center bottom;
+  background-size: .94rem .94rem;
+}
+.icon-newfooter-my {
+  background: url("../images/common/icon_newfooter_my_normal.png") no-repeat center bottom;
+  background-size: .38rem .47rem;
+}
+.on .icon-newfooter-home {
+  background: url("../images/common/icon_newfooter_home_pressed.png") no-repeat center bottom;
+  background-size: .47rem .47rem;
+}
+.on .icon-newfooter-bbs {
+  background: url("../images/common/icon_newfooter_bbs_pressed.png") no-repeat center bottom;
+  background-size: .94rem .94rem;
+}
+
+.on .icon-newfooter-my {
+  background: url("../images/common/icon_newfooter_my_pressed.png") no-repeat center bottom;
+  background-size: .38rem .47rem;
+}
+//新版底部导航end
+
