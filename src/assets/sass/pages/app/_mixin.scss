@@ -309,6 +309,56 @@ $title_right_text_color: #9FA0A0;*/
 
 //--超链接点击，最右箭头图标
 //html结构 <div class="orderitem">
+//<a class="link-text" href="#"> <span class="title"><i class="community_icon icon_community_code"></i>我的订单</span>
+//<span class="orderlink">查看所有订单<i class="arrow-icon"></i></span></a>
+//</div>
+@mixin link-item-icon-sprite($height:1rem,$border-width:0rem) {
+  padding: 0 .28rem;
+  height: $height;
+  line-height: $height;
+  .link-text, a {
+    display: block;
+    color: #231815;
+    width: 100%;
+    font-size: .25rem;
+    &::after{
+      display: table;
+      line-height: 0;
+      content: "";
+      clear: both;
+    }
+  }
+  .title {
+    float: left;
+    color: #231815;
+    font-size: 0;
+    .text {
+      font-size: .25rem;
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
+  .common_icon {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: .17rem;
+  }
+
+  .orderlink {
+    float: right;
+    vertical-align: middle;
+    color: #9FA0A0;
+    font-size: .25rem;
+    //箭头
+    .common_icon{
+      margin-left: 0.18rem;
+      margin-right: 0;
+    }
+  }
+}
+
+//--超链接点击，最右箭头图标
+//html结构 <div class="orderitem">
 //<a href="#"> <span class="title">我的订单</span>
 //<span class="orderlink">查看所有订单<i class="arrow-icon"></i></span></a>
 //</div>
@@ -403,6 +453,8 @@ $title_right_text_color: #9FA0A0;*/
     align-items: center;
     justify-content: center;
     padding: $padding-width;
+    overflow-x: hidden;
+    overflow-y: hidden;
     img {
       display: inline-block;
      // width: 100%;
@@ -429,14 +481,16 @@ $title_right_text_color: #9FA0A0;*/
     align-items: center;
     justify-content: center;
     padding: $padding-width;
-
+    overflow-x: hidden;
+    overflow-y: hidden;
     img {
-      //display: inline-block;
+      display: inline-block;
       max-width: 100%;
     }
 
   }
 }
+
 
 //我的推客列表
 //<div class="itembox">
@@ -739,22 +793,7 @@ $title_right_text_color: #9FA0A0;*/
   text-overflow: ellipsis;
 
 }
-@mixin create-square-image($width:1.18rem, $height:1.1rem,  $padding-width:0rem) {
-  .imgbox {
-    display: inline-block;
-    width: $width;
-    height: $height;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: $padding-width;
-    position: relative;
-    img {
-      display: inline-block;
-      max-width: 100%;
-    }
-  }
-}
+
 //
 //推荐品牌 店铺详细用
 @mixin goodsign {
@@ -855,13 +894,18 @@ $title_right_text_color: #9FA0A0;*/
   line-height: .42rem;
 }
 
-@mixin borderRadius($radius:20px) {
+@mixin borderRadius($radius:.2rem) {
   border-radius: $radius;
   border-top-left-radius: $radius;
   border-top-right-radius: $radius;
   border-bottom-left-radius: $radius;
   border-bottom-right-radius: $radius;
 }
+@mixin vertical-align($type:middle){
+  vertical-align: $type;
+}
+
+
 
 
 

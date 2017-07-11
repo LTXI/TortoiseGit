@@ -1,0 +1,245 @@
+@import "app/mixin";
+//品牌收益 分红
+//品牌分红 及统计begin
+.reward, .reward-count {
+  .reward-list-title {
+    background: #fff;
+    @include link-item-icon-sprite(1rem, 0px);
+    .link-text{
+      font-size: .3rem;
+    }
+    .limit{
+      font-size: .22rem;
+      color: #9FA0A0;
+    }
+    .title {
+      font-size: .3rem;
+    }
+    .orderlink {
+      font-size: .25rem;
+    }
+  }
+  .reward-list-content {
+    height: 1.62rem;
+    background-color: #fff;
+    padding: 0 .28rem;
+    line-height: normal;
+    .title{
+      font-size: .24rem;
+      color: #9FA0A0;
+      line-height: .9rem;
+    }
+    .sign{
+      font-size: .30rem;
+    }
+    .result{
+      font-size: .5rem;
+      color: #F23030;
+      line-height: 1;
+    }
+  }
+  .order-list-title {
+    height: 1.4rem;
+    background-color: #F4F4F4;
+    text-align: center;
+    .title-box{
+      display: inline-block;
+      margin-top: 0;
+      margin-bottom: 0;
+      font-size: 0;
+      padding-top: .4rem;
+    }
+    .title{
+      font-size: .3rem;
+      vertical-align: middle;
+      padding: 0 .26rem;
+    }
+    .common_icon_fix {
+      display: inline-block;
+      vertical-align: middle;
+    }
+    .scalex{
+    transform: scaleX(-1)
+    }
+  }
+  .list-content-item {
+    background: #fff;
+    padding: .35rem 0;
+    @include layout-col-3(1.5rem, 4.0rem, 2.5rem, flex-start);
+    .item-left {
+      padding-left: .4rem;
+      padding-right: .3rem;
+      @include create-square-image(.76rem, .76rem, 0)
+    }
+    .item-right {
+      padding-right: .24rem;
+      text-align: right;
+      .order-detail-btn{
+        width: 1.34rem;
+        height: .38rem;
+        line-height: .38rem;
+        border-radius: .5rem;
+        display: inline-block;
+        background-color: #FEDE3B;
+        color: #000000;
+        font-size: .24rem;
+        text-align: center;
+      }
+      .quantity {
+        color: #F23030;
+        margin-top: .18rem;
+        line-height: normal;
+        font-size: .24rem;
+        text-align: right;
+      }
+    }
+    .item-middle {
+      .title {
+        width: 3rem;
+        color: #231815;
+        font-size: .24rem;
+        white-space: nowrap;
+        @include  ellipsis;
+      }
+      .desc {
+        color: #9FA0A0;
+        font-size: .24rem;
+      }
+      .status {
+        padding-left: .2rem;
+      }
+      .order{
+        color: #9FA0A0;
+        font-size: .24rem;
+        line-height: .6rem;
+      }
+    }
+  }
+
+//数字金额
+  .amount-num {
+    color: #fff;
+    font-size: .8rem;
+    font-weight: 500;
+    line-height: normal;
+    .sign {
+      font-size: .40rem;
+    }
+    .unit {
+      font-size: .24rem;
+      font-weight: normal;
+    }
+  }
+}
+
+.reward {
+  .reward-header {
+    position: relative;
+    height: 4.8rem;
+    background: #F14E49 url("../images/app/home/reward-bg1.png") no-repeat center top;
+    background-size: 100% 4.8rem;
+    .rewardbox {
+      position: relative;
+      padding-top: 1.95rem;
+      .reward-item {
+        position: relative;
+        width: 100%;
+        float: left;
+        padding-left: .88rem;
+        font-size: 0;
+        .title {
+          color: #fff;
+          font-size: .34rem;
+          height: .72rem;
+        }
+        .gapline {
+          display: inline-block;
+          background: #fff;
+          width: .3rem;
+          height: .04rem;
+          margin-bottom: .6rem;
+          margin-left: .05rem;
+        }
+      }
+    }
+    .draw-money{
+      position: absolute;
+      right: .24rem;
+      bottom: .7rem;
+      width: 1.8rem;
+      height: .5rem;
+      line-height: .5rem;
+      border-radius: .5rem;
+      display: inline-block;
+      background-color: #FEDE3B;
+      color: #000000;
+      font-size: .34rem;
+      text-align: center;
+    }
+  }
+}
+
+.reward-count {
+  .reward-header {
+    position: relative;
+    height: 2.65rem;
+    background: #F14E49 url("../images/app/home/reward-bg1.png") no-repeat center top;
+    background-size: 100% 2.65rem;
+    .title {
+      position: absolute;
+      top: .7rem;
+      left: .88rem;
+      color: #fff;
+      font-size: .34rem;
+    }
+    .amount-num-pos{
+      position: absolute;
+      left: .88rem;
+      top: 1.2rem;
+    }
+    .tips {
+      position: absolute;
+      right: .24rem;
+      bottom: .3rem;
+      color: #fff;
+      text-align: right;
+      font-size: .22rem;
+    }
+  }
+  .reward-list-title .orderlink {
+    color: #F23030;
+    font-size: .36rem;
+    .unit {
+      font-size: .24rem;
+      font-weight: normal;
+    }
+  }
+  .month-box {
+    position: absolute;
+    top: .56rem;
+    left: 2.34rem;
+    width: .76rem;
+    height: .32rem;
+    line-height: .32rem;
+    background-color: #FBC9C8;
+    text-align: center;
+    font-size: .24rem;
+    color: #F23030;
+    border-radius: .05rem;
+    &:after{
+      position: absolute;
+      bottom: -.15rem;
+      left: .15rem;
+      content: "";
+      width: 0;
+      height: 0;
+      border-top: .1rem solid #FBC9C8;
+      border-right: .1rem solid transparent;
+      border-bottom: .1rem solid transparent;
+      border-left: .1rem solid #FBC9C8;
+
+    }
+  }
+}
+
+//品牌分享end

@@ -1,19 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="code">
 <head>
-    @@include('../../partical/meta.inc',{"title":"九件社区"})
+    @@include('../../partical/meta.inc',{"title":"九件商圈"})
     @@include('../../partical/styles.inc', {"links":""})
     <link rel="stylesheet" href="../../assets/styles/app.css">
+
     @@include('../../partical/fontsize.inc')
-
-
 </head>
 <body>
 <!--头部-->
 @@include('../../partical/appheadernav.inc',{
 "header-fixed":"header-fixed",
-"title":"九件社区"
+"title":"九件商圈"
 })
+
 
 <div id="content" class="page-content bbs">
     <div class="banner mrg-bottom24">
@@ -63,31 +63,7 @@
     </div>
 
     <div class="container mrg-bottom24">
-        <!--旧-->
-        <ul style="display: none">
-            <a class="" href="#" >
-                <li class="itembox mrg-bottom24">
-
-                    <div class="item-left">
-                        <div class="imgbox">
-                            <img src="../../assets/images/app/bbs/icon_bbs_head.png" alt=""/></div>
-                    </div>
-                    <div class="item-middle">
-                        <p class="title"><i class="label"></i>社区代理飞哥</p>
-                        <p class="">QQ号:<span>1</span></p>
-                        <p class="">微信号:<span class="red">15</span></p>
-                        <p class="">微信二维码:</p>
-                    </div>
-                    <div class="item-right">
-                        <span class="time">2015-2-05 16:12:53</span>
-                        <span class="code-box"><img
-                                src="../../assets/images/app/bbs/icon_bbs_code.png"/><span>点击扫描二维码</span></span>
-                    </div>
-
-                </li>
-            </a>
-        </ul>
-        <ul class="posts-list">
+        <ul class="posts-list mrg-bottom80">
             <li class="posts-item clearfix mrg-bottom24">
                 <div class="left-side">
                     <div class="imgbox">
@@ -96,15 +72,18 @@
                 </div>
                 <div class="right-side">
                     <p class="username">九妹</p>
-                    <span class="spe-post">精华</span>
+                    <span class="spe-post">
+                    <i class="icon-bbs-elite mrg-r10"></i>
+                    <span class="text">精华精华</span>
+                </span>
                     <p class="title">夏日水果榜单夏日水果榜单</p>
                     <div class="clearfix contentbox">
                         <p class="content ">夏日水果榜单夏日水果榜单夏日水果榜单夏日水果榜单夏日水果榜单夏日水果榜单
                         </p>
                         <span class="open-arrow">
                         <span class="text open-text">全文</span>
-                        <span class="text close-text">收起</span>
-                        <i class="arrow"></i>
+                       <span class="text close-text">收起</span>
+                        <i class="icon_bbs_down_arrow"></i>
                     </span>
                     </div>
                     <div class="picbox clearfix ">
@@ -123,8 +102,14 @@
                     </div>
 
                     <div class="bottom clearfix">
-                        <span class="count">晒单 | 1465人阅读</span>
-                        <span class="like surelike">100</span>
+                    <span class="count">
+                        <i class="icon_bbs_share mrg-r10"></i>
+                        <span class="text">分享</span>
+                    </span>
+                        <span class="like">
+                        <i class="icon_bbs_like_normal mrg-r10"></i>
+                        <span class="text">100</span>
+                    </span>
                     </div>
                 </div>
 
@@ -137,18 +122,27 @@
                 </div>
                 <div class="right-side">
                     <p class="username">九妹</p>
-                    <span class="spe-post">精华</span>
+                    <span class="spe-post">
+                    <i class="icon-bbs-elite mrg-r10"></i>
+                    <span class="text">精华精华</span>
+                </span>
                     <p class="title">夏日水果榜单夏日水果榜单</p>
-                    <div class="clearfix open contentbox">
+                    <div class="clearfix contentbox">
                         <p class="content ">夏日水果榜单夏日水果榜单夏日水果榜单夏日水果榜单夏日水果榜单夏日水果榜单
                         </p>
                         <span class="open-arrow">
                         <span class="text open-text">全文</span>
-                        <span class="text close-text">收起</span>
-                        <i class="arrow"></i>
+                       <span class="text close-text">收起</span>
+                        <i class="icon_bbs_down_arrow"></i>
                     </span>
                     </div>
-                    <div class="picbox clearfix">
+                    <div class="picbox clearfix ">
+                        <div class="picitem">
+                            <img class="pic" src="../../assets/images/app/bbs/bbs_msg_pic.png" alt="图片">
+                        </div>
+                        <div class="picitem">
+                            <img class="pic" src="../../assets/images/app/bbs/bbs_msg_pic.png" alt="图片">
+                        </div>
                         <div class="picitem">
                             <img class="pic" src="../../assets/images/app/bbs/bbs_msg_pic.png" alt="图片">
                         </div>
@@ -158,18 +152,21 @@
                     </div>
 
                     <div class="bottom clearfix">
-                        <span class="count">晒单 | 1465人阅读</span>
-                        <span class="like surelike">100</span>
+                    <span class="count">
+                        <i class="icon_bbs_share mrg-r10"></i>
+                        <span class="text">分享</span>
+                    </span>
+                        <span class="like">
+                        <i class="icon_bbs_like_normal mrg-r10"></i>
+                        <span class="text">100</span>
+                    </span>
                     </div>
                 </div>
+
             </li>
         </ul>
-
-
     </div>
-
 </div>
-
 
 <!--尾部-->
 @@include('../../partical/footer-nav-bar-new.inc')
@@ -200,7 +197,8 @@
   })
 </script>
 <!--脚步导入开始-->
-@@include('../../partical/script.inc')
+<!--js模块公用放入-->
+<link rel="stylesheet" href="../../assets/styles/community.css">
 <script src="../../assets/scripts/app.js"></script>
 </body>
 </html>

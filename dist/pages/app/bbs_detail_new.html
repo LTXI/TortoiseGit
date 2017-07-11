@@ -62,6 +62,14 @@ document.addEventListener('DOMContentLoaded', function () {
             <span class="attention"><span class="plus">+</span>关注</span>
             <p class="desc">萨芬啊发生 艾丝凡阿飞安</p>
         </div>
+
+        <span class="publish-tie">
+            <a href="#">
+                <i class="icon_bbs_tie_sm"></i>
+            <p class="desc">发表</p>
+            </a>
+
+        </span>
     </div>
     <div class="posts-head mrg-bottom24">
         <span class="tips">看帖</span>
@@ -79,15 +87,18 @@ document.addEventListener('DOMContentLoaded', function () {
             </div>
             <div class="right-side">
                 <p class="username">九妹</p>
-                <span class="spe-post">精华</span>
+                <span class="spe-post">
+                    <i class="icon-bbs-elite mrg-r10"></i>
+                    <span class="text">精华精华</span>
+                </span>
                 <p class="title">夏日水果榜单夏日水果榜单</p>
                 <div class="clearfix contentbox">
                     <p class="content ">夏日水果榜单夏日水果榜单夏日水果榜单夏日水果榜单夏日水果榜单夏日水果榜单
                     </p>
                     <span class="open-arrow">
                         <span class="text open-text">全文</span>
-                        <span class="text close-text">收起</span>
-                        <i class="arrow"></i>
+                       <span class="text close-text">收起</span>
+                        <i class="icon_bbs_down_arrow"></i>
                     </span>
                 </div>
                 <div class="picbox clearfix ">
@@ -106,8 +117,14 @@ document.addEventListener('DOMContentLoaded', function () {
                 </div>
 
                 <div class="bottom clearfix">
-                    <span class="count">晒单 | 1465人阅读</span>
-                    <span class="like surelike">100</span>
+                    <span class="count">
+                        <i class="icon_bbs_share mrg-r10"></i>
+                        <span class="text">分享</span>
+                    </span>
+                    <span class="like">
+                        <i class="icon_bbs_like_normal mrg-r10"></i>
+                        <span class="text">100</span>
+                    </span>
                 </div>
             </div>
 
@@ -120,18 +137,27 @@ document.addEventListener('DOMContentLoaded', function () {
             </div>
             <div class="right-side">
                 <p class="username">九妹</p>
-                <span class="spe-post">精华</span>
+                <span class="spe-post">
+                    <i class="icon-bbs-elite mrg-r10"></i>
+                    <span class="text">精华精华</span>
+                </span>
                 <p class="title">夏日水果榜单夏日水果榜单</p>
-                <div class="clearfix open contentbox">
+                <div class="clearfix contentbox">
                     <p class="content ">夏日水果榜单夏日水果榜单夏日水果榜单夏日水果榜单夏日水果榜单夏日水果榜单
                     </p>
                     <span class="open-arrow">
                         <span class="text open-text">全文</span>
-                        <span class="text close-text">收起</span>
-                        <i class="arrow"></i>
+                       <span class="text close-text">收起</span>
+                        <i class="icon_bbs_down_arrow"></i>
                     </span>
                 </div>
-                <div class="picbox clearfix">
+                <div class="picbox clearfix ">
+                    <div class="picitem">
+                        <img class="pic" src="../../assets/images/app/bbs/bbs_msg_pic.png" alt="图片">
+                    </div>
+                    <div class="picitem">
+                        <img class="pic" src="../../assets/images/app/bbs/bbs_msg_pic.png" alt="图片">
+                    </div>
                     <div class="picitem">
                         <img class="pic" src="../../assets/images/app/bbs/bbs_msg_pic.png" alt="图片">
                     </div>
@@ -141,38 +167,25 @@ document.addEventListener('DOMContentLoaded', function () {
                 </div>
 
                 <div class="bottom clearfix">
-                    <span class="count">晒单 | 1465人阅读</span>
-                    <span class="like surelike">100</span>
+                    <span class="count">
+                        <i class="icon_bbs_share mrg-r10"></i>
+                        <span class="text">分享</span>
+                    </span>
+                    <span class="like">
+                        <i class="icon_bbs_like_normal mrg-r10"></i>
+                        <span class="text">100</span>
+                    </span>
                 </div>
             </div>
+
         </li>
     </ul>
 
 </div>
-
-<!--尾部导航-->
-<!--新尾部导航2017-6-23 transparent-bg  scroll-->
-<div id="footer" class=" new-app-page-footer">
-    <ul class="footer_inner ">
-        <li class="footer_item home">
-            <a class="" href="./home.html">
-               <i class="icon-newfooter-home"></i>
-                <span class="text">首页</span>
-            </a>
-        </li>
-        <li class="footer_item bbs">
-            <a class="on" href="./bbs.html">
-                <i class="icon-newfooter-bbs"></i>
-                <span class="text">发现</span>
-            </a>
-        </li>
-        <li class="footer_item my">
-            <a class="" href="./my-new.html">
-                <i class="icon-newfooter-my"></i>
-                <span class="text">我的九件</span>
-            </a>
-        </li>
-    </ul>
+<div class="bbs-topic">
+<div class="bbs-topic-inner">
+    <a href="#"><i class="icon_bbs_tie_big tie-pic"></i></a>
+</div>
 </div>
 
 <script>
@@ -189,6 +202,7 @@ document.addEventListener('DOMContentLoaded', function () {
 </script>
 <!--脚步导入开始-->
 <!--js模块公用放入-->
+<link rel="stylesheet" href="../../assets/styles/community.css">
 <script src="../../assets/scripts/app.js"></script>
 </body>
 </html>

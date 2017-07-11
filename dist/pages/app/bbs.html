@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="code">
 <head>
        <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
@@ -10,7 +10,7 @@
     <meta http-equiv="Pragma" content="no-cache" />
     <meta http-equiv="Expires" content="0" />
     <meta http-equiv="x-dns-prefetch-control" content="on" />
-    <title>九件社区</title>
+    <title>九件商圈</title>
     <script src="../../scripts/mui.min.js"></script>
     <link rel="stylesheet" href="../../styles/mui.min.css" />
     <link rel="stylesheet" href="../../styles/swiper.min.css" />
@@ -25,6 +25,7 @@
     <!--样式模块公用放入-->
 
     <link rel="stylesheet" href="../../assets/styles/app.css">
+
     <script >
 document.addEventListener('DOMContentLoaded', function () {
 (function initFontSize() {
@@ -49,8 +50,6 @@ document.addEventListener('DOMContentLoaded', function () {
 	})();
 });
 </script>
-
-
 </head>
 <body>
 <!--头部-->
@@ -60,9 +59,9 @@ document.addEventListener('DOMContentLoaded', function () {
         <a href="javascript:history.go(-1);">
             <div class="posl icon icon_back icon-fix"></div>
         </a>
-        <p class="title">九件社区</p>
+        <p class="title">九件商圈</p>
         <a href="#">
-            <div class=" posr icon icon_header-nav-short"></div>
+            <div class=" posr icon icon_header_plus"></div>
         </a>
     </div>
 </div>
@@ -75,6 +74,7 @@ document.addEventListener('DOMContentLoaded', function () {
             <a href="http://www.baidu.com"><li class="navltem bdr-bottom"><i class="navicon  icon_header_nav_home"></i>首页</li></a>
         </ul>
     </div>
+
 
 
 <div id="content" class="page-content bbs">
@@ -125,31 +125,7 @@ document.addEventListener('DOMContentLoaded', function () {
     </div>
 
     <div class="container mrg-bottom24">
-        <!--旧-->
-        <ul style="display: none">
-            <a class="" href="#" >
-                <li class="itembox mrg-bottom24">
-
-                    <div class="item-left">
-                        <div class="imgbox">
-                            <img src="../../assets/images/app/bbs/icon_bbs_head.png" alt=""/></div>
-                    </div>
-                    <div class="item-middle">
-                        <p class="title"><i class="label"></i>社区代理飞哥</p>
-                        <p class="">QQ号:<span>1</span></p>
-                        <p class="">微信号:<span class="red">15</span></p>
-                        <p class="">微信二维码:</p>
-                    </div>
-                    <div class="item-right">
-                        <span class="time">2015-2-05 16:12:53</span>
-                        <span class="code-box"><img
-                                src="../../assets/images/app/bbs/icon_bbs_code.png"/><span>点击扫描二维码</span></span>
-                    </div>
-
-                </li>
-            </a>
-        </ul>
-        <ul class="posts-list">
+        <ul class="posts-list mrg-bottom80">
             <li class="posts-item clearfix mrg-bottom24">
                 <div class="left-side">
                     <div class="imgbox">
@@ -158,15 +134,18 @@ document.addEventListener('DOMContentLoaded', function () {
                 </div>
                 <div class="right-side">
                     <p class="username">九妹</p>
-                    <span class="spe-post">精华</span>
+                    <span class="spe-post">
+                    <i class="icon-bbs-elite mrg-r10"></i>
+                    <span class="text">精华精华</span>
+                </span>
                     <p class="title">夏日水果榜单夏日水果榜单</p>
                     <div class="clearfix contentbox">
                         <p class="content ">夏日水果榜单夏日水果榜单夏日水果榜单夏日水果榜单夏日水果榜单夏日水果榜单
                         </p>
                         <span class="open-arrow">
                         <span class="text open-text">全文</span>
-                        <span class="text close-text">收起</span>
-                        <i class="arrow"></i>
+                       <span class="text close-text">收起</span>
+                        <i class="icon_bbs_down_arrow"></i>
                     </span>
                     </div>
                     <div class="picbox clearfix ">
@@ -185,8 +164,14 @@ document.addEventListener('DOMContentLoaded', function () {
                     </div>
 
                     <div class="bottom clearfix">
-                        <span class="count">晒单 | 1465人阅读</span>
-                        <span class="like surelike">100</span>
+                    <span class="count">
+                        <i class="icon_bbs_share mrg-r10"></i>
+                        <span class="text">分享</span>
+                    </span>
+                        <span class="like">
+                        <i class="icon_bbs_like_normal mrg-r10"></i>
+                        <span class="text">100</span>
+                    </span>
                     </div>
                 </div>
 
@@ -199,18 +184,27 @@ document.addEventListener('DOMContentLoaded', function () {
                 </div>
                 <div class="right-side">
                     <p class="username">九妹</p>
-                    <span class="spe-post">精华</span>
+                    <span class="spe-post">
+                    <i class="icon-bbs-elite mrg-r10"></i>
+                    <span class="text">精华精华</span>
+                </span>
                     <p class="title">夏日水果榜单夏日水果榜单</p>
-                    <div class="clearfix open contentbox">
+                    <div class="clearfix contentbox">
                         <p class="content ">夏日水果榜单夏日水果榜单夏日水果榜单夏日水果榜单夏日水果榜单夏日水果榜单
                         </p>
                         <span class="open-arrow">
                         <span class="text open-text">全文</span>
-                        <span class="text close-text">收起</span>
-                        <i class="arrow"></i>
+                       <span class="text close-text">收起</span>
+                        <i class="icon_bbs_down_arrow"></i>
                     </span>
                     </div>
-                    <div class="picbox clearfix">
+                    <div class="picbox clearfix ">
+                        <div class="picitem">
+                            <img class="pic" src="../../assets/images/app/bbs/bbs_msg_pic.png" alt="图片">
+                        </div>
+                        <div class="picitem">
+                            <img class="pic" src="../../assets/images/app/bbs/bbs_msg_pic.png" alt="图片">
+                        </div>
                         <div class="picitem">
                             <img class="pic" src="../../assets/images/app/bbs/bbs_msg_pic.png" alt="图片">
                         </div>
@@ -220,38 +214,41 @@ document.addEventListener('DOMContentLoaded', function () {
                     </div>
 
                     <div class="bottom clearfix">
-                        <span class="count">晒单 | 1465人阅读</span>
-                        <span class="like surelike">100</span>
+                    <span class="count">
+                        <i class="icon_bbs_share mrg-r10"></i>
+                        <span class="text">分享</span>
+                    </span>
+                        <span class="like">
+                        <i class="icon_bbs_like_normal mrg-r10"></i>
+                        <span class="text">100</span>
+                    </span>
                     </div>
                 </div>
+
             </li>
         </ul>
-
-
     </div>
-
 </div>
-
 
 <!--尾部-->
 <!--新尾部导航2017-6-23 transparent-bg  scroll-->
-<div id="footer" class=" new-app-page-footer">
+<div id="footer" class="new-app-page-footer">
     <ul class="footer_inner ">
         <li class="footer_item home">
             <a class="" href="./home.html">
-               <i class="icon-newfooter-home"></i>
-                <span class="text">首页</span>
+            <i class="common_icon_fix icon-newfooter-home"></i>
+             <span class="text">首页</span>
             </a>
         </li>
         <li class="footer_item bbs">
             <a class="on" href="./bbs.html">
-                <i class="icon-newfooter-bbs"></i>
-                <span class="text">发现</span>
+                <i class="common_icon_fix icon-newfooter-bbs"></i>
+                <span class="text">商圈</span>
             </a>
         </li>
         <li class="footer_item my">
             <a class="" href="./my-new.html">
-                <i class="icon-newfooter-my"></i>
+                <i class="common_icon_fix icon-newfooter-my"></i>
                 <span class="text">我的九件</span>
             </a>
         </li>
@@ -285,6 +282,7 @@ document.addEventListener('DOMContentLoaded', function () {
 </script>
 <!--脚步导入开始-->
 <!--js模块公用放入-->
+<link rel="stylesheet" href="../../assets/styles/community.css">
 <script src="../../assets/scripts/app.js"></script>
 </body>
 </html>

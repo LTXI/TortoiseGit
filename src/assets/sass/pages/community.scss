@@ -1,0 +1,546 @@
+@import "app/_mixin";
+//社区详情页begin
+.bbs-detail-new {
+  .head {
+    position: relative;
+    height: 4.9rem;
+    background: url("../images/app/bbs/bbs_bg.jpg") no-repeat center top;
+    background-size: 100% 100%;
+    .content {
+      text-align: center;
+      padding-top: 1.34rem;
+      @include create-circle-image(1.2rem, 0);
+      .imgbox {
+        margin: 0 auto;
+      }
+      .theme {
+        font-size: .26rem;
+        color: #fff;
+        padding: .15rem 0;
+      }
+      .attention {
+        display: inline-block;
+        background-color: #F23030;
+        width: 1.31rem;
+        height: .34rem;
+        line-height: .34rem;
+        color: #fff;
+        font-size: .24rem;
+      }
+      .plus {
+        font-size: .30rem;
+      }
+      .desc {
+        margin-top: .34rem;
+        font-size: .26rem;
+        color: #fff;
+      }
+    }
+    .publish-tie {
+
+      position: absolute;
+      right: .24rem;
+      top: .93rem;
+      .desc{
+        text-align: center;
+        font-size: .22rem;
+        color: #fff;
+      }
+
+
+    }
+  }
+
+}
+
+.posts-head {
+  position: relative;
+  background-color: #fff;
+  height: 1.17rem;
+  padding: 0 .24rem;
+  .tips {
+    float: left;
+    font-size: .24rem;
+    color: #231815;
+    line-height: 1.17rem;
+    padding-left: .13rem
+  }
+  .switchbox {
+    width: 1.4rem;
+    position: absolute;
+    top: 50%;
+    right: 0.1rem;
+    transform: translateY(-50%);
+  }
+}
+.bbs-topic {
+  height: 0.8rem;
+  display: block;
+  position: relative;
+  width: 7.5rem;
+  max-width: 1080px;
+  .bbs-topic-inner {
+    background-color: transparent;
+    position: fixed;
+    bottom: 0;
+    height: 1rem;
+    width: 7.5rem;
+    max-width: 1080px;
+    z-index: 100;
+    text-align: center;
+    .tie-pic {
+      display: inline-block;
+      position: relative;
+      top: -.2rem;
+    }
+  }
+}
+
+//选项框
+$duration: .4s;
+$checkedColor: #F23030;
+.bbs-switch {
+  width: 1.4rem;
+  height: .54rem;
+  position: relative;
+  border: 1px solid #4D514F;
+  background-color: #4D514F;
+  box-shadow: #4D514F 0 0 0 0 inset;
+  @include borderRadius(.4rem);
+  background-clip: content-box;
+  display: inline-block;
+  -webkit-appearance: none;
+  user-select: none;
+  outline: none;
+  &:before {
+    content: '';
+    width: .48rem;
+    height: .48rem;
+    position: absolute;
+    top: 50%;
+    left: .01rem;
+    margin-top: -.24rem;
+    @include borderRadius(.24rem);
+    background-color: #fff;
+  }
+  &:checked {
+    border-color: $checkedColor;
+    background-color: $checkedColor;
+    &:before {
+      left: .88rem;
+    }
+    &:after {
+      content: '精选';
+      color: #fff;
+      width: .88rem;
+      height: .48rem;
+      line-height: .48rem;
+      position: absolute;
+      left: .03rem;
+      font-size: .24rem;
+      top: 50%;
+      margin-top: -.24rem;
+      text-align: center;
+    }
+  }
+  &.switch-animbg {
+    transition: background-color ease $duration;
+    &:before {
+      transition: left .3s;
+    }
+    &:checked {
+      box-shadow: #dfdfdf 0 0 0 0 inset;
+      background-color: $checkedColor;
+      transition: border-color $duration, background-color ease $duration;
+      &:before {
+        transition: left 0.3s;
+      }
+    }
+  }
+}
+
+
+//商圈列表
+.posts-list {
+  .posts-item {
+    padding: 0.24rem .24rem;
+
+    background-color: #fff;
+    position: relative;
+    .left-side {
+      float: left;
+      width: 0.8rem;
+      height: auto;
+      @include create-circle-image(0.6rem, 0)
+    }
+    .right-side {
+      position: relative;
+      float: left;
+      width: 6.2rem;
+    }
+    .username {
+      line-height: .66rem;
+      color: #3887FF;
+      font-size: .3rem;
+      width: 3.6rem;
+      @include ellipsis;
+    }
+    .spe-post {
+      position: absolute;
+      right: 0;
+      top: 0.14rem;
+      font-size: 0;
+      .text {
+        color: #E7A834;
+        font-size: .20rem;
+        vertical-align: middle;
+      }
+    }
+    .title {
+      color: #000000;
+      font-size: .26rem;
+      line-height: .42rem;
+      width: 5rem;
+      @include ellipsis;
+    }
+    .content {
+      max-width: 5rem;
+      float: left;
+      font-size: .26rem;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      height: .4rem;
+      line-height: .4rem;
+    }
+    .open .content {
+      color: #797471;
+      overflow: visible;
+      white-space: pre-wrap;
+      height: .8rem;
+      max-width: 5.9rem;
+    }
+    .open-arrow {
+      float: left;
+      font-size: 0;
+      .text {
+        padding-right: .1rem;
+        height: .4rem;
+        color: #3887FF;
+        font-size: .26rem;
+        display: inline-block;
+        vertical-align: middle;
+        @include vertical-align();
+      }
+      .close-text {
+        display: none;
+      }
+    }
+    .open .icon_bbs_down_arrow {
+      transform: scaleY(-1);
+    }
+    .open .close-text {
+      display: inline-block;
+    }
+    .open .open-text {
+      display: none;
+    }
+    .open .open-arrow {
+      float: none;
+    }
+    .picbox {
+      margin: 0.1rem 0 .2rem 0;
+      .picitem {
+        float: left;
+        width: 1.95rem;
+        height: 1.95rem;
+        margin-right: .12rem;
+        margin-bottom: .05rem;
+        .pic {
+          width: 100%;
+          height: 100%;
+        }
+        &:nth-child(3n) {
+          margin-right: 0;
+        }
+      }
+    }
+    .bottom {
+      .count {
+        float: left;
+        font-size: 0;
+      }
+      .like {
+        float: right;
+        color: #9FA0A0;
+        font-size: 0;
+      }
+      .text {
+        color: #9FA0A0;
+        font-size: .2rem;
+        vertical-align: middle;
+        line-height: normal;
+      }
+    }
+  }
+  .mrg-r10 {
+    margin-right: .08rem;
+  }
+}
+
+
+@keyframes play {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(360deg);
+  }
+}
+
+//社区详情页end
+
+
+//九件社区begin
+.bbs {
+  .banner {
+    height: 2.82rem;
+  }
+
+  .quick-entry-nav {
+    padding: .3rem .3rem;
+    position: relative;
+    background-color: #fff;
+    height: 4.6rem;
+  }
+  .quick-entry-link {
+    position: relative;
+    width: 25%;
+    float: left;
+    text-align: center;
+    display: block;
+    height: 2rem;
+  }
+  .quick-box {
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 1.6rem;
+    span {
+      overflow: hidden;
+      display: flex;
+      -webkit-line-clamp: 1;
+      justify-content: center;
+      line-clamp: 1;
+      height: 2em;
+      font-size: .26rem;
+      color: #585657;
+    }
+    img {
+      height: 1.16rem;
+      width: 1.16rem;
+    }
+  }
+  //数据提示位置
+  .data-tips .tipsbox {
+    padding-top: 0rem;
+  }
+}
+.bbs, .bbs-detail{
+  .itembox  {
+    background-color: #fff;
+    padding: .4rem 0;
+    @include layout-col-3(1.38rem, 3.5rem, 2.5rem, flex-start);
+    .item-left {
+      padding: 0 .26rem 0 .24rem;
+      @include create-square-image(.82rem, .82rem, 0rem);
+      flex-grow: 0;
+    }
+    .item-middle {
+      p {
+        color: #231815;
+        font-size: .22rem;
+        line-height: .48rem;
+        height: .48rem;
+      }
+      p.title {
+        font-size: .28rem;
+        color: #9FA0A0;
+        margin-bottom: .2rem;
+        .label {
+          display: inline-block;
+          width: .07rem;
+          height: .25rem;
+          background-color: #FEDE3B;
+          vertical-align: middle;
+          border-radius: 2px;
+          margin-right: .1rem;
+        }
+      }
+      span {
+        padding-left: .24rem;
+        font-size: .24rem;
+        color: #9FA0A0;
+
+      }
+    }
+    .item-right {
+      padding-right: .24rem;
+      position: relative;
+      flex-grow: 1;
+      padding-top: .1rem;
+      position: relative;
+      .time {
+        white-space: nowrap;
+        color: #9FA0A0;
+        font-size: .20rem;
+        padding-left: .3rem;
+        background: url("../images/app/bbs/icon_bbs_clock.png") no-repeat left center;
+        background-size: .23rem .21rem;
+        position: absolute;
+        top: 0;
+        right: .24rem;
+        line-height: .48rem;
+        height: .48rem;
+        //padding-right: .24rem;
+      }
+      .code-box {
+        margin-top: .9rem;
+        float: right;
+        right: .24rem;
+        text-align: right;
+        height: 1.07rem;
+        width: 2rem;
+        img {
+          display: inline-block;
+          width: .71rem;
+          height: .72rem;
+        }
+        span {
+          text-align: right;
+          display: block;
+          font-size: .28rem;
+          color: #9FA0A0;
+          white-space: nowrap;
+        }
+
+      }
+    }
+  }
+}
+.bbs-detail{
+  .itembox{
+    .item-middle{
+      p.title{
+        margin-bottom: 0rem;
+      }
+    }
+  }
+  .share{
+    padding: 0.5rem  0 .7rem 0;
+    background-color: #fff;
+    .title{
+      padding: .05rem 0;
+      width: 3.4rem;
+      background-color: #F23030;
+      text-align: center;
+      color: #fff;
+      font-size: .24rem;
+      height: .48rem;
+
+      border-radius: .5rem;
+      margin: 0 auto;
+    }
+    .code{
+      position: relative;
+      padding: .55rem 0;
+      @include create-square-image(3.48rem,3.48rem,0);
+      .imgbox{
+        margin: 0 auto;
+      }
+
+    }
+    .desc{
+      font-size: .24rem;
+      color: #9FA0A0;
+      text-align: center;
+    }
+  }
+}
+.mrg-bottom80{
+  margin-bottom: 0.8rem;
+}
+//九件社区end
+
+//商圈发布begin
+/*.bbs-publish {
+  background-color: #fff;
+  .form-item-title {
+    //background-color: green;
+    position: relative;
+    color: #9FA0A0;
+    height: 1.18rem;
+    line-height: 1.18rem;
+    font-size: .24rem;
+    padding: 0 .24rem;
+
+  }
+  .form-item-content {
+    position: relative;
+    background-color: goldenrod;
+    padding: 0 .24rem;
+    height: 3.78rem;
+    overflow: hidden;
+  }
+  .form-item-content {
+    padding: .3rem 0;
+    line-height: 1.6;
+    color: #9FA0A0;
+    font-size: .24rem;
+    border: 1px solid red;
+    .num-tips {
+      position: absolute;
+      right: .24rem;
+      bottom: .3rem;
+    }
+  }
+  textarea, input[type="text"] {
+    width: 100%;
+    height: 100%;
+    outline: 0 none;
+    resize: none;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    border: none;
+    color: #9FA0A0;
+  }
+  input::-webkit-input-placeholder {
+    color: #9FA0A0;
+  }
+  input:-ms-input-placeholder {
+    color: #9FA0A0;
+  }
+  input:-moz-placeholder {
+    color: #9FA0A0;
+  }
+  input::-moz-placeholder {
+    color: #9FA0A0;
+  }
+
+
+
+}
+.jm-header .jm-wrapper {
+  .cancel-text {
+    font-size: .26rem;
+    color: #000;
+  }
+  .submit-text {
+    font-size: .26rem;
+    color: #F23030;
+  }
+}*/
+//商圈发布end

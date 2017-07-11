@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SpriteFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" CssFileName="../images/common" ImageName="common_icon" IsPhone="true" SpriteImgFileType="Png" xmlns="CssSprite">
+  <SpriteList>
+    <Sprite Path="icon_community_wechat.png" LocationX="0" LocationY="0" />
+    <Sprite Path="icon_community_tieba.png" LocationX="0" LocationY="51" />
+    <Sprite Path="icon_community_code.png" LocationX="0" LocationY="96" />
+    <Sprite Path="icon_community_weibo.png" LocationX="0" LocationY="144" />
+    <Sprite Path="icon_community_storePhone.png" LocationX="0" LocationY="192" />
+    <Sprite Path="icon_community_store.png" LocationX="0" LocationY="240" />
+    <Sprite Path="icon_community_qq.png" LocationX="0" LocationY="288" />
+    <Sprite Path="icon_community_storeLogo.png" LocationX="0" LocationY="336" />
+    <Sprite Path="icon_community_storeDesc.png" LocationX="0" LocationY="384" />
+    <Sprite Path="icon_right_arrow.png" LocationX="162" LocationY="0" />
+    <Sprite Path="icon_order_title_sign.png" LocationX="162" LocationY="30" />
+    <Sprite Path="icon_newfooter_bbs_normal.png" LocationX="53" LocationY="0" />
+    <Sprite Path="icon_newfooter_bbs_pressed.png" LocationX="53" LocationY="103" />
+    <Sprite Path="icon_newfooter_home_normal.png" LocationX="57" LocationY="208" />
+    <Sprite Path="icon_newfooter_home_pressed.png" LocationX="60" LocationY="271" />
+    <Sprite Path="icon_newfooter_my_normal.png" LocationX="58" LocationY="326" />
+    <Sprite Path="icon_newfooter_my_pressed.png" LocationX="56" LocationY="388" />
+  </SpriteList>
+</SpriteFile>

@@ -1,6 +1,3 @@
-@import "../base/base.scss";
-@import "../base/navbar.scss";
-@import "brandsprites";
 @import "./app/mixin";
 
 //店铺详情begin
@@ -131,14 +128,26 @@
         }
       }
     }
-
     .enter-brand {
+      position: relative;
+      .prop-title{
+        position: absolute;
+        top:0;
+        left: .24rem;
+        width: 5rem;
+        font-size: .28rem;
+        color: #666;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        line-height: .8rem;
+      }
       background-color: #fff;
       @include layout-col-3(1.9rem, 3rem, 1.8rem,center);
-      padding: 0.26rem 0;
+      padding: 0.8rem 0 .26rem 0;
       .item-left {
         padding: 0 .5rem 0 .24rem;
-        @include  create-square-image(1.18rem, 1.18rem, 0);
+        @include create-square-image(1.18rem, 1.18rem, 0);
       }
       .item-middle {
         .title{

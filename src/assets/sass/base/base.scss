@@ -45,7 +45,10 @@ body {
 
 //底部间距 margin-bottom
 .mrg-bottom24{
-  margin-bottom: 0.24rem;
+  margin-bottom: 0.24rem !important;
+}
+.vertical-align-middle{
+  vertical-align: middle;
 }
 
 /*.rectangle{

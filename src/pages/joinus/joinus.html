@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    @@include('../../partical/meta.inc',{"title":"招募令"})
+    @@include('../../partical/meta.inc',{"title":"招募"})
     @@include('../../partical/styles.inc', {
     "links":"<link rel='stylesheet' href='../../assets/styles/joinus.css'/>"
     })
@@ -9,37 +9,55 @@
 <body>
 @@include('../../partical/fontsize.inc')
 
+<!--头部-->
+<div class="jm-header transparent100">
+    <div class="jm-wrapper un-bottom-line">
+        <a href="javascript:history.go(-1);">
+            <div class="posl icon_back_white"></div>
+        </a>
+        <p class="title"></p>
+    </div>
+</div>
 <!--body内容信息-->
-<div id="content" class="page-content">
-    <div class="container">
-        <div class="header">
-            <img class="titlebg" src="../../assets/images/joinus/bg.png" alt="">
-
-            <div class="desc">
-                <p>我是品牌合伙人：1234567899</p>
-                <p>邀请您</p>
-                <p>加入脉品牌</p>
-                <!--<p>轻松赚钱 轻松创业</p>-->
-                <div class="breandbox">
-                    <div class="brand">
-                        <img src="../../assets/images/joinus/brand.png">
-                        <img src="../../assets/images/joinus/brand.png">
-                        <img src="../../assets/images/joinus/brand.png">
-                        <img src="../../assets/images/joinus/brand.png">
-                        <img src="../../assets/images/joinus/brand.png">
-                    </div>
-                </div>
+<div id="content" class="page-content join-index-new">
+    <div class="join-job">
+        <p class="job">品牌助理</p>
+    </div>
+    <div class="join-title mrg-bottom24">
+        <p class="title">我是品牌合伙人<br>九件客服</p>
+    </div>
+    <div class="join-product-item ">
+        <div class="product-img">
+            <div class="imgbox">
+                <img src="../../assets/images/joinus/brand.png" alt=""/>
             </div>
         </div>
-        <img class="alpha" src="../../assets/images/joinus/bg_top.png" alt="">
-        <div class="btnbox">
-            <a class="btn" href="#">
-                <img src="../../assets/images/joinus/btnenter.png" alt="">
-            </a>
+        <div class="recommend">
+            <p class="title">科研氏科科研氏科科研氏科科研氏科</p>
+            <p class="desc">直销：3.5%</p>
+            <p class="desc">推销：22%</p>
         </div>
-        <div class="copy">
-            <a href="#"><p>详情请登录详情请登录</p></a>
+    </div>
+    <div class="join-logo">
+        <div class="logobox">
+            <img src="../../assets/images/joinus/logo.png" alt="logo">
         </div>
+    </div>
+    <div class="join-slogan">
+        <p class="slogan">邀请您成为品牌助理</p>
+    </div>
+    <div class="join-form">
+        <form action="#" >
+            <div class="join-enter">
+                <a class="join-enter-desc" onclick="javascript:App.submit();">立即进入</a>
+                <div class="join-protocol">
+                    <input id="protocol" type="checkbox" class=" join-switch" />
+                    <label for="protocol">阅读并同意九件品牌助理服务协议</label>
+                </div>
+            </div>
+
+
+        </form>
     </div>
 </div>
 

@@ -67,6 +67,7 @@
 
   .jm-wrapper {
     position: relative;
+    z-index: 1;
     .title {
       height: 1rem;
       line-height: 1rem;
@@ -98,6 +99,10 @@
       transform: scaleY(.8);
       width: 100%;
       z-index: 10;
+    }
+    &.un-bottom-line::after {
+      border-bottom: none;
+
     }
   }
 }
@@ -131,17 +136,7 @@
     }
   }
 }
-//返回头部 end
-//头部标题右侧 缩写导航
-.icon_header-nav-short {
-  background: transparent url("../images/common/icon_header_nav_short.png") no-repeat center center;
-  background-size: 15px 3px;
-  width: 15px;
-  height: 100%;
-  /*background-size: .3rem .07rem;// 37 7
-  width: .3rem;
-  height: 0.07rem;*/
-}
+
 //弹出层导航栏
 .header-nav-bar{
   display: none;
@@ -381,12 +376,12 @@
         line-height: normal;
         color: #000000;
       }
-      i[class^='icon-'] {
+      i[class*='common_icon']{
         position: relative;
         display: inline-block;
-        padding-top: .6rem;
-        padding-left: 1rem;
+       // padding-left: 1rem;
       }
+
       .text {
         display: inline-block;
         width: 100%;
@@ -399,6 +394,9 @@
         color: #F23030;
       }
     }
+    .footer_item.home i[class*='common_icon'], .footer_item.my i[class*='common_icon']{
+      margin-top: (1-0.4-0.47)+rem;//0.47 图标高度
+    }
     .footer_item.home a {
       float: right;
       min-width: .6rem;
@@ -406,12 +404,16 @@
     .footer_item.bbs a {
       text-align: center;
       width: 100%;
+      position: relative;
     }
-    .footer_item.bbs a i[class^='icon-'] {
-      padding-top: 1rem;
-      padding-left: 100%;
+    .footer_item.bbs a i[class*='common_icon'] {
+      //padding-top: 1rem;
+      //padding-left: 100%;
       top: -0.4rem;
       position: absolute;
+      display: inline;
+      left: 50%;
+      transform: translateX(-50%);
     }
     .footer_item.bbs a .text {
       padding-top: .6rem;

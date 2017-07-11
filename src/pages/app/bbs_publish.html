@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" id="code">
+<head>
+    @@include('../../partical/meta.inc',{"title":"发帖子"})
+    @@include('../../partical/styles.inc', {"links":""})
+    <link rel="stylesheet" href="../../assets/styles/app.css">
+    @@include('../../partical/fontsize.inc')
+</head>
+<body>
+
+<!--头部-->
+<div class="jm-header header-fixed">
+    <div class="jm-wrapper">
+        <a href="javascript:history.go(-1);">
+            <div class="posl cancel-text">取消</div>
+        </a>
+        <p class="title">发帖子</p>
+        <a href="#">
+            <div class="posr submit-text">提交</div>
+        </a>
+    </div>
+</div>
+<div class="hold-space-top"></div>
+
+<div id="content" class="page-content bbs-publish">
+    <div class="wrapper">
+        <form action="#">
+
+            <p class="form-item-title bdr-bottom">
+                <span class=""></span>
+                <input type="text" value="" name="article-title" placeholder="标题 (3-25个字)" class="bbs-publish-title">
+            </p>
+            <p class="form-item-content bdr-bottom">
+                <textarea rows="3"  class="bbs-publish-content" name="article-content" placeholder="给这则帖子写几句有趣的文字..." ></textarea>
+                <span class="num-tips">(80字以内)</span>
+            </p>
+        </form>
+
+    </div>
+</div>
+
+
+
+<!--脚步导入开始-->
+@@include('../../partical/script.inc')
+<link rel="stylesheet" href="../../assets/styles/community.css">
+<script src="../../assets/scripts/app.js"></script>
+</body>
+</html>

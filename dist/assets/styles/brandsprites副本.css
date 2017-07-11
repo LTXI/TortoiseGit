@@ -1,3 +1,9 @@
+/*
+var start = 400;
+var base = 100.00;
+for(var i=start; i<=800;i++ ){
+console.log('$_'+i+":"+(i/base)+"rem;");
+}*/
 .icon {
   background: url("../images/common/brand.png") no-repeat;
 }
