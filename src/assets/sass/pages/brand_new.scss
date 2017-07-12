@@ -1,0 +1,456 @@
+@import "app/mixin";
+
+
+//品牌列表
+.brandlistbox {
+  background: #fff;
+  color: #231815;
+  //margin-bottom: 0.3rem;
+  .brand-type {
+    @include title-text-both-icon;
+  }
+  .list {
+    background-color: #f4f4f4;
+  }
+  .item {
+    //margin-bottom: .25rem;
+    background-color: #fff;
+  }
+  .itembox {
+    @include brand-list-item;
+    .item-middle{
+      align-self: flex-start;//中间部分上对齐
+    }
+    .btn_yellow, .btn_peach {
+      //width: 1.3rem !important;
+     // text-align: center !important;
+    }
+  }
+}
+
+//品牌合伙人
+.partnership {
+  background: #f4f4f4;
+  color: #231816;
+  margin-bottom: 0.3rem;
+  .list {
+    background: #fff;
+    .shop-item {
+      @include layout-col-3(1.9rem, 4.1rem, 1.4rem, center);
+      padding: .3rem 0;
+      .img-item , .item-left{
+
+        @include create-circle-image(1.18rem, 0.12rem);
+
+        padding: 0 .45rem 0 .24rem;
+        .imgbox{
+          background-color: #DDDDDD;
+          position: relative;
+          &::after{
+            position: absolute;
+            top: -0.5px;
+            left: -0.5px;
+            width: 200%;
+            height: 200%;
+            content: '';
+            //border: 1px solid green;
+            //border-radius: 6px;//圆角
+            transform: scale(0.5);
+            transform-origin: top left;
+          }
+          .noimg {
+            background: #DDDDDD;
+            border-radius: 50%;
+            width: .94rem;
+            height: .94rem;
+          }
+        }
+
+      }
+
+      .desc-item , .item-middle{
+        //border: 1px solid red;
+        .name {
+          display: block;
+          font-size: .28rem;
+          margin-bottom: .1rem;
+        }
+        .phone {
+          display: block;
+          position: relative;
+          color: #6f6d6e;
+          font-size: .28rem;
+          padding-left: .4rem;
+          line-height: .35rem;
+          height: .35rem;
+          .pos {
+            display: inline-block;
+            position: absolute;
+            left: 0;
+            width: .35rem;
+            height: .35rem;
+            top: 50%;
+            transform: translateY(-50%);
+          }
+        }
+      }
+      .btn-item , .item-right{
+
+        .code {
+          display: inline-block;
+          width: .41rem;
+          height: .41rem;
+          background-size: cover;
+          float: right;
+          right: .24rem;
+        }
+      }
+    }
+  }
+}
+
+//品牌合伙人 品牌商品头部公用
+.partner {
+  background-color: #fff;
+  position: relative;
+  padding: .36rem .24rem;
+  overflow: hidden;
+  //margin-bottom: 0.3rem;
+  .logo {
+    float: left;
+    width: 1.18rem;
+    height: 1.18rem;
+
+    @include create-circle-image(1.18rem,0.12rem);
+    .imgbox{
+      background-color: #DDDDDD;
+    }
+  }
+  .twitter {
+    float: left;
+    width: 3rem;
+    margin-left: .3rem;
+    //height: 1.18rem;
+    .name {
+      display: block;
+      color: #221715;
+      font-size: .28rem;
+      line-height: .4rem;
+      @include ellipsis;
+    }
+    .sell {
+      display: block;
+      color: #acacac;
+      font-size: .22rem;
+      height: .3rem;
+      line-height: .3rem;
+      @include ellipsis;
+    }
+    .focus {
+      display: block;
+      position: relative;
+      top: 0.1rem;
+
+      color: #6f6d6e;
+      font-size: .20rem;
+      padding-left: .4rem;
+      .pos {
+        display: inline-block;
+        position: absolute;
+        left: 0;
+        width: .3rem;
+        height: .3rem;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+  }
+  .payback {
+    position: relative;
+    float: right;
+    width: 2.44rem;
+    height: 1.10rem;
+    font-size: .22rem;
+    .left {
+      position: absolute;
+      display: inline-block;
+      z-index: 10;
+      .outcircle {
+        background: #fff5c4;
+        display: inline-block;
+        width: 1.1rem;
+        height: 1.1rem;
+        border-radius: 50%;
+        padding: .1rem;
+      }
+      .incircle {
+        position: relative;
+        background: #fee358;
+        display: inline-block;
+        width: .9rem;
+        height: .9rem;
+        border-radius: 50%;
+        font-size: 0;
+        display: flex;
+        align-content: center;
+        align-items:flex-start;
+        flex-wrap: wrap;
+        span {
+          position: relative;
+          display: block;
+          text-align: center;
+          width: 100%;
+
+          &.up, &.down {
+            font-size: .22rem;
+            line-height: 1.1;
+            color: #231815;
+          }
+        }
+      }
+    }
+    .bottom {
+      position: absolute;
+      left: .5rem;
+      top: .1rem;
+      z-index: 0;
+      display: inline-block;
+      height: .9rem;
+      width: 2rem;
+      .up, .down {
+        background: #fff5c4;
+        height: .43rem;
+        padding-left: .6rem;
+        line-height: .43rem;
+        white-space: nowrap;
+        position: relative;
+      }
+      .up::after {
+        border-bottom: 2px solid #fee45c;
+        bottom: -1px;
+        content: "";
+        height: 1px;
+        position: absolute;
+        right: 0;
+        transform: scaleY(.5);
+        width: 100%;
+        z-index: 10;
+      }
+    }
+  }
+}
+
+//商店二维码
+//#code {
+  //body {
+    //background: #fff;
+  //}
+  .codeshop {
+    background: #fff;
+    min-height: 100%;
+    padding: 1.4rem 1.4rem 1.1rem 1.4rem;
+    text-align: center;
+    height: 12.10rem;
+    .code {
+      position: relative;
+      display: inline-block;
+      width: 4.5rem;
+      height: 4.5rem;
+      background: url("../images/brand/code-bg.png") no-repeat center center;
+      background-size: contain;
+      img {
+        width: 2.87rem;
+        height: 2.84rem;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+    .code2 {
+      display: inline-block;
+      width: 4.50rem;
+      height: 3rem;
+      margin-top: .48rem;
+      img {
+        width: 100%;
+      }
+    }
+  }
+//}
+
+//品牌商品
+.brandgoods {
+  background: #f4f4f4;
+  color: #231816;
+  .goods-box {
+    display: flex;
+    flex-direction: row;
+    width: 6.96rem;
+    margin: 0.26rem .28rem .28rem .28rem;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    .goods-item {
+      flex-basis: 3.37rem;
+      height: 4.74rem;
+      background-color: #fff;
+      margin-bottom: .2rem;
+      position: relative;
+      &:nth-child(2n) {
+        margin-left: .2rem;
+      }
+      .hot{
+        position: absolute;
+        text-align: center;
+        left: 0;
+        top: 0;
+        background-color: #c72443;
+        font-size: 12px;
+        color: #fff;
+        padding: 1px 2px;
+      }
+      .imgbox img{
+        width: 100%;
+      }
+      .infobox{
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        padding: .1rem .1rem;
+        .brand-name{
+          display: block;
+          font-size: .24rem;
+          height: .5rem;
+          line-height: .5rem;
+          color: #333;
+          @include ellipsis;
+        }
+        .price{
+          color: #e50000;
+          font-size: .28rem;
+          height: .6rem;
+          line-height: .6rem;
+        }
+
+        .oldprice{
+          color: #949494;
+          font-size: .22rem;
+          text-decoration: line-through;
+          padding-left: .2rem;
+        }
+      }
+    }
+  }
+}
+
+//新品牌详情begin
+.my-brand-detail{
+  .head{
+    background-color: #fff;
+    position: relative;
+    height: 4.24rem;
+  }
+  .brand-title {
+    position: absolute;
+    top:.88rem;
+    width: 100%;
+    font-size: .34rem;
+    color: #fff;
+    text-align: center;
+    z-index: 10;
+    white-space: nowrap;
+
+  }
+  .brand-logo-box{
+    position: absolute;
+    top:2.2rem;
+    left: 50%;
+    margin-left: -1rem;
+    width: 2rem;
+    height: 1.6rem;
+    z-index: 11;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0px 3px 8px 2px #E7DCDF;
+    @include  create-square-image(2rem, 1rem,.3rem);
+  }
+  .attention-btn{
+    display: inline-block;
+    margin-top: .28rem;
+    width:.9rem;
+    height: .32rem;
+    line-height: .32rem;
+    background-color: #FEDE3B;
+    border-radius: .5rem;
+    text-align: center;
+    font-size: .2rem;
+    color: #231815;
+  }
+  .article{
+    background-color: #fff;
+    padding: .24rem;
+    .theme{
+      background-color: #EEEEEE;
+      padding: .1rem .15rem;
+      font-size: .24rem;
+      color: #231815;
+    }
+    .article-title{
+      display: block;
+      text-align: center;
+      color:#000000;
+      font-size: .26rem;
+      line-height: .45rem;
+      height: .45rem;
+      margin-bottom: .1rem;
+    }
+    .content{
+      line-height: .3rem;
+      font-size: .20rem;
+      color: #595757;
+      margin-bottom: .1rem;
+    }
+  }
+  .banner {
+    height: 3.54rem;
+  }
+}
+//微调
+.my-brand-detail .goods-box{
+  margin-top: 0 !important;
+}
+//分享按钮begin
+.brahd-share-box{
+  position: absolute;
+  right: 0.24rem;
+  bottom: 0.2rem;
+  z-index: 2;
+  width: .83rem;
+  height: .29rem;
+  background: url("../../assets/images/brand/icon_brand_share_bg.png") no-repeat;
+  background-size: .83rem  .29rem;
+}
+.join-box{
+  display: block;
+  position: relative;
+  height: 1rem;
+  line-height: 1rem;
+  width: 7.5rem;
+  max-width: 1080px;
+  .join-enter{
+    text-align: center;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    background-color: #F23030;
+    font-size: .36rem;
+    color: #fff;
+    z-index: 100;
+  }
+}
+//分享按钮end
+//新品牌详情end
+
+
