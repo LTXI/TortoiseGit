@@ -1,8 +1,8 @@
-@import "../base/base.scss";
-@import "../base/navbar.scss";
-@import "brandsprites";
+//@import "../base/base.scss";
+//@import "../base/navbar.scss";
+//@import "brandsprites";
 @import "./app/mixin";
-@import "app/app_common";
+//@import "app/app_common";
 
 #qrcode_box {
   position: fixed;
@@ -185,7 +185,7 @@
   display: none;
   position: fixed;
   right: 9px;
-  bottom: 1rem;
+  bottom: 1.2rem;
   width: 39px;
   height: 39px;
   border-radius: 50%;
@@ -388,6 +388,225 @@
 }
 
 //店铺简介end
+
+
+//新店铺首页begin
+.store-index-new {
+.jm-store{
+  position: relative;
+  width: 100%;
+
+  height: 5.87rem;
+  background: url("../images/store/store_index_new_bg.png?") no-repeat ;
+  background-size: 100% auto;
+  .store-name-box {
+    position: absolute;
+    top:.3rem;
+    left: .24rem;
+  }
+  .store-logo {
+    width: 5.6rem;
+    @include create-circle-image(.65rem,0);
+    .imgbox {
+      float: left;
+    }
+  }
+  .store-name {
+    float: left;
+    width: 4rem;
+    color: #fff;
+    font-size: .24rem;
+    line-height: .65rem;
+    padding-left: .17rem;
+    @include ellipsis
+  }
+
+  .store-share {
+    position: absolute;
+    right: .24rem;
+    top: .33rem;
+    width: .59rem;
+    height: .59rem;
+    background: url("../images/store/store_index_share.png?") no-repeat ;
+    background-size: 100% auto;
+  }
+
+  //中间
+  .store-main {
+    padding-top: 1rem;
+    text-align: center;
+    .store-main-name {
+      text-align: center;
+      padding-top: .36rem;
+      display: block;
+      width: 100%;
+      font-size: .3rem;
+      color: #fff;
+      line-height: .6rem;
+    }
+    .desc {
+      display: block;
+      width: 100%;
+      font-size: .24rem;
+      color: #9FA0A0;
+    }
+  }
+  .store-main-logo{
+    display: inline-block;
+    padding: .44rem .6rem;
+    width: 2.94rem;
+    height: 2.19rem;
+    background: url("../images/store/store_index-_ew_logo_bg.png?") no-repeat ;
+    background-size: 100% auto;
+
+    @include create-circle-image(1.75rem,0);
+  }
+
+ }
+  .store-recommend {
+    position: relative;
+    .info-list-title {
+      background-color: #fff;
+    }
+    .title {
+      color: #231815;
+      font-size: .36rem;
+    }
+    .more-btn {
+      position: absolute;
+      right: .24rem;
+      top: 50%;
+      margin-top: -.22rem;
+      background-color: #FEDE3B;
+      width: 1.18rem;
+      height: .44rem;
+      line-height: .44rem;
+      font-size: .22rem;
+      color: #231815;
+      text-align: center;
+    }
+  }
+  .swiper-container{
+    //background-color: #fff;
+  }
+    .goods-box {
+      display: flex;
+      flex-direction: row;
+      width: 7.5rem;
+      height: 3.90rem;
+      //margin: 0.26rem .28rem .28rem .28rem;
+      justify-content: flex-start;
+      align-items: flex-start;
+      align-content: flex-start;
+      flex-wrap: nowrap;
+background-color: #fff;
+      .goods-item {
+        flex-basis: 33.3%;
+        height: 3.90rem;
+        background-color: #fff;
+        margin-bottom: .2rem;
+        position: relative;
+        border: 1px solid #D9D9D9;
+        border-right: none;
+
+        &:last-child{
+          border-right: 1px solid #D9D9D9;
+        }
+        .hot{
+          position: absolute;
+          text-align: center;
+          left: .14rem;
+          top: .07rem;
+          background-color: #c72443;
+          font-size: 12px;
+          color: #fff;
+          padding: 1px 2px;
+        }
+        .imgbox {
+          padding:.15rem;
+        }
+        .imgbox img{
+          width: 100%;
+        }
+        .infobox{
+          position: absolute;
+          width: 100%;
+          bottom: 0;
+          padding: .1rem .1rem;
+          .brand-name{
+            display: block;
+            font-size: .24rem;
+            height: .5rem;
+            line-height: .5rem;
+            color: #333;
+            @include ellipsis;
+          }
+          .price{
+            color: #e50000;
+            font-size: .28rem;
+            height: .6rem;
+            line-height: .6rem;
+          }
+
+          .oldprice{
+            color: #949494;
+            font-size: .22rem;
+            text-decoration: line-through;
+            padding-left: .2rem;
+          }
+        }
+      }
+    }
+
+  .ad{
+    background-color: #fff;
+    font-size: 0;
+
+    text-align: center;
+    img{
+      display: inline-block;
+      width: 100%;
+    }
+  }
+  .ad-padd-bottom{
+padding-bottom: .2rem;
+  }
+  .ad-join-padd{
+    padding: .3rem .24rem .3rem .24rem;
+  }
+  .store-brand-list {
+    padding:0 .08rem .3rem .08rem;
+    background-color: #fff;
+    font-size: 0;
+    overflow: hidden;
+    .item-box {
+      float: left;
+      width: 33.32%;
+    }
+    .item {
+      border: 1px solid #D9D9D9;
+      height: 1.66rem;
+      margin: .08rem;
+      overflow: hidden;
+      padding:0.2rem 0.2rem 0 .2rem;
+      @include create-square-image(1.83rem , 0.92rem,0rem);
+      .title {
+        width: 100%;
+        text-align: center;
+        color: #231815;
+        line-height: .4rem;
+        font-size: .22rem;
+        @include ellipsis;
+      }
+
+    }
+    .on .title {
+      color: #F23030;
+    }
+  }
+}
+//新店铺首页end
+
 
 
 

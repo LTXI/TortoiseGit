@@ -204,6 +204,7 @@ $checkedColor: #F23030;
       @include ellipsis;
     }
     .content {
+      color: #595757;
       max-width: 5rem;
       float: left;
       font-size: .26rem;
@@ -214,7 +215,7 @@ $checkedColor: #F23030;
       line-height: .4rem;
     }
     .open .content {
-      color: #797471;
+      color: #595757;
       overflow: visible;
       white-space: pre-wrap;
       height: .8rem;
@@ -247,6 +248,8 @@ $checkedColor: #F23030;
     }
     .open .open-arrow {
       float: none;
+      display: block;
+      width: 100%;
     }
     .picbox {
       margin: 0.1rem 0 .2rem 0;

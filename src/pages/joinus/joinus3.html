@@ -4,29 +4,20 @@
     @@include('../../partical/meta.inc',{"title":"招募"})
     @@include('../../partical/styles.inc', {"links":""})
     <link rel='stylesheet' href='../../assets/styles/app.css'/>
-    <link rel='stylesheet' href='../../assets/styles/joinus2.css'/>
+    <link rel='stylesheet' href='../../assets/styles/joinus3.css'/>
 </head>
 <body>
-@@include('../../partical/fontsize.inc')
-
-<!--头部-->
-
 <!--body内容信息-->
 <div id="content" class="page-content join-index-new">
-    <div class="jm-header header-fixed transparent100">
-        <div class="jm-wrapper un-bottom-line">
-            <a href="javascript:history.go(-1);">
-                <div class="posl icon_back_white"></div>
-            </a>
-            <p class="title"></p>
-        </div>
-    </div>
+
     <div class="join-job">
-        <p class="job">品牌助理</p>
-    </div>
-    <div class="join-title mrg-bottom24">
         <p class="title">我是品牌合伙人<br>九件客服</p>
     </div>
+
+
+    <!--<div class="join-title mrg-bottom24">
+        <p class="title">我是品牌合伙人<br>九件客服</p>
+    </div>-->
     <div class="join-product-item ">
         <div class="product-img">
             <div class="imgbox">
@@ -34,11 +25,20 @@
             </div>
         </div>
         <div class="recommend">
-            <p class="title">科研氏科科研氏科科研氏科科研氏科</p>
-            <p class="desc">直销：3.5%</p>
-            <p class="desc">推销：22%</p>
+            <p class="title">科研氏科科研氏科研氏科科研氏</p>
         </div>
     </div>
+    <div class="brand-desc">
+        <p class="title">科研氏科科研氏科研氏科科研氏</p>
+        <div class="content-box">
+            <p class="content">1、科研氏科科研氏科研氏科科研氏</p>
+            <p class="content">2、科研氏科科研氏科研氏科科研氏</p>
+            <p class="content">3、科研氏科科研氏科研氏科科研氏</p>
+            <p class="content">4、科研氏科科研氏科研氏科科研氏</p>
+
+        </div>
+    </div>
+
     <div class="join-logo">
         <div class="logobox">
             <img src="../../assets/images/joinus/logo.png" alt="logo">
@@ -56,8 +56,6 @@
                     <label for="protocol">阅读并同意九件品牌助理服务协议</label>
                 </div>
             </div>
-
-
         </form>
     </div>
 </div>
@@ -70,10 +68,10 @@
 <script type="text/javascript">
   window.onload = window.onresize = function(){
     pageResponse({
-      selectors : '#content',     //模块选择器，使用querySelectorAll的方法
+      selectors : '#content',//模块选择器，使用querySelectorAll的方法
       mode : 'contain',     // auto || contain || cover ，默认模式为auto
-      width : '450',      //输入页面的宽度，只支持输入数值，默认宽度为320px
-      height : '804'      //输入页面的高度，只支持输入数值，默认高度为504px
+      width : '450',      //375*1.5 输入页面的宽度，只支持输入数值，默认宽度为320px
+      height : '804'      //667*1.5 输入页面的高度，只支持输入数值，默认高度为504px
     })
   }
 </script>

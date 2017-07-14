@@ -38,6 +38,7 @@
       line-height: 1;
     }
   }
+  //新版列表标题
   .order-list-title {
     height: 1.4rem;
     background-color: #F4F4F4;
@@ -136,7 +137,7 @@
   .reward-header {
     position: relative;
     height: 4.8rem;
-    background: #F14E49 url("../images/app/home/reward-bg1.png") no-repeat center top;
+    background: #F14E49 url("../images/app/home/reward-height-bg.png") no-repeat center top;
     background-size: 100% 4.8rem;
     .rewardbox {
       position: relative;
@@ -183,7 +184,7 @@
   .reward-header {
     position: relative;
     height: 2.65rem;
-    background: #F14E49 url("../images/app/home/reward-bg1.png") no-repeat center top;
+    background: #F14E49 url("../images/app/home/reward-height-bg.png") no-repeat center top;
     background-size: 100% 2.65rem;
     .title {
       position: absolute;

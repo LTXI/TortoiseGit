@@ -1,117 +1,37 @@
 @import "../base/size";
 
+
+
 //精灵sprite
 @mixin common_icon {
   background: url('../images/common/common_icon.png') no-repeat;
-  background-size: $_200 $_435;
+  background-size: $_200 $_461;
 
 }
 //放大100倍
 @mixin common_icon_fix {
   background: url('../images/common/common_icon.png') no-repeat;
-  background-size: $_200*$base_scale $_435*$base_scale;
+  background-size: $_200*$base_scale $_461*$base_scale;
 }
 
-@mixin icon_community_wechat {
-  height: $_47;
-  width: $_47;
-  background-position: 0 0;
-}
+@mixin icon_community_wechat{height:$_47;width:$_47;background-position:0 0;}
+@mixin icon_community_tieba{height:$_47;width:$_47;background-position:0 0 -$_51;}
+@mixin icon_community_code{height:$_47;width:$_47;background-position:0 0 -$_102;}
+@mixin icon_community_weibo{height:$_47;width:$_47;background-position:0 0 -$_154;}
+@mixin icon_community_storePhone{height:$_47;width:$_47;background-position:0 0 -$_206;}
+@mixin icon_community_store{height:$_47;width:$_47;background-position:0 0 -$_258;}
+@mixin icon_community_qq{height:$_47;width:$_47;background-position:0 0 -$_311;}
+@mixin icon_community_storeLogo{height:$_47;width:$_47;background-position:0 0 -$_362;}
+@mixin icon_community_storeDesc{height:$_47;width:$_47;background-position:0 0 -$_414;}
+@mixin icon_right_arrow{height:$_24;width:$_18;background-position:0 -$_162 0;}
+@mixin icon_order_title_sign{height:$_30;width:$_38;background-position:0 -$_162 0 -$_30;}
+@mixin icon_newfooter_bbs_normal{height:$_94;width:$_94;background-position:0 -$_53 0;}
+@mixin icon_newfooter_bbs_pressed{height:$_94;width:$_94;background-position:0 -$_53 0 -$_103;}
+@mixin icon_newfooter_home_normal{height:$_47;width:$_48;background-position:0 -$_57 0 -$_208;}
+@mixin icon_newfooter_home_pressed{height:$_47;width:$_48;background-position:0 -$_58 0 -$_271;}
+@mixin icon_newfooter_my_normal{height:$_47;width:$_38;background-position:0 -$_58 0 -$_326;}
+@mixin icon_newfooter_my_pressed{height:$_47;width:$_38;background-position:0 -$_56 0 -$_388;}
 
-@mixin icon_community_tieba {
-  height: $_47;
-  width: $_47;
-  background-position: 0 0 -$_51;
-}
-
-@mixin icon_community_code {
-  height: $_47;
-  width: $_47;
-  background-position: 0 0 -$_96;
-}
-
-@mixin icon_community_weibo {
-  height: $_47;
-  width: $_47;
-  background-position: 0 0 -$_144;
-}
-
-@mixin icon_community_storePhone {
-  height: $_47;
-  width: $_47;
-  background-position: 0 0 -$_192;
-}
-
-@mixin icon_community_store {
-  height: $_47;
-  width: $_47;
-  background-position: 0 0 -$_240;
-}
-
-@mixin icon_community_qq {
-  height: $_47;
-  width: $_47;
-  background-position: 0 0 -$_288;
-}
-
-@mixin icon_community_storeLogo {
-  height: $_47;
-  width: $_47;
-  background-position: 0 0 -$_336;
-}
-
-@mixin icon_community_storeDesc {
-  height: $_47;
-  width: $_47;
-  background-position: 0 0 -$_384;
-}
-
-@mixin icon_right_arrow {
-  height: $_24;
-  width: $_18;
-  background-position: 0 -$_162 0;
-}
-
-@mixin icon_newfooter_bbs_normal {
-  height: $_94;
-  width: $_94;
-  background-position: 0 -$_53 0;
-}
-
-@mixin icon_newfooter_bbs_pressed {
-  height: $_94;
-  width: $_94;
-  background-position: 0 -$_53 0 -$_103;
-}
-
-@mixin icon_newfooter_home_normal {
-  height: $_47;
-  width: $_48;
-  background-position: 0-$_57 0-$_208;
-}
-
-@mixin icon_newfooter_home_pressed {
-  height: $_47;
-  width: $_48;
-  background-position: 0 -$_60 0 -$_271;
-}
-
-@mixin icon_newfooter_my_normal {
-  height: $_47;
-  width: $_38;
-  background-position: 0 -$_58 0 -$_326;
-}
-
-@mixin icon_newfooter_my_pressed {
-  height: $_47;
-  width: $_38;
-  background-position: 0 -$_56 0 -$_388;
-}
-@mixin icon_order_title_sign{
-  height:$_30;
-  width:$_41;
-  background-position:0 -$_162 0 -$_30;
-}
 //精灵sprite end
 
 //正常的sprite 但会有小数点误差
@@ -139,8 +59,6 @@
     transform: scale(0.01);
   }
 }
-
-
 
 //头部导航 begin
 .icon_community_qq {
@@ -199,45 +117,35 @@
 .icon-newfooter-bbs {
   @include icon_newfooter_bbs_normal;
   &:after {
-    height: $_94 * $base_scale;
-    width: $_94 * $base_scale;
-    background-position: 0 -$_53 * $base_scale 0;
+    height:$_94*$base_scale;width:$_94*$base_scale;background-position:0 -$_53*$base_scale 0;
   }
 }
 
 .icon-newfooter-my {
   @include icon_newfooter_my_normal;
   &:after {
-    height: $_47 * $base_scale;
-    width: $_38 * $base_scale;
-    background-position: 0 -$_58 * $base_scale 0 -$_326 * $base_scale;
+    height:$_47*$base_scale;width:$_38*$base_scale;background-position:0 -$_58*$base_scale 0 -$_326*$base_scale;
   }
 }
 
 .on .icon-newfooter-home {
   @include icon_newfooter_home_pressed;
   &:after {
-    height: $_47 * $base_scale;
-    width: $_48 * $base_scale;
-    background-position: 0 -$_60 * $base_scale 0 -$_271 * $base_scale;
+    height:$_47*$base_scale;width:$_48*$base_scale;background-position:0 -$_58*$base_scale 0 -$_271*$base_scale;
   }
 }
 
 .on .icon-newfooter-bbs {
   @include icon_newfooter_bbs_pressed;
   &:after {
-    height: $_94 * $base_scale;
-    width: $_94 * $base_scale;
-    background-position: 0 -$_53 * $base_scale 0 -$_103 * $base_scale;
+    height:$_94*$base_scale;width:$_94*$base_scale;background-position:0 -$_53*$base_scale 0 -$_103*$base_scale;
   }
 }
 
 .on .icon-newfooter-my {
   @include icon_newfooter_my_pressed;
   &:after {
-    height: $_47 * $base_scale;
-    width: $_38  * $base_scale;
-    background-position: 0 -$_56 * $base_scale 0 -$_388 * $base_scale;
+    height:$_47*$base_scale;width:$_38*$base_scale;background-position:0 -$_56*$base_scale 0 -$_388*$base_scale;
   }
 }
 
@@ -262,7 +170,7 @@
   }
 }
 //其他杂end
-
+//icon begin------------------
 .icon {
   background: url("../images/common/brand.png") no-repeat;
   //background-size:.4rem 1.2rem;
@@ -384,7 +292,7 @@
 .icon_like:after {
   background-position: 0 -347rem;
 }
-
+//icon end------------------
 
 //头部导航 end
 //店铺设置begin
@@ -494,4 +402,102 @@
   background-size: 100% auto;
   vertical-align: middle;
 }
+
+
+//店铺底部图片begin------------------------------------
+
+@mixin icon_shop_index_Pressed{height:$_40;width:$_39;background-position:0 0;}
+@mixin icon_shop_index_normal{height:$_40;width:$_39;background-position:0 0 -$_41;}
+@mixin icon_store_index_Pressed{height:$_38;width:$_42;background-position:0 0 -$_82;}
+@mixin icon_store_my_normal{height:$_43;width:$_42;background-position:0 0 -$_121;}
+@mixin icon_store_index_normal{height:$_38;width:$_42;background-position:0 0 -$_165;}
+@mixin icon_store_my_Pressed{height:$_43;width:$_42;background-position:0 0 -$_204;}
+@mixin icon_store_car_Pressed{height:$_45;width:$_50;background-position:0 0 -$_248;}
+@mixin icon_store_car_normal{height:$_45;width:$_50;background-position:0 0 -$_294;}
+
+
+@mixin store_common_icon {
+  background: url("../images/common/store_common_icon.png") no-repeat;
+  background-size: $_50 $_339;
+};
+@mixin store_common_icon_fix{background:url("../images/common/store_common_icon.png") no-repeat ;background-size:$_50*$base_scale $_339*$base_scale;}
+
+.store_common_icon {
+  @include store_common_icon;
+}
+//正常的sprite 但会有小数点误差
+.on .icon_shop_index {
+  @include icon_shop_index_Pressed;
+  &:after{
+    height:$_40*$base_scale;width:$_39*$base_scale;background-position:0 0;
+  }
+}
+.on  .icon_store_my {
+  @include icon_store_my_Pressed;
+  &:after{
+    height:$_43*$base_scale;width:$_42*$base_scale;background-position:0 0 -$_204*$base_scale;
+  }
+}
+.on .icon_store_index {
+  @include icon_store_index_Pressed;
+  &:after{
+    height:$_38*$base_scale;width:$_42*$base_scale;background-position:0 0 -$_82*$base_scale;
+  }
+}
+.on .icon_store_car {
+  @include icon_store_car_Pressed;
+  &:after{
+    height:$_45*$base_scale;width:$_50*$base_scale;background-position:0 0 -$_248*$base_scale;
+  }
+}
+
+//----------
+.store_common_icon_fix {
+  background: none;
+  position: relative;
+  overflow: hidden;
+  &:after {
+    content: "";
+    display: block;
+    width: $base_scale*100%; //父类宽高的100倍
+    height: $base_scale*100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    @include store_common_icon_fix(); //放大100倍
+    background-repeat: no-repeat;
+    -webkit-transform-origin: 0 0;
+    -webkit-transform: scale(.01);
+    transform-origin: 0 0;
+    transform: scale(0.01);
+  }
+}
+
+
+.icon_shop_index {
+  @include icon_shop_index_normal;
+  &:after{
+    height:$_40*$base_scale;width:$_39*$base_scale;background-position:0 0 -$_41*$base_scale;
+  }
+}
+.icon_store_my {
+  @include icon_store_my_normal;
+  &:after{
+    height:$_43*$base_scale;width:$_42*$base_scale;background-position:0 0 -$_121*$base_scale;
+  }
+}
+.icon_store_index {
+  @include icon_store_index_normal;
+  &:after{
+    height:$_38*$base_scale;width:$_42*$base_scale;background-position:0 0 -$_165*$base_scale;
+  }
+}
+.icon_store_car {
+  @include icon_store_car_normal;
+  &:after{
+    height:$_45*$base_scale;width:$_50*$base_scale;background-position:0 0 -$_294*$base_scale;
+  }
+}
+
+//店铺底部图片end------------------------------------
 

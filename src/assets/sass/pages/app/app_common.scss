@@ -36,7 +36,7 @@
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 100;
+  z-index: 1;//原来100
 }
 
 //头部导航固定间隙占位符
@@ -136,7 +136,9 @@
     }
   }
 }
-
+.nav-none .icon_header-nav-short{
+  display: none;
+}
 //弹出层导航栏
 .header-nav-bar{
   display: none;
@@ -340,6 +342,74 @@
     }
   }
 }
+//店铺
+.new-store-page-footer{
+  display: block;
+  position: relative;
+  height: 1rem;
+  width: 7.5rem;
+  max-width: 1080px;
+
+  .footer_inner {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: flex-start;
+    position: fixed;
+    bottom: 0;
+    height: 1rem;
+    width: 7.5rem;
+    max-width: 1080px;
+    z-index: 100;
+    background-color: #fff;
+    color: #000;
+    border-top: 1px solid #E3E3E3;
+    font-size: 0;
+    text-align: center;
+    .footer_item {
+      display: inline-block;
+      flex: 1 1 25%;
+      height: 1rem;
+      position: relative;
+      .link {
+        position: relative;
+        display: inline-block;
+        height: 100%;
+        text-align: center;
+        font-size: 0;
+        line-height: normal;
+        color: #000000;
+      }
+      i[class*='store_common_icon']{
+        position: relative;
+        display: inline-block;
+      }
+      .icon-box{
+        display: inline-block;
+        width: 100%;
+        height: (1-.4)+rem;
+        line-height: (1-.4)+rem;
+        position: relative;
+        i{
+          position: absolute;
+          top:32%;
+          left: 50%;
+          transform: translate(-50%);
+        }
+      }
+      .text {
+        display: inline-block;
+        width: 100%;
+        height: .4rem;
+        line-height: .4rem;
+        font-size: .18rem;
+        position: relative;
+      }
+      .link.on .text {
+        color: #F23030;
+      }
+    }
+  }
+}
 //新底部begin
 .new-app-page-footer {
   display: block;
@@ -422,8 +492,34 @@
       float: left;
       min-width: .8rem;
     }
-
   }
-
 }
 //新底部end
+
+//新版列表标题begin
+.info-list-title {
+  position: relative;
+  height: 1.4rem;
+  background-color: #F4F4F4;
+  text-align: center;
+  .title-box{
+    display: inline-block;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 0;
+    @include center;
+  }
+  .title{
+    font-size: .3rem;
+    vertical-align: middle;
+    padding: 0 .26rem;
+  }
+  .common_icon_fix {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  .scalex{
+    transform: scaleX(-1)
+  }
+}
+//新版列表标题begin

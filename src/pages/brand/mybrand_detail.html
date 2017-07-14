@@ -88,11 +88,41 @@
     </ul>
 </div>
 
-<div class="join-box">
+<!--<div class="join-box">
     <a href="#" class="join-enter">发起招募</a>
+</div>-->
+<!--show-category-->
+<div class="category-box">
+    <div id="good-category">
+        <div class="mask-layer"></div>
+        <div class="category">
+            <ul class="category-list">
+                <li class="category-list-item bdr-bottom">
+                    <span class="text">服饰</span>
+                </li>
+                <li class="category-list-item bdr-bottom">
+                    <span class="text">香水</span>
+                </li>
+                <li class="category-list-item bdr-bottom">
+                    <span class="text">香水1</span>
+                </li>
+                <li class="category-list-item bdr-bottom">
+                    <span class="text">香水2</span>
+                </li>
+            </ul>
+            <div class="nav">
+                <div class="category-item">
+                    <span class="text">品牌详情</span>
+                </div>
+                <div class="category-item show-category-item">
+                    <span class="text">品牌分类</span>
+                    <i class="triangle"></i>
+                </div>
+                <span class="line bdr-r"></span>
+            </div>
+        </div>
+    </div>
 </div>
-
-
 
 
 <!--脚步导入开始-->
@@ -108,6 +138,20 @@
     })
   })
 </script>
+
+<script type="text/javascript">
+  $(document).ready(function () {
+    $(document).on('click', '.show-category-item', function (e) {
+      $("#good-category").toggleClass('show-category');
+
+      $(".mask-layer").on("click", function () {
+        $(".mask-layer").off('click');
+        $("#good-category").removeClass('show-category');
+      })
+    })
+  })
+</script>
+
 <script src="../../assets/scripts/app.js"></script>
 <link rel="stylesheet" href="../../assets/styles/brand_new.css">
 </body>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SpriteFile xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" CssFileName="../images/common" ImageName="store_common_icon" IsPhone="true" SpriteImgFileType="Png" xmlns="CssSprite">
+  <SpriteList>
+    <Sprite Path="icon_shop_index_Pressed.png" LocationX="0" LocationY="0" />
+    <Sprite Path="icon_shop_index_normal.png" LocationX="0" LocationY="41" />
+    <Sprite Path="icon_store_index_Pressed.png" LocationX="0" LocationY="82" />
+    <Sprite Path="icon_store_my_normal.png" LocationX="0" LocationY="121" />
+    <Sprite Path="icon_store_index_normal.png" LocationX="0" LocationY="165" />
+    <Sprite Path="icon_store_my_Pressed.png" LocationX="0" LocationY="204" />
+    <Sprite Path="icon_store_car_Pressed.png" LocationX="0" LocationY="248" />
+    <Sprite Path="icon_store_car_normal.png" LocationX="0" LocationY="294" />
+  </SpriteList>
+</SpriteFile>

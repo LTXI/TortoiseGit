@@ -904,7 +904,42 @@ $title_right_text_color: #9FA0A0;*/
 @mixin vertical-align($type:middle){
   vertical-align: $type;
 }
+//新版列表标题begin
 
+//<div class="info-list-title">
+//<span class="title-box">
+//<i class="common_icon_fix icon_order_title_sign"></i>           <span class="title">订单详情</span>
+//<i class="common_icon_fix icon_order_title_sign scalex"></i>
+//</span>
+//</div>
+@mixin new-info-list-title($bg-color:#F4F4F4,$height:1.4rem){
+  .info-list-title {
+    position: relative;
+    height: $height;
+    background-color: $bg-color;
+    text-align: center;
+    .title-box{
+      display: inline-block;
+      margin-top: 0;
+      margin-bottom: 0;
+      font-size: 0;
+      @include center;
+    }
+    .title{
+      font-size: .3rem;
+      vertical-align: middle;
+      padding: 0 .26rem;
+    }
+    .common_icon_fix {
+      display: inline-block;
+      vertical-align: middle;
+    }
+    .scalex{
+      transform: scaleX(-1)
+    }
+  }
+}
+//新版列表标题begin
 
 
 

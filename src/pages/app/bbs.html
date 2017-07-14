@@ -11,7 +11,8 @@
 <!--头部-->
 @@include('../../partical/appheadernav.inc',{
 "header-fixed":"header-fixed",
-"title":"九件商圈"
+"title":"九件商圈",
+"secondcss":"posr icon_header_plus"
 })
 
 
@@ -76,15 +77,15 @@
                     <i class="icon-bbs-elite mrg-r10"></i>
                     <span class="text">精华精华</span>
                 </span>
-                    <p class="title">夏日水果榜单夏日水果榜单</p>
+                    <p class="title"></p>
                     <div class="clearfix contentbox">
-                        <p class="content ">夏日水果榜单夏日水果榜单夏日水果榜单夏日水果榜单夏日水果榜单夏日水果榜单
+                        <!--<p class="content ">夏日水果榜单夏日水果榜单夏日水果榜单夏日水果榜单夏日水果榜单夏日水果榜单
                         </p>
                         <span class="open-arrow">
                         <span class="text open-text">全文</span>
                        <span class="text close-text">收起</span>
                         <i class="icon_bbs_down_arrow"></i>
-                    </span>
+                    </span>-->
                     </div>
                     <div class="picbox clearfix ">
                         <div class="picitem">
@@ -164,6 +165,47 @@
                 </div>
 
             </li>
+            <li class="posts-item clearfix mrg-bottom24">
+                <div class="left-side">
+                    <div class="imgbox">
+                        <img src="../../assets/images/app/bbs/bbs_msg_dead_normal.png" alt="">
+                    </div>
+                </div>
+                <div class="right-side">
+                    <p class="username">九妹</p>
+                    <span class="spe-post">
+                    <i class="icon-bbs-elite mrg-r10"></i>
+                    <span class="text">精华精华</span>
+                </span>
+                    <p class="title">夏日水果榜单夏日水果榜单</p>
+                    <div class="clearfix contentbox">
+                        <p class="content ">夏日水果榜单夏日水果榜单夏日水果榜单夏日水果榜单夏日水果榜单夏日水果榜单
+                        </p>
+                        <span class="open-arrow">
+                        <span class="text open-text">全文</span>
+                       <span class="text close-text">收起</span>
+                        <i class="icon_bbs_down_arrow"></i>
+                    </span>
+                    </div>
+                    <div class="picbox clearfix ">
+                        <!--<div class="picitem">
+                            <img class="pic" src="../../assets/images/app/bbs/bbs_msg_pic.png" alt="图片">
+                        </div>-->
+
+                    </div>
+                    <div class="bottom clearfix">
+                    <span class="count">
+                        <i class="icon_bbs_share mrg-r10"></i>
+                        <span class="text">分享</span>
+                    </span>
+                        <span class="like">
+                        <i class="icon_bbs_like_normal mrg-r10"></i>
+                        <span class="text">100</span>
+                    </span>
+                    </div>
+                </div>
+
+            </li>
         </ul>
     </div>
 </div>
@@ -181,8 +223,6 @@
       paginationClickable :true
     })
   })
-
-
 </script>
 <script>
   $(function () {
