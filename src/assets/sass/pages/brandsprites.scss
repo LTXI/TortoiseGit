@@ -387,7 +387,7 @@
   display: inline-block;
   width: .3rem;
   height: .07rem;
-  background: transparent url("../images/common/icon_header_nav_short.png") no-repeat;
+  background: transparent url("../images/app/bbs/icon_header_nav_short.png") no-repeat;
   background-size: 100% auto;
   vertical-align: middle;
 }
@@ -398,13 +398,13 @@
   display: inline-block;
   width: .36rem;
   height: .27rem;
-  background: transparent url("../images/common/icon_header_plus.png") no-repeat;
+  background: transparent url("../images/app/bbs/icon_header_plus.png") no-repeat;
   background-size: 100% auto;
   vertical-align: middle;
 }
 
 
-//店铺底部图片begin------------------------------------
+//店铺 商城首页底部图片begin------------------------------------
 
 @mixin icon_shop_index_Pressed{height:$_40;width:$_39;background-position:0 0;}
 @mixin icon_shop_index_normal{height:$_40;width:$_39;background-position:0 0 -$_41;}
@@ -415,12 +415,39 @@
 @mixin icon_store_car_Pressed{height:$_45;width:$_50;background-position:0 0 -$_248;}
 @mixin icon_store_car_normal{height:$_45;width:$_50;background-position:0 0 -$_294;}
 
+@mixin icon_shop_indexmain_normal{height:$_47;width:$_48;background-position:0 0 -$_345;}
+@mixin icon_shop_indexmain_Pressed{height:$_47;width:$_48;background-position:0 0 -$_396;}
+@mixin icon_shop_category_normal{height:$_38;width:$_48;background-position:0 0 -$_448;}
+@mixin icon_shop_category_Pressed{height:$_38;width:$_48;background-position:0 0 -$_491;}
+@mixin icon_shop_community_normal{height:$_36;width:$_51;background-position:0 0 -$_533;}
+@mixin icon_shop_community_Pressed{height:$_36;width:$_51;background-position:0 0 -$_573;}
+
+
+//商城首页
+.icon_shop_indexmain {
+  @include icon_shop_indexmain_normal;
+  &:after{
+    height:$_47*$base_scale;width:$_48*$base_scale;background-position:0 0 -$_345*$base_scale;
+  }
+}
+.on .icon_shop_indexmain{
+  @include icon_shop_indexmain_Pressed;
+  &:after{
+    height:$_47*$base_scale;width:$_48*$base_scale;background-position:0 0 -$_396*$base_scale;
+  }
+}
+
+
+
+
+
+
 
 @mixin store_common_icon {
   background: url("../images/common/store_common_icon.png") no-repeat;
-  background-size: $_50 $_339;
+  background-size: $_51 $_609;
 };
-@mixin store_common_icon_fix{background:url("../images/common/store_common_icon.png") no-repeat ;background-size:$_50*$base_scale $_339*$base_scale;}
+@mixin store_common_icon_fix{background:url("../images/common/store_common_icon.png") no-repeat ;background-size:$_51*$base_scale $_609*$base_scale;}
 
 .store_common_icon {
   @include store_common_icon;
@@ -501,3 +528,30 @@
 
 //店铺底部图片end------------------------------------
 
+
+//商城分类
+.icon_shop_category {
+  @include icon_shop_category_normal;
+  &:after{
+    height:$_38*$base_scale;width:$_48*$base_scale;background-position:0 0 -$_448*$base_scale;
+  }
+}
+.on .icon_shop_category{
+  @include icon_shop_category_Pressed;
+  &:after{
+    height:$_38*$base_scale;width:$_48*$base_scale;background-position:0 0 -$_491*$base_scale;
+  }
+}
+//商城社区
+.icon_shop_community {
+  @include icon_shop_community_normal;
+  &:after{
+    height:$_36*$base_scale;width:$_51*$base_scale;background-position:0 0 -$_533*$base_scale;
+  }
+}
+.on .icon_shop_community{
+  @include icon_shop_category_Pressed;
+  &:after{
+    height:$_36*$base_scale;width:$_51*$base_scale;background-position:0 0 -$_573*$base_scale;
+  }
+}

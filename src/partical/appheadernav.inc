@@ -6,7 +6,7 @@
         </a>
         <p class="title">@@title</p>
         <a href="#">
-            <div class=" posr icon icon_header-nav-short @@secondcss"></div>
+            <div class=" posr icon icon_header-nav-short"></div> <!--@@secondcss-->
         </a>
     </div>
 </div>

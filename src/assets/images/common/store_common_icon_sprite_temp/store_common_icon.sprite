@@ -9,5 +9,11 @@
     <Sprite Path="icon_store_my_Pressed.png" LocationX="0" LocationY="204" />
     <Sprite Path="icon_store_car_Pressed.png" LocationX="0" LocationY="248" />
     <Sprite Path="icon_store_car_normal.png" LocationX="0" LocationY="294" />
+    <Sprite Path="icon_shop_indexmain_normal.png" LocationX="0" LocationY="345" />
+    <Sprite Path="icon_shop_indexmain_Pressed.png" LocationX="0" LocationY="396" />
+    <Sprite Path="icon_shop_category_normal.png" LocationX="0" LocationY="448" />
+    <Sprite Path="icon_shop_category_Pressed.png" LocationX="0" LocationY="491" />
+    <Sprite Path="icon_shop_community_normal.png" LocationX="0" LocationY="533" />
+    <Sprite Path="icon_shop_community_Pressed.png" LocationX="0" LocationY="573" />
   </SpriteList>
 </SpriteFile>

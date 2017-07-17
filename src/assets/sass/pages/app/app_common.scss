@@ -342,7 +342,11 @@
     }
   }
 }
-//店铺
+//店铺，新商城首页底部
+.new-store-page-footer .footer_inner .footer_item{
+  flex: 1 1 25%;
+}
+
 .new-store-page-footer{
   display: block;
   position: relative;
@@ -379,7 +383,7 @@
         line-height: normal;
         color: #000000;
       }
-      i[class*='store_common_icon']{
+      i[class*='*_common_icon']{
         position: relative;
         display: inline-block;
       }

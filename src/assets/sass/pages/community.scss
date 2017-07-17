@@ -477,73 +477,133 @@ $checkedColor: #F23030;
   margin-bottom: 0.8rem;
 }
 //九件社区end
+//商圈发布end
 
-//商圈发布begin
-/*.bbs-publish {
-  background-color: #fff;
-  .form-item-title {
-    //background-color: green;
-    position: relative;
-    color: #9FA0A0;
-    height: 1.18rem;
-    line-height: 1.18rem;
-    font-size: .24rem;
-    padding: 0 .24rem;
-
-  }
-  .form-item-content {
-    position: relative;
-    background-color: goldenrod;
-    padding: 0 .24rem;
-    height: 3.78rem;
-    overflow: hidden;
-  }
-  .form-item-content {
-    padding: .3rem 0;
-    line-height: 1.6;
-    color: #9FA0A0;
-    font-size: .24rem;
-    border: 1px solid red;
-    .num-tips {
-      position: absolute;
-      right: .24rem;
-      bottom: .3rem;
-    }
-  }
-  textarea, input[type="text"] {
-    width: 100%;
-    height: 100%;
-    outline: 0 none;
-    resize: none;
-    white-space: pre-wrap;
-    word-wrap: break-word;
-    border: none;
-    color: #9FA0A0;
-  }
-  input::-webkit-input-placeholder {
-    color: #9FA0A0;
-  }
-  input:-ms-input-placeholder {
-    color: #9FA0A0;
-  }
-  input:-moz-placeholder {
-    color: #9FA0A0;
-  }
-  input::-moz-placeholder {
-    color: #9FA0A0;
-  }
-
-
+/*******商圈发布分享页面START*******/
+.module {
+  margin-bottom:.25rem;
+  background-color:#fff;
+  padding:0rem .23rem;
+}
+.module .title {
+  padding:.35rem 0;
+  border-bottom:1px solid #e7e7e7;
+}
+.module .title input {
+  height:.43rem;
+  line-height:.43rem;
+  width:100%;
+  border:0 none;
+  padding:0 0.02rem;
+  font-size:.28rem;
+}
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+  color:#d5d5d5;
+}
+.module .content {
+  padding:.3rem .02rem;
+  padding-bottom:.7rem;
+}
+.module .content textarea {
+  border:0 none;
+  font-size:.28rem;
+  font-family:"微软雅黑";
+  height:1.85rem;
+  width:100%;
+}
+.module .content span {
+  float:right;
+  color:#d5d5d5;
+  font-size:.28rem;
+}
+.module p {
+  padding-top:.25rem;
+  padding-bottom:.2rem;
+  font-size:.28rem;
+  color:#a1a1a1;
+}
+.module .img-list {
 
 }
-.jm-header .jm-wrapper {
-  .cancel-text {
-    font-size: .26rem;
-    color: #000;
-  }
-  .submit-text {
-    font-size: .26rem;
-    color: #F23030;
-  }
-}*/
-//商圈发布end
+.module .img-list li {
+  float:left;
+  width:1.55rem;
+  height:1.55rem;
+  margin-right:.1rem;
+  margin-bottom: .1rem;
+  position:relative;
+}
+.module .img-list img {
+  width:100%;
+  height:100%;
+  object-fit: cover;
+}
+.module .img-list .delimg {
+  position:absolute;
+  bottom:0;
+  left:0;
+  height:.4rem;
+  line-height:.4rem;
+  background-color:rgba(0,0,0,.5);
+  text-align:center;
+  display:block;
+  width:100%;
+  color:#fff;
+  font-size:.2rem;
+}
+.module .ch { clear:both; padding-bottom:.35rem;}
+.module .cat_list {
+  padding-top:.2rem;
+}
+.module .cat_list li {
+  float:left;
+  width:1.65rem;
+  height:.45rem;
+  line-height:.45rem;
+  margin-bottom:.3rem;
+  font-size:.28rem;
+  text-align:center;
+  color:#333;
+}
+.module .cat_list .activa {
+  color:#f43d3f;
+}
+.module .cat_list li input {
+  display:none;
+}
+.share_but {
+  margin-top:.55rem;
+  margin-bottom:.3rem;
+  height:.75rem;
+  text-align:center;
+}
+.share_but button {
+  width:7rem;
+  margin:0 auto;
+  border:0 none;
+  background-color:#f23030;
+  color:#fff;
+  height:.75rem;
+  line-height:.75rem;
+  border-radius:.12rem;
+  display:block;
+}
+#loadingDiv {
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  z-index: 10000;
+  left: 0px;
+  top: 0px;
+  display: none;
+}
+#loadingDiv img {
+  position: fixed;
+  width:1.5rem;
+  height:1.5rem;
+  top: 3rem;
+  left: 50%;
+  margin-left: -0.75rem;
+}
+/*******商圈发布分享页面END*******/
