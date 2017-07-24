@@ -1,0 +1,263 @@
+html, body {
+  height: 100% !important;
+  background-color: #fff !important;
+}
+
+.join-index-new {
+  position: relative;
+  width: 100%;
+  background: #fff url("../images/joinus/bg.png") no-repeat;
+  background-size: 100% auto;
+  text-align: center;
+}
+
+.join-top {
+  position: relative;
+}
+
+.join-job {
+  position: relative;
+  display: inline-block;
+  margin-top: 1.2rem;
+  margin-left: -0.25rem;
+  width: 5.36rem;
+  height: 1.81rem;
+  background: url("../images/joinus/join_job.png") no-repeat 0;
+  background-size: 100% auto;
+}
+
+.join-job .title {
+  text-align: center;
+  padding-left: 0.14rem;
+  line-height: .42rem;
+  width: 100%;
+  color: #fff;
+  font-size: .34rem;
+  font-weight: 400;
+}
+
+.join-product-item {
+  padding-left: 0px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 4rem;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 1 4rem;
+     -moz-box-flex: 1;
+      -ms-flex: 1 1 4rem;
+          flex: 1 1 4rem;
+  margin: 0 auto;
+  position: relative;
+  text-align: center;
+  font-size: 0;
+}
+
+.join-product-item .product-img {
+  position: absolute;
+  width: 1.6rem;
+  left: 50%;
+  top: -.6rem;
+  -webkit-transform: translateX(-50%);
+     -moz-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.join-product-item .product-img .imgbox {
+  position: relative;
+  width: 1.6rem;
+  height: 1.6rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+     -moz-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+.join-product-item .product-img .imgbox img {
+  display: inline-block;
+  max-width: 100%;
+}
+
+.join-product-item .recommend {
+  margin-top: 0.9rem;
+  width: 100%;
+  text-align: center;
+}
+
+.join-product-item .recommend .title {
+  color: #fff;
+  font-size: .28rem;
+  line-height: .8rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-bottom: .1rem;
+}
+
+.brand-desc {
+  position: relative;
+  width: 5.22rem;
+  height: 2rem;
+  margin: 0 auto;
+  background: url("../images/joinus/join_brand_show.png") no-repeat;
+  background-size: 100% auto;
+  text-align: center;
+}
+
+.brand-desc .title {
+  display: inline-block;
+  width: 2.14rem;
+  color: #fff;
+  font-size: .3rem;
+  line-height: .42rem;
+  height: .42rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.brand-desc .content-box {
+  padding: 0.09rem .3rem;
+  text-align: left;
+}
+
+.brand-desc .content-box .content {
+  line-height: .32rem;
+  color: #fff;
+  font-size: .22rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.join-logo {
+  margin-top: .5rem;
+}
+
+.join-logo .logobox {
+  display: inline-block;
+  width: 1.12rem;
+  height: 1.12rem;
+  left: 50%;
+  overflow: hidden;
+}
+
+.join-logo .logobox img {
+  max-width: 100%;
+}
+
+.join-slogan {
+  position: relative;
+  width: 5.95rem;
+  height: .86rem;
+  left: 50%;
+  margin-left: -2.97rem;
+  background: url("../images/joinus/bg_top.png") no-repeat;
+  background-size: 100% auto;
+}
+
+.join-slogan .slogan {
+  position: absolute;
+  width: 100%;
+  color: #AB8F68;
+  font-size: .5rem;
+  bottom: 0;
+  line-height: normal;
+  font-weight: 500;
+}
+
+.join-enter {
+  text-align: center;
+  position: relative;
+  margin: 0 auto;
+  margin-top: .3rem;
+  margin-bottom: .3rem;
+  width: 6.44rem;
+  height: 2.4rem;
+  background: url("../images/joinus/btnenter.png") no-repeat;
+  background-size: 100% auto;
+}
+
+.join-enter .join-enter-desc {
+  position: absolute;
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  top: .9rem;
+  height: .92rem;
+  line-height: .92rem;
+  color: #231815;
+  font-size: .38rem;
+}
+
+.join-form input[type=checkbox] {
+  display: none;
+}
+
+.join-form .join-protocol {
+  padding-left: .35rem;
+  position: absolute;
+  bottom: 0;
+}
+
+.join-switch + label {
+  width: 6.44rem;
+  position: relative;
+  font-size: .22rem;
+  line-height: .22rem;
+  color: #9FA0A0;
+}
+
+.join-switch + label:before {
+  content: '';
+  width: .24rem;
+  height: .24rem;
+  position: relative;
+  background-color: #fff;
+  position: absolute;
+  top: 0.03rem;
+  left: -.3rem;
+  background: url("../images/joinus/icon_hook_square.png") no-repeat left center;
+  background-size: .24rem .24rem;
+}
+
+.join-switch:checked + label:after {
+  content: '';
+  color: #fff;
+  width: 0.25rem;
+  height: .21rem;
+  position: absolute;
+  top: 0.03rem;
+  left: -.3rem;
+  background: url("../images/joinus/icon_hook.png") no-repeat left center;
+  background-size: .25rem .21rem;
+}
+
+.icon_join_dot {
+  display: inline-block;
+  width: .11rem;
+  height: .11rem;
+  background: transparent url("../images/joinus/icon_join_dot.png") no-repeat;
+  background-size: 100% auto;
+  vertical-align: middle;
+  margin-right: 0.11rem;
+}
+
+/*# sourceMappingURL=maps/joinus4.css.map */

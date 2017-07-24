@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en" id="code">
+<head>
+       <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+    <meta content="telephone=no" name="format-detection" />
+    <meta name="google" value="notranslate" />
+    <meta name="root-url" value="<?php echo JQ_URL; ?>" />
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <meta http-equiv="x-dns-prefetch-control" content="on" />
+    <title>品牌详情</title>
+
+    <link rel="stylesheet" href="../../styles/mui.min.css" />
+    <link rel="stylesheet" href="../../styles/swiper.min.css" />
+    <link rel="stylesheet" href="../../styles/framework.css" />
+    <link rel="stylesheet" href="../../styles/app-base.css" />
+    <link rel="stylesheet" href="../../styles/ricky.css?v=04062" />
+ <script src="../../scripts/mui.min.js"></script>
+   <script type="text/javascript" src="../../scripts/zepto.min.js"></script>
+    <script type="text/javascript" src="../../scripts/zepto.swiper.min.js"></script>
+   <!--<script type="text/javascript" src="../../scripts/zepto.app.js?v=04063"></script>
+    <script type="text/javascript" src="../../scripts/zepto.custom.js?v=04062"></script>-->
+
+
+<!--
+    <link rel="stylesheet" href="http://192.168.2.133/styles/swiper.min.css" />
+        <link rel="stylesheet" href="http://192.168.2.133/styles/framework.css" />
+        <link rel="stylesheet" href="http://192.168.2.133/styles/app-base.css?v=04062" />
+        <link rel="stylesheet" href="http://192.168.2.133/styles/ricky.css" />
+    	<script type="text/javascript" src="http://192.168.2.133/scripts/mui.min.js"></script>
+        <script type="text/javascript" src="http://192.168.2.133/scripts/zepto.min.js"></script>
+        <script type="text/javascript" src="http://192.168.2.133/scripts/zepto.swiper.min.js"></script>
+        <script type="text/javascript" src="http://192.168.2.133/scripts/zepto.app.js?v=04063"></script>
+        <script type="text/javascript" src="http://192.168.2.133/scripts/zepto.custom.js?v=04062"></script>
+
+        <link rel='stylesheet' href='http://192.168.2.133/styles/mui.min.css'/>
+        <link rel='stylesheet' href='http://192.168.2.133/styles/app.css'/>
+        <script type="text/javascript" src="http://192.168.2.133/scripts/app.js"></script>
+         <link rel="stylesheet" href="http://192.168.2.133/styles/zepto.mdatetimer.css">
+        <script type="text/javascript" src="http://192.168.2.133/scripts/zepto.mdatetimer.js"></script>
+ -->
+    <!--样式模块公用放入-->
+
+    <link rel="stylesheet" href="../../assets/styles/app.css">
+
+    <script >
+document.addEventListener('DOMContentLoaded', function () {
+(function initFontSize() {
+		var resizeEvent = 'orientationchange' in window ? 'orientationchange' : 'resize';
+
+		function changeSize() {
+			const designWidth = 750; //设计稿尺寸是640px
+			const designWidth2 = 1080;
+			var html = document.documentElement; //根元素
+			var deviceWidth = html.clientWidth; //屏幕逻辑宽度
+			var base = 100;
+
+			if (deviceWidth > designWidth2) {
+				deviceWidth = designWidth2;
+			}
+			html.style.fontSize = (deviceWidth / designWidth) * base + "px";
+			//console.log(html.style.fontSize);
+			//alert(html.style.fontSize+"==="+deviceWidth);
+		}
+		changeSize();
+		window.addEventListener(resizeEvent, changeSize, false);
+	})();
+});
+</script>
+</head>
+<body>
+<!--头部-->
+<!--头部-->
+<div class="jm-header header-fixed nav-none">
+    <div class="jm-wrapper">
+        <a href="javascript:history.go(-1);">
+            <div class="posl icon icon_back icon-fix"></div>
+        </a>
+        <p class="title">品牌详情</p>
+        <a href="#">
+            <div class="posr icon"></div>
+        </a>
+    </div>
+</div>
+<!--如果布局fixed，将占据垂直空间1.26rem-->
+<div class="hold-space-top"></div>
+<!--导航栏-->
+<div class="header-nav-bar">
+        <span class="triangle"></span>
+        <ul>
+            <a href="#"><li class="navltem bdr-bottom"><i class="navicon  icon_header_nav_home"></i>首页</li></a>
+        </ul>
+    </div>
+
+<div id="content" class="page-content my-brand-detail brandgoods">
+    <div class="head">
+        <div class="banner mrg-bottom24">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <a
+                            class="swiper-slide swiper-slide-active" href="javascript:void(0);"><img
+                            src="../../assets/images/app/bbs/banner2.png"></a>
+                    <a
+                            class="swiper-slide swiper-slide-active" href="javascript:void(0);"><img
+                            src="../../assets/images/app/bbs/banner2.png"></a>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+        <p class="brand-title">雅诗兰黛/雅诗兰黛</p>
+        <div class="brand-logo-box">
+            <div class="imgbox">
+                <img src="../../assets/images/brand/logo2.png" alt=""/>
+                </div>
+            <a class="attention-btn" href="#">已关注</a>
+        </div>
+    </div>
+    
+    <div class="article">
+        <span class="theme">品牌简洁</span>
+        <span class="article-title">雅诗莱黛雅诗莱黛雅诗莱黛</span>
+        <p class="content">雅诗兰黛是美国雅诗兰黛公司旗下的化妆品旗舰品牌，以抗衰修护护肤品闻名。雅诗兰黛公司是全球领先的大型生产商和销售商。1946年雅诗兰。</p>
+    </div>
+
+    <div class="article">
+        <span class="theme">品牌分红</span>
+        <span class="article-title"></span>
+        <p class="content">1、品牌合伙人分红：15%-35%</p>
+        <p class="content">2、品牌助理分红：20%</p>
+        <p class="content">3、品牌合伙人分红：15%-35%</p>
+    </div>
+
+    <div class="info-list-title">
+     <span class="title-box">
+        <i class="common_icon_fix icon_order_title_sign"></i>           <span class="title">订单详情</span>
+        <i class="common_icon_fix icon_order_title_sign scalex"></i>
+     </span>
+    </div>
+
+    <!--内容列表-->
+    <ul class="list goods-box">
+        <li class="goods-item">
+            <a href="#"><div class="imgbox">
+                <img src="../../assets/images/brand/goods-1.png" alt="">
+            </div>
+                <span class="hot">热销</span>
+                <div class="infobox">
+                    <span class="brand-name">科颜氏高温保湿科颜氏高温保湿科颜氏高温保湿科颜氏高温保湿</span>
+                    <div class="price">$320<span class="oldprice">$400</span></div>
+                </div>
+                <div class="brahd-share-box"></div>
+            </a>
+        </li>
+        <li class="goods-item">
+            <a href="#"><div class="imgbox">
+                <img src="../../assets/images/brand/goods-1.png" alt="">
+            </div>
+                <span class="hot">热销</span>
+                <div class="infobox">
+                    <span class="brand-name">科颜氏高温保湿科颜氏高温保湿科颜氏高温保湿科颜氏高温保湿</span>
+                    <div class="price">$320<span class="oldprice">$400</span></div>
+                </div>
+                <div class="brahd-share-box"></div>
+            </a>
+        </li>
+
+    </ul>
+</div>
+
+<!--<div class="join-box">
+    <a href="#" class="join-enter">发起招募</a>
+</div>-->
+<!--show-category-->
+<div class="category-box">
+    <div id="good-category">
+        <div class="mask-layer"></div>
+        <div class="category">
+            <ul class="category-list">
+                <li class="category-list-item bdr-bottom">
+                    <span class="text">服饰</span>
+                </li>
+                <li class="category-list-item bdr-bottom">
+                    <span class="text">香水</span>
+                </li>
+                <li class="category-list-item bdr-bottom">
+                    <span class="text">香水1</span>
+                </li>
+                <li class="category-list-item bdr-bottom">
+                    <span class="text">香水2</span>
+                </li>
+            </ul>
+            <div class="nav">
+                <div class="category-item">
+                    <span class="text">品牌详情</span>
+                </div>
+                <div class="category-item show-category-item">
+                    <span class="text">品牌分类</span>
+                    <i class="triangle"></i>
+                </div>
+                <span class="line bdr-r"></span>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--脚步导入开始-->
+<script type="text/javascript">
+  $(document).ready(function () {
+    var mySwiper = new Swiper('.swiper-container', {
+      autoplay: 50000,//可选选项，自动滑动
+      direction: 'horizontal',
+      loop: true,
+      // 如果需要分页器
+      pagination: '.swiper-pagination',
+      paginationClickable :true
+    })
+  })
+</script>
+
+<script type="text/javascript">
+  $(document).ready(function () {
+    $(document).on('click', '.show-category-item', function (e) {
+      $("#good-category").toggleClass('show-category');
+
+      $(".mask-layer").on("click", function () {
+        $(".mask-layer").off('click');
+        $("#good-category").removeClass('show-category');
+      })
+    })
+  })
+</script>
+
+<script src="../../assets/scripts/app.js"></script>
+<link rel="stylesheet" href="../../assets/styles/brand_new.css">
+</body>
+</html>

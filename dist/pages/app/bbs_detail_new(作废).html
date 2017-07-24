@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en" id="code">
+<head>
+       <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+    <meta content="telephone=no" name="format-detection" />
+    <meta name="google" value="notranslate" />
+    <meta name="root-url" value="<?php echo JQ_URL; ?>" />
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <meta http-equiv="x-dns-prefetch-control" content="on" />
+    <title>社区详细</title>
+
+    <link rel="stylesheet" href="../../styles/mui.min.css" />
+    <link rel="stylesheet" href="../../styles/swiper.min.css" />
+    <link rel="stylesheet" href="../../styles/framework.css" />
+    <link rel="stylesheet" href="../../styles/app-base.css" />
+    <link rel="stylesheet" href="../../styles/ricky.css?v=04062" />
+ <script src="../../scripts/mui.min.js"></script>
+   <script type="text/javascript" src="../../scripts/zepto.min.js"></script>
+    <script type="text/javascript" src="../../scripts/zepto.swiper.min.js"></script>
+   <!--<script type="text/javascript" src="../../scripts/zepto.app.js?v=04063"></script>
+    <script type="text/javascript" src="../../scripts/zepto.custom.js?v=04062"></script>-->
+
+
+<!--
+    <link rel="stylesheet" href="http://192.168.2.133/styles/swiper.min.css" />
+        <link rel="stylesheet" href="http://192.168.2.133/styles/framework.css" />
+        <link rel="stylesheet" href="http://192.168.2.133/styles/app-base.css?v=04062" />
+        <link rel="stylesheet" href="http://192.168.2.133/styles/ricky.css" />
+    	<script type="text/javascript" src="http://192.168.2.133/scripts/mui.min.js"></script>
+        <script type="text/javascript" src="http://192.168.2.133/scripts/zepto.min.js"></script>
+        <script type="text/javascript" src="http://192.168.2.133/scripts/zepto.swiper.min.js"></script>
+        <script type="text/javascript" src="http://192.168.2.133/scripts/zepto.app.js?v=04063"></script>
+        <script type="text/javascript" src="http://192.168.2.133/scripts/zepto.custom.js?v=04062"></script>
+
+        <link rel='stylesheet' href='http://192.168.2.133/styles/mui.min.css'/>
+        <link rel='stylesheet' href='http://192.168.2.133/styles/app.css'/>
+        <script type="text/javascript" src="http://192.168.2.133/scripts/app.js"></script>
+         <link rel="stylesheet" href="http://192.168.2.133/styles/zepto.mdatetimer.css">
+        <script type="text/javascript" src="http://192.168.2.133/scripts/zepto.mdatetimer.js"></script>
+ -->
+    <!--样式模块公用放入-->
+
+    <link rel="stylesheet" href="../../assets/styles/app.css">
+    <script >
+document.addEventListener('DOMContentLoaded', function () {
+(function initFontSize() {
+		var resizeEvent = 'orientationchange' in window ? 'orientationchange' : 'resize';
+
+		function changeSize() {
+			const designWidth = 750; //设计稿尺寸是640px
+			const designWidth2 = 1080;
+			var html = document.documentElement; //根元素
+			var deviceWidth = html.clientWidth; //屏幕逻辑宽度
+			var base = 100;
+
+			if (deviceWidth > designWidth2) {
+				deviceWidth = designWidth2;
+			}
+			html.style.fontSize = (deviceWidth / designWidth) * base + "px";
+			//console.log(html.style.fontSize);
+			//alert(html.style.fontSize+"==="+deviceWidth);
+		}
+		changeSize();
+		window.addEventListener(resizeEvent, changeSize, false);
+	})();
+});
+</script>
+</head>
+<body>
+
+<div id="content" class="page-content bbs-detail-new">
+    <div class="head">
+        <div class="content">
+            <div class="imgbox">
+                <img src="../../assets/images/app/bbs/icon_bbs_nav_1.png" alt="">
+            </div>
+            <p class="theme">美食饮料</p>
+            <span class="attention"><span class="plus">+</span>关注</span>
+            <p class="desc">萨芬啊发生 艾丝凡阿飞安</p>
+        </div>
+
+        <span class="publish-tie">
+            <a href="#">
+                <i class="icon_bbs_tie_sm"></i>
+            <p class="desc">发表</p>
+            </a>
+
+        </span>
+    </div>
+    <div class="posts-head mrg-bottom24">
+        <span class="tips">看帖</span>
+        <div class="switchbox">
+            <input class="switchbox bbs-switch switch-animbg" type="checkbox" checked />
+        </div>
+    </div>
+
+    <ul class="posts-list">
+        <li class="posts-item clearfix mrg-bottom24">
+            <div class="left-side">
+                <div class="imgbox">
+                    <img src="../../assets/images/app/bbs/bbs_msg_dead_normal.png" alt="">
+                </div>
+            </div>
+            <div class="right-side">
+                <p class="username">九妹</p>
+                <span class="spe-post">
+                    <i class="icon-bbs-elite mrg-r10"></i>
+                    <span class="text">精华精华</span>
+                </span>
+                <p class="title"></p>
+                <div class="clearfix contentbox">
+                    <!--<p class="content ">夏日水果榜单夏日水果榜单夏日水果榜单夏日水果榜单夏日水果榜单夏日水果榜单
+                    </p>
+                    <span class="open-arrow">
+                    <span class="text open-text">全文</span>
+                   <span class="text close-text">收起</span>
+                    <i class="icon_bbs_down_arrow"></i>
+                </span>-->
+                </div>
+                <div class="picbox clearfix ">
+                    <div class="picitem">
+                        <img class="pic"  src="../../assets/images/app/bbs/bbs_msg_pic.png" data-index="1" data-url="../../assets/images/app/bbs/bbs_msg_pic.png" alt="图片">
+                    </div>
+                    <div class="picitem">
+                        <img class="pic" src="../../assets/images/app/bbs/2.jpg" data-index="2" data-url="../../assets/images/app/bbs/2.large.jpg" alt="图片">
+                    </div>
+                    <div class="picitem">
+                        <img class="pic" src="../../assets/images/app/bbs/3.jpg" data-index="3" data-url="../../assets/images/app/bbs/3.large.jpg" alt="图片">
+                    </div>
+                    <div class="picitem">
+                        <img class="pic" src="../../assets/images/app/bbs/4.jpg" data-index="4" data-url="../../assets/images/app/bbs/4.large.jpg" alt="图片">
+                    </div>
+                </div>
+
+                <div class="bottom clearfix">
+                    <span class="count">
+                        <i class="icon_bbs_share mrg-r10"></i>
+                        <span class="text">分享</span>
+                    </span>
+                    <span class="like">
+                        <i class="icon_bbs_like_normal mrg-r10"></i>
+                        <span class="text">100</span>
+                    </span>
+                </div>
+            </div>
+
+        </li>
+        <li class="posts-item clearfix mrg-bottom24">
+            <div class="left-side">
+                <div class="imgbox">
+                    <img src="../../assets/images/app/bbs/bbs_msg_dead_normal.png" alt="">
+                </div>
+            </div>
+            <div class="right-side">
+                <p class="username">九妹</p>
+                <span class="spe-post">
+                    <i class="icon-bbs-elite mrg-r10"></i>
+                    <span class="text">精华精华</span>
+                </span>
+                <p class="title">夏日水果榜单夏日水果榜单</p>
+                <div class="clearfix contentbox">
+                    <p class="content ">夏日水果榜单夏日水果榜单夏日水果榜单夏日水果榜单夏日水果榜单夏日水果榜单
+                    </p>
+                    <span class="open-arrow">
+                        <span class="text open-text">全文</span>
+                       <span class="text close-text">收起</span>
+                        <i class="icon_bbs_down_arrow"></i>
+                    </span>
+                </div>
+                <div class="picbox clearfix ">
+                    <div class="picitem">
+                        <img class="pic" src="../../assets/images/app/bbs/bbs_msg_pic.png" data-index="1" data-url="../../assets/images/app/bbs/bbs_msg_pic.png" alt="图片">
+                    </div>
+                    <div class="picitem">
+                        <img class="pic" src="../../assets/images/app/bbs/bbs_msg_pic.png" data-index="2" data-url="../../assets/images/app/bbs/bbs_msg_pic.png" alt="图片">
+                    </div>
+                    <div class="picitem">
+                        <img class="pic" src="../../assets/images/app/bbs/icon_bbs_nav_4.png" data-index="3" data-url="../../assets/images/app/bbs/icon_bbs_nav_4.png" alt="图片">
+                    </div>
+                </div>
+
+                <div class="bottom clearfix">
+                    <span class="count">
+                        <i class="icon_bbs_share mrg-r10"></i>
+                        <span class="text">分享</span>
+                    </span>
+                    <span class="like">
+                        <i class="icon_bbs_like_normal mrg-r10"></i>
+                        <span class="text">100</span>
+                    </span>
+                </div>
+            </div>
+
+        </li>
+        <li class="posts-item clearfix mrg-bottom24">
+            <div class="left-side">
+                <div class="imgbox">
+                    <img src="../../assets/images/app/bbs/bbs_msg_dead_normal.png" alt="">
+                </div>
+            </div>
+            <div class="right-side">
+                <p class="username">九妹</p>
+                <span class="spe-post">
+                    <i class="icon-bbs-elite mrg-r10"></i>
+                    <span class="text">精华精华</span>
+                </span>
+                <p class="title">夏日水果榜单夏日水果榜单</p>
+                <div class="clearfix contentbox">
+                    <p class="content ">夏日水果榜单夏日水果榜单夏日水果榜单夏日水果榜单夏日水果榜单夏日水果榜单
+                    </p>
+                    <span class="open-arrow">
+                        <span class="text open-text">全文</span>
+                       <span class="text close-text">收起</span>
+                        <i class="icon_bbs_down_arrow"></i>
+                    </span>
+                </div>
+                <div class="picbox clearfix ">
+                    <!--<div class="picitem">
+                        <img class="pic" src="../../assets/images/app/bbs/bbs_msg_pic.png" alt="图片">
+                    </div>-->
+
+                </div>
+                <div class="bottom clearfix">
+                    <span class="count">
+                        <i class="icon_bbs_share mrg-r10"></i>
+                        <span class="text">分享</span>
+                    </span>
+                    <span class="like">
+                        <i class="icon_bbs_like_normal mrg-r10"></i>
+                        <span class="text">100</span>
+                    </span>
+                </div>
+            </div>
+
+        </li>
+    </ul>
+
+</div>
+<div class="bbs-topic">
+<div class="bbs-topic-inner">
+    <a href="#"><i class="icon_bbs_tie_big tie-pic"></i></a>
+</div>
+</div>
+<!--图片预览-->
+<!--<div class="large animated fadeInDown" id="large_container" style="display:none">
+    &lt;!&ndash;<img id="large_img">&ndash;&gt;
+</div>-->
+<!--图片预览-->
+<div class="large animated fadeInDown" id="large_container" style="display:none">
+    <!--<img id="large_img">-->
+    <div class="swiper-container">
+        <div class="swiper-wrapper"></div>
+        <div class="swiper-pagination"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+  $(document).ready(function () {
+   /* window.mySwiper = new Swiper('.swiper-container', {
+      autoplay: 5000,//可选选项，自动滑动
+      direction: 'horizontal',
+      loop: false,
+      // 如果需要分页器
+      pagination: '.swiper-pagination',
+
+    })*/
+  })
+</script>
+
+<script>
+    $(function () {
+      $(".posts-list").on("click",'.open-arrow', function (e) {
+        var parent = $(e.currentTarget).parent('.contentbox');
+        if(parent.hasClass("open")){
+          parent.removeClass("open");
+        }else{
+          parent.addClass("open");
+        }
+      });
+
+
+    })
+</script>
+<!--脚步导入开始-->
+<!--js模块公用放入-->
+<link href="../../assets/styles/animate.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="../../assets/styles/community.css">
+<script src="../../assets/scripts/app.js"></script>
+
+<script>
+  $(function () {
+    //图片预览
+    var zWin = $(window);
+    var cid;
+    var images_url = [];
+
+    //点击原图
+    var cur_elems = null;
+    var mySwiper = null;
+    $('.picbox').delegate('.picitem','click',function(e){
+      images_url = [];
+      if(cur_elems == null){
+        cur_elems =  $(this).parent(".picbox").children(".picitem");
+        $.each(cur_elems, function (index, elem) {
+          var url = $(this).find(".pic").attr("data-url");
+          var html = '<div class="swiper-slide swiper-slide-active"><img src="'+url+'"></div >';
+          $(".swiper-container .swiper-wrapper").append(html);
+        });
+      }
+      cid = $(this).find(".pic").attr('data-index');
+      $('#large_container').css({
+        width:zWin.width(),
+        height:zWin.height()
+      }).show();
+      statusImg(0);
+      e.preventDefault();
+      /*$('#large_container').css({
+        width:zWin.width(),
+        height:zWin.height()
+      }).show();*/
+      if(mySwiper == null){
+        mySwiper = new Swiper('.swiper-container', {
+          initialSlide:(cid-1),
+          direction: 'horizontal',
+          loop: false,
+          pagination: '.swiper-pagination',
+        });
+      }else{
+        mySwiper.slideTo((cid-1), 0, false);//切换到第一个slide，速度为1秒
+      }
+
+    });
+
+    $('#large_container').click(function(){
+      $('#large_container').hide();
+      $(".swiper-container .swiper-wrapper").empty();
+      cur_elems = null;
+      images_url = [];
+      statusImg(1);
+    });
+    $('#large_container').mousedown(function(e){
+      e.preventDefault();
+    });
+    //滑动
+
+
+    var statusImg = function (flag) {
+      if(flag==0){//隐藏
+        //alert(111);
+
+//        $('#content').css({height:zWin.height(),'overflow':'hidden'});
+       // $('#content').css({display:'none'});
+       // $('.bbs-topic').css({display:'none'});
+
+      }else{
+//        $('#content').css({height:'auto','overflow':'auto'});
+        //$('#content').css({display:'block'});
+        //$('.bbs-topic').css({display:"block"});
+      }
+    };
+
+  });
+
+</script>
+
+
+<!--<script>
+  $(function () {
+    //图片预览
+    var zWin = $(window);
+    var cid;
+    var curl;
+    var wImage = $('#large_img');
+    var domImage = wImage[0];
+    var images_url = [];
+    var loadImg = function(id,callback){
+      statusImg(0);
+      $('#large_container').css({
+        width:zWin.width(),
+        height:zWin.height()
+      }).show();
+
+      var imgsrc = id;
+      var ImageObj = new Image();
+      ImageObj.src = imgsrc;
+      ImageObj.onload = function(){
+        var w = this.width;
+        var h = this.height;
+        var winWidth = zWin.width();
+        var winHeight = zWin.height();
+        var realw = parseInt((winWidth - winHeight*w/h)/2);
+        var realh = parseInt((winHeight - winWidth*h/w)/2);
+
+        wImage.css('width','auto').css('height','auto');
+        wImage.css('padding-left','0px').css('padding-top','0px');
+        if(h/w>1.2){
+          wImage.attr('src',imgsrc).css('height',winHeight).css('padding-left',realw+'px');;
+        }else{
+          wImage.attr('src',imgsrc).css('width',winWidth).css('padding-top',realh+'px');
+        }
+        callback&&callback();
+      }
+    }
+    //点击原图
+    var cur_elems = null;
+    $('.picbox').delegate('.picitem','click',function(){
+      alert("111");
+      images_url = [];
+
+       if(cur_elems == null){
+         cur_elems =  $(this).parent(".picbox").children(".picitem");
+         $.each(cur_elems, function (index, elem) {
+           var url = $(this).find(".pic").attr("data-url");
+           images_url.push(url);
+         });
+       }
+
+      if(images_url.length <=0){
+        return;
+      }
+      cid = $(this).find(".pic").attr('data-index');
+      if(cid < 1 || cid > images_url.length){
+        return;
+      }
+      curl = images_url[cid-1];
+      loadImg(curl);
+    });
+
+    $('#large_container').click(function(){
+      statusImg(1);
+      $('#large_container').hide();
+      cur_elems = null;
+    });
+    $('#large_container').mousedown(function(e){
+      e.preventDefault();
+    });
+    //滑动
+    var lock = false;
+    $('#large_container').swipeLeft(function(){
+      if(lock){
+        return;
+      }
+      if(cid >=images_url.length){
+        mui.toast("当前最后一张了");
+        return;
+      }
+      cid++;
+
+      lock =true;
+      curl = images_url[cid-1];
+      loadImg(curl,function(){
+        domImage.addEventListener('webkitAnimationEnd',function(){
+          wImage.removeClass('animated bounceInRight');
+          //domImage.removeEventListener('webkitAnimationEnd');
+          lock = false;
+        },false);
+        wImage.addClass('animated bounceInRight');
+      });
+    });
+
+    $('#large_container').swipeRight(function(){
+      if(lock){
+        return;
+      }
+      if(cid <= 1){
+        mui.toast("当前第一张了");
+        return;
+      }
+      cid&#45;&#45;;
+      curl = images_url[cid-1];
+      lock =true;
+      if(cid>0){
+        loadImg(curl,function(){
+          domImage.addEventListener('webkitAnimationEnd',function(){
+            wImage.removeClass('animated bounceInLeft');
+            //domImage.removeEventListener('webkitAnimationEnd');
+            lock = false;
+          },false);
+          wImage.addClass('animated bounceInLeft');
+        });
+      }else{
+        cid = 1;
+      }
+    });
+
+    var statusImg = function (flag) {
+      if(flag==0){//隐藏
+        $('#content').css({height:zWin.height(),'overflow':'hidden'});
+        $('.bbs-topic').css({display:'none'});
+      }else{
+        $('#content').css({height:'auto','overflow':'auto'});
+        $('.bbs-topic').css({display:"block"});
+      }
+    };
+
+  });
+
+</script>-->
+</body>
+</html>

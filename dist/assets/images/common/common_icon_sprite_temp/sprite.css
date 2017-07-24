@@ -1,0 +1,20 @@
+@mixin common_icon{background:url(../images/common/common_icon.png) no-repeat ;background-size:$_206 $_461;}
+@mixin icon_community_wechat{height:$_47;width:$_47;background-position:0 0;}
+@mixin icon_community_tieba{height:$_47;width:$_47;background-position:0 0 -$_51;}
+@mixin icon_community_code{height:$_47;width:$_47;background-position:0 0 -$_102;}
+@mixin icon_community_weibo{height:$_47;width:$_47;background-position:0 0 -$_154;}
+@mixin icon_community_storePhone{height:$_47;width:$_47;background-position:0 0 -$_206;}
+@mixin icon_community_store{height:$_47;width:$_47;background-position:0 0 -$_258;}
+@mixin icon_community_qq{height:$_47;width:$_47;background-position:0 0 -$_311;}
+@mixin icon_community_storeLogo{height:$_47;width:$_47;background-position:0 0 -$_362;}
+@mixin icon_community_storeDesc{height:$_47;width:$_47;background-position:0 0 -$_414;}
+@mixin icon_right_arrow{height:$_24;width:$_18;background-position:0 -$_162 0;}
+@mixin icon_order_title_sign{height:$_30;width:$_38;background-position:0 -$_162 0 -$_30;}
+@mixin icon_newfooter_bbs_normal{height:$_94;width:$_94;background-position:0 -$_53 0;}
+@mixin icon_newfooter_bbs_pressed{height:$_94;width:$_94;background-position:0 -$_53 0 -$_103;}
+@mixin icon_newfooter_home_normal{height:$_47;width:$_48;background-position:0 -$_57 0 -$_208;}
+@mixin icon_newfooter_home_pressed{height:$_47;width:$_48;background-position:0 -$_58 0 -$_271;}
+@mixin icon_newfooter_my_normal{height:$_47;width:$_38;background-position:0 -$_58 0 -$_326;}
+@mixin icon_newfooter_my_pressed{height:$_47;width:$_38;background-position:0 -$_56 0 -$_388;}
+@mixin icon_order_title_red_sign{height:$_30;width:$_44;background-position:0 -$_162 0 -$_65;}
+

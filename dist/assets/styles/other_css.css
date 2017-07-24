@@ -1,5 +1,5 @@
 @charset "UTF-8";
-/**其添加 begin**/
+/**后期调整添加 begin**/
 .form-update-store_desc {
   height: 100%;
   width: 6.5rem;
@@ -42,7 +42,7 @@
   background: #F23030;
 }
 
-/**其他添加 end**/
+/**后期调整添加 end**/
 .share-form {
   display: none;
 }
@@ -81,5 +81,177 @@
   position: relative;
   display: block;
 }
+
+/**小伙伴们添加到app.css代码begin**/
+.my-brand .itembox .item-middle .per {
+  font-size: .19rem;
+}
+
+.shareapp .infos {
+  position: relative;
+  padding: 0.41rem 1.82rem;
+  min-height: 1.25rem;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+   -ms-flex-align: center;
+       align-items: center;
+  display: box;
+  display: -ms-box;
+  display: -webkit-box;
+  display: -moz-box;
+  display: flex;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+}
+
+.shareapp .infos .face {
+  background: rgba(0, 0, 0, 0.2) none repeat scroll 0 0;
+  margin-right: 0.31rem;
+  overflow: hidden;
+}
+
+.shareapp .infos .face, .shareapp .infos .face img {
+  border-radius: 0.6rem;
+  display: block;
+  height: 1.2rem;
+  width: 1.2rem;
+}
+
+/**************意见反馈 START*****************/
+.feedback_tag_box {
+  padding: .29rem;
+  height: 11.08rem;
+  background-color: #fff;
+}
+
+.feedback_tag_box .please_select {
+  line-height: .7rem;
+  height: .7rem;
+  font-size: .26rem;
+  color: #b4b4b4;
+}
+
+.feedback_tag_box .tag_list {
+  margin-top: .18rem;
+}
+
+.feedback_tag_box .tag_list li {
+  float: left;
+  height: .62rem;
+  line-height: .6rem;
+  width: 2.06rem;
+  margin-right: .37rem;
+  background-color: #ececec;
+  text-align: center;
+  font-size: .28rem;
+  color: #5f5f5f;
+  margin-bottom: .25rem;
+}
+
+.feedback_tag_box .tag_list .active {
+  background-color: #f23030;
+  color: #fff;
+}
+
+.feedback_tag_box .tag_list li:nth-child(3n) {
+  margin-right: 0;
+}
+
+.feedback_tag_box .tag_list li input {
+  display: none;
+}
+
+.feedback_tag_box .feedback_content {
+  margin-top: .2rem;
+  width: 100%;
+  height: 3.8rem;
+  background-color: #ececec;
+  border: none;
+  padding: .2rem;
+  color: #5f5f5f;
+}
+
+.feedback_tag_box .form-btn {
+  width: 5rem;
+  height: .8rem;
+  line-height: .8rem;
+  margin: .8rem auto;
+  border-radius: .1rem;
+  background-color: #f23030;
+  text-align: center;
+}
+
+.feedback_tag_box .form-btn a {
+  display: block;
+  width: 100%;
+  height: .8rem;
+  color: #fff;
+  font-size: .32rem;
+}
+
+/**************意见反馈 END*****************/
+/* 我的好友 搜索框 START */
+.searchbox {
+  background-color: #fff;
+}
+
+.search-input {
+  color: #000;
+  height: 1.10rem;
+  padding: .24rem .24rem;
+}
+
+.search-input form {
+  border: none !important;
+}
+
+.search-input .inner {
+  width: 100%;
+  position: relative;
+  border-radius: 8%/100%;
+  background: transparent;
+}
+
+.search-input button {
+  width: 51px;
+  height: .6rem;
+  border: none;
+  vertical-align: middle;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  right: 0;
+  background-color: transparent;
+}
+
+.search-input button span.icon-twitter-search {
+  display: inline-block;
+  background: transparent url("../images/app/twitter/icon_search_twitter.png") no-repeat center center;
+  background-size: .29rem .3rem;
+  width: .8rem;
+  height: 100%;
+}
+
+.search-input .inner input[type="search"] {
+  border: none;
+  height: .6rem;
+  line-height: normal;
+  font-size: .24rem;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  color: #595757;
+  background: #E7E7E7;
+  border-radius: 10%/100%;
+  width: 100%;
+  padding: 0 51px 0 15px;
+}
+
+/* 我的好友 搜索框 END */
+/**小伙伴们添加到app.css代码end**/
 
 /*# sourceMappingURL=maps/other_css.css.map */

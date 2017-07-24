@@ -1,0 +1,122 @@
+.certification-info .certification-box .title {
+  padding: .27rem .24rem;
+  color: #000000;
+  font-size: .25rem;
+  background: #F4F4F4;
+}
+
+.certification-info .certification-box .form-item-text {
+  display: block;
+  width: 100%;
+  padding: .27rem .24rem;
+  color: #9FA0A0;
+  background: #fff;
+  font-size: .25rem;
+  border: none;
+}
+
+.certification-info .certification-box .bdr-bottom-line {
+  border-bottom: 1px solid #F4F4F4;
+}
+
+.certification-info .certification-box .upload-card-box {
+  padding: .1rem .24rem;
+  background: #fff;
+  background: #fff;
+}
+
+.certification-info .certification-box .card-desc {
+  color: #9FA0A0;
+  background: #fff;
+  font-size: .25rem;
+  line-height: .34rem;
+}
+
+.certification-info .certification-box .icon_user_card_tips {
+  display: inline-block;
+  width: .26rem;
+  height: .32rem;
+  background: url("../images/app/user/icon_user_card_tips.png") no-repeat center center;
+  background-size: 100% auto;
+  margin-right: .1rem;
+}
+
+.certification-info .certification-box .item {
+  margin: .24rem 0;
+  float: left;
+  width: 50%;
+  width: 3.35rem;
+}
+
+.certification-info .certification-box .card-item {
+  position: relative;
+  height: 2.09rem;
+  background: url("../images/app/user/user_certification_upload.png") no-repeat center center;
+  background-size: 100% auto;
+}
+
+.certification-info .certification-box .load-text {
+  position: absolute;
+  width: 100%;
+  font-size: .3rem;
+  color: #9FA0A0;
+  text-align: center;
+  bottom: .4rem;
+}
+
+.certification-info .certification-box .card-item:first-child {
+  margin-right: 0.13rem;
+}
+
+.certification-info .certification-box .card-item:last-child {
+  margin-left: .13rem;
+}
+
+.certification-info .certification-box .example {
+  text-align: center;
+}
+
+.certification-info .certification-box .example .example-desc {
+  line-height: .7rem;
+  height: .7rem;
+  color: #9FA0A0;
+  font-size: .25rem;
+}
+
+.certification-info .certification-box .example .example-img {
+  display: inline-block;
+  width: 1.51rem;
+  height: .92rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin: 0 auto;
+}
+
+.certification-info .certification-box .reason-title {
+  padding-top: .3rem;
+  text-align: center;
+  background: #F4F4F4;
+}
+
+.certification-info .certification-box .reason-desc {
+  background: #F4F4F4;
+  padding: 0 .24rem;
+}
+
+.certification-info .share_but {
+  padding: .3rem .24rem;
+}
+
+.certification-info .share_but button[type=submit] {
+  display: block;
+  width: 100%;
+  padding: .3rem .24rem;
+  background: #F23030;
+  font-size: .34rem;
+  color: #fff;
+  border: none;
+  outline: none;
+  border-radius: .05rem;
+}
+
+/*# sourceMappingURL=maps/certification.css.map */

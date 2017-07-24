@@ -1,38 +1,3 @@
-/*$title_left_text_color: #595757;
-$title_right_text_color: #9FA0A0;*/
-/*@mixin jm-header {
-  background: #fff;
-  height: 1.26rem;
-  //border-bottom: 1px solid #e7e7e7;
-  padding-top: .26rem;
-  position: relative;
-  background: #efefef url("./images/common/header-bg.png") repeat-x 0 0;
-  background-size: 100% 44px;
-  .jm-wrapper {
-    position: relative;
-    .title {
-      height: 1rem;
-      line-height: 1rem;
-      text-align: center;
-      font-size: .38rem;
-      color: #000;
-    }
-    .posl, .posr, .poslike {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-    }
-    .posl {
-      left: .24rem;
-    }
-    .posr {
-      right: .24rem;
-    }
-    .poslike {
-      right: 1rem;
-    }
-  }
-}*/
 .icon_back_white {
   background: url("../images/joinus/icon_back_white.png") no-repeat 0 50%;
   width: .21rem;

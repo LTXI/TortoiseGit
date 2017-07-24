@@ -1,39 +1,4 @@
 @charset "UTF-8";
-/*$title_left_text_color: #595757;
-$title_right_text_color: #9FA0A0;*/
-/*@mixin jm-header {
-  background: #fff;
-  height: 1.26rem;
-  //border-bottom: 1px solid #e7e7e7;
-  padding-top: .26rem;
-  position: relative;
-  background: #efefef url("./images/common/header-bg.png") repeat-x 0 0;
-  background-size: 100% 44px;
-  .jm-wrapper {
-    position: relative;
-    .title {
-      height: 1rem;
-      line-height: 1rem;
-      text-align: center;
-      font-size: .38rem;
-      color: #000;
-    }
-    .posl, .posr, .poslike {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-    }
-    .posl {
-      left: .24rem;
-    }
-    .posr {
-      right: .24rem;
-    }
-    .poslike {
-      right: 1rem;
-    }
-  }
-}*/
 .bbs-detail-new .head {
   position: relative;
   height: 4.9rem;
@@ -161,7 +126,6 @@ $title_right_text_color: #9FA0A0;*/
   height: 1rem;
   width: 7.5rem;
   max-width: 1080px;
-  z-index: 100;
   text-align: center;
 }
 
@@ -344,6 +308,7 @@ $title_right_text_color: #9FA0A0;*/
 }
 
 .posts-list .posts-item .content {
+  color: #595757;
   max-width: 5rem;
   float: left;
   font-size: .26rem;
@@ -355,7 +320,7 @@ $title_right_text_color: #9FA0A0;*/
 }
 
 .posts-list .posts-item .open .content {
-  color: #797471;
+  color: #595757;
   overflow: visible;
   white-space: pre-wrap;
   height: .8rem;
@@ -398,6 +363,8 @@ $title_right_text_color: #9FA0A0;*/
 
 .posts-list .posts-item .open .open-arrow {
   float: none;
+  display: block;
+  width: 100%;
 }
 
 .posts-list .posts-item .picbox {
@@ -787,72 +754,182 @@ $title_right_text_color: #9FA0A0;*/
   margin-bottom: 0.8rem;
 }
 
-/*.bbs-publish {
+/*******商圈发布分享页面START*******/
+.module {
+  margin-bottom: .25rem;
   background-color: #fff;
-  .form-item-title {
-    //background-color: green;
-    position: relative;
-    color: #9FA0A0;
-    height: 1.18rem;
-    line-height: 1.18rem;
-    font-size: .24rem;
-    padding: 0 .24rem;
-
-  }
-  .form-item-content {
-    position: relative;
-    background-color: goldenrod;
-    padding: 0 .24rem;
-    height: 3.78rem;
-    overflow: hidden;
-  }
-  .form-item-content {
-    padding: .3rem 0;
-    line-height: 1.6;
-    color: #9FA0A0;
-    font-size: .24rem;
-    border: 1px solid red;
-    .num-tips {
-      position: absolute;
-      right: .24rem;
-      bottom: .3rem;
-    }
-  }
-  textarea, input[type="text"] {
-    width: 100%;
-    height: 100%;
-    outline: 0 none;
-    resize: none;
-    white-space: pre-wrap;
-    word-wrap: break-word;
-    border: none;
-    color: #9FA0A0;
-  }
-  input::-webkit-input-placeholder {
-    color: #9FA0A0;
-  }
-  input:-ms-input-placeholder {
-    color: #9FA0A0;
-  }
-  input:-moz-placeholder {
-    color: #9FA0A0;
-  }
-  input::-moz-placeholder {
-    color: #9FA0A0;
-  }
-
-
-
+  padding: 0rem .23rem;
 }
-.jm-header .jm-wrapper {
-  .cancel-text {
-    font-size: .26rem;
-    color: #000;
-  }
-  .submit-text {
-    font-size: .26rem;
-    color: #F23030;
-  }
-}*/
+
+.module .title {
+  padding: .35rem 0;
+  border-bottom: 1px solid #e7e7e7;
+}
+
+.module .title input {
+  height: .43rem;
+  line-height: .43rem;
+  width: 100%;
+  border: 0 none;
+  padding: 0 0.02rem;
+  font-size: .28rem;
+}
+
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+  color: #d5d5d5;
+}
+
+.module .content {
+  padding: .3rem .02rem;
+  padding-bottom: .7rem;
+}
+
+.module .content textarea {
+  border: 0 none;
+  font-size: .28rem;
+  font-family: "微软雅黑";
+  height: 1.85rem;
+  width: 100%;
+}
+
+.module .content span {
+  float: right;
+  color: #d5d5d5;
+  font-size: .28rem;
+}
+
+.module p {
+  padding-top: .25rem;
+  padding-bottom: .2rem;
+  font-size: .28rem;
+  color: #a1a1a1;
+}
+
+.module .img-list li {
+  float: left;
+  width: 1.55rem;
+  height: 1.55rem;
+  margin-right: .1rem;
+  margin-bottom: .1rem;
+  position: relative;
+}
+
+.module .img-list img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.module .img-list .delimg {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: .4rem;
+  line-height: .4rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  text-align: center;
+  display: block;
+  width: 100%;
+  color: #fff;
+  font-size: .2rem;
+}
+
+.module .ch {
+  clear: both;
+  padding-bottom: .35rem;
+}
+
+.module .cat_list {
+  padding-top: .2rem;
+}
+
+.module .cat_list li {
+  float: left;
+  width: 1.65rem;
+  height: .45rem;
+  line-height: .45rem;
+  margin-bottom: .3rem;
+  font-size: .28rem;
+  text-align: center;
+  color: #333;
+}
+
+.module .cat_list .activa {
+  color: #f43d3f;
+}
+
+.module .cat_list li input {
+  display: none;
+}
+
+.share_but {
+  margin-top: .55rem;
+  margin-bottom: .3rem;
+  height: .75rem;
+  text-align: center;
+}
+
+.share_but button {
+  width: 7rem;
+  margin: 0 auto;
+  border: 0 none;
+  background-color: #f23030;
+  color: #fff;
+  height: .75rem;
+  line-height: .75rem;
+  border-radius: .12rem;
+  display: block;
+}
+
+#loadingDiv {
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  z-index: 10000;
+  left: 0px;
+  top: 0px;
+  display: none;
+}
+
+#loadingDiv img {
+  position: fixed;
+  width: 1.5rem;
+  height: 1.5rem;
+  top: 3rem;
+  left: 50%;
+  margin-left: -0.75rem;
+}
+
+/*******商圈发布分享页面END*******/
+#large_container.large {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  overflow: hidden;
+  z-index: 101;
+}
+
+#large_container .swiper-wrapper img {
+  max-width: 100%;
+  margin: 0 auto;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+     -moz-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+#large_container .swiper-pagination-bullet {
+  background: #CEB8B8;
+}
 
 /*# sourceMappingURL=maps/community.css.map */

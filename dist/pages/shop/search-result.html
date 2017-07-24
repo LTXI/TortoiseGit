@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+       <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+    <meta content="telephone=no" name="format-detection" />
+    <meta name="google" value="notranslate" />
+    <meta name="root-url" value="<?php echo JQ_URL; ?>" />
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <meta http-equiv="x-dns-prefetch-control" content="on" />
+    <title>搜索</title>
+
+    <link rel="stylesheet" href="../../styles/mui.min.css" />
+    <link rel="stylesheet" href="../../styles/swiper.min.css" />
+    <link rel="stylesheet" href="../../styles/framework.css" />
+    <link rel="stylesheet" href="../../styles/app-base.css" />
+    <link rel="stylesheet" href="../../styles/ricky.css?v=04062" />
+ <script src="../../scripts/mui.min.js"></script>
+   <script type="text/javascript" src="../../scripts/zepto.min.js"></script>
+    <script type="text/javascript" src="../../scripts/zepto.swiper.min.js"></script>
+   <!--<script type="text/javascript" src="../../scripts/zepto.app.js?v=04063"></script>
+    <script type="text/javascript" src="../../scripts/zepto.custom.js?v=04062"></script>-->
+
+
+<!--
+    <link rel="stylesheet" href="http://192.168.2.133/styles/swiper.min.css" />
+        <link rel="stylesheet" href="http://192.168.2.133/styles/framework.css" />
+        <link rel="stylesheet" href="http://192.168.2.133/styles/app-base.css?v=04062" />
+        <link rel="stylesheet" href="http://192.168.2.133/styles/ricky.css" />
+    	<script type="text/javascript" src="http://192.168.2.133/scripts/mui.min.js"></script>
+        <script type="text/javascript" src="http://192.168.2.133/scripts/zepto.min.js"></script>
+        <script type="text/javascript" src="http://192.168.2.133/scripts/zepto.swiper.min.js"></script>
+        <script type="text/javascript" src="http://192.168.2.133/scripts/zepto.app.js?v=04063"></script>
+        <script type="text/javascript" src="http://192.168.2.133/scripts/zepto.custom.js?v=04062"></script>
+
+        <link rel='stylesheet' href='http://192.168.2.133/styles/mui.min.css'/>
+        <link rel='stylesheet' href='http://192.168.2.133/styles/app.css'/>
+        <script type="text/javascript" src="http://192.168.2.133/scripts/app.js"></script>
+         <link rel="stylesheet" href="http://192.168.2.133/styles/zepto.mdatetimer.css">
+        <script type="text/javascript" src="http://192.168.2.133/scripts/zepto.mdatetimer.js"></script>
+ -->
+    <!--样式模块公用放入-->
+
+    <link rel="stylesheet" href="../../assets/styles/app.css">
+    <script >
+document.addEventListener('DOMContentLoaded', function () {
+(function initFontSize() {
+		var resizeEvent = 'orientationchange' in window ? 'orientationchange' : 'resize';
+
+		function changeSize() {
+			const designWidth = 750; //设计稿尺寸是640px
+			const designWidth2 = 1080;
+			var html = document.documentElement; //根元素
+			var deviceWidth = html.clientWidth; //屏幕逻辑宽度
+			var base = 100;
+
+			if (deviceWidth > designWidth2) {
+				deviceWidth = designWidth2;
+			}
+			html.style.fontSize = (deviceWidth / designWidth) * base + "px";
+			//console.log(html.style.fontSize);
+			//alert(html.style.fontSize+"==="+deviceWidth);
+		}
+		changeSize();
+		window.addEventListener(resizeEvent, changeSize, false);
+	})();
+});
+</script>
+</head>
+<body>
+
+<div id="content" class="page-content search-page">
+    <!--头部-->
+<div class="jm-header header-fixed jm-shop-header ">
+    <div class="jm-wrapper">
+         <div class="header-left-box">
+               <i class="icon icon_back icon-fix"></i>
+          </div>
+        <div class="header-center-box mid-search mid-search_cancel">
+         <p class="title">商城首页</p>
+         <div class="search-box">
+            <form action="#" method="" class="search-form">
+               <div class="inner-box">
+                <input type="search" name="search-form-content" placeholder="输入搜索内容" autocomplete="off" class="search-form-item">
+                <button type="submit" class="search-sub-btn"><i class="icon_header_shop_search"></i></button>
+                <i class="icon_header_shop_search_cancel"></i>
+               </div>
+            </form>
+         </div>
+        </div>
+           <div class="header-right-box">
+              <i class="icon-r "></i>
+              <span class="text-r jm-header-search-text show">搜索</span>
+           </div>
+    </div>
+</div>
+<!--如果布局fixed，将占据垂直空间1.26rem-->
+<div class="hold-space-top"></div>
+<!--导航栏-->
+<div class="header-nav-bar">
+        <span class="triangle"></span>
+        <ul>
+            <a href="#"><li class="navltem bdr-bottom"><i class="navicon  icon_header_nav_home"></i>首页</li></a>
+        </ul>
+    </div>
+
+    <!--热门搜索-->
+    <div class="search-content">
+        <h3 class="u-title">热门搜索</h3>
+        <div class="m-hotwordlist clearfix">
+            <a class="u-hotword" href="#" target="_self">600元礼包券</a>
+            <a class="u-hotword z-highlight" href="#" target="_self">电动牙刷</a>
+            <a class="u-hotword z-highlight" href="#" target="_self">电动牙刷</a>
+
+            <a class="u-hotword z-highlight" href="#" target="_self">尤妮佳</a>
+            <a class="u-hotword z-highlight" href="#" target="_self">电动牙刷</a>
+
+        </div>
+    </div>
+    <!--历史记录-->
+    <div class=" search-content search-hisroty-content clearfix">
+        <h3 class="u-title">历史记录</h3>
+        <div class="m-hotwordlist">
+            <a class="u-hotword" href="#" target="_self">600元礼包券</a>
+            <a class="u-hotword z-highlight" href="#" target="_self">电动牙刷</a>
+
+            <a class="u-hotword z-highlight" href="#" target="_self">尤妮佳</a>
+
+        </div>
+    </div>
+
+    <!--搜索结果展示-->
+    <div class="search-result">
+        <!--热推产品-->
+        <div class="recommend-title">
+            <div class="info-list-title">
+        <span class="title-box">
+<i class="common_icon_fix icon_order_title_sign"></i>           <span class="title">搜索结果</span>
+<i class="common_icon_fix icon_order_title_sign scalex"></i>
+</span>
+            </div>
+        </div>
+        <div class="search-list">
+
+            <!--商品搜索结果-->
+            <div class="brandgoods">
+                <ul class="list goods-box">
+                    <li class="goods-item">
+                        <a href="#">
+                            <div class="imginfo">
+                                <div class="imgbox">
+                                    <img src="../../assets/images/brand/goods-1.jpg" alt="商品">
+                                </div>
+                            </div>
+
+                            <span class="hot">热销</span>
+                            <div class="infobox">
+                                <span class="brand-name">科颜氏高温保湿科颜氏高温保湿科颜氏高温保湿科颜氏高温保湿</span>
+                                <div class="price">$320<span class="oldprice">$400</span></div>
+                            </div>
+                            <div class="brahd-share-box"></div>
+                        </a>
+                    </li>
+                    <li class="goods-item">
+                        <a href="#">
+                            <div class="imginfo">
+                                <div class="imgbox">
+                                    <img src="../../assets/images/brand/goods-2.png" alt="商品">
+                                </div>
+                            </div>
+                            <span class="hot">热销</span>
+
+                            <div class="infobox">
+                                <span class="brand-name">科颜氏高温保湿科颜氏高温保湿科颜氏高温保湿科颜氏高温保湿</span>
+                                <div class="price">$320<span class="oldprice">$400</span></div>
+                            </div>
+                            <div class="brahd-share-box"></div>
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+            <!--其他搜索结果待续-->
+              <div class=""></div>
+        </div>
+    </div>
+</div>
+
+
+
+<!--底部导航-->
+<div id="footer" class="new-store-page-footer">
+    <ul class="footer_inner ">
+        <li class="footer_item">
+            <a class="on  link" href="#">
+            <span class="icon-box">
+                <i class="store_common_icon_fix icon_shop_indexmain"></i>
+            </span>
+
+             <span class="text">首页</span>
+            </a>
+        </li>
+        <li class="footer_item">
+            <a class="link" href="#">
+                <span class="icon-box">
+                    <i class="store_common_icon_fix icon_shop_category"></i>
+                </span>
+
+                <span class="text">分类</span>
+            </a>
+        </li>
+        <li class="footer_item">
+                    <a class="link" href="#">
+                        <span class="icon-box">
+                            <i class="store_common_icon_fix icon_shop_community"></i>
+                        </span>
+                        <span class="text">社区</span>
+                    </a>
+                </li>
+        <li class="footer_item">
+            <a class="link" href="#">
+                <span class="icon-box">
+                    <i class="store_common_icon_fix icon_store_car"></i>
+                </span>
+                <span class="text">购物车</span>
+            </a>
+        </li>
+        <li class="footer_item">
+            <a class="link" href="#">
+                <span class="icon-box">
+                    <i class="store_common_icon_fix icon_store_my"></i>
+                </span>
+                <span class="text">我的</span>
+             </a>
+        </li>
+    </ul>
+</div>
+<link rel="stylesheet" href="../../assets/styles/appshop.css">
+<link rel="stylesheet" href="../../assets/styles/search.css">
+<script type="text/javascript">
+  $(function () {
+    cancelFormHander();
+  });
+  function cancelFormHander() {
+    var $cancel = $(".icon_header_shop_search_cancel")
+    $cancel.on('click', function () {
+      $(".search-form .search-form-item").val("");
+      $cancel.css({"display": "none"});
+    });
+    $(".search-form input[type='search']").bind('input propertychange', function () {
+      var size = $(this).val().length;
+      $cancel.css({"display": size > 0 ? "inline-block" : "none"});
+    });
+  }
+</script>
+</body>
+</html>

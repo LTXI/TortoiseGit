@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en" id="code">
+<head>
+       <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+    <meta content="telephone=no" name="format-detection" />
+    <meta name="google" value="notranslate" />
+    <meta name="root-url" value="<?php echo JQ_URL; ?>" />
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <meta http-equiv="x-dns-prefetch-control" content="on" />
+    <title>实名认证</title>
+
+    <link rel="stylesheet" href="../../styles/mui.min.css" />
+    <link rel="stylesheet" href="../../styles/swiper.min.css" />
+    <link rel="stylesheet" href="../../styles/framework.css" />
+    <link rel="stylesheet" href="../../styles/app-base.css" />
+    <link rel="stylesheet" href="../../styles/ricky.css?v=04062" />
+ <script src="../../scripts/mui.min.js"></script>
+   <script type="text/javascript" src="../../scripts/zepto.min.js"></script>
+    <script type="text/javascript" src="../../scripts/zepto.swiper.min.js"></script>
+   <!--<script type="text/javascript" src="../../scripts/zepto.app.js?v=04063"></script>
+    <script type="text/javascript" src="../../scripts/zepto.custom.js?v=04062"></script>-->
+
+
+<!--
+    <link rel="stylesheet" href="http://192.168.2.133/styles/swiper.min.css" />
+        <link rel="stylesheet" href="http://192.168.2.133/styles/framework.css" />
+        <link rel="stylesheet" href="http://192.168.2.133/styles/app-base.css?v=04062" />
+        <link rel="stylesheet" href="http://192.168.2.133/styles/ricky.css" />
+    	<script type="text/javascript" src="http://192.168.2.133/scripts/mui.min.js"></script>
+        <script type="text/javascript" src="http://192.168.2.133/scripts/zepto.min.js"></script>
+        <script type="text/javascript" src="http://192.168.2.133/scripts/zepto.swiper.min.js"></script>
+        <script type="text/javascript" src="http://192.168.2.133/scripts/zepto.app.js?v=04063"></script>
+        <script type="text/javascript" src="http://192.168.2.133/scripts/zepto.custom.js?v=04062"></script>
+
+        <link rel='stylesheet' href='http://192.168.2.133/styles/mui.min.css'/>
+        <link rel='stylesheet' href='http://192.168.2.133/styles/app.css'/>
+        <script type="text/javascript" src="http://192.168.2.133/scripts/app.js"></script>
+         <link rel="stylesheet" href="http://192.168.2.133/styles/zepto.mdatetimer.css">
+        <script type="text/javascript" src="http://192.168.2.133/scripts/zepto.mdatetimer.js"></script>
+ -->
+    <!--样式模块公用放入-->
+
+    <link rel="stylesheet" href="../../assets/styles/app.css">
+
+    <script >
+document.addEventListener('DOMContentLoaded', function () {
+(function initFontSize() {
+		var resizeEvent = 'orientationchange' in window ? 'orientationchange' : 'resize';
+
+		function changeSize() {
+			const designWidth = 750; //设计稿尺寸是640px
+			const designWidth2 = 1080;
+			var html = document.documentElement; //根元素
+			var deviceWidth = html.clientWidth; //屏幕逻辑宽度
+			var base = 100;
+
+			if (deviceWidth > designWidth2) {
+				deviceWidth = designWidth2;
+			}
+			html.style.fontSize = (deviceWidth / designWidth) * base + "px";
+			//console.log(html.style.fontSize);
+			//alert(html.style.fontSize+"==="+deviceWidth);
+		}
+		changeSize();
+		window.addEventListener(resizeEvent, changeSize, false);
+	})();
+});
+</script>
+</head>
+<body>
+<!--头部-->
+<!--头部-->
+<div class="jm-header header-fixed">
+    <div class="jm-wrapper">
+        <a href="javascript:history.go(-1);">
+            <div class="posl icon icon_back icon-fix"></div>
+        </a>
+        <p class="title">实名认证</p>
+        <a href="#">
+            <div class="posr icon"></div>
+        </a>
+    </div>
+</div>
+<!--如果布局fixed，将占据垂直空间1.26rem-->
+<div class="hold-space-top"></div>
+<!--导航栏-->
+<div class="header-nav-bar">
+        <span class="triangle"></span>
+        <ul>
+            <a href="#"><li class="navltem bdr-bottom"><i class="navicon  icon_header_nav_home"></i>首页</li></a>
+        </ul>
+    </div>
+
+
+<div id="content" class="page-content certification-info">
+    <div class="wrapper">
+        <form action="#" autocomplete="on" id="myForm" enctype="multipart/form-data">
+            <div class="certification-box">
+                <p class="title">身份证信息（必填）</p>
+                <input type="text" name="real-name" class="bdr-bottom-line form-item-text" placeholder="您的真实姓名"/>
+                <input type="text" name="card-num" class="form-item-text" placeholder="您的身份证号码(将加密处理)"/>
+            </div>
+
+            <div class="certification-box">
+                <p class="title">身份证正反面照片（选填）</p>
+                <div class="upload-card-box">
+                    <p class="card-desc"><i class="icon_user_card_tips"></i>温馨提示：请长传原始比例的身份证正方面，请勿裁剪涂改，保证身份证信息清晰显示，否则无法通过审核</p>
+
+                    <ul class="clearfix">
+                        <li class="item">
+                            <div class="card-item">
+                                <input type="file" id="fileupload-normal" style="display:none" name="card-image" />
+                                <p class="load-text">上传照片</p>
+                            </div>
+                            <div class="example">
+                                <p class="example-desc">示例</p>
+                                    <img class="example-img" src="../../assets/images/app/user/certification_card_normal.png">
+                            </div>
+
+                        </li>
+                        <li class="item">
+                            <div class="card-item">
+                                <input type="file" id="fileupload-cover" style="display:none" name="card-image" />
+                                <p class="load-text">上传照片</p>
+                            </div>
+                            <div class="example">
+                                <p class="example-desc">示例</p>
+                                    <img class="example-img" src="../../assets/images/app/user/certification_card_over.png">
+
+                            </div>
+                        </li>
+
+                    </ul>
+
+                </div>
+            </div>
+            <div class="certification-box">
+                    <p class="reason-title title">为什么要实名认证呢？</p>
+                <p class="reason-desc card-desc">根据海关规定，购买跨进商品需要办理清关手续，请您配合实名认证，以确认您购买商品顺利通过海关检查</p>
+            </div>
+            <div class="share_but">
+                <button type="submit">提交</button>
+            </div>
+        </form>
+    </div>
+</div>
+<script>
+    $(function () {
+      $("#myForm").submit(function(){
+        var realname = $("input[name=real-name]").val();
+        var carenum = $("input[name=card-num]").val();
+
+        if(realname==''){
+          mui.toast("姓名不能为空");
+          return false;
+        }
+        if(carenum==''){
+          mui.toast("身份证号码不能为空");
+          return false;
+        }
+      });
+    })
+</script>
+<script src="../../assets/scripts/app.js"></script>
+<link rel="stylesheet" href="../../assets/styles/certification.css">
+</body>
+</html>
