@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+       <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+    <meta content="telephone=no" name="format-detection" />
+    <meta name="google" value="notranslate" />
+    <meta name="root-url" value="<?php echo JQ_URL; ?>" />
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <meta http-equiv="x-dns-prefetch-control" content="on" />
+    <title>足迹</title>
+
+    <link rel="stylesheet" href="../../styles/mui.min.css" />
+    <link rel="stylesheet" href="../../styles/swiper.min.css" />
+    <link rel="stylesheet" href="../../styles/framework.css" />
+    <link rel="stylesheet" href="../../styles/app-base.css" />
+    <link rel="stylesheet" href="../../styles/ricky.css?v=04062" />
+ <script src="../../scripts/mui.min.js"></script>
+   <script type="text/javascript" src="../../scripts/zepto.min.js"></script>
+    <script type="text/javascript" src="../../scripts/zepto.swiper.min.js"></script>
+   <!--<script type="text/javascript" src="../../scripts/zepto.app.js?v=04063"></script>
+    <script type="text/javascript" src="../../scripts/zepto.custom.js?v=04062"></script>-->
+
+
+<!--
+    <link rel="stylesheet" href="http://192.168.2.133/styles/swiper.min.css" />
+        <link rel="stylesheet" href="http://192.168.2.133/styles/framework.css" />
+        <link rel="stylesheet" href="http://192.168.2.133/styles/app-base.css?v=04062" />
+        <link rel="stylesheet" href="http://192.168.2.133/styles/ricky.css" />
+    	<script type="text/javascript" src="http://192.168.2.133/scripts/mui.min.js"></script>
+        <script type="text/javascript" src="http://192.168.2.133/scripts/zepto.min.js"></script>
+        <script type="text/javascript" src="http://192.168.2.133/scripts/zepto.swiper.min.js"></script>
+        <script type="text/javascript" src="http://192.168.2.133/scripts/zepto.app.js?v=04063"></script>
+        <script type="text/javascript" src="http://192.168.2.133/scripts/zepto.custom.js?v=04062"></script>
+
+        <link rel='stylesheet' href='http://192.168.2.133/styles/mui.min.css'/>
+        <link rel='stylesheet' href='http://192.168.2.133/styles/app.css'/>
+        <script type="text/javascript" src="http://192.168.2.133/scripts/app.js"></script>
+         <link rel="stylesheet" href="http://192.168.2.133/styles/zepto.mdatetimer.css">
+        <script type="text/javascript" src="http://192.168.2.133/scripts/zepto.mdatetimer.js"></script>
+ -->
+    <!--样式模块公用放入-->
+
+    <link rel="stylesheet" href="../../assets/styles/app.css">
+    <script >
+document.addEventListener('DOMContentLoaded', function () {
+(function initFontSize() {
+		var resizeEvent = 'orientationchange' in window ? 'orientationchange' : 'resize';
+
+		function changeSize() {
+			const designWidth = 750; //设计稿尺寸是640px
+			const designWidth2 = 1080;
+			var html = document.documentElement; //根元素
+			var deviceWidth = html.clientWidth; //屏幕逻辑宽度
+			var base = 100;
+
+			if (deviceWidth > designWidth2) {
+				deviceWidth = designWidth2;
+			}
+			html.style.fontSize = (deviceWidth / designWidth) * base + "px";
+			//console.log(html.style.fontSize);
+			//alert(html.style.fontSize+"==="+deviceWidth);
+		}
+		changeSize();
+		window.addEventListener(resizeEvent, changeSize, false);
+	})();
+});
+</script>
+</head>
+
+
+<body>
+<!--头部-->
+<!--头部-->
+<!--头部-->
+<div class="jm-header header-fixed">
+    <div class="jm-wrapper">
+        <a href="javascript:history.go(-1);">
+            <div class="posl icon icon_back icon-fix"></div>
+        </a>
+        <p class="title">足迹</p>
+        <a href="#">
+            <div class="posr icon"></div>
+        </a>
+    </div>
+</div>
+<!--如果布局fixed，将占据垂直空间1.26rem-->
+<div class="hold-space-top"></div>
+<!--导航栏-->
+<div class="header-nav-bar">
+        <span class="triangle"></span>
+        <ul>
+            <a href="#"><li class="navltem bdr-bottom"><i class="navicon  icon_header_nav_home"></i>首页</li></a>
+        </ul>
+    </div>
+
+<div id="content" class="page-content shop-history">
+    <div class="tab_subnav mrg-bottom24">
+        <ul class="tab_subnav_list">
+            <li class="current"><a href="#">足迹</a></li>
+            <li><a href="#">收藏</a></li>
+            <li><a href="#">收藏</a></li>
+        </ul>
+    </div>
+    <ul class="history-list">
+        <li class="history-item mrg-bottom24">
+            <div class="top bdr-bottom">
+                <span class="time">时间：<span>2017-05-07 19:36</span></span>
+                <a href="#"><i class="delete"></i></a>
+            </div>
+            <div class="middle bdr-bottom">
+                <div class="item-left">
+                    <div class="imgbox">
+                        <img src="../../assets/images/brand/goods-1.jpg" alt=""/>
+                    </div>
+                </div>
+                <div class="item-middle">
+                    <p class="title">CUGU古驰</p>
+                    <p class="type">手提包</p>
+                    <p class="num"><span>$15</span></p>
+                </div>
+                <div class="item-right">
+                    <div class="store-info">
+                        <a href="#"><div class="imgbox">
+                            <img src="../../assets/images/store/store_index_new_logo.png" alt=""/>
+                        </div>
+                        <p class="store-name">店面名称店面</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </li>
+        <li class="history-item mrg-bottom24">
+            <div class="top bdr-bottom">
+                <span class="time">时间：<span>2017-05-07 19:36</span></span>
+                <a href="#"><i class="delete"></i></a>
+            </div>
+            <div class="middle bdr-bottom">
+                <div class="item-left">
+                    <div class="imgbox">
+                        <img src="../../assets/images/brand/goods-1.jpg" alt=""/>
+                    </div>
+                </div>
+                <div class="item-middle">
+                    <p class="title">CUGU古驰</p>
+                    <p class="type">手提包</p>
+                    <p class="num"><span>$15</span></p>
+                </div>
+                <div class="item-right">
+                    <div class="store-info">
+                        <a href="#"><div class="imgbox">
+                            <img src="../../assets/images/store/store_index_new_logo.png" alt=""/>
+                        </div>
+                            <p class="store-name">店面名称店面</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>
+<!--底部导航-->
+
+<link rel="stylesheet" href="../../assets/styles/hisroty.css">
+</body>
+</html>

@@ -24,6 +24,7 @@ var gulp = require('gulp'),
   flatten = require('gulp-flatten'),
   autoprefixer = require('autoprefixer'),
   cssver = require('gulp-make-css-url-version'),  // css文件引用URL加版本号
+
   revhtml = require('gulp-rev-append'),           // html添加版本号
   //browserSync = require('browser-sync'),      // 浏览器同步
   //reload = browserSync.reload;                // 自动刷新
@@ -93,7 +94,7 @@ gulp.task('sass', function () {
     .pipe(sourcemaps.write('./maps'))//生成map文件的路径
     .pipe(gulp.dest(outAssetsPath + '/styles/'))
     //css js文件引入静态文件加版本 长度：5
-    .pipe(assetRev({hashLen: 5}))
+    //.pipe(assetRev({hashLen: 5}))
     .pipe(gulp.dest(outAssetsPath + '/styles/'))
 });
 
@@ -111,7 +112,7 @@ gulp.task('pageshtml', function () {
       message: 'html task complete'
     }))
     .pipe(gulp.dest('dist/pages'))
-    .pipe(revhtml())//给html引入的css、js 、img等静态资源后面添加?rev=@@hash，即可生成版本,如果路径不对，不会生成
+    //.pipe(revhtml())//给html引入的css、js 、img等静态资源后面添加?rev=@@hash，即可生成版本,如果路径不对，不会生成
     .pipe(gulp.dest('dist/pages'));
 });
 //html
@@ -124,7 +125,7 @@ gulp.task('images', function () {
   return gulp.src(srcAssetsPath + '/images/**/*')
     .pipe(plumber())
     .pipe(cache(imagemin({
-      optimizationLevel: 3,
+      optimizationLevel: 5,
       progressive: true,
       interlaced: true
     })))
@@ -167,7 +168,7 @@ gulp.task('scripts', function () {
     .pipe(plumber())
     //.pipe(uglify())
     .pipe(gulp.dest(outAssetsPath + '/scripts'))
-    .pipe(assetRev({hashLen: 5}))
+   // .pipe(assetRev({hashLen: 5}))
     .pipe(gulp.dest(outAssetsPath + '/scripts'))
 });
 
@@ -243,13 +244,13 @@ gulp.task('autoSprite', function () {
 //为css中引入的图片/字体等添加hash编码
 gulp.task('assetRev', function () {
   return gulp.src(outAssetsPath + '/styles/*.css')   //该任务针对的文件
-    .pipe(assetRev({hashLen: 10}))  //该任务调用的模块
+    //.pipe(assetRev({hashLen: 10}))  //该任务调用的模块
     .pipe(gulp.dest(outAssetsPath + '/rev/')); //编译后的路径
 });
 //CSS生成文件hash编码并生成 rev-manifest.json文件名对照映射
 gulp.task('revCss', function () {
   return gulp.src(outAssetsPath + '/styles/*.css')
-    .pipe(rev())
+    //.pipe(rev())
     .pipe(gulp.dest(outAssetsPath + '/styles/'))
     .pipe(rev.manifest())
     .pipe(gulp.dest(outAssetsPath + '/rev/'));
@@ -257,9 +258,9 @@ gulp.task('revCss', function () {
 //js生成文件hash编码并生成 rev-manifest.json文件名对照映射
 gulp.task('revJs', function () {
   return gulp.src(outAssetsPath + '/scripts/*.js')
-    .pipe(rev())
+    //.pipe(rev())
     .pipe(gulp.dest(outAssetsPath + '/scripts/'))
-    .pipe(rev.manifest())
+    //.pipe(rev.manifest())
     .pipe(gulp.dest(outAssetsPath + '/rev/'));
 });
 gulp.task('revHtml', function () {
@@ -274,7 +275,7 @@ gulp.task('defaultrev', function (done) {
     ['assetRev'],
     ['revCss'],
     ['revJs'],
-    ['revHtml'],
+    //['revHtml'],
     done);
 });
 //加版本end

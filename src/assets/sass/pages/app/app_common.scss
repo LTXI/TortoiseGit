@@ -102,7 +102,9 @@
     }
     &.un-bottom-line::after {
       border-bottom: none;
-
+    }
+    a [class^="icon-"], a [class*=" icon-"] {
+      display: inline-block;
     }
   }
 }
@@ -529,7 +531,7 @@
 //新版列表标题begin
 
 
-//品牌商品，商城搜索结果，有热销，分享 商品框白底 4.74rem 高begin ,
+//品牌商品，商品分类 ，详情商城搜索结果，有热销，分享 商品框白底 4.74rem 高begin ,
 .brandgoods {
   background: #f4f4f4;
   color: #231816;
@@ -544,6 +546,8 @@
     flex-wrap: wrap;
     .goods-item {
       flex-basis: 3.37rem;
+      flex-grow: 0;
+      flex-shrink: 1;
       height: 4.74rem;
       background-color: #fff;
       margin-bottom: .2rem;
@@ -561,8 +565,27 @@
         color: #fff;
         padding: 1px 2px;
       }
-      .imgbox img{
-        width: 100%;
+      .imginfo {
+        position: relative;
+        overflow: hidden;
+        padding-top: 100%;
+
+      }
+      .imgbox{
+        position: absolute;
+        width:100%;
+        left: 0;
+        top:0;
+        bottom: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        padding: .2rem;
+        img{
+          display: inline-block;
+          max-width: 100%;
+        }
       }
       .infobox{
         position: absolute;

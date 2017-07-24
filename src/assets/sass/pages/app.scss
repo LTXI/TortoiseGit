@@ -219,16 +219,15 @@
 .my-user {
   .top {
     position: relative;
-    height: 3.09rem;
+    height: 4.36rem;
     //height: 4.95rem;
     width: 100%;
     background: url("../images/app/user/user-bg.jpg") no-repeat center center;
     background-size: 100%;
-    margin-bottom: .24rem;
+    //margin-bottom: .24rem;
     .userinfo {
       position: absolute;
-      top: 1.05rem;
-
+      top: 1.8rem;
       height: 1.22rem;
       line-height: 1.22rem;
       color: #fff;
@@ -252,8 +251,8 @@
         @include create-circle-image(1.2rem, 0rem);
         .pass::after {
           content: "";
-          width: .3rem;
-          height: .3rem;
+          width: .33rem;
+          height: .43rem;
           position: absolute;
           right: 3px;
           bottom: 0px;
@@ -323,7 +322,7 @@
       border: 1px solid transparent;// 很奇怪，加上，android4.4以下就不会换行了，即使item是20%（5项），否则19.9%也可以实现
       //height: 1.22rem;
       //line-height: 1.22rem;
-      padding: .56rem 0 .45rem 0;
+      padding: .9rem 0 .45rem 0;
       font-size: 0;
       .item {
         display: inline-block;
@@ -341,21 +340,6 @@
         height: .6rem;
         width: 1rem;
         min-width: 30px;
-      }
-      a .icon.icon-unpay {
-        //width: .38rem;
-      }
-      a .icon.icon-unems {
-        //width: .64rem;
-      }
-      a .icon.icon-ems {
-        // width: .41rem;
-      }
-      a .icon.icon-done {
-        //width: .34rem;
-      }
-      a .icon.icon-order {
-        //width: .38rem;
       }
       a .line {
         display: block;
@@ -385,7 +369,7 @@
         display: block;
         height: 0.6rem;
         line-height: 0.8rem;
-        color: #595757;
+        color: #231815;
         font-size: .24rem;
       }
       .icon-unpay {
@@ -439,6 +423,57 @@
       @include link-item-icon(0.92rem, 1px);
     }
 
+  }
+
+  .item-box {
+    background-color: #fff;
+
+    color: #595757;
+    .item-info {
+      border: 1px solid transparent;
+      padding: .15rem 0 .15rem 0;
+      font-size: 0;
+      .item {
+        display: inline-block;
+        width: 33.3%;
+        color: #595757;
+        text-align: center;
+      }
+      a .icon {
+        display: inline-block;
+        height: .6rem;
+        width: 1rem;
+        min-width: 30px;
+      }
+
+      a .line {
+        display: block;
+        height: 0.6rem;
+        line-height: 0.6rem;
+        width: 100%;
+        text-align: center;
+        position: relative;
+      }
+      .text {
+        display: block;
+        height: 0.6rem;
+        line-height: 0.8rem;
+        color: #231815;
+        font-size: .24rem;
+      }
+      .icon_user_attention {
+        background: url("../images/app/user/icon_user_attention.png") no-repeat center bottom;
+        background-size: .56rem .56rem;
+      }
+      .icon_user_collet {
+        background: url("../images/app/user/icon_user_collet.png") no-repeat center bottom;
+        background-size: .56rem .56rem;
+      }
+      .icon_user_track {
+        background: url("../images/app/user/icon_user_track.png") no-repeat center bottom;
+        background-size: .56rem .56rem;
+      }
+    }
   }
 }
 
@@ -670,18 +705,6 @@
         padding-right: .46rem;
         .imgbox{
           position: relative;
-          /*&::after {
-            position: absolute;
-            top: -0.5px;
-            left: -0.5px;
-            width: 200%;
-            height: 200%;
-            content: '';
-            border: 1px solid #e3e5e9;
-            border-radius: 6px; //圆角
-            transform: scale(0.5);
-            transform-origin: top left;
-          }*/
         }
       }
       .item-middle {

@@ -1018,6 +1018,10 @@ console.log('$_'+i+":"+(i/base)+"rem;");
   border-bottom: none;
 }
 
+.jm-header .jm-wrapper a [class^="icon-"], .jm-header .jm-wrapper a [class*=" icon-"] {
+  display: inline-block;
+}
+
 .transparent-bg.header-fixed + .hold-space-top, .hold-space-top {
   height: 0;
 }

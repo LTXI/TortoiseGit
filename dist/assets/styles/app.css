@@ -1019,6 +1019,10 @@ console.log('$_'+i+":"+(i/base)+"rem;");
   border-bottom: none;
 }
 
+.jm-header .jm-wrapper a [class^="icon-"], .jm-header .jm-wrapper a [class*=" icon-"] {
+  display: inline-block;
+}
+
 .transparent-bg.header-fixed + .hold-space-top, .hold-space-top {
   height: 0;
 }
@@ -3568,18 +3572,6 @@ console.log('$_'+i+":"+(i/base)+"rem;");
 
 .my-commission-order ul.orderlist .orderitem .middle .item-left .imgbox {
   position: relative;
-  /*&::after {
-            position: absolute;
-            top: -0.5px;
-            left: -0.5px;
-            width: 200%;
-            height: 200%;
-            content: '';
-            border: 1px solid #e3e5e9;
-            border-radius: 6px; //圆角
-            transform: scale(0.5);
-            transform-origin: top left;
-          }*/
 }
 
 .my-commission-order ul.orderlist .orderitem .middle .item-middle {
@@ -4816,7 +4808,6 @@ console.log('$_'+i+":"+(i/base)+"rem;");
 }
 
 .sharebox .share_link {
-  float: right;
   color: #9FA0A0;
   font-size: .20rem;
   border: 1px solid #eee;
