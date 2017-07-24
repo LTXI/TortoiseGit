@@ -279,7 +279,7 @@
   }
 //}
 
-//品牌商品
+//品牌商品，商城搜索结果，有热销，分享 商品框白底 4.74rem 高begin ,
 .brandgoods {
   background: #f4f4f4;
   color: #231816;
@@ -344,6 +344,7 @@
     }
   }
 }
+//品牌商品，商城搜索结果，有热销，分享 商品框白底 4.74rem 高end
 
 //新品牌详情begin
 .my-brand-detail{
@@ -425,7 +426,7 @@
 .brahd-share-box{
   position: absolute;
   right: 0.24rem;
-  bottom: 0.2rem;
+  bottom: 0.25rem;
   z-index: 0;
   width: .83rem;
   height: .29rem;
@@ -448,6 +449,8 @@
     font-size: .36rem;
     color: #fff;
     z-index: 100;
+    width: 7.5rem;
+    max-width: 1080px;
   }
 }
 //分类

@@ -62,7 +62,7 @@
                         <img class="pic"  src="../../assets/images/app/bbs/bbs_msg_pic.png" data-index="1" data-url="../../assets/images/app/bbs/bbs_msg_pic.png" alt="图片">
                     </div>
                     <div class="picitem">
-                        <img class="pic" src="../../assets/images/app/bbs/1.jpg" data-index="2" data-url="../../assets/images/app/bbs/1.large.jpg" alt="图片">
+                        <img class="pic" src="../../assets/images/app/bbs/2.jpg" data-index="2" data-url="../../assets/images/app/bbs/2.large.jpg" alt="图片">
                     </div>
                     <div class="picitem">
                         <img class="pic" src="../../assets/images/app/bbs/3.jpg" data-index="3" data-url="../../assets/images/app/bbs/3.large.jpg" alt="图片">
@@ -112,7 +112,7 @@
                         <img class="pic" src="../../assets/images/app/bbs/bbs_msg_pic.png" data-index="1" data-url="../../assets/images/app/bbs/bbs_msg_pic.png" alt="图片">
                     </div>
                     <div class="picitem">
-                        <img class="pic" src="../../assets/images/app/bbs/17.jpg" data-index="2" data-url="../../assets/images/app/bbs/17.large.jpg" alt="图片">
+                        <img class="pic" src="../../assets/images/app/bbs/bbs_msg_pic.png" data-index="2" data-url="../../assets/images/app/bbs/bbs_msg_pic.png" alt="图片">
                     </div>
                     <div class="picitem">
                         <img class="pic" src="../../assets/images/app/bbs/icon_bbs_nav_4.png" data-index="3" data-url="../../assets/images/app/bbs/icon_bbs_nav_4.png" alt="图片">
@@ -171,6 +171,7 @@
                     </span>
                 </div>
             </div>
+
         </li>
     </ul>
 
@@ -181,14 +182,30 @@
 </div>
 </div>
 <!--图片预览-->
-
-<div class="large animated fadeIn" id="large_container" style="display:none">
+<!--<div class="large animated fadeInDown" id="large_container" style="display:none">
+    &lt;!&ndash;<img id="large_img">&ndash;&gt;
+</div>-->
+<!--图片预览-->
+<div class="large animated fadeInDown" id="large_container" style="display:none">
     <!--<img id="large_img">-->
-    <div class="swiper-container large-swiper-container">
+    <div class="swiper-container">
         <div class="swiper-wrapper"></div>
         <div class="swiper-pagination"></div>
     </div>
 </div>
+
+<script type="text/javascript">
+  $(document).ready(function () {
+   /* window.mySwiper = new Swiper('.swiper-container', {
+      autoplay: 5000,//可选选项，自动滑动
+      direction: 'horizontal',
+      loop: false,
+      // 如果需要分页器
+      pagination: '.swiper-pagination',
+
+    })*/
+  })
+</script>
 
 <script>
     $(function () {
@@ -200,77 +217,88 @@
           parent.addClass("open");
         }
       });
+
+
     })
 </script>
 <!--脚步导入开始-->
 @@include('../../partical/script.inc')
-<!--<link href="../../assets/styles/animate.css" rel="stylesheet" type="text/css">-->
+<link href="../../assets/styles/animate.css" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="../../assets/styles/community.css">
 <script src="../../assets/scripts/app.js"></script>
 
 <script>
   $(function () {
-
-    var mySwiper = new Swiper('.large-swiper-container', {
-      initialSlide:0,
-      direction: 'horizontal',
-      loop: false,
-      pagination: '.swiper-pagination',
-      observer:true,
-      observeParents:true,
-    });
+    //图片预览
     var zWin = $(window);
     var cid;
     var images_url = [];
+
+    //点击原图
     var cur_elems = null;
-    var html = "";
+    var mySwiper = null;
     $('.picbox').delegate('.picitem','click',function(e){
       images_url = [];
-      html = "";
       if(cur_elems == null){
         cur_elems =  $(this).parent(".picbox").children(".picitem");
         $.each(cur_elems, function (index, elem) {
-          var url = $(this).find(".pic").attr("src");
-          html +='<div class="swiper-slide swiper-slide-active"><img src="'+url+'"></div >';
-
+          var url = $(this).find(".pic").attr("data-url");
+          var html = '<div class="swiper-slide swiper-slide-active"><img src="'+url+'"></div >';
+          $(".swiper-container .swiper-wrapper").append(html);
         });
       }
-      mySwiper.removeAllSlides();
-      $(".swiper-container .swiper-wrapper").html(html);
-
+      cid = $(this).find(".pic").attr('data-index');
       $('#large_container').css({
         width:zWin.width(),
         height:zWin.height()
       }).show();
-
-      cid = $(this).index() +1;
-      /*if(mySwiper == null){
-        mySwiper = new Swiper('.large-swiper-container', {
+      statusImg(0);
+      e.preventDefault();
+      /*$('#large_container').css({
+        width:zWin.width(),
+        height:zWin.height()
+      }).show();*/
+      if(mySwiper == null){
+        mySwiper = new Swiper('.swiper-container', {
           initialSlide:(cid-1),
           direction: 'horizontal',
           loop: false,
           pagination: '.swiper-pagination',
-          observer:true,
-          observeParents:true,
         });
       }else{
-        mySwiper.update();
-        mySwiper.slideTo((cid-1), 0, false);
-      }*/
-      mySwiper.update();
-      mySwiper.slideTo((cid-1), 0, false);
-      e.preventDefault();
+        mySwiper.slideTo((cid-1), 0, false);//切换到第一个slide，速度为1秒
+      }
+
     });
 
     $('#large_container').click(function(){
       $('#large_container').hide();
-      mySwiper.removeAllSlides();
+      $(".swiper-container .swiper-wrapper").empty();
       cur_elems = null;
       images_url = [];
+      statusImg(1);
     });
     $('#large_container').mousedown(function(e){
       e.preventDefault();
     });
+    //滑动
+
+
+    var statusImg = function (flag) {
+      if(flag==0){//隐藏
+        //alert(111);
+
+//        $('#content').css({height:zWin.height(),'overflow':'hidden'});
+       // $('#content').css({display:'none'});
+       // $('.bbs-topic').css({display:'none'});
+
+      }else{
+//        $('#content').css({height:'auto','overflow':'auto'});
+        //$('#content').css({display:'block'});
+        //$('.bbs-topic').css({display:"block"});
+      }
+    };
+
   });
 
 </script>

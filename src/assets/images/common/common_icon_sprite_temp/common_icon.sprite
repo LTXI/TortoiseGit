@@ -18,5 +18,6 @@
     <Sprite Path="icon_newfooter_home_pressed.png" LocationX="58" LocationY="271" />
     <Sprite Path="icon_newfooter_my_normal.png" LocationX="58" LocationY="326" />
     <Sprite Path="icon_newfooter_my_pressed.png" LocationX="56" LocationY="388" />
+    <Sprite Path="icon_order_title_red_sign.png" LocationX="162" LocationY="65" />
   </SpriteList>
 </SpriteFile>

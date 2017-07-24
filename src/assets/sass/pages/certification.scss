@@ -1,0 +1,112 @@
+.certification-info {
+  .certification-box {
+    .title {
+      padding: .27rem .24rem;
+      color: #000000;
+      font-size: .25rem;
+      background: #F4F4F4;
+    }
+    .form-item-text {
+      display: block;
+      width: 100%;
+      padding: .27rem .24rem;
+      color: #9FA0A0;
+      background: #fff;
+      font-size: .25rem;
+      border: none;
+
+    }
+    .bdr-bottom-line {
+      border-bottom: 1px solid #F4F4F4;
+    }
+
+    .upload-card-box {
+      padding: .1rem .24rem;
+      background: #fff;
+      background: #fff;
+    }
+    .card-desc {
+      color: #9FA0A0;
+      background: #fff;
+      font-size: .25rem;
+      line-height: .34rem;
+    }
+
+    .icon_user_card_tips {
+      display: inline-block;
+      width: .26rem;
+      height: .32rem;
+      background: url("../images/app/user/icon_user_card_tips.png") no-repeat center center;
+      background-size: 100% auto;
+      margin-right: .1rem;
+    }
+    .item {
+      margin: .24rem 0;
+      float: left;
+      width: 50%;
+      width: 3.35rem;
+    }
+    .card-item {
+      position: relative;
+
+      height: 2.09rem;
+      background: url("../images/app/user/user_certification_upload.png") no-repeat center center;
+      background-size: 100% auto;
+    }
+    .load-text {
+      position: absolute;
+      width: 100%;
+      font-size: .3rem;
+      color: #9FA0A0;
+      text-align: center;
+      bottom: .4rem;
+
+    }
+
+    .card-item:first-child {
+      margin-right: 0.13rem;
+    }
+    .card-item:last-child {
+      margin-left: .13rem;
+    }
+    .example {
+      text-align: center;
+      .example-desc {
+        line-height: .7rem;
+        height: .7rem;
+        color: #9FA0A0;
+        font-size: .25rem;
+      }
+      .example-img {
+        display: inline-block;
+        width: 1.51rem;
+        height: .92rem;
+        object-fit: cover;
+        margin: 0 auto;
+      }
+    }
+    .reason-title {
+      padding-top: .3rem;
+      text-align: center;
+      background: #F4F4F4;
+    }
+    .reason-desc {
+      background: #F4F4F4;
+      padding: 0 .24rem;
+    }
+  }
+  .share_but {
+    padding: .3rem .24rem;
+    button[type=submit] {
+      display: block;
+      width: 100%;
+      padding: .3rem .24rem;
+      background:#F23030;
+      font-size: .34rem;
+      color: #fff;
+      border: none;
+      outline: none;
+      border-radius: .05rem;
+    }
+  }
+}

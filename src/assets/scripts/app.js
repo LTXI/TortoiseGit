@@ -95,25 +95,20 @@ $(function () {
 
 
 
-/**微信分享 begin**/
+/**微信分享 begin------------------------------------------**/
 var app_share = {};
 app_share.shares = null;
 /**初始*/
 app_share.init = function () {
   // 监听plusready事件
   document.addEventListener("plusready", function () {
-    alert("eee2222");
     plus.share.getServices(function (s) {
       app_share.shares = {};
-      //alert("sss=="+s);
       for (var i in s) {
         var t = s[i];
         app_share.shares[t.id] = t;
-        //mui.toast("shares===" + t.id + "  >  " + t);
-        //alert(t.id + "  >>  " + t);
       }
-      console.log(app_share.shares['weixin']);
-      //alert("weixin==="+app_share.shares['weixin']);
+      //console.log(app_share.shares['weixin']);
     }, function (e) {
       //mui.toast("无享服务！");
       plus.nativeUI.alert('无分享服务!');
@@ -146,7 +141,6 @@ app_share.shareMessage =function (msg, s) {
 
 app_share.shareAction = function(sb, ishref, msginfo) {
   if (!sb || !sb.s) {
-    //mui.toast("无效的分享服务！");
     plus.nativeUI.alert('无效的分享服务!');
     return;
   }
@@ -199,8 +193,6 @@ app_share.appshare = function (msgdata, ishref) {
   var shareBts = [];
   // 更新分享列表
   var ss = app_share.shares['weixin'];
-  //console.log("ssss==" + ss.nativeClient);
-  //mui.toast("ss.nativeClient==" + ss.nativeClient);
   ss && ss.nativeClient && (shareBts.push({
     title: '微信朋友圈',
     s: ss,
@@ -212,7 +204,6 @@ app_share.appshare = function (msgdata, ishref) {
   }));
 
   // 弹出分享列表
-  //mui.toast("shareBts.length===" + shareBts.length);
   shareBts.length > 0 ? plus.nativeUI.actionSheet({
         title: '分享',
         cancel: '取消',
@@ -242,6 +233,7 @@ app_share.getShareParam = function($form){
 
 $(document).ready(function() { app_share.init(); });
 
+
 /**
  * 公用的分享触发方法
  * title  标题
@@ -261,4 +253,4 @@ function ShareHandleParam(title, desc, pic, href){
   app_share.appshare(params, params.ishref);
 }
 
-/**微信分享 end **/
+/**微信分享 end ------------------------------------------**/

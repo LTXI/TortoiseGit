@@ -1,4 +1,4 @@
-@mixin common_icon{background:url(../images/common/common_icon.png) no-repeat ;background-size:$_200 $_461;}
+@mixin common_icon{background:url(../images/common/common_icon.png) no-repeat ;background-size:$_206 $_461;}
 @mixin icon_community_wechat{height:$_47;width:$_47;background-position:0 0;}
 @mixin icon_community_tieba{height:$_47;width:$_47;background-position:0 0 -$_51;}
 @mixin icon_community_code{height:$_47;width:$_47;background-position:0 0 -$_102;}
@@ -16,3 +16,5 @@
 @mixin icon_newfooter_home_pressed{height:$_47;width:$_48;background-position:0 -$_58 0 -$_271;}
 @mixin icon_newfooter_my_normal{height:$_47;width:$_38;background-position:0 -$_58 0 -$_326;}
 @mixin icon_newfooter_my_pressed{height:$_47;width:$_38;background-position:0 -$_56 0 -$_388;}
+@mixin icon_order_title_red_sign{height:$_30;width:$_44;background-position:0 -$_162 0 -$_65;}
+

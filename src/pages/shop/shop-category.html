@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+    @@include('../../partical/meta.inc',{"title":"商城分类"})
+    @@include('../../partical/styles.inc', {"links":""})
+    <link rel="stylesheet" href="../../assets/styles/app.css">
+    @@include('../../partical/fontsize.inc')
+</head>
+
+
+<body>
+<!--头部-->
+@@include('../../partical/app-shop-new-header-search-nav.inc',{
+"header-fixed":"header-fixed jm-shop-header",
+"header-left-icon-style":"icon icon_back icon-fix",
+"header-mid-style":"mid-search mid-search_cancel",
+"title":"商城分类",
+"header-right-icon-style":"icon_header_shop_msg show",
+"header-right-text-style":"",
+"header-right-text":""
+})
+<!--<div id="header" class="page-header"></div>-->
+<div id="content" class="page-content new-category">
+    <!--<div class="category-topbar">
+        <div class="topbar-warp">
+            <a href="javascript:history.go(-1);">
+                <div class="icon_back"></div>
+            </a>
+            <div class="topbar-inner">
+                <form onsubmit="return false;" class="header-search-frm" action=""><input type="search"
+                                                                                          placeholder="搜索瓜藤商品"
+                                                                                          id="topSearchTxt"
+                                                                                          class="header-search-txt"
+                                                                                          name="keyword"><input
+                        type="submit" onclick="javascript:App.search();" value="搜索" class="search-submit"></form>
+            </div>
+            <a href="#">
+                <div class="msg-box">
+                    <div class="msg">消息</div>
+                </div>
+            </a>
+        </div>
+    </div>-->
+    <div class="category-sidebar">
+        <div class="sidebar-scroll">
+            <ul class="sidebar-items">
+                <li><a href="#m"><span>热门推荐</span></a></li>
+                <li><a href="#"><span>日本馆</span></a></li>
+                <li class="cur"><a href="#"><span>生活家居</span></a></li>
+                <li><a href="#"><span>全球购</span></a></li>
+                <li><a href="#"><span>健康有机</span></a></li>
+                <li><a href="#"><span>生态厨房</span></a></li>
+                <li><a href="#"><span>养生保健</span></a></li>
+
+            </ul>
+        </div>
+    </div>
+    <div class="category-pro-list">
+        <div class="category-recommend">
+            <span class="title">一线奢侈品</span>
+            <a href="#" class="more-btn">更多</a>
+        </div>
+        <div class="content-list pro_list pro_type_grid">
+            <div class="pro_item"><a class="item_inner" href="#m=goods&amp;goods_id=376">
+                <div class="cover"><img class="photo"
+                                        src="../../assets/images/brand/1484592650148983443.jpg"></div>
+                <div class="info">
+                    <div class="title">韩国怡思美C+维他精华爽肤水</div>
+                    <div class="price"><strong><em>￥287.00</em></strong></div>
+                </div>
+            </a></div>
+            <div class="pro_item"><a class="item_inner" href="#m=goods&amp;goods_id=371">
+                <div class="cover"><img class="photo"
+                                        src="../../assets/images/brand/1484592650148983443.jpg"></div>
+                <div class="info">
+                    <div class="title">好杞来枸杞原液（盒装）</div>
+                    <div class="price"><strong><em>￥443.00</em></strong></div>
+                </div>
+            </a></div>
+            <div class="pro_item"><a class="item_inner" href="#m=goods&amp;goods_id=361">
+                <div class="cover"><img class="photo"
+                                        src="http://vshop.guaten.com/images/201611/1479923162748996415.jpg"></div>
+                <div class="info">
+                    <div class="title">金滤嘴生物活性科技烟嘴</div>
+                    <div class="price"><strong><em>￥661.00</em></strong></div>
+                </div>
+            </a></div>
+        </div>
+    </div>
+</div>
+
+
+<!--底部导航-->
+@@include('../../partical/footer-shop-nav-bar-new.inc')
+<link rel="stylesheet" href="../../assets/styles/appshop.css">
+<script src="../../scripts/jquery-1.8.3.min.js"></script>
+<script src="../../assets/scripts/store.js"></script>
+<script>
+
+  $(function () {
+    cancelFormHander();
+  });
+  function cancelFormHander() {
+    var $cancel = $(".icon_header_shop_search_cancel")
+      $cancel.on('click', function () {
+      $(".search-form .search-form-item").val("");
+      $cancel.css({"display": "none"});
+    });
+    $(".search-form input[type='search']").bind('input propertychange', function (e) {
+      var size = $(this).val().length;
+      $cancel.css({"display": size > 0 ? "inline-block" : "none"});
+    });
+  }
+</script>
+
+</body>
+</html>

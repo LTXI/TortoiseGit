@@ -16,14 +16,74 @@
 
 <div id="content" class="page-content certification-info">
     <div class="wrapper">
-        <form action="#" autocomplete="on" enctype="multipart/form-data">
+        <form action="#" autocomplete="on" id="myForm" enctype="multipart/form-data">
+            <div class="certification-box">
+                <p class="title">身份证信息（必填）</p>
+                <input type="text" name="real-name" class="bdr-bottom-line form-item-text" placeholder="您的真实姓名"/>
+                <input type="text" name="card-num" class="form-item-text" placeholder="您的身份证号码(将加密处理)"/>
+            </div>
 
+            <div class="certification-box">
+                <p class="title">身份证正反面照片（选填）</p>
+                <div class="upload-card-box">
+                    <p class="card-desc"><i class="icon_user_card_tips"></i>温馨提示：请长传原始比例的身份证正方面，请勿裁剪涂改，保证身份证信息清晰显示，否则无法通过审核</p>
 
+                    <ul class="clearfix">
+                        <li class="item">
+                            <div class="card-item">
+                                <input type="file" id="fileupload-normal" style="display:none" name="card-image" />
+                                <p class="load-text">上传照片</p>
+                            </div>
+                            <div class="example">
+                                <p class="example-desc">示例</p>
+                                    <img class="example-img" src="../../assets/images/app/user/certification_card_normal.png">
+                            </div>
+
+                        </li>
+                        <li class="item">
+                            <div class="card-item">
+                                <input type="file" id="fileupload-cover" style="display:none" name="card-image" />
+                                <p class="load-text">上传照片</p>
+                            </div>
+                            <div class="example">
+                                <p class="example-desc">示例</p>
+                                    <img class="example-img" src="../../assets/images/app/user/certification_card_over.png">
+
+                            </div>
+                        </li>
+
+                    </ul>
+
+                </div>
+            </div>
+            <div class="certification-box">
+                    <p class="reason-title title">为什么要实名认证呢？</p>
+                <p class="reason-desc card-desc">根据海关规定，购买跨进商品需要办理清关手续，请您配合实名认证，以确认您购买商品顺利通过海关检查</p>
+            </div>
+            <div class="share_but">
+                <button type="submit">提交</button>
+            </div>
         </form>
     </div>
 </div>
+<script>
+    $(function () {
+      $("#myForm").submit(function(){
+        var realname = $("input[name=real-name]").val();
+        var carenum = $("input[name=card-num]").val();
 
+        if(realname==''){
+          mui.toast("姓名不能为空");
+          return false;
+        }
+        if(carenum==''){
+          mui.toast("身份证号码不能为空");
+          return false;
+        }
+      });
+    })
+</script>
 <script src="../../assets/scripts/app.js"></script>
-<link rel="stylesheet" href="../../assets/styles/app.css">
+<link rel="stylesheet" href="../../assets/styles/certification.css">
 </body>
 </html>

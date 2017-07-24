@@ -36,7 +36,7 @@
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 1;//原来100
+  z-index: 2;//原来100
 }
 
 //头部导航固定间隙占位符
@@ -395,7 +395,7 @@
         position: relative;
         i{
           position: absolute;
-          top:32%;
+          top:28%;
           left: 50%;
           transform: translate(-50%);
         }
@@ -527,3 +527,82 @@
   }
 }
 //新版列表标题begin
+
+
+//品牌商品，商城搜索结果，有热销，分享 商品框白底 4.74rem 高begin ,
+.brandgoods {
+  background: #f4f4f4;
+  color: #231816;
+  .goods-box {
+    display: flex;
+    flex-direction: row;
+    width: 6.96rem;
+    margin: 0.26rem .28rem .28rem .28rem;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    .goods-item {
+      flex-basis: 3.37rem;
+      height: 4.74rem;
+      background-color: #fff;
+      margin-bottom: .2rem;
+      position: relative;
+      &:nth-child(2n) {
+        margin-left: .2rem;
+      }
+      .hot{
+        position: absolute;
+        text-align: center;
+        left: 0;
+        top: 0;
+        background-color: #c72443;
+        font-size: 12px;
+        color: #fff;
+        padding: 1px 2px;
+      }
+      .imgbox img{
+        width: 100%;
+      }
+      .infobox{
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        padding: .1rem .1rem;
+        .brand-name{
+          display: block;
+          font-size: .24rem;
+          height: .5rem;
+          line-height: .5rem;
+          color: #333;
+          @include ellipsis;
+        }
+        .price{
+          color: #e50000;
+          font-size: .28rem;
+          height: .6rem;
+          line-height: .6rem;
+        }
+
+        .oldprice{
+          color: #949494;
+          font-size: .22rem;
+          text-decoration: line-through;
+          padding-left: .2rem;
+        }
+      }
+      //分享按钮begin
+      .brahd-share-box{
+        position: absolute;
+        right: 0.24rem;
+        bottom: 0.25rem;
+        z-index: 0;
+        width: .83rem;
+        height: .29rem;
+        background: url("../images/brand/icon_brand_share_bg.png") no-repeat;
+        background-size: .83rem  .29rem;
+      }
+    }
+  }
+}
+//品牌商品，商城搜索结果，有热销，分享 商品框白底 4.74rem 高end
