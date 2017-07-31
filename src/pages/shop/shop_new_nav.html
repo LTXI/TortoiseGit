@@ -1,14 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    @@include('../../partical/meta.inc',{"title":"商城首页"})
+    <!--@@include('../../partical/meta.inc',{"title":"商城首页"})
     @@include('../../partical/styles.inc', {"links":"" })
+    <link rel="stylesheet" href="../../assets/styles/app.css">-->
+    <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"><meta content="telephone=no" name="format-detection"><meta name="google" value="notranslate"><meta name="root-url" value="http://www.nineneeds.com/"><meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"><meta http-equiv="Pragma" content="no-cache"><meta http-equiv="Expires" content="0"><meta http-equiv="x-dns-prefetch-control" content="on"><title>九件购物</title><link rel="stylesheet" href="http://www.nineneeds.com/styles/swiper.min.css"><link rel="stylesheet" href="http://www.nineneeds.com/styles/framework.css">
+    <!--<link rel="stylesheet" href="http://www.nineneeds.com/styles/app-base.css?v=04062">-->
+    <link rel="stylesheet" href="../../styles/app-base.css" />
+    <link rel="stylesheet" href="http://www.nineneeds.com/styles/ricky.css"><script type="text/javascript" src="http://www.nineneeds.com/scripts/mui.min.js"></script><script type="text/javascript" src="http://www.nineneeds.com/scripts/zepto.min.js"></script><script type="text/javascript" src="http://www.nineneeds.com/scripts/zepto.swiper.min.js"></script><script type="text/javascript" src="http://www.nineneeds.com/scripts/zepto.app.js?v=04063"></script><script type="text/javascript" src="http://www.nineneeds.com/scripts/zepto.custom.js?v=04062"></script><link rel="stylesheet" href="http://www.nineneeds.com/styles/mui.min.css">
+    <!--<link rel="stylesheet" href="http://www.nineneeds.com/styles/app.css">-->
     <link rel="stylesheet" href="../../assets/styles/app.css">
+    <script type="text/javascript" src="http://www.nineneeds.com/scripts/app.js"></script><link rel="stylesheet" href="http://www.nineneeds.com/styles/zepto.mdatetimer.css"><script type="text/javascript" src="http://www.nineneeds.com/scripts/zepto.mdatetimer.js"></script>
     @@include('../../partical/fontsize.inc')
 </head>
 <body>
 <!--头部-->
-@@include('../../partical/app-shop-new-header-search-nav.inc',{
+<!--@@include('../../partical/app-shop-new-header-search-nav.inc',{
 "header-fixed":"header-fixed jm-shop-header jm-header-column-two-right",
 "header-left-icon-style":"",
 "header-mid-style":"mid-search",
@@ -16,7 +23,29 @@
 "header-right-icon-style":"show store_common_icon icon_store_my",
 "header-right-text-style":"jm-header-login-text",
 "header-right-text":"登录"
-})
+})-->
+<div class="jm-header header-fixed jm-shop-header jm-header-column-two-right">
+    <div class="jm-wrapper">
+        <div class="header-left-box">
+            <i class=""></i>
+        </div>
+        <div class="header-center-box mid-search">
+            <p class="title">商城首页</p>
+            <div class="search-box">
+                <form action="#" method="" class="search-form">
+                    <div class="inner-box">
+                        <input type="search" name="search-form-content" placeholder="输入搜索内容" autocomplete="off" class="search-form-item">
+                        <button type="submit" class="search-sub-btn"><i class="icon_header_shop_search"></i></button>
+                        <i class="icon_header_shop_search_cancel"></i>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="header-right-box">
+            <span class="text-r jm-header-login-text">登录</span>
+        </div>
+    </div>
+</div>
 
 <!--body内容信息-->
 <div id="content" class="page-content shop-index-new">
@@ -109,7 +138,7 @@
                         </div>
                     </a>
                 </li>
-                <li class="brand-item item-box swiper-slide">
+                <!--<li class="brand-item item-box swiper-slide">
                     <a href="#">
                         <div class="inner">
                             <div class="item">
@@ -134,7 +163,7 @@
                             <p class="desc">保持沁润水靓保持沁润</p>
                         </div>
                     </a>
-                </li>
+                </li>-->
 
             </ul>
         </div>
@@ -226,6 +255,8 @@
         </div>
     </div>
 
+    <div style="height: 500px"></div>
+
 </div>
 <!--返回头部-->
 <a href="#top" id="jm-backtop" class="jm-backtop"></a>
@@ -245,6 +276,7 @@
     //品牌
     var mySwiperbrand = new Swiper('.swiper-container-brand', {
       freeMode : true,
+      freeModeSticky:true,
       centeredSlides : false,
       slidesPerView : 2.8,
       paginationClickable :true,
@@ -257,6 +289,9 @@
         else if(swiper.activeIndex==0){
           swiper.lockSwipeToPrev();
         }
+      },
+      onBeforeResize: function(swiper){
+        alert("3333");
       }
     });
    //热门
@@ -266,6 +301,8 @@
       slidesPerView : 3,
       paginationClickable: true,
       onTouchStart: function(swiper,even){
+        console.log("swiper.activeIndex=="+swiper.activeIndex);
+        console.log("swiper.isEnd=="+swiper.isEnd);
         swiper.unlockSwipeToPrev();
         swiper.unlockSwipeToNext();
         if(swiper.isEnd){
@@ -274,9 +311,19 @@
         else if(swiper.activeIndex==0){
           swiper.lockSwipeToPrev();
         }
+      },
+      onBeforeResize: function(swiper){
+        alert("33334444");
       }
     });
+    if(mySwiperbrand != null){
+      mySwiperbrand.update();
+    }
+    if(mySwiperhot != null){
+      mySwiperhot.update();
+    }
   })
+
 </script>
 </body>
 </html>

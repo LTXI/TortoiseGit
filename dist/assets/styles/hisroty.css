@@ -202,6 +202,11 @@
   color: #231815;
   height: .4rem;
   line-height: .4rem;
+  width: 3rem;
+  max-width: 3rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .history-list .history-item .middle .item-middle .type {
@@ -209,6 +214,11 @@
   font-size: .24rem;
   height: .4rem;
   line-height: .4rem;
+  width: 3rem;
+  max-width: 3rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .history-list .history-item .middle .item-middle p.num {
@@ -274,7 +284,7 @@
 
 .history-list .history-item .middle .item-right .store-name {
   text-align: center;
-  width: 1.6rem;
+  max-width: 1.6rem;
   white-space: nowrap;
   color: #231815;
   font-size: .28rem;

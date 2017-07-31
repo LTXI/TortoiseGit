@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html>
+<head>
+       <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+    <meta content="telephone=no" name="format-detection" />
+    <meta name="google" value="notranslate" />
+    <meta name="root-url" value="<?php echo JQ_URL; ?>" />
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <meta http-equiv="x-dns-prefetch-control" content="on" />
+    <title>50条评论</title>
+
+    <link rel="stylesheet" href="../../styles/mui.min.css" />
+    <link rel="stylesheet" href="../../styles/swiper.min.css" />
+    <link rel="stylesheet" href="../../styles/framework.css" />
+    <link rel="stylesheet" href="../../styles/app-base.css" />
+    <link rel="stylesheet" href="../../styles/ricky.css?v=04062" />
+ <script src="../../scripts/mui.min.js"></script>
+   <script type="text/javascript" src="../../scripts/zepto.min.js"></script>
+    <script type="text/javascript" src="../../scripts/zepto.swiper.min.js"></script>
+   <!--<script type="text/javascript" src="../../scripts/zepto.app.js?v=04063"></script>
+    <script type="text/javascript" src="../../scripts/zepto.custom.js?v=04062"></script>-->
+
+
+<!--
+    <link rel="stylesheet" href="http://192.168.2.133/styles/swiper.min.css" />
+        <link rel="stylesheet" href="http://192.168.2.133/styles/framework.css" />
+        <link rel="stylesheet" href="http://192.168.2.133/styles/app-base.css?v=04062" />
+        <link rel="stylesheet" href="http://192.168.2.133/styles/ricky.css" />
+    	<script type="text/javascript" src="http://192.168.2.133/scripts/mui.min.js"></script>
+        <script type="text/javascript" src="http://192.168.2.133/scripts/zepto.min.js"></script>
+        <script type="text/javascript" src="http://192.168.2.133/scripts/zepto.swiper.min.js"></script>
+        <script type="text/javascript" src="http://192.168.2.133/scripts/zepto.app.js?v=04063"></script>
+        <script type="text/javascript" src="http://192.168.2.133/scripts/zepto.custom.js?v=04062"></script>
+
+        <link rel='stylesheet' href='http://192.168.2.133/styles/mui.min.css'/>
+        <link rel='stylesheet' href='http://192.168.2.133/styles/app.css'/>
+        <script type="text/javascript" src="http://192.168.2.133/scripts/app.js"></script>
+         <link rel="stylesheet" href="http://192.168.2.133/styles/zepto.mdatetimer.css">
+        <script type="text/javascript" src="http://192.168.2.133/scripts/zepto.mdatetimer.js"></script>
+ -->
+    <!--样式模块公用放入-->
+
+    <link rel="stylesheet" href="../../assets/styles/app.css">
+    <script >
+document.addEventListener('DOMContentLoaded', function () {
+(function initFontSize() {
+		var resizeEvent = 'orientationchange' in window ? 'orientationchange' : 'resize';
+
+		function changeSize() {
+			const designWidth = 750; //设计稿尺寸是640px
+			const designWidth2 = 1080;
+			var html = document.documentElement; //根元素
+			var deviceWidth = html.clientWidth; //屏幕逻辑宽度
+			var base = 100;
+
+			if (deviceWidth > designWidth2) {
+				deviceWidth = designWidth2;
+			}
+			html.style.fontSize = (deviceWidth / designWidth) * base + "px";
+			//console.log(html.style.fontSize);
+			//alert(html.style.fontSize+"==="+deviceWidth);
+		}
+		changeSize();
+		window.addEventListener(resizeEvent, changeSize, false);
+	})();
+});
+</script>
+</head>
+<body>
+<!--头部-->
+<!--头部-->
+<div class="jm-header header-fixed">
+    <div class="jm-wrapper">
+        <a href="javascript:history.go(-1);">
+            <div class="posl icon icon_back icon-fix"></div>
+        </a>
+        <p class="title">50条评论</p>
+        <a href="#">
+            <div class="posr icon"></div>
+        </a>
+    </div>
+</div>
+<!--如果布局fixed，将占据垂直空间1.26rem-->
+<div class="hold-space-top"></div>
+<!--导航栏-->
+<div class="header-nav-bar">
+        <span class="triangle"></span>
+        <ul>
+            <a href="#"><li class="navltem bdr-bottom"><i class="navicon  icon_header_nav_home"></i>首页</li></a>
+        </ul>
+    </div>
+
+<div id="content" class="page-content shop-community-detail replay-comment">
+    <div class="commu-review">
+        <div class="review">
+            <ul class="posts-list">
+                <li class="posts-item clearfix">
+                    <div class="left-side">
+                        <div class="imgbox">
+                            <img src="../../assets/images/app/bbs/bbs_msg_dead_normal.png" alt="">
+                        </div>
+                    </div>
+                    <div class="right-side">
+                        <p class="username">九妹</p>
+
+                        <p class="title">夏日水果榜单夏日水果榜单</p>
+                        <div class="clearfix contentbox">
+                            <p class="content ">夏日水果榜单夏日水果榜单夏日水果榜单夏日水果榜单夏日水果榜单夏日水果榜单</p>
+                        </div>
+
+
+                        <div class="bottom clearfix">
+                            <span class="time">2017-07-25</span>
+
+                            <span class="like">
+                                <i class="icon_bbs_like_normal mrg-r10"></i>
+                                <span class="text">赞</span>
+                            </span>
+                            <span class="replay">
+                                <span class="text">回复</span>
+                            </span>
+                        </div>
+                        <ul class="other-replay-box">
+                            <span class="triangle"></span>
+                            <li class="other-replay-user clearfix other-replay-comment">
+                                <div class="replay-comment-box">
+                                    <div class="imgbox">
+                                        <img src="../../assets/images/app/bbs/bbs_msg_dead_normal.png" alt="头像">
+                                    </div>
+                                        <span class="replay-user">巴塞洛拉(作者):</span>
+                                        <br>
+                                        <span class="replay-content ">内容内容内容内容内容内容内容内容内容内容内容内容内容内容</span>
+                                    </div>
+                                <div class="bottom clearfix">
+                                    <span class="time">2017-07-25</span>
+
+                                    <span class="like">
+                                <i class="icon_bbs_like_pressed mrg-r10"></i>
+                                <span class="text">赞</span>
+                            </span>
+                                    <span class="replay">
+                                <span class="text">回复</span>
+                            </span>
+                                </div>
+                            </li>
+                            <li class="other-replay-user clearfix other-replay-comment">
+                                <div class="replay-comment-box">
+                                    <div class="imgbox">
+                                        <img src="../../assets/images/app/bbs/bbs_msg_dead_normal.png" alt="头像">
+                                    </div>
+                                    <span class="replay-user">巴塞洛拉(作者):</span>
+                                    <br>
+                                    <span class="replay-content ">内容内容内容内容内容内容内容内容内容内容内容内容内容内容</span>
+                                </div>
+                                <div class="bottom clearfix">
+                                    <span class="time">2017-07-25</span>
+
+                                    <span class="like">
+                                <i class="icon_bbs_like_normal mrg-r10"></i>
+                                <span class="text">赞</span>
+                            </span>
+                                    <span class="replay">
+                                <span class="text">回复</span>
+                            </span>
+                                </div>
+                            </li>
+                            <span href="#" class="other-replay-num">查看2条回复<i class="icon_bbs_down_arrow"></i>
+                            </span>
+                        </ul>
+                    </div>
+                </li>
+                <li class="posts-item clearfix">
+                    <div class="left-side">
+                        <div class="imgbox">
+                            <img src="../../assets/images/app/bbs/bbs_msg_dead_normal.png" alt="">
+                        </div>
+                    </div>
+                    <div class="right-side">
+                        <p class="username">九妹</p>
+                        <p class="title">夏日水果榜单夏日水果榜单</p>
+                        <div class="clearfix contentbox">
+                            <p class="content ">夏日水果榜单夏日水果榜单夏日水果榜单夏日水果榜单夏日水果榜单夏日水果榜单</p>
+
+                        </div>
+                        <div class="bottom clearfix">
+                            <span class="time">2017-07-25</span>
+
+                            <span class="like">
+                                <i class="icon_bbs_like_normal mrg-r10"></i>
+                                <span class="text">赞</span>
+                            </span>
+                            <span class="replay">
+                                <span class="text">回复</span>
+                            </span>
+                        </div>
+                        <ul class="other-replay-box">
+                            <span class="triangle"></span>
+                            <li class="other-replay-user clearfix other-replay-comment">
+                                <div class="replay-comment-box">
+                                    <div class="imgbox">
+                                        <img src="../../assets/images/app/bbs/bbs_msg_dead_normal.png" alt="头像">
+                                    </div>
+                                    <span class="replay-user">巴塞洛拉(作者):</span>
+                                    <br>
+                                    <span class="replay-content ">内容内容内容内容内容内容内容内容内容内容内容内容内容内容</span>
+                                </div>
+                                <div class="bottom clearfix">
+                                    <span class="time">2017-07-25</span>
+
+                                    <span class="like">
+                                <i class="icon_bbs_like_normal mrg-r10"></i>
+                                <span class="text">赞</span>
+                            </span>
+                                    <span class="replay">
+                                <span class="text">回复</span>
+                            </span>
+                                </div>
+                            </li>
+                            <span href="#" class="other-replay-num">查看2条回复<i class="icon_bbs_down_arrow"></i>
+                            </span>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+</div>
+<div class="form-comm-reply replay-comment-form">
+    <div class="form-comm-inner">
+        <form action="#" class="form-reply">
+            <input type="text" class="form-reply-item" name="replay" placeholder="走心也分好几种，赶评论的最有种">
+            <input type="submit" class="form-reply-btn" value="发布">
+        </form>
+    </div>
+</div>
+
+<link rel="stylesheet" href="../../assets/styles/community.css">
+<script>
+  $(function () {
+  $(".hobby-box li").click(function () {
+    if ($(this).hasClass("active")) {
+      $(this).removeClass("active");
+      $(this).find("input[type='checkbox']").attr("checked", false);
+    } else {
+      $(this).addClass("active");
+      $(this).find("input[type='checkbox']").attr("checked", true);
+    }
+  });
+});
+</script>
+
+<script>
+  $(function () {
+    $(".posts-list").on("click",'.open-arrow', function (e) {
+      var parent = $(e.currentTarget).parent('.contentbox');
+      if(parent.hasClass("open")){
+        parent.removeClass("open");
+      }else{
+        parent.addClass("open");
+      }
+    });
+
+    //伸缩
+    var sub_ul_arr=$(".posts-list .posts-item ul.other-replay-box");
+    for(var i = 0; i<sub_ul_arr.length; i++){
+      var $ul = $(sub_ul_arr[i]);
+      var sub_ul_li_arr = $ul.find("li");
+      if(sub_ul_li_arr.length > 1){//有隐藏
+        $ul.find(".other-replay-num").addClass("more-replay");
+        for(var j = 1; j<sub_ul_li_arr.length; j++){
+          $(sub_ul_li_arr[j]).hide();
+        }
+      }else{
+        $(sub_ul_li_arr[0]).show();
+        $ul.find(".other-replay-num").removeClass("more-replay");
+      }
+    }
+    $(".posts-list").on("click",".other-replay-box .other-replay-num", function (e) {
+      var parent = $(this).parent(".other-replay-box");
+      var sub_ul_li_arr = $(parent).find("li");
+      if($(this).hasClass("up")){
+        for(var i = 1; i< sub_ul_li_arr.length; i++){
+          $(sub_ul_li_arr[i]).hide();
+        }
+        $(this).removeClass("up").html('查看'+ sub_ul_li_arr.length +'条回复<i class="icon_bbs_down_arrow"></i>');
+      }else{
+        for(var i = 0; i< sub_ul_li_arr.length; i++){
+          $(sub_ul_li_arr[i]).show();
+        }
+        $(this).addClass("up").html('收起所有回复<i class="icon_bbs_down_arrow"></i>');
+      }
+    })
+  })
+</script>
+
+<script>
+  $(function () {
+    $(document).on("click",".commu-review .tips, .replay", function(e){
+      $("input[type='text']").focus();
+    });
+  });
+
+</script>
+</body>
+</html>

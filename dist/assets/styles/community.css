@@ -308,23 +308,23 @@
 }
 
 .posts-list .posts-item .content {
-  color: #595757;
   max-width: 5rem;
   float: left;
   font-size: .26rem;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  height: .4rem;
   line-height: .4rem;
+  color: #595757;
 }
 
 .posts-list .posts-item .open .content {
   color: #595757;
   overflow: visible;
   white-space: pre-wrap;
-  height: .8rem;
   max-width: 5.9rem;
+  height: .8rem;
+  width: 100%;
 }
 
 .posts-list .posts-item .open-arrow {
@@ -382,6 +382,8 @@
 .posts-list .posts-item .picbox .picitem .pic {
   width: 100%;
   height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .posts-list .posts-item .picbox .picitem:nth-child(3n) {
@@ -389,8 +391,9 @@
 }
 
 .posts-list .posts-item .bottom .count {
-  float: left;
+  float: right;
   font-size: 0;
+  margin-right: .2rem;
 }
 
 .posts-list .posts-item .bottom .like {
@@ -408,6 +411,29 @@
 
 .posts-list .mrg-r10 {
   margin-right: .08rem;
+}
+
+.shareTime {
+  float: left;
+  display: inline-block;
+  line-height: 18px;
+}
+
+.shareTime i {
+  background: url("../images/app/bbs/time-icon.png") no-repeat left top;
+  width: .3rem;
+  height: .3rem;
+  background-size: 100%;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: .1rem;
+  float: left;
+  margin-top: .02rem;
+}
+
+.shareTime .text {
+  float: right;
+  margin-top: .03rem;
 }
 
 @-webkit-keyframes play {
@@ -931,5 +957,1240 @@ input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
 #large_container .swiper-pagination-bullet {
   background: #CEB8B8;
 }
+
+.SaveImg {
+  width: 2rem;
+  height: .6rem;
+  line-height: .6rem;
+  text-align: center;
+  background-color: black;
+  border-radius: .08rem;
+  position: fixed;
+  bottom: 1rem;
+  left: 50%;
+  margin-left: -1rem;
+  color: #fff;
+  z-index: 9999;
+  font-size: .26rem;
+  display: none;
+}
+
+/****商城社区begin------**/
+.shop-community-hobby .head {
+  height: 2.8rem;
+  overflow: hidden;
+  background: url("../images/app/shopbbs/commu_hobby_top_bg.png") no-repeat center top;
+  background-size: 100% auto;
+}
+
+.shop-community-hobby .head .desc {
+  margin-top: .85rem;
+  text-align: center;
+}
+
+.shop-community-hobby .head .desc .title-bg {
+  color: #fff;
+  font-size: .4rem;
+  line-height: .84rem;
+}
+
+.shop-community-hobby .head .desc .title-sm {
+  color: #fff;
+  font-size: .3rem;
+  line-height: .5rem;
+}
+
+.shop-community-hobby .hobby .hobby-box {
+  margin: .15rem .14rem;
+}
+
+.shop-community-hobby .hobby .bobby-item {
+  position: relative;
+  float: left;
+  width: 33.33%;
+}
+
+.shop-community-hobby .hobby .bobby-item .inner {
+  position: relative;
+  margin: .15rem .14rem;
+  overflow: hidden;
+}
+
+.shop-community-hobby .hobby .bobby-item input {
+  opacity: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 20px;
+  left: 0;
+}
+
+.shop-community-hobby .hobby .bobby-item img {
+  width: 100%;
+  height: 100%;
+}
+
+.shop-community-hobby .hobby .bobby-item .checkbox-icon {
+  position: absolute;
+  right: 0.1rem;
+  top: 0.1rem;
+  width: .34rem;
+  height: .34rem;
+}
+
+.shop-community-hobby .hobby .bobby-item .hobby-desc {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: .1rem;
+  height: .54rem;
+  line-height: .54rem;
+  color: #231815;
+  font-size: .3rem;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.shop-community-hobby .hobby .checkbox-un-icon {
+  background: url("../images/app/shopbbs/checkbox_hobby_unselected.png") no-repeat center top;
+  background-size: 100% auto;
+}
+
+.shop-community-hobby .hobby .active .checkbox-un-icon {
+  background: url("../images/app/shopbbs/checkbox_hobby_selected.png") no-repeat center top;
+  background-size: 100% auto;
+}
+
+.shop-community-hobby .hobby .form-btn-box {
+  height: .98rem;
+  line-height: .98rem;
+}
+
+.shop-community-hobby .hobby .form-btn-box .form-btn {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.shop-community-hobby .hobby .form-btn-box .btn-text {
+  display: block;
+  text-align: center;
+  font-size: .35rem;
+  height: .98rem;
+  line-height: .98rem;
+  color: #9FA0A0;
+  background-color: #DDD;
+}
+
+.shop-community-index-head {
+  background-color: #E60000;
+}
+
+.shop-community-index-head .header-center-box {
+  background-color: #E60000;
+}
+
+.shop-community-index-head .search-form-item {
+  background-color: #C30D23 !important;
+  color: #fff !important;
+}
+
+.shop-community-index-head input::-webkit-input-placeholder, .shop-community-index-head textarea::-webkit-input-placeholder {
+  color: #fff;
+}
+
+.shop-community-index-head .icon_header_commu_search {
+  display: inline-block;
+  width: .26rem;
+  height: .26rem;
+  background: url("../images/app/shopbbs/icon_header_commu_search.png") no-repeat;
+  background-size: 100% auto;
+  vertical-align: middle;
+}
+
+.shop-community-index-head .icon_header_commu_plus {
+  display: inline-block;
+  width: .47rem;
+  height: .35rem;
+  background: url("../images/app/shopbbs/icon_header_commu_plus.png") no-repeat;
+  background-size: 100% auto;
+  vertical-align: middle;
+}
+
+.shop-community-index .nav-index-box {
+  position: relative;
+  background: #fff;
+  border-bottom: 1px solid #D5D5D5;
+  height: .9rem;
+}
+
+.shop-community-index .nav-index-box .main-nav {
+  font-size: 0;
+  position: relative;
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+  margin-right: 1.3rem;
+}
+
+.shop-community-index .nav-index-box .nav-arrow-box {
+  text-align: center;
+  border-left: 1px solid #D5D5D5;
+  position: absolute;
+  width: 1rem;
+  right: 0;
+  top: .18rem;
+}
+
+.shop-community-index .nav-index-box .nav-arrow-box .arrow {
+  display: inline-block;
+  width: .25rem;
+  height: .25rem;
+  border-left: 1px solid #D5D5D5;
+  border-bottom: 1px solid #D5D5D5;
+  -webkit-transform: rotate(-45deg) translateY(-0.1rem);
+     -moz-transform: rotate(-45deg) translateY(-0.1rem);
+      -ms-transform: rotate(-45deg) translateY(-0.1rem);
+          transform: rotate(-45deg) translateY(-0.1rem);
+}
+
+.shop-community-index .nav-index-box .nav-arrow-box .open.arrow {
+  display: inline-block;
+  width: .25rem;
+  height: .25rem;
+  border-left: 1px solid #D5D5D5;
+  border-top: 1px solid #D5D5D5;
+  border-bottom: none;
+  -webkit-transform: rotate(45deg) translateY(0.1rem);
+     -moz-transform: rotate(45deg) translateY(0.1rem);
+      -ms-transform: rotate(45deg) translateY(0.1rem);
+          transform: rotate(45deg) translateY(0.1rem);
+}
+
+.shop-community-index .nav-index-box .nav-type-item {
+  font-size: 0;
+  display: inline-block;
+  position: relative;
+  text-align: center;
+  padding: .25rem .25rem .35rem 0.25rem;
+}
+
+.shop-community-index .nav-index-box .nav-type-item span {
+  font-size: .25rem;
+  line-height: 1;
+  padding: .11rem 0;
+  color: #9FA0A0;
+}
+
+.shop-community-index .nav-index-box .nav-type-item.current span {
+  color: #231815;
+  border-bottom: 2px solid #F23030;
+}
+
+.shop-community-index .shop-community-index-banner {
+  height: 2.8rem;
+}
+
+.shop-community-index .index-hobby-box {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+     -moz-box-orient: horizontal;
+     -moz-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 7.5rem;
+  min-height: 2.82rem;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+     -moz-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+     -moz-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-align-content: flex-start;
+      -ms-flex-line-pack: start;
+          align-content: flex-start;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+  background-color: #F4F4F4;
+  padding-bottom: .23rem;
+}
+
+.shop-community-index .index-hobby-box .hobby-item {
+  width: 30%;
+  background-color: #fff;
+  margin-left: .12rem;
+}
+
+.shop-community-index .index-hobby-box .hobby-item:first-child {
+  margin-left: .20rem;
+}
+
+.shop-community-index .index-hobby-box .hobby-item .inner {
+  position: relative;
+  text-align: center;
+  font-size: 0;
+  padding: 0 .14rem;
+}
+
+.shop-community-index .index-hobby-box .hobby-item .item {
+  margin: .3rem 0 .25rem 0;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.shop-community-index .index-hobby-box .hobby-item .item .imgbox {
+  position: relative;
+  display: inline-block;
+  width: 0.8rem;
+  height: 0.8rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+     -moz-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0rem;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+.shop-community-index .index-hobby-box .hobby-item .item .imgbox img {
+  display: inline-block;
+  width: 0.8rem;
+  height: 0.8rem;
+  border-radius: 50%;
+}
+
+.shop-community-index .index-hobby-box .hobby-item .title {
+  font-size: .3rem;
+  text-align: center;
+  color: #231815;
+  line-height: .5rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.shop-community-index .index-hobby-box .hobby-item .desc {
+  font-size: .25rem;
+  text-align: center;
+  color: #9FA0A0;
+  line-height: .32rem;
+  height: .64rem;
+  color: #9FA0A0;
+  word-break: break-all;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.shop-community-index .index-hobby-box .hobby-item .attention-btn {
+  display: inline-block;
+  margin-top: .4rem;
+  margin-bottom: 0.1rem;
+  padding: .04rem .35rem;
+  text-align: center;
+  background-color: #FEDE3B;
+  color: #000000;
+  font-size: .25rem;
+  border-radius: .5rem;
+}
+
+.shop-community-index .index-community-hobby {
+  width: 100%;
+  padding: 0 .18rem;
+  margin: .3rem  auto;
+}
+
+.shop-community-index .index-community-hobby .waterfall {
+  -webkit-column-count: 2;
+     -moz-column-count: 2;
+          column-count: 2;
+  -webkit-column-gap: .18rem;
+     -moz-column-gap: .18rem;
+          column-gap: .18rem;
+}
+
+.shop-community-index .index-community-hobby .waterfall .item {
+  -webkit-column-break-inside: avoid;
+     page-break-inside: avoid;
+          break-inside: avoid;
+  background-color: #fff;
+}
+
+.shop-community-index .index-community-hobby .waterfall .item .gapy {
+  width: 100%;
+  height: 0.18rem;
+  background-color: #F4F4F4;
+}
+
+.shop-community-index .index-community-hobby .waterfall .item .imgbox {
+  text-align: center;
+  overflow: hidden;
+}
+
+.shop-community-index .index-community-hobby .waterfall .item .imgbox img {
+  display: inline-block;
+  max-width: 100%;
+  margin-bottom: 10px;
+}
+
+.shop-community-index .index-community-hobby .waterfall .item .title {
+  font-size: .25rem;
+  line-height: .36rem;
+  color: #000000;
+  word-break: break-all;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  height: auto;
+  padding: 0 .2rem;
+}
+
+.shop-community-index .index-community-hobby .waterfall .item .desc {
+  margin-top: .16rem;
+  margin-bottom: .1rem;
+  font-size: .2rem;
+  line-height: .3rem;
+  height: auto;
+  color: #9FA0A0;
+  word-break: break-all;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding: 0 .2rem;
+}
+
+.shop-community-index .index-community-hobby .waterfall .item .commu-user {
+  display: inline-block;
+  margin-top: .14rem;
+  font-size: 0;
+  padding-left: .2rem;
+}
+
+.shop-community-index .index-community-hobby .waterfall .item .commu-user .imgbox {
+  position: relative;
+  display: inline-block;
+  width: 0.4rem;
+  height: 0.4rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+     -moz-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+.shop-community-index .index-community-hobby .waterfall .item .commu-user .imgbox img {
+  display: inline-block;
+  width: 0.4rem;
+  height: 0.4rem;
+  border-radius: 50%;
+}
+
+.shop-community-index .index-community-hobby .waterfall .item .commu-user .imgbox {
+  float: left;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.shop-community-index .index-community-hobby .waterfall .item .commu-user .text {
+  float: left;
+  padding-left: .1rem;
+  font-size: .25rem;
+  height: .4rem;
+  line-height: .4rem;
+  color: #231815;
+}
+
+.shop-community-index .index-community-hobby .waterfall .item .praise {
+  margin-top: .14rem;
+  float: right;
+  font-size: 0;
+  padding-right: .2rem;
+}
+
+.shop-community-index .index-community-hobby .waterfall .item .praise .text {
+  padding-left: .1rem;
+  font-size: .25rem;
+  height: .4rem;
+  line-height: .4rem;
+  color: #9FA0A0;
+  vertical-align: middle;
+}
+
+.shop-community-index .index-community-hobby .icon_commu_heart {
+  display: inline-block;
+  width: .28rem;
+  height: .26rem;
+  background: url("../images/app/shopbbs/icon_commu_heart.png") no-repeat;
+  background-size: 100% auto;
+  vertical-align: middle;
+}
+
+.shop-community-index .index-community-hobby .icon_commu_red_heart {
+  display: inline-block;
+  width: .28rem;
+  height: .26rem;
+  background: url("../images/app/shopbbs/icon_commu_red_heart.png") no-repeat;
+  background-size: 100% auto;
+  vertical-align: middle;
+}
+
+.shop-community-index .mask {
+  display: none;
+}
+
+.shop-community-index .open.mask {
+  position: absolute;
+  display: block;
+  top: .9rem;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.shop-community-index .nav-list {
+  padding: .2rem 0;
+  background-color: #fff;
+  -webkit-transition: 1s cubic-bezier(0.35, 2, 0.35, 1), opacity 1s;
+  -moz-transition: 1s cubic-bezier(0.35, 2, 0.35, 1), opacity 1s;
+  transition: 1s cubic-bezier(0.35, 2, 0.35, 1), opacity 1s;
+}
+
+.shop-community-index .nav-list .nav-item {
+  float: left;
+  text-align: center;
+  width: 25%;
+  height: .4rem;
+  margin: .2rem 0;
+  color: #9FA0A0;
+  font-size: .25rem;
+}
+
+.shop-community-detail .head {
+  height: auto;
+  width: 7.5rem;
+}
+
+.shop-community-detail .head .imgbox {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+     -moz-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+.shop-community-detail .head .imgbox img {
+  display: inline-block;
+  max-width: 100%;
+}
+
+.shop-community-detail .commu-user {
+  background-color: #fff;
+}
+
+.shop-community-detail .commu-user .inner {
+  padding: 0.35rem 0rem;
+  margin: 0 .24rem;
+  font-size: 0;
+  overflow: hidden;
+}
+
+.shop-community-detail .commu-user .inner .imgbox {
+  position: relative;
+  display: inline-block;
+  width: 0.8rem;
+  height: 0.8rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+     -moz-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+.shop-community-detail .commu-user .inner .imgbox img {
+  display: inline-block;
+  width: 0.8rem;
+  height: 0.8rem;
+  border-radius: 50%;
+}
+
+.shop-community-detail .commu-user .imgbox {
+  float: left;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.shop-community-detail .commu-user .user-text {
+  float: left;
+  padding-left: .16rem;
+  font-size: .25rem;
+  height: .8rem;
+  line-height: .8rem;
+  color: #231815;
+}
+
+.shop-community-detail .commu-box {
+  margin: 0.15rem .24rem 0 .24rem;
+  padding-bottom: 0.25rem;
+}
+
+.shop-community-detail .commu-box .title {
+  padding: .12rem 0;
+  font-size: 0.3rem;
+  color: #231815;
+}
+
+.shop-community-detail .commu-box .title span {
+  font-size: 0.3rem;
+  color: #3A84FF;
+}
+
+.shop-community-detail .commu-box .content {
+  height: auto;
+  left: .42rem;
+  font-size: .25rem;
+  color: #9FA0A0;
+  overflow: hidden;
+  margin-bottom: .3rem;
+}
+
+.shop-community-detail .commu-box .textsize {
+  font-size: .25rem;
+  color: #9FA0A0;
+}
+
+.shop-community-detail .commu-box .time {
+  left: .42rem;
+}
+
+.shop-community-detail .commu-box .praise, .shop-community-detail .commu-box .collect {
+  float: right;
+  margin-left: .4rem;
+}
+
+.shop-community-detail .commulink {
+  background-color: #fff;
+  padding: 0 .28rem;
+  height: 0.85rem;
+  line-height: 0.85rem;
+}
+
+.shop-community-detail .commulink .title {
+  float: left;
+  color: #231815;
+  font-size: .28rem;
+}
+
+.shop-community-detail .commulink a {
+  display: block;
+  color: #231815;
+  width: 100%;
+}
+
+.shop-community-detail .commulink a::after {
+  display: table;
+  line-height: 0;
+  content: "";
+  clear: both;
+}
+
+.shop-community-detail .commulink .orderlink {
+  float: right;
+  vertical-align: middle;
+  color: #9FA0A0;
+  font-size: .29rem;
+}
+
+.shop-community-detail .commulink .orderlink .arrow-icon {
+  padding-left: .4rem;
+  display: inline-block;
+  width: .18rem;
+  height: .24rem;
+  background: url("../images/app/user/right_arrow.png") no-repeat right center;
+  background-size: contain;
+  vertical-align: middle;
+}
+
+.shop-community-detail .commulink .bottom-line {
+  height: 100%;
+}
+
+.shop-community-detail .commulink .title {
+  color: #9FA0A0;
+}
+
+.shop-community-detail .commu-review {
+  background-color: #fff;
+}
+
+.shop-community-detail .commu-review .tips {
+  background-color: #fff;
+  padding: .3rem .28rem .3rem 1.07rem;
+}
+
+.shop-community-detail .commu-review .tips p {
+  width: 6.1rem;
+  padding: .25rem 0;
+  text-align: center;
+  background-color: #F4F8FB;
+  border-radius: .1rem;
+  color: #9FA0A0;
+  font-size: .28rem;
+}
+
+.shop-community-detail .commu-review .review .posts-list .posts-item .content {
+  max-width: 6rem;
+  float: left;
+  font-size: .26rem;
+  height: auto;
+  line-height: .4rem;
+  color: #595757;
+  white-space: pre-wrap;
+  text-overflow: initial;
+}
+
+.shop-community-detail .commu-review .review .right-side .username {
+  color: #231815;
+}
+
+.shop-community-detail .commu-review .review .right-side .bottom {
+  margin: .2rem 0;
+  line-height: 1;
+}
+
+.shop-community-detail .commu-review .review .right-side .bottom .time {
+  float: left;
+  font-size: .25rem;
+  color: #9FA0A0;
+}
+
+.shop-community-detail .commu-review .review .right-side .bottom .replay {
+  float: right;
+  margin-right: .3rem;
+  font-size: 0;
+}
+
+.shop-community-detail .commu-review .review .right-side .other-replay-box {
+  padding: .28rem .28rem .12rem .28rem;
+  position: relative;
+  display: block;
+  background-color: #F4F8FB;
+  height: auto;
+  border-radius: .1rem;
+}
+
+.shop-community-detail .commu-review .review .right-side .other-replay-box .triangle {
+  position: absolute;
+  left: .28rem;
+  top: -.15rem;
+  display: inline-block;
+  width: 0;
+  height: 0;
+  border-left: .2rem solid transparent;
+  border-right: .2rem solid transparent;
+  border-bottom: .2rem solid #F4F8FB;
+}
+
+.shop-community-detail .commu-review .review .right-side .other-replay-box .other-replay-user p {
+  line-height: .35rem;
+}
+
+.shop-community-detail .commu-review .review .right-side .other-replay-box .other-replay-user .replay-user {
+  padding-right: .16rem;
+}
+
+.shop-community-detail .commu-review .review .right-side .other-replay-box .other-replay-user .replay-user, .shop-community-detail .commu-review .review .right-side .other-replay-box .other-replay-user .replay-content {
+  font-size: .25rem;
+  color: #595757;
+}
+
+.shop-community-detail .commu-review .review .right-side .other-replay-box .other-replay-num {
+  color: #3786FF !important;
+  font-size: .25rem;
+}
+
+.shop-community-detail .commu-review .review .right-side .other-replay-box .other-replay-num .icon_right_arrow {
+  display: inline-block;
+  width: .17rem;
+  height: .16rem;
+  border-right: 1px solid #3786FF;
+  border-bottom: 1px solid #3786FF;
+  -webkit-transform: rotate(-45deg);
+     -moz-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.shop-community-detail .index-product-box {
+  margin-bottom: 1rem;
+}
+
+.shop-community-detail .index-product-box .swiper-goods .goods-box {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+     -moz-box-orient: horizontal;
+     -moz-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 7.5rem;
+  height: 3.90rem;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+     -moz-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+     -moz-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-align-content: flex-start;
+      -ms-flex-line-pack: start;
+          align-content: flex-start;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+  background-color: #fff;
+}
+
+.shop-community-detail .index-product-box .swiper-goods .goods-box .goods-item {
+  -webkit-flex-basis: 33.3%;
+      -ms-flex-preferred-size: 33.3%;
+          flex-basis: 33.3%;
+  height: 3.90rem;
+  background-color: #fff;
+  margin-bottom: .2rem;
+  position: relative;
+  border: 1px solid #D9D9D9;
+  border-right: none;
+}
+
+.shop-community-detail .index-product-box .swiper-goods .goods-box .goods-item:last-child {
+  border-right: 1px solid #D9D9D9;
+}
+
+.shop-community-detail .index-product-box .swiper-goods .goods-box .goods-item .hot {
+  position: absolute;
+  text-align: center;
+  left: .14rem;
+  top: .07rem;
+  background-color: #c72443;
+  font-size: 12px;
+  color: #fff;
+  padding: 1px 2px;
+}
+
+.shop-community-detail .index-product-box .swiper-goods .goods-box .goods-item .imgbox {
+  padding: .15rem;
+}
+
+.shop-community-detail .index-product-box .swiper-goods .goods-box .goods-item .imgbox img {
+  width: 100%;
+}
+
+.shop-community-detail .index-product-box .swiper-goods .goods-box .goods-item .infobox {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  padding: .1rem .1rem;
+}
+
+.shop-community-detail .index-product-box .swiper-goods .goods-box .goods-item .infobox .brand-name {
+  display: block;
+  font-size: .24rem;
+  height: .5rem;
+  line-height: .5rem;
+  color: #333;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.shop-community-detail .index-product-box .swiper-goods .goods-box .goods-item .infobox .price {
+  color: #e50000;
+  font-size: .28rem;
+  height: .6rem;
+  line-height: .6rem;
+}
+
+.shop-community-detail .index-product-box .swiper-goods .goods-box .goods-item .infobox .oldprice {
+  color: #949494;
+  font-size: .22rem;
+  text-decoration: line-through;
+  padding-left: .2rem;
+}
+
+.shop-community-detail .index-product-box .swiper-goods .goods-box {
+  background-color: #F4F4F4;
+}
+
+.shop-community-detail .index-product-box .swiper-goods .goods-box .goods-item {
+  margin-left: .12rem;
+  border: none;
+}
+
+.community-footer {
+  height: 1rem;
+  background-color: #333333;
+  line-height: 1rem;
+}
+
+.community-footer .footer_inner .footer_item {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 1 33.3%;
+     -moz-box-flex: 1;
+      -ms-flex: 1 1 33.3%;
+          flex: 1 1 33.3%;
+}
+
+.community-footer {
+  background-color: #333;
+  display: block;
+  position: relative;
+  height: 1rem;
+  width: 7.5rem;
+  max-width: 1080px;
+}
+
+.community-footer .footer_inner {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-flow: row nowrap;
+     -moz-box-orient: horizontal;
+     -moz-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+     -moz-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  position: fixed;
+  bottom: 0;
+  height: 1rem;
+  width: 7.5rem;
+  max-width: 1080px;
+  z-index: 100;
+  background-color: #333333;
+  color: #fff;
+  border-top: 1px solid #333333;
+  font-size: 0;
+  text-align: center;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around;
+}
+
+.community-footer .footer_inner .footer_item {
+  display: inline-block;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 1 33.3%;
+     -moz-box-flex: 1;
+      -ms-flex: 1 1 33.3%;
+          flex: 1 1 33.3%;
+  height: 1rem;
+  position: relative;
+}
+
+.community-footer .footer_inner .footer_item .link {
+  position: relative;
+  display: inline-block;
+  height: 100%;
+  text-align: center;
+  font-size: 0;
+  line-height: normal;
+  color: #fff;
+}
+
+.community-footer .footer_inner .footer_item i[class*='*_common_icon'] {
+  position: relative;
+  display: inline-block;
+}
+
+.community-footer .footer_inner .footer_item .icon-box {
+  display: inline-block;
+  width: 100%;
+  height: 0.5rem;
+  line-height: 0.5rem;
+  position: relative;
+}
+
+.community-footer .footer_inner .footer_item .icon-box i {
+  position: absolute;
+  top: 28%;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+     -moz-transform: translate(-50%);
+      -ms-transform: translate(-50%);
+          transform: translate(-50%);
+}
+
+.community-footer .footer_inner .footer_item .text {
+  display: inline-block;
+  width: 100%;
+  height: .4rem;
+  line-height: .4rem;
+  font-size: .18rem;
+  position: relative;
+}
+
+.community-footer .footer_inner .footer_item .link.on .text {
+  color: #fff;
+}
+
+.icon_footer_commu_praise {
+  display: inline-block;
+  width: .28rem;
+  height: .26rem;
+  background: transparent url("../images/app/shopbbs/icon_footer_commu_praise.png") no-repeat;
+  background-size: 100% auto;
+  vertical-align: middle;
+}
+
+.icon_footer_commu_talk {
+  display: inline-block;
+  width: .30rem;
+  height: .27rem;
+  background: transparent url("../images/app/shopbbs/icon_footer_commu_talk.png") no-repeat;
+  background-size: 100% auto;
+  vertical-align: middle;
+}
+
+.icon_footer_commu_buy {
+  display: inline-block;
+  width: .28rem;
+  height: .31rem;
+  background: transparent url("../images/app/shopbbs/icon_footer_commu_buy.png") no-repeat;
+  background-size: 100% auto;
+  vertical-align: middle;
+}
+
+.icon_header_commu_white_back {
+  display: inline-block;
+  width: .21rem;
+  height: .37rem;
+  background: transparent url("../images/app/shopbbs/icon_header_commu_white_back.png") no-repeat;
+  background-size: 100% auto;
+  vertical-align: middle;
+}
+
+.form-comm-reply {
+  display: none;
+  background-color: #F4F8FB;
+  position: relative;
+  height: 1rem;
+  width: 7.5rem;
+  max-width: 1080px;
+}
+
+.form-comm-reply .form-comm-inner {
+  position: fixed;
+  bottom: 0;
+  height: 1rem;
+  background-color: #F4F8FB;
+  padding: 0.2rem .24rem;
+  z-index: 1;
+}
+
+.form-comm-reply .form-reply {
+  height: .6rem;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.form-comm-reply .form-reply-item {
+  float: left;
+  height: 100%;
+  width: 6rem;
+  padding: 0 .1rem;
+  border-radius: .05rem;
+  font-size: .22rem;
+}
+
+.form-comm-reply .form-reply-btn {
+  width: 1rem;
+  float: left;
+  font-size: .25rem;
+  height: 100%;
+  background-color: #F4F8FB;
+  color: #9FA0A0;
+}
+
+.form-comm-reply input[type='submit']:enabled:active {
+  width: 1rem;
+  float: left;
+  font-size: .25rem;
+  height: 100%;
+  background-color: #F4F8FB;
+  color: #9FA0A0;
+  border: none;
+}
+
+.replay-comment .other-replay-user .replay-comment-box .imgbox {
+  position: relative;
+  display: inline-block;
+  width: 0.5rem;
+  height: 0.5rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+     -moz-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+.replay-comment .other-replay-user .replay-comment-box .imgbox img {
+  display: inline-block;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+}
+
+.replay-comment .other-replay-user .replay-comment-box .imgbox {
+  float: left;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.replay-comment .other-replay-user .replay-comment-box .replay-user {
+  float: left;
+  padding-left: .1rem;
+  font-size: .25rem;
+  height: .5rem;
+  line-height: .5rem;
+  color: #231815;
+}
+
+.replay-comment .other-replay-user .replay-comment-box .replay-content {
+  display: block;
+  width: 100%;
+  line-height: .35rem;
+  margin: .1rem 0;
+}
+
+.replay-comment .other-replay-num {
+  display: none;
+  width: 100%;
+  text-align: center;
+  color: #9FA0A0 !important;
+}
+
+.replay-comment .other-replay-num.more-replay .icon_bbs_down_arrow {
+  margin-left: .1rem;
+}
+
+.replay-comment .other-replay-num.more-replay.up .icon_bbs_down_arrow {
+  -webkit-transform: scaleY(-1);
+     -moz-transform: scaleY(-1);
+      -ms-transform: scaleY(-1);
+          transform: scaleY(-1);
+}
+
+.replay-comment .more-replay.other-replay-num {
+  display: block;
+}
+
+.replay-comment-form.form-comm-reply {
+  display: block;
+}
+
+/****商城社区end------**/
 
 /*# sourceMappingURL=maps/community.css.map */

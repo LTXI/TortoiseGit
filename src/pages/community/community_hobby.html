@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+    @@include('../../partical/meta.inc',{"title":"兴趣"})
+    @@include('../../partical/styles.inc', {"links":""})
+    <link rel="stylesheet" href="../../assets/styles/app.css">
+    @@include('../../partical/fontsize.inc')
+</head>
+<body>
+<!--头部-->
+
+
+<div id="content" class="page-content shop-community-hobby">
+    <div class="head">
+        <div class="desc">
+            <p class="title title-bg">选择你喜欢的内容<br></p>
+            <p class="title title-sm">如果有新主意，可以随时修改</p>
+        </div>
+    </div>
+    <div class="hobby">
+        <form action="#" method="post">
+            <ul class="hobby-box clearfix">
+                <li class="bobby-item">
+                    <div class="inner">
+                        <input type="checkbox" name="bobby" value="1">
+                        <img src="../../assets/images/app/shopbbs/commu_hobby_food.png" alt="喜爱">
+                        <span class="checkbox-icon checkbox-un-icon"></span>
+
+                        <p class="hobby-desc">美食饮料</p>
+                    </div>
+                </li>
+                <li class="bobby-item">
+                    <div class="inner">
+                        <input type="checkbox"  name="bobby" value="2">
+                        <img src="../../assets/images/app/shopbbs/commu_hobby_trip.png" alt="喜爱">
+                        <span class="checkbox-icon checkbox-un-icon"></span>
+
+                        <p class="hobby-desc">出行旅游</p>
+                    </div>
+
+                </li>
+                <li class="bobby-item">
+                    <div class="inner">
+                        <input type="checkbox" name="bobby" value="3">
+                        <img src="../../assets/images/app/shopbbs/commu_hobby_cool.png" alt="喜爱">
+                        <span class="checkbox-icon checkbox-un-icon"></span>
+
+                        <p class="hobby-desc">装逼</p>
+                    </div>
+                </li>
+
+
+                <li class="bobby-item">
+                    <div class="inner">
+                        <input type="checkbox"  name="bobby" value="4">
+                        <img src="../../assets/images/app/shopbbs/commu_hobby_beauty.png" alt="喜爱">
+                        <span class="checkbox-icon checkbox-un-icon"></span>
+
+                        <p class="hobby-desc">美妆个护</p>
+                    </div>
+                </li>
+                <li class="bobby-item">
+                    <div class="inner">
+                        <input type="checkbox"  name="bobby" value="5">
+                        <img src="../../assets/images/app/shopbbs/commu_hobby_life.png" alt="喜爱">
+                        <span class="checkbox-icon checkbox-un-icon"></span>
+
+                        <p class="hobby-desc">情趣生活</p>
+                    </div>
+                </li>
+                <li class="bobby-item">
+                    <div class="inner">
+                        <input type="checkbox"  name="bobby" value="6">
+                        <img src="../../assets/images/app/shopbbs/commu_hobby_home.png" alt="喜爱">
+                        <span class="checkbox-icon checkbox-un-icon"></span>
+
+                        <p class="hobby-desc">家居日用</p>
+                    </div>
+                </li>
+                <li class="bobby-item">
+                    <div class="inner">
+                        <input type="checkbox"  name="bobby" value="5">
+                        <img src="../../assets/images/app/shopbbs/commu_hobby_health.png" alt="喜爱">
+                        <span class="checkbox-icon checkbox-un-icon"></span>
+
+                        <p class="hobby-desc">营养保健</p>
+                    </div>
+                </li>
+                <li class="bobby-item">
+                    <div class="inner">
+                        <input type="checkbox"  name="bobby" value="6">
+                        <img src="../../assets/images/app/shopbbs/commu_hobby_baby.png" alt="喜爱">
+                        <span class="checkbox-icon checkbox-un-icon"></span>
+
+                        <p class="hobby-desc">母婴用品</p>
+                    </div>
+                </li>
+            </ul>
+            <div class="form-btn-box">
+                <div class="form-btn">
+                    <a href="javascript:void(0);" class="btn-text" onclick="javascript:App.submit();">选择你感兴趣的标签</a></div>
+            </div>
+
+        </form>
+    </div>
+</div>
+
+<link rel="stylesheet" href="../../assets/styles/community.css">
+<script>$(function () {
+  $(".hobby-box li").click(function () {
+    if($(this).hasClass("active")){
+      $(this).removeClass("active");
+      $(this).find("input[type='checkbox']").attr("checked", false);
+    }else{
+      $(this).addClass("active");
+      $(this).find("input[type='checkbox']").attr("checked", true);
+    }
+    var checkbox_arr = $("input[type='checkbox']");
+    var ischecked = false;
+    for( var i = 0; i < checkbox_arr.length; i++){
+     if($(checkbox_arr[i]).is(':checked')){
+        ischecked = true;
+        break;
+      }
+    }
+    if(ischecked){
+      $(".form-btn-box .btn-text").css({"background-color":"#E60000","color":"#fff"});
+    }else{
+      $(".form-btn-box .btn-text").css({"background-color":"#DDD","color":"#9FA0A0"});
+    }
+  });
+});</script>
+</body>
+</html>

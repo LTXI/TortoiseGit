@@ -1,3 +1,4 @@
+var App_shop = {};
 $(function () {
   $(".app-page-footer a").on('click', function (e) {
     $(".app-page-footer a").removeClass('on');
@@ -25,7 +26,7 @@ $(function () {
     });
   })();
 
-  //滚动事件，改变头部背景
+  /*//滚动事件，改变头部背景
   (function scroll() {
     var headerEle = $(".jm-header.header-fixed.transparent-bg.scroll");
     var target = $(".new-twitter .banner");
@@ -45,7 +46,7 @@ $(function () {
       headerEle.css({opacity: scale});
       //console.log(scale+"  "+scrollTop +"   "+ targetHight);
     });
-  })();
+  })();*/
 /**
  * <div class="ShareObject ">
  <form class="share-form" >
@@ -88,8 +89,70 @@ $(function () {
      });
    };
   doneShare();
+
+  popupConfirm();
 });
 
+/**确认弹框 begin------------------------------------------**/
+//二次弹框确认
+/*<div id="alert_mb_box" class="alert_mb_box">
+  <div id="alert_mb_con" class="alert_mb_con">
+  <span class="alert_mb_tit">温馨提示标题标题</span>
+  <div class="alert_mb_msg">您确定要退出吗？</div>
+<div class="alert_mb_btnbox">
+  <span id="alert_mb_btn_ok" class="alert_mb_btn_ok alert_mb_btn">确定</span>
+  <span id="alert_mb_btn_no" class="alert_mb_btn_no alert_mb_btn">取消</span>
+</div>
+</div>
+</div>*/
+var popupConfirm = function() {
+  App_shop.MsgJMBox = {
+    //消息提示框
+    Alert: function (title, msg) {
+      GenerateHtml("alert", title, msg);
+      btnOk();  //alert只是弹出消息，因此没必要用到回调函数callback
+      btnNo();
+    },
+    //消息二次确认框
+    Confirm: function (title, msg, callback) {
+      GenerateHtml("confirm", title, msg);
+      btnOk(callback);
+      btnNo();
+    }
+  }
+  //生成Html
+  var GenerateHtml = function (type, title, msg) {
+    var _html = "";
+    _html += '<div id="alert_mb_box" class="alert_mb_box"><div id="alert_mb_con" class="alert_mb_con"><span class="alert_mb_tit">' + title + '</span>';
+    _html += '<div class="alert_mb_msg">' + msg + '</div><div class="alert_mb_btnbox">';
+    if (type == "alert") {
+      _html += '<span id="alert_mb_btn_ok" class="alert_mb_btn_ok alert_mb_btn mb_notice_ok">确定</span>';
+    }
+    if (type == "confirm") {
+      _html += '<span id="alert_mb_btn_ok" class="alert_mb_btn_ok alert_mb_btn">确定</span>';
+      _html += '<span id="alert_mb_btn_no" class="alert_mb_btn_no alert_mb_btn">取消</span>';
+    }
+    _html += '</div></div></div>';
+    $("body").append(_html);
+  }
+
+  //确定按钮事件
+  var btnOk = function (callback) {
+    $("#alert_mb_btn_ok").click(function () {
+      $("#alert_mb_box").remove();
+      if (typeof (callback) == 'function') {
+        callback();
+      }
+    });
+  }
+  //取消按钮事件
+  var btnNo = function () {
+    $("#alert_mb_btn_no").click(function () {
+      $("#alert_mb_box").remove();
+    });
+  }
+};
+/**确认弹框 end------------------------------------------**/
 
 
 

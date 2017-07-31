@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html>
+<head>
+       <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+    <meta content="telephone=no" name="format-detection" />
+    <meta name="google" value="notranslate" />
+    <meta name="root-url" value="<?php echo JQ_URL; ?>" />
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <meta http-equiv="x-dns-prefetch-control" content="on" />
+    <title>社区详情</title>
+
+    <link rel="stylesheet" href="../../styles/mui.min.css" />
+    <link rel="stylesheet" href="../../styles/swiper.min.css" />
+    <link rel="stylesheet" href="../../styles/framework.css" />
+    <link rel="stylesheet" href="../../styles/app-base.css" />
+    <link rel="stylesheet" href="../../styles/ricky.css?v=04062" />
+ <script src="../../scripts/mui.min.js"></script>
+   <script type="text/javascript" src="../../scripts/zepto.min.js"></script>
+    <script type="text/javascript" src="../../scripts/zepto.swiper.min.js"></script>
+   <!--<script type="text/javascript" src="../../scripts/zepto.app.js?v=04063"></script>
+    <script type="text/javascript" src="../../scripts/zepto.custom.js?v=04062"></script>-->
+
+
+<!--
+    <link rel="stylesheet" href="http://192.168.2.133/styles/swiper.min.css" />
+        <link rel="stylesheet" href="http://192.168.2.133/styles/framework.css" />
+        <link rel="stylesheet" href="http://192.168.2.133/styles/app-base.css?v=04062" />
+        <link rel="stylesheet" href="http://192.168.2.133/styles/ricky.css" />
+    	<script type="text/javascript" src="http://192.168.2.133/scripts/mui.min.js"></script>
+        <script type="text/javascript" src="http://192.168.2.133/scripts/zepto.min.js"></script>
+        <script type="text/javascript" src="http://192.168.2.133/scripts/zepto.swiper.min.js"></script>
+        <script type="text/javascript" src="http://192.168.2.133/scripts/zepto.app.js?v=04063"></script>
+        <script type="text/javascript" src="http://192.168.2.133/scripts/zepto.custom.js?v=04062"></script>
+
+        <link rel='stylesheet' href='http://192.168.2.133/styles/mui.min.css'/>
+        <link rel='stylesheet' href='http://192.168.2.133/styles/app.css'/>
+        <script type="text/javascript" src="http://192.168.2.133/scripts/app.js"></script>
+         <link rel="stylesheet" href="http://192.168.2.133/styles/zepto.mdatetimer.css">
+        <script type="text/javascript" src="http://192.168.2.133/scripts/zepto.mdatetimer.js"></script>
+ -->
+    <!--样式模块公用放入-->
+
+    <link rel="stylesheet" href="../../assets/styles/app.css">
+    <script >
+document.addEventListener('DOMContentLoaded', function () {
+(function initFontSize() {
+		var resizeEvent = 'orientationchange' in window ? 'orientationchange' : 'resize';
+
+		function changeSize() {
+			const designWidth = 750; //设计稿尺寸是640px
+			const designWidth2 = 1080;
+			var html = document.documentElement; //根元素
+			var deviceWidth = html.clientWidth; //屏幕逻辑宽度
+			var base = 100;
+
+			if (deviceWidth > designWidth2) {
+				deviceWidth = designWidth2;
+			}
+			html.style.fontSize = (deviceWidth / designWidth) * base + "px";
+			//console.log(html.style.fontSize);
+			//alert(html.style.fontSize+"==="+deviceWidth);
+		}
+		changeSize();
+		window.addEventListener(resizeEvent, changeSize, false);
+	})();
+});
+</script>
+</head>
+<body>
+<!--头部-->
+<!--头部-->
+<div class="jm-header transparent-bg header-fixed scroll">
+    <div class="jm-wrapper">
+        <a href="javascript:history.go(-1);">
+            <div class="posl icon icon_back icon-fix"></div>
+        </a>
+        <p class="title"></p>
+        <a href="#">
+            <div class="posr icon"></div>
+        </a>
+    </div>
+</div>
+<!--如果布局fixed，将占据垂直空间1.26rem-->
+<div class="hold-space-top"></div>
+<!--导航栏-->
+<div class="header-nav-bar">
+        <span class="triangle"></span>
+        <ul>
+            <a href="#"><li class="navltem bdr-bottom"><i class="navicon  icon_header_nav_home"></i>首页</li></a>
+        </ul>
+    </div>
+
+<div id="content" class="page-content shop-community-detail">
+    <div class="head">
+            <div class="swiper-container swiper-container-banner">
+                <div class="swiper-wrapper ">
+                    <a
+                            class="swiper-slide swiper-slide-active" href="javascript:void(0);"><img
+                            src="../../assets/images/app/bbs/banner.png"></a>
+                    <a
+                            class="swiper-slide swiper-slide-active" href="javascript:void(0);"><img
+                            src="../../assets/images/app/bbs/banner2.png"></a>
+                    <a
+                            class="swiper-slide swiper-slide-active" href="javascript:void(0);"><img
+                            src="../../assets/images/app/shopbbs/commu_product_img.png"></a>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+    </div>
+    <div class="commu-user mrg-bottom24">
+        <div class="inner bdr-bottom">
+            <div class="imgbox">
+                <img src="../../assets/images/app/bbs/bbs_msg_dead_normal.png" alt="头像">
+            </div>
+            <span class="user-text">巴塞洛拉</span>
+        </div>
+        <div class="commu-box">
+            <div class="commu-detail">
+                <p class="title">不发胖的零食<span>#零食零食#</span></p>
+                <div class="content">不发胖的零食不发胖的零食不发胖的零食不发胖的零食不发胖的零食发胖的零食发胖的零食发胖的零食发胖的零食发胖的零食发胖的零食</div>
+                <div class="clearfix">
+                    <span class="time textsize">2017-07-22</span>
+                    <span class="praise textsize">430点赞</span>
+                    <span class="collect textsize">430收藏</span>
+
+                </div>
+                <div class="state">
+                    <a href="#">
+                        <i class="icon_bbs_share mrg-r10"></i>
+                        <span class="text textsize">分享</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="commulink">
+        <a href="community_comment.html" class="bdr-bottom bottom-line">
+            <span class="title">九件社区评论</span>
+            <span class="orderlink">共50条评论<i class="arrow-icon"></i>
+            </span>
+        </a>
+    </div>
+
+    <div class="commu-review">
+        <div class="tips">
+            <p>既然来了，有话就留点话呗。</p>
+        </div>
+
+        <div class="review">
+            <ul class="posts-list">
+                <li class="posts-item clearfix">
+                    <div class="left-side">
+                        <div class="imgbox">
+                            <img src="../../assets/images/app/bbs/bbs_msg_dead_normal.png" alt="">
+                        </div>
+                    </div>
+                    <div class="right-side">
+                        <p class="username">九妹</p>
+                        <p class="title">夏日水果榜单夏日水果榜单</p>
+                        <div class="clearfix contentbox">
+                            <p class="content">夏日水果榜单夏日水果榜单夏日水果榜单夏日水果榜单夏日水果榜单夏日水果榜单夏日水果榜单夏日水果榜单夏日水果榜单夏日水果榜单夏日水果榜单夏日水果榜单夏日水果榜单夏日水果榜单夏日水果榜单夏日水果榜单夏日水果榜单夏日水果榜单</p>
+                        </div>
+                        <div class="bottom clearfix">
+                            <span class="time">2017-07-25</span>
+
+                            <span class="like">
+                                <i class="icon_bbs_like_normal mrg-r10"></i>
+                                <span class="text">赞</span>
+                            </span>
+                            <span class="replay">
+                                <span class="text">回复</span>
+                            </span>
+                        </div>
+
+                        <div class="other-replay-box">
+                            <span class="triangle"></span>
+                            <a href="community_comment.html">
+                            <div class="other-replay-user clearfix">
+                                <p>
+                                    <span class="replay-user">巴塞洛拉(作者):</span>
+                                    <span class="replay-content">内容内容内容内容内容内容内容内容内容内容内容内容内容内容</span>
+                                </p>
+                            </div>
+                            <span class="other-replay-num">共2条回复<i class="icon_right_arrow"></i></span>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+                <li class="posts-item clearfix">
+                    <div class="left-side">
+                        <div class="imgbox">
+                            <img src="../../assets/images/app/bbs/bbs_msg_dead_normal.png" alt="">
+                        </div>
+                    </div>
+                    <div class="right-side">
+                        <p class="username">九妹</p>
+
+                        <p class="title">夏日水果榜单夏日水果榜单</p>
+                        <div class="clearfix contentbox">
+                            <p class="content ">夏日水果榜单夏日水果榜单夏日水果榜单夏日水果榜单夏日水果榜单夏日水果榜单</p>
+                        </div>
+                        <div class="bottom clearfix">
+                            <span class="time">2017-07-25</span>
+                            <span class="like">
+                                <i class="icon_bbs_like_normal mrg-r10"></i>
+                                <span class="text">赞</span>
+                            </span>
+                            <span class="replay">
+                                <span class="text">回复</span>
+                            </span>
+                        </div>
+
+                        <div class="other-replay-box">
+                            <span class="triangle"></span>
+                            <a href="community_comment.html">
+                            <div class="other-replay-user clearfix">
+                                <p>
+                                    <span class="replay-user">巴塞洛拉(作者):</span>
+                                    <span class="replay-content">内容内容内容内容内容内容内容内容内容内容内容内容内容内容</span>
+                                </p>
+                            </div>
+                            <span class="other-replay-num">共2条回复<i class="icon_right_arrow"></i></span>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="recommend-title">
+        <div class="info-list-title">
+        <span class="title-box">
+<i class="common_icon_fix icon_order_title_sign"></i>           <span class="title">相关商品</span>
+<i class="common_icon_fix icon_order_title_sign scalex"></i>
+</span>
+        </div>
+    </div>
+    <div class="index-product-box">
+        <div class="swiper-container swiper-container-hot swiper-goods">
+            <ul class="list goods-box swiper-wrapper">
+                <li class="goods-item swiper-slide">
+                    <a href="http://www.baidu.com">
+                        <div class="imgbox">
+                            <img src="../../assets/images/brand/1484592650148983443.jpg" alt="">
+                        </div>
+                        <span class="hot">热销</span>
+                        <div class="infobox">
+                            <span class="brand-name">1科颜氏高温保湿科颜氏高温保湿科颜氏高温保湿科颜氏高温保湿</span>
+                            <div class="price">$320<span class="oldprice">$400</span></div>
+                        </div>
+                    </a>
+                </li>
+                <li class="goods-item swiper-slide">
+                    <a href="http://www.baidu.com">
+                        <div class="imgbox">
+                            <img src="../../assets/images/brand/goods-1.png" alt="">
+                        </div>
+                        <span class="hot">热销</span>
+                        <div class="infobox">
+                            <span class="brand-name">2科颜氏高温保湿科颜氏高温保湿科颜氏高温保湿科颜氏高温保湿</span>
+                            <div class="price">$320<span class="oldprice">$400</span></div>
+                        </div>
+                    </a>
+                </li>
+                <li class="goods-item swiper-slide">
+                    <a href="http://www.baidu.com">
+                        <div class="imgbox">
+                            <img src="../../assets/images/brand/1484592650148983443.jpg" alt="">
+                        </div>
+                        <span class="hot">热销</span>
+                        <div class="infobox">
+                            <span class="brand-name">3科颜氏高温保湿科颜氏高温保湿科颜氏高温保湿科颜氏高温保湿</span>
+                            <div class="price">$320<span class="oldprice">$400</span></div>
+                        </div>
+                    </a>
+                </li>
+                <li class="goods-item swiper-slide">
+                    <a href="#">
+                        <div class="imgbox">
+                            <img src="../../assets/images/brand/goods-1.png" alt="">
+                        </div>
+                        <span class="hot">热销</span>
+                        <div class="infobox">
+                            <span class="brand-name">4科颜氏高温保湿科颜氏高温保湿科颜氏高温保湿科颜氏高温保湿</span>
+                            <div class="price">$320<span class="oldprice">$400</span></div>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+    <div id="community-footer" class="community-footer">
+        <ul class="footer_inner ">
+            <li class="footer_item">
+                <a class="on  link" href="#">
+            <span class="icon-box">
+                <i class="icon_footer_commu_praise"></i>
+            </span>
+
+                    <span class="text">赞 · 100</span>
+                </a>
+            </li>
+            <li class="footer_item">
+                <a class="link" href="#">
+                <span class="icon-box">
+                    <i class="icon_footer_commu_talk"></i>
+                </span>
+
+                    <span class="text">评论 · 100</span>
+                </a>
+            </li>
+            <li class="footer_item">
+                <a class="link" href="#">
+                        <span class="icon-box">
+                            <i class="icon_footer_commu_buy"></i>
+                        </span>
+                    <span class="text">购买商品</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+<!--回复输入框-->
+<div class="form-comm-reply">
+    <div class="form-comm-inner">
+        <form action="#" class="form-reply">
+            <input type="text" class="form-reply-item" name="replay" placeholder="走心也分好几种，赶评论的最有种">
+            <input type="submit" class="form-reply-btn" value="发布">
+        </form>
+    </div>
+</div>
+
+<link rel="stylesheet" href="../../assets/styles/community.css">
+<script>
+  $(function () {
+
+
+    var bannerSwiper = new Swiper('.swiper-container-banner', {
+      autoplay: 0,//可选选项，自动滑动
+      direction: 'horizontal',
+      loop: true,
+      // 如果需要分页器
+      pagination: '.swiper-pagination',
+      paginationClickable :false,
+      autoHeight:true,
+      onSlideChangeStart: function(swiper) {
+        var H = $(".content-slide").eq(swiper.activeIndex).height();
+        $(".swiper-slide").css('height', H + 'px');
+        $(".swiper-wrapper").css('height', H + 'px');
+      }
+    });
+
+  $(".hobby-box li").click(function () {
+    if ($(this).hasClass("active")) {
+      $(this).removeClass("active");
+      $(this).find("input[type='checkbox']").attr("checked", false);
+    } else {
+      $(this).addClass("active");
+      $(this).find("input[type='checkbox']").attr("checked", true);
+    }
+  });
+});
+</script>
+
+<script>
+  $(function () {
+    $(".posts-list").on("click",'.open-arrow', function (e) {
+      var parent = $(e.currentTarget).parent('.contentbox');
+      if(parent.hasClass("open")){
+        parent.removeClass("open");
+      }else{
+        parent.addClass("open");
+      }
+    })
+  })
+</script>
+
+<script>
+  var mySwiperhot = new Swiper('.swiper-container-hot', {
+    freeMode : true,
+    centeredSlides : false,
+    slidesPerView : 3,
+    paginationClickable: true,
+    onTouchStart: function(swiper,even){
+      swiper.unlockSwipeToPrev();
+      swiper.unlockSwipeToNext();
+      if(swiper.isEnd){
+        swiper.lockSwipeToNext();
+      }
+      else if(swiper.activeIndex==0){
+        swiper.lockSwipeToPrev();
+      }
+    }
+  });
+  $(function () {
+    $(document).on("click",".commu-review .tips, .replay", function(e){
+      $(".form-comm-reply").show();
+      $(".community-footer").hide();
+      $("input[type='text']").focus();
+    });
+    $(".review").not(".commu-review .tips, .replay").on("click", function(e){
+      $(".form-comm-reply").hide();
+      $(".community-footer").show();
+    });
+
+  /* $("input[type='text']").blur(function(){
+     if($(".form-comm-inner").hasFocus){
+
+     }else{
+       $(".form-comm-reply").hide();
+       $(".community-footer").show();
+     }
+   });*/
+
+    scroll();
+  });
+  //滚动事件，改变头部背景
+  function scroll() {
+    var headerEle = $(".jm-header.header-fixed.transparent-bg.scroll");
+    var target = $(".shop-community-detail .head");
+    $(window).scroll(function (e) {
+      //头部高度
+      var targetHight = target.height();
+      var initOpacity = 0.3;
+      var scrollTop = $(window).scrollTop();
+      var scale = scrollTop / targetHight;
+      headerEle.removeClass('bottom-line');
+      if (scale > 1) {
+        scale = 1;
+        headerEle.addClass('bottom-line');
+      } else if (scale < initOpacity) {
+        scale = initOpacity;
+      }
+      headerEle.css({opacity: scale});
+      //console.log(scale+"  "+scrollTop +"   "+ targetHight);
+    });
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    @@include('../../partical/meta.inc',{"title":"公用模块"})
+    @@include('../../partical/styles.inc', {"links":"" })
+    <link rel="stylesheet" href="../../assets/styles/app.css">
+    @@include('../../partical/fontsize.inc')
+</head>
+<body>
+<!--头部-->
+@@include('../../partical/appheadernav.inc',{
+"header-fixed":"header-fixed",
+"title":"公用模块"
+})
+<div id="content" class="page-content search-page">
+
+    <!--多选项模块-->
+    <div class="checkbox">
+        <div class="search-content">
+            <h3 class="u-title">热门搜索</h3>
+            <div class="m-hotwordlist clearfix">
+                <a class="u-hotword" href="#" target="_self">600元礼包券</a>
+                <a class="u-hotword z-highlight" href="#" target="_self">电动牙刷</a>
+                <a class="u-hotword z-highlight" href="#" target="_self">电动牙刷</a>
+
+                <a class="u-hotword z-highlight" href="#" target="_self">尤妮佳</a>
+                <a class="u-hotword z-highlight" href="#" target="_self">电动牙刷</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>

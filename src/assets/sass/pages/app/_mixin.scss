@@ -943,6 +943,84 @@
 
 
 
+//滑动商品begin-----------------
+//商城首页  社区详情页
+@mixin swiper-goods-box(){
+.swiper-goods {
+  .goods-box {
+    display: flex;
+    flex-direction: row;
+    width: 7.5rem;
+    height: 3.90rem;
+    //margin: 0.26rem .28rem .28rem .28rem;
+    justify-content: flex-start;
+    align-items: flex-start;
+    align-content: flex-start;
+    flex-wrap: nowrap;
+    background-color: #fff;
+    .goods-item {
+      flex-basis: 33.3%;
+      height: 3.90rem;
+      background-color: #fff;
+      margin-bottom: .2rem;
+      position: relative;
+      border: 1px solid #D9D9D9;
+      border-right: none;
+
+      &:last-child{
+        border-right: 1px solid #D9D9D9;
+      }
+      .hot{
+        position: absolute;
+        text-align: center;
+        left: .14rem;
+        top: .07rem;
+        background-color: #c72443;
+        font-size: 12px;
+        color: #fff;
+        padding: 1px 2px;
+      }
+      .imgbox {
+        padding:.15rem;
+      }
+      .imgbox img{
+        width: 100%;
+      }
+      .infobox{
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        padding: .1rem .1rem;
+        .brand-name{
+          display: block;
+          font-size: .24rem;
+          height: .5rem;
+          line-height: .5rem;
+          color: #333;
+          @include ellipsis;
+        }
+        .price{
+          color: #e50000;
+          font-size: .28rem;
+          height: .6rem;
+          line-height: .6rem;
+        }
+
+        .oldprice{
+          color: #949494;
+          font-size: .22rem;
+          text-decoration: line-through;
+          padding-left: .2rem;
+        }
+      }
+    }
+  }
+}
+}
+//滑动商品end-------------------
+
+
+
 
 
 
