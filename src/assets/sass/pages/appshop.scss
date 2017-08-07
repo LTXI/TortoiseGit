@@ -117,7 +117,7 @@
     display: flex;
     flex-direction: row;
     width: 7.5rem;
-    height: 3.82rem;
+    height: 3.6rem;
     justify-content: flex-start;
     align-items: flex-start;
     align-content: flex-start;
@@ -158,18 +158,23 @@
       }
     }
   }
-
 }
 //头部导航
 .nav-index-box{
   background: #fff;
+  height: .6rem;
   .main-nav{
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 2;
     font-size: 0;
-    position: relative;
     overflow-x: auto;
     overflow-y: hidden;
     white-space: nowrap;
-    -webkit-overflow-scrolling: touch
+    -webkit-overflow-scrolling: touch;
+    background-color: #fff;
+
   }
   .nav-type-item {
     font-size: 0;
@@ -224,11 +229,26 @@
         color: #fff;
         padding: 1px 2px;
       }
-      .imgbox {
-        padding:.15rem;
+      .imginfo {
+        position: relative;
+        overflow: hidden;
+        padding-top: 100%;
       }
-      .imgbox img{
-        width: 100%;
+      .imgbox{
+        position: absolute;
+        width:100%;
+        left: 0;
+        top:0;
+        bottom: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        padding: .15rem;
+        img{
+          display: inline-block;
+          max-width: 100%;
+        }
       }
       .infobox{
         position: absolute;
