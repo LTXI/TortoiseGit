@@ -48,8 +48,8 @@
         <a href="#" class="more-btn">更多</a>
     </div>
     <!--内容列表-->
-    <div class="swiper-container">
-        <ul class="list goods-box swiper-wrapper">
+    <div class="swiper-container swiper-container-hot">
+        <ul class="list goods-box swiper-wrapper ">
             <li class="goods-item swiper-slide">
                 <a href="http://www.baidu.com">
                     <div class="imgbox">
@@ -108,7 +108,7 @@
             <img src="../../assets/images/store/store_index_new_ad.png" alt="招募">
         </a>
     </div>
-    <div class="store-recommend">
+    <!--<div class="store-recommend">
         <div class="info-list-title">
         <span class="title-box">
 <i class="common_icon_fix icon_order_title_sign"></i>           <span class="title">热门品牌</span>
@@ -158,7 +158,88 @@
                 </div>
             </a>
         </li>
-    </ul>
+    </ul>-->
+    <!--品牌-->
+    <div class="recommend-title">
+        <div class="info-list-title">
+        <span class="title-box">
+<i class="common_icon_fix icon_order_title_sign"></i>           <span class="title">热门品牌</span>
+<i class="common_icon_fix icon_order_title_sign scalex"></i>
+</span>
+        </div>
+    </div>
+    <div class="index-brand-box mrg-bottom24">
+        <div class="swiper-container swiper-container-brand">
+            <ul class="list swiper-wrapper">
+                <li class="brand-item item-box swiper-slide">
+                    <a href="#">
+                        <div class="inner">
+                            <div class="item">
+                                <div class="imgbox">
+                                    <img src="../../assets/images/common/bg.png" alt="品牌"/>
+                                </div>
+                            </div>
+                            <p class="title">鲜奈儿鲜奈儿</p>
+                            <p class="desc">保持沁润水靓保持沁润</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="brand-item item-box swiper-slide">
+                    <a href="#">
+                        <div class="inner">
+                            <div class="item">
+                                <div class="imgbox">
+                                    <img src="../../assets/images/store/logo3.png" alt="品牌"/>
+                                </div>
+                            </div>
+                            <p class="title">鲜奈儿鲜奈儿</p>
+                            <p class="desc">保持沁润水靓保持沁润</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="brand-item item-box swiper-slide">
+                    <a href="#">
+                        <div class="inner">
+                            <div class="item">
+                                <div class="imgbox">
+                                    <img src="../../assets/images/store/logo2.png" alt="品牌"/>
+                                </div>
+                            </div>
+                            <p class="title">鲜奈儿鲜奈儿</p>
+                            <p class="desc">保持沁润水靓保持沁润</p>
+                        </div>
+                    </a>
+                </li>
+                <!--<li class="brand-item item-box swiper-slide">
+                    <a href="#">
+                        <div class="inner">
+                            <div class="item">
+                                <div class="imgbox">
+                                    <img src="../../assets/images/store/logo4.png" alt="品牌"/>
+                                </div>
+                            </div>
+                            <p class="title">鲜奈儿鲜奈儿</p>
+                            <p class="desc">保持沁润水靓保持沁润</p>
+                        </div>
+                    </a>
+                </li>
+                <li class="brand-item item-box swiper-slide">
+                    <a href="#">
+                        <div class="inner">
+                            <div class="item">
+                                <div class="imgbox">
+                                    <img src="../../assets/images/store/logo4.png" alt="品牌"/>
+                                </div>
+                            </div>
+                            <p class="title">鲜奈儿鲜奈儿</p>
+                            <p class="desc">保持沁润水靓保持沁润</p>
+                        </div>
+                    </a>
+                </li>-->
+
+            </ul>
+        </div>
+    </div>
 
     <div class="store-recommend">
         <div class="info-list-title">
@@ -230,17 +311,38 @@
 
 <script type="text/javascript">
   $(document).ready(function () {
-    var mySwiper = new Swiper('.swiper-container', {
+
+    var mySwiper = new Swiper('.swiper-container-hot', {
       freeMode : true,
+      freeModeSticky:true,
       centeredSlides : false,
-      slidesPerView : 3,//'auto'
+      slidesPerView : 3
       //autoplay: 5000,//可选选项，自动滑动
       //direction: 'horizontal',
       //loop: true,
       // 如果需要分页器
       //pagination: '.swiper-pagination',
       //paginationClickable :true
-    })
+    });
+
+    //品牌
+    var mySwiperbrand = new Swiper('.swiper-container-brand', {
+      freeMode : true,
+      freeModeSticky:true,
+      centeredSlides : false,
+      slidesPerView : 2.8,
+      paginationClickable :true
+      /*onTouchStart: function(swiper,even){
+        swiper.unlockSwipeToPrev();
+        swiper.unlockSwipeToNext();
+        if(swiper.isEnd){
+          swiper.lockSwipeToNext();
+        }
+        else if(swiper.activeIndex==0){
+          swiper.lockSwipeToPrev();
+        }
+      }*/
+    });
   })
 </script>
 
