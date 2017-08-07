@@ -4,12 +4,12 @@
 //精灵sprite
 @mixin common_icon {
   background: url('../images/common/common_icon.png') no-repeat;
-  background-size: $_206 $_461;
+  background-size: $_203 $_461;
 }
 //放大100倍
 @mixin common_icon_fix {
   background: url('../images/common/common_icon.png') no-repeat;
-  background-size: $_206*$base_scale $_461*$base_scale;
+  background-size: $_203*$base_scale $_461*$base_scale;
 }
 
 @mixin icon_community_wechat{height:$_47;width:$_47;background-position:0 0;}
@@ -29,7 +29,7 @@
 @mixin icon_newfooter_home_pressed{height:$_47;width:$_48;background-position:0 -$_58 0 -$_271;}
 @mixin icon_newfooter_my_normal{height:$_47;width:$_38;background-position:0 -$_58 0 -$_326;}
 @mixin icon_newfooter_my_pressed{height:$_47;width:$_38;background-position:0 -$_56 0 -$_388;}
-@mixin icon_order_title_red_sign{height:$_30;width:$_44;background-position:0 -$_162 0 -$_65;}
+@mixin icon_order_title_red_sign{height:$_30;width:$_41;background-position:0 -$_162 0 -$_65;}
 
 //精灵sprite end
 
@@ -41,7 +41,7 @@
 .common_icon_fix {
   background: none;
   position: relative;
-  overflow: hidden;
+  //overflow: hidden;//框宽高小数，计算有误差，图片残缺
   &:after {
     content: "";
     display: block;
@@ -62,14 +62,29 @@
 //头部导航 begin
 .icon_community_qq {
   @include icon_community_qq;
+  &:after {
+    height:$_47* $base_scale;
+    width:$_47* $base_scale;
+    background-position:0 0 -$_311* $base_scale;
+  }
 }
 
 .icon_community_wechat {
   @include icon_community_wechat;
+  &:after {
+    height:$_47* $base_scale;
+    width:$_47* $base_scale;
+    background-position:0 0;
+  }
 }
 
 .icon_community_code {
   @include icon_community_code;
+  &:after {
+    height:$_47* $base_scale;
+    width:$_47* $base_scale;
+    background-position:0 0 -$_102* $base_scale;
+  }
 }
 
 .icon_right_arrow {
@@ -78,27 +93,56 @@
 
 .icon_community_tieba {
   @include icon_community_tieba;
+  &:after {
+    height:$_47* $base_scale;
+    width:$_47* $base_scale;
+    background-position:0 0 -$_51* $base_scale;
+  }
 }
 
 .icon_community_weibo {
   @include icon_community_weibo;
+  &:after {
+    height:$_47* $base_scale;
+    width:$_47* $base_scale;
+    background-position:0 0 -$_154* $base_scale;
+  }
 }
 
 //店铺设置begin
 .icon_community_store {
   @include icon_community_store;
+  &:after {
+    height:$_47* $base_scale;
+    width:$_47* $base_scale;
+    background-position:0 0 -$_258* $base_scale;
+  }
 }
-
 .icon_community_storeDesc {
   @include icon_community_storeDesc;
+  &:after {
+    height:$_47* $base_scale;
+    width:$_47* $base_scale;
+    background-position:0 0 -$_414* $base_scale;
+  }
 }
 
 .icon_community_storeLogo {
   @include icon_community_storeLogo;
+  &:after {
+    height:$_47* $base_scale;
+    width:$_47* $base_scale;
+    background-position:0 0 -$_362* $base_scale;
+  }
 }
 
 .icon_community_storePhone {
   @include icon_community_storePhone;
+  &:after {
+    height:$_47 * $base_scale;
+    width:$_47 * $base_scale;
+    background-position:0 0 -$_206 * $base_scale;
+  }
 }
 
 //店铺设置end
@@ -172,7 +216,7 @@
   @include icon_order_title_red_sign;
   &:after{
     height:$_30 * $base_scale;
-    width:$_44 * $base_scale;
+    width:$_41 * $base_scale;
     background-position:0 -$_162* $base_scale 0 -$_65* $base_scale;
   }
 }
@@ -470,7 +514,7 @@
 .store_common_icon_fix {
   background: none;
   position: relative;
-  overflow: hidden;
+  //overflow: hidden;//框宽高小数，计算有误差，图片残缺
   &:after {
     content: "";
     display: block;

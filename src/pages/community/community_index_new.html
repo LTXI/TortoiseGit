@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    @@include('../../partical/meta.inc',{"title":"社区首页"})
+    @@include('../../partical/styles.inc', {"links":"" })
+    <link rel="stylesheet" href="../../assets/styles/app.css">
+    @@include('../../partical/fontsize.inc')
+</head>
+<body>
+<!--头部-->
+<div class="header-fixed jm-shop-header jm-header-column-two-right shop-community-index-head " >
+    <div class="jm-wrapper un-bottom-line">
+        <div class="header-left-box">
+            <a href=""><i class=""></i></a>
+        </div>
+        <div class="header-center-box mid-search">
+            <div class="search-box">
+                <form action="#" method="" class="search-form">
+                    <div class="inner-box">
+                        <input type="search" name="search-form-content" placeholder="输入搜索内容" autocomplete="off" class="search-form-item">
+                        <button type="submit" class="search-sub-btn"><i class="icon_header_commu_search"></i></button>
+                        <i class="icon_header_shop_search_cancel"></i>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="header-right-box">
+            <a  href="#" style="display: block"><i class="icon-r show  icon_header_commu_plus"></i></a>
+        </div>
+    </div>
+</div>
+<!--如果布局fixed，将占据垂直空间1.26rem-->
+<div class="hold-space-top"></div>
+<!--body内容信息-->
+<div id="content" class="page-content shop-community-index">
+    <div class="nav-index-box mrg-bottom24">
+        <ul class="main-nav clearfix">
+            <a href="#"><li class="nav-type-item current"><span>推荐</span></li></a>
+            <a href="#"><li class="nav-type-item"><span>饮食</span></li></a>
+            <a href="#"><li class="nav-type-item"><span>限时特惠</span></li></a>
+            <a href="#"><li class="nav-type-item"><span>美妆</span></li></a>
+            <a href="#"><li class="nav-type-item"><span>母婴</span></li></a>
+            <a href="#"><li class="nav-type-item"><span>出行</span></li></a>
+            <a href="#"><li class="nav-type-item"><span>美食</span></li></a>
+            <a href="#"><li class="nav-type-item"><span>游乐</span></li></a>
+        </ul>
+        <span class="nav-arrow-box">
+            <i class="arrow"></i>
+        </span>
+    </div>
+    <!--广告宣传-->
+    <div class="shop-community-index-banner">
+        <div class="swiper-container swiper-container-banner">
+            <div class="swiper-wrapper">
+                <a
+                        class="swiper-slide swiper-slide-active" href="javascript:void(0);"><img
+                        src="../../assets/images/app/bbs/banner.png"></a>
+                <a
+                        class="swiper-slide swiper-slide-active" href="javascript:void(0);"><img
+                        src="../../assets/images/app/bbs/banner2.png"></a>
+
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+    <div class="recommend-title">
+        <div class="info-list-title">
+        <span class="title-box">
+<i class="common_icon_fix icon_order_title_sign"></i>           <span class="title">你可能感兴趣的圈子</span>
+<i class="common_icon_fix icon_order_title_sign scalex"></i>
+</span>
+        </div>
+        <!--<a href="#" class="more-btn">更多</a>-->
+    </div>
+    <!--品牌-->
+    <div class="index-hobby-box mrg-bottom24">
+        <div class="swiper-container swiper-container-hobby">
+            <ul class="list swiper-wrapper">
+                <li class="hobby-item item-box swiper-slide">
+                    <a href="#">
+                        <div class="inner">
+                            <div class="item">
+                                <div class="imgbox">
+                                    <img src="../../assets/images/app/bbs/icon_bbs_nav_1.png" alt="美食饮料"/>
+                                </div>
+                            </div>
+                            <p class="title">美食饮料</p>
+                            <p class="desc">保持沁润水靓保持沁润保持沁润水靓保持沁润</p>
+                            <span class="attention-btn">加入</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="hobby-item item-box swiper-slide">
+                    <a href="#">
+                        <div class="inner">
+                            <div class="item">
+                                <div class="imgbox">
+                                    <img src="../../assets/images/app/bbs/icon_bbs_nav_2.png" alt="出行旅行"/>
+                                </div>
+                            </div>
+                            <p class="title">出行旅行</p>
+                            <p class="desc">保持沁润水</p>
+                            <span class="attention-btn">加入</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="hobby-item item-box swiper-slide">
+                    <a href="#">
+                        <div class="inner">
+                            <div class="item">
+                                <div class="imgbox">
+                                    <img src="../../assets/images/app/bbs/icon_bbs_nav_3.png" alt="装逼"/>
+                                </div>
+                            </div>
+                            <p class="title">装逼</p>
+                            <p class="desc">保持沁润水靓保持沁润保持沁润水靓保持沁润</p>
+                            <span class="attention-btn">加入</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="hobby-item item-box swiper-slide">
+                    <a href="#">
+                        <div class="inner">
+                            <div class="item">
+                                <div class="imgbox">
+                                    <img src="../../assets/images/app/bbs/icon_bbs_nav_1.png" alt="美食饮料"/>
+                                </div>
+                            </div>
+                            <p class="title">美食饮料</p>
+                            <p class="desc">保持沁润水靓保持沁润保持沁润水靓保持沁润</p>
+                            <span class="attention-btn">加入</span>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!--热推产品-->
+    <div class="index-community-hobby-new">
+        <div id="container" class="waterfall clearfix">
+            <ul class="col col-left">
+                <li class="item">
+                    <a href="./community_detail.html">
+                        <div class="imgbox">
+                            <img src="../../assets/images/brand/1484592650148983443.jpg" alt="关注">
+                        </div>
+                        <p class="title">超实用！超实用！超实用干货攻略</p>
+                        <p class="desc">超实用干货攻略超实用干货攻略描述描述超实用干货攻略超实用干货攻略描述描述</p>
+                    </a>
+                    <a class="commu-user">
+                        <div class="imgbox">
+                            <img src="../../assets/images/app/bbs/bbs_msg_dead_normal.png" alt="头像">
+                        </div>
+                        <span class="text">巴塞洛拉</span>
+                    </a>
+
+                    <a class="praise" href="#"><i class="icon_commu_heart mrg-r10"></i><span class="text">300</span></a>
+                </li>
+                <li class="item">
+                    <a href="./community_detail.html">
+                        <div class="imgbox">
+                            <img src="../../assets/images/app/user/icon_user_track.png" alt="关注">
+                        </div>
+                        <p class="title">超实用！超实用</p>
+                        <p class="desc">44</p>
+                    </a>
+                    <a class="commu-user">
+                        <div class="imgbox">
+                            <img src="../../assets/images/app/bbs/bbs_msg_dead_normal.png" alt="头像">
+                        </div>
+                        <span class="text">巴塞洛拉</span>
+                    </a>
+                    <a class="praise" href="#"><i class="icon_commu_red_heart mrg-r10"></i><span class="text">300</span></a>
+                </li>
+            </ul>
+            <ul class="col col-right">
+                <li class="item">
+                    <a href="./community_detail.html">
+                        <div class="imgbox">
+                            <img src="../../assets/images/app/user/icon_user_track.png" alt="关注">
+                        </div>
+                        <p class="title">超实用！超实用</p>
+                        <p class="desc">44</p>
+                    </a>
+                    <a class="commu-user">
+                        <div class="imgbox">
+                            <img src="../../assets/images/app/bbs/bbs_msg_dead_normal.png" alt="头像">
+                        </div>
+                        <span class="text">巴塞洛拉</span>
+                    </a>
+                    <a class="praise" href="#"><i class="icon_commu_red_heart mrg-r10"></i><span class="text">300</span></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="mask">
+        <ul class="nav-list clearfix">
+            <li class="nav-item">饮食</li>
+            <li class="nav-item">饮食</li>
+            <li class="nav-item">美妆</li>
+            <li class="nav-item">出行</li>
+            <li class="nav-item">出行</li>
+            <li class="nav-item">饮食</li>
+            <li class="nav-item">饮食</li>
+            <li class="nav-item">美妆</li>
+            <li class="nav-item">出行</li>
+            <li class="nav-item">出行</li>
+            <li class="nav-item">饮食</li>
+            <li class="nav-item">饮食</li>
+            <li class="nav-item">美妆</li>
+            <li class="nav-item">出行</li>
+            <li class="nav-item">出行</li>
+        </ul>
+    </div>
+</div>
+
+<!--底部导航-->
+@@include('../../partical/footer-shop-nav-bar-new.inc')
+<link rel="stylesheet" href="../../assets/styles/community.css">
+<script type="text/javascript">
+  $(function () {
+    var mySwiperbanner = new Swiper('.swiper-container-banner', {
+      autoplay: 5000,
+      direction: 'horizontal',
+      loop: true,
+      pagination: '.swiper-pagination',
+      paginationClickable :true
+    });
+
+    var mySwiperhobby= new Swiper('.swiper-container-hobby', {
+      freeMode : true,
+      centeredSlides : false,
+      slidesPerView : 3.6,
+      paginationClickable :true,
+      onTouchStart: function(swiper,even){
+        swiper.unlockSwipeToPrev();
+        swiper.unlockSwipeToNext();
+        if(swiper.isEnd){
+          swiper.lockSwipeToNext();
+        }
+        else if(swiper.activeIndex==0){
+          swiper.lockSwipeToPrev();
+        }
+      }
+    });
+
+    $(".nav-arrow-box").on('click',function (e) {
+      if($(this).find(".arrow").hasClass("open")){//打开的
+        $(this).find(".arrow").removeClass("open");
+        $(".mask").removeClass("open");
+        $("body").css({"overflow":"auto"});
+      }else{
+        $(this).find(".arrow").addClass("open");
+        $(".mask").addClass("open");
+        $("body").css({"overflow":"hidden"});
+      }
+    });
+    $(".mask").on('click',function (e) {
+      $(".nav-arrow-box").find(".arrow").removeClass("open");
+      $(".mask").removeClass("open");
+      $("body").css({"overflow":"auto"});
+    });
+  })
+</script>
+
+//瀑布js控制
+<script type="text/javascript">
+  $(function(){
+    var index = 0;
+    //异步请求
+    function loadMeinv(){
+      var data = 0;
+      var imgArr = ['../../assets/images/app/user/icon_user_track.png','../../assets/images/brand/1484592650148983443.jpg','../../assets/images/app/shopbbs/222.jpg','../../assets/images/app/shopbbs/21.jpg'];
+      for(var i=0;i<9;i++){//每次加载时模拟随机加载图片
+        data = parseInt(Math.random()*9);
+        var html = "";
+        html = '<li class="item">'+
+            '<a href="./community_detail.html">'+
+                '<div class="imgbox">'+
+                '<img src="'+imgArr[i%4]+'" alt="关注">'+
+                '</div>'+
+                '<p class="title">'+(index++)+"超实用,超实用超实用,超实用超实用,超实用"+'</p>'+
+                '<p class="desc">'+(44+i)+'</p>'+
+            '</a>'+
+            '<a class="commu-user">'+
+                '<div class="imgbox">'+
+                '<img src="../../assets/images/app/bbs/bbs_msg_dead_normal.png" alt="头像">'+
+                '</div>'+
+                '<span class="text">巴塞洛拉巴塞洛拉</span>'+
+            '</a>'+
+            '<a class="praise" href="#">' +
+                '<i class="icon_commu_red_heart mrg-r10"></i>' +
+                '<span class="text">300</span>' +
+            '</a>'+
+        '</li>';
+        $minUl = getMinUl();
+        $minUl.append(html);
+      }
+    }
+    loadMeinv();
+    $(window).on("scroll",function(){
+      $minUl = getMinUl();
+      if($minUl.height() <= $(window).scrollTop()+$(window).height()){
+        //当最短的ul的高度比窗口滚出去的高度+浏览器高度大时加载新图片
+        loadMeinv();
+      }
+    })
+    function getMinUl(){//每次获取最短的ul,将内容放到其后
+      var $arrUl = $("#container .col");
+      var $minUl =$arrUl.eq(0);
+      $arrUl.each(function(index,elem){
+        if($(elem).height()<$minUl.height()){
+          $minUl = $(elem);
+        }
+      });
+      return $minUl;
+    }
+  })
+</script>
+</body>
+</html>
