@@ -1,0 +1,159 @@
+-------------------新begin------------------------
+APP支付：
+微信开放平台 九件联盟应用的微信APP支付已经开通
+微信支付商户号：1486336882
+申请对应的应用 ：九件联盟
+应用APPID ：wxecfaa4152fbc5cb7
+API签名密钥 ：PZ7K3M670L6581841153876WJ23UL491
+
+
+
+微信开放平台
+https://open.weixin.qq.com
+账号：muyandev@163.com
+密码：myit1234
+
+
+//超越微信（之前九件分享用这个）
+账号：zmkjwx@126.com 
+密码：6748wiwl,.
+
+
+
+开放平台 九件联盟
+AppID: wxecfaa4152fbc5cb7
+AppSecret:159af2b9acfc495fc9d272089fde222a
+
+
+hbuilder 打包
+android打包 
+推客端： com.ym.nineneeds
+代理端： com.ym.nineneeds
+
+
+
+原来配置
+bbd15f705df7bd4e102e32a0e3025a37
+包名：com.joymain.jiujian
+
+微博账号：arilewu520@163.com   arilewu520
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+微博（自己注册）
+ltxlife@163.com
+ltxlife123456
+
+liutianxii@163.com
+ltxltx168
+-------------------新end------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+-------------------------老begin------------------------
+android打包 
+推客端： com.ym.nineneeds
+代理端： com.ym.nineneeds
+
+
+微信分享功能：
+应用签名：59201cf6589202cb2cdab26752472112
+应用包名：com.ym.nineneeds
+
+
+
+
+ios打包：
+
+appid: com.ym.nineneeds
+
+微信分享功能：
+AppID: wx17cdd0afac2c79e9
+AppSecret: 47fd284f23f1dcada46a0c579e05f40a
+
+
+
+
+
+
+
+plist:地址
+https://git.oschina.net/liutx/nineneeds/blob/master/nineneeds-agency.plist
+
+
+
+
+git 到码云命令
+
+码云  
+https://git.oschina.net/login
+ltxlife@163.com   
+oschina168 
+
+//命令  
+git add .
+git commit -m "first commit" 本地提交代码
+git push origin master 把代码提交到
+
+
+ 
+蒲公英 
+https://www.pgyer.com
+ltxlife@163.com 
+pgyer168 
+-------------------------老end--------------------------
+
+
+微信开放平台
+https://open.weixin.qq.com
+账号：muyandev@163.com
+密码：myit1234
+
+------------------
+//超越微信（之前九件分享用这个）
+zmkjwx@126.com / 6748wiwl,.
+AppID：wx17cdd0afac2c79e9
+iOS平台
+iPhone
+应用下载地址：未填写
+Bundle ID：com.ym.nineneeds
+测试版本Bundle ID：com.ym.nineneeds
+
+iPad 无
+Android平台
+应用下载地址：未填写
+应用签名：59201CF6589202CB2CDAB26752472112
+
+包名：com.ym.nineneeds
+
+--------------------------
+
+
+
+
+
+

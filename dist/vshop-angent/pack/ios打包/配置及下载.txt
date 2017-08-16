@@ -1,0 +1,50 @@
+android打包 
+推客端： com.ym.nineneeds
+代理端： com.ym.nineneeds
+
+
+微信分享功能：
+应用签名：59201cf6589202cb2cdab26752472112
+应用包名：com.ym.nineneeds
+
+
+
+
+ios打包：
+
+appid: com.ym.nineneeds
+
+微信分享功能：
+AppID: wx17cdd0afac2c79e9
+AppSecret: 47fd284f23f1dcada46a0c579e05f40a
+
+
+
+
+
+
+
+plist:地址
+https://git.oschina.net/liutx/nineneeds/blob/master/nineneeds-agency.plist
+
+
+
+
+git 到码云命令
+
+码云  
+https://git.oschina.net/login
+ltxlife@163.com   
+oschina168 
+
+//命令  
+git add .
+git commit -m "first commit" 本地提交代码
+git push origin master 把代码提交到
+
+
+ 
+蒲公英 
+https://www.pgyer.com
+ltxlife@163.com 
+pgyer168 
