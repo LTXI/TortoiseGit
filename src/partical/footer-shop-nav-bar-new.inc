@@ -26,12 +26,13 @@
                         <span class="text">社区</span>
                     </a>
                 </li>
-        <li class="footer_item">
-            <a class="link" href="#">
+        <li class="footer_item m-buybar">
+            <a class="link cart" href="#">
                 <span class="icon-box">
                     <i class="store_common_icon_fix icon_store_car"></i>
                 </span>
                 <span class="text">购物车</span>
+                <span class="count">1</span>
             </a>
         </li>
         <li class="footer_item">

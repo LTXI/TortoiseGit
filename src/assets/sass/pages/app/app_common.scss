@@ -570,6 +570,23 @@
     }
   }
 }
+//购物车数字
+.m-buybar .cart .count {
+  position: absolute;
+  min-width: 16px;
+  height: 16px;
+  left: 27px;
+  top: 2px;
+  background-color: #fff;
+  color: #e31436;
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
+  font-size: 12px;
+  line-height: 14px;
+  text-align: center;
+  padding: 0 4px;
+  border: 1px solid #e31436;
+}
 //新底部begin
 .new-app-page-footer {
   display: block;
@@ -831,3 +848,92 @@
     }
   }
 }
+
+/**分享begin**/
+
+.m-layermsk{
+  background: rgba(0,0,0,0);
+  position: fixed;
+  z-index: 10000;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+.m-newpopmsk {
+  background-color: rgba(0,0,0,0.6);
+  animation: animation-opacity 500ms ease;
+}
+@keyframes animation-opacity{
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
+}
+@keyframes animation-move{
+  from{
+    transform: translateY(100%) translateZ(0);
+  }
+  to{
+    transform: translateY(0) translateZ(0);
+  }
+}
+
+
+.m-window {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.winbody{
+  position: absolute;
+  bottom: 0%;
+  width: 100%;
+  background: rgba(255,255,255,0.95);
+  text-align: center;
+  padding: .2rem  .4rem .2rem .4rem;
+  font-size: 0;
+  animation: animation-move 500ms ease;
+  .share-content{
+    margin: .2rem 0;
+  }
+  .title{
+    font-size: .3rem;
+  }
+  .share-item{
+    float: left;
+    width: 33.33%;
+    padding: .15rem;
+    text-align: center;
+  }
+  .share-item-img{
+    display: inline-block;
+    width: 100%;
+    height: 1.2rem;
+  }
+  .share-item-text{
+    font-size: .28rem;
+    color: #000;
+  }
+  .icon_share_wechat{
+    background: url("../images/app/share/icon_share_wechat.png") center center no-repeat;
+    background-size: 1.2rem auto;
+  }
+  .icon_share_friends{
+    background: url("../images/app/share/icon_share_friends.png") center center no-repeat;
+    background-size:1.2rem auto;
+  }
+  .icon_share_weibo{
+    background: url("../images/app/share/icon_share_weibo.png") center center no-repeat;
+    background-size: 1.2rem auto;
+  }
+  .cancel {
+    font-size: .3rem;
+    padding: .25rem 0 0 0;
+  }
+}
+/**分享end**/

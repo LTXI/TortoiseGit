@@ -34,7 +34,7 @@
 <!--body内容信息-->
 <div id="content" class="page-content shop-community-index">
     <div class="nav-index-box mrg-bottom24">
-        <ul class="main-nav">
+        <ul class="main-nav clearfix">
             <a href="#"><li class="nav-type-item current"><span>推荐</span></li></a>
             <a href="#"><li class="nav-type-item"><span>饮食</span></li></a>
             <a href="#"><li class="nav-type-item"><span>限时特惠</span></li></a>
@@ -137,7 +137,7 @@
     </div>
     <!--热推产品-->
     <div class="index-community-hobby-new">
-        <div id="container" class="waterfall">
+        <div id="container" class="waterfall clearfix">
             <ul class="inner-container clearfix" id="main">
                 <li class="item">
                     <div class="item-container">
@@ -217,7 +217,6 @@
                     </div>
                 </li>
             </ul>
-            <div style="height:1rem;"></div>
         </div>
     </div>
     <div class="mask">
@@ -291,150 +290,109 @@
 </script>
 
 <script type="text/javascript">
-  var dataInt={'data':[
-    {'src':'http://img4.imgtn.bdimg.com/it/u=3400595141,3957584367&fm=200&gp=0.jpg'},
-    {'src':'http://pic41.nipic.com/20140501/18539861_155959517170_2.jpg'},
-    {'src':'http://imgsrc.baidu.com/forum/pic/item/5d8ea144ad345982913052140cf431adcaef8455.jpg'},
-    {'src':'http://img4.imgtn.bdimg.com/it/u=3400595141,3957584367&fm=200&gp=0.jpg'},
-    {'src':'http://img17.3lian.com/d/file/201702/22/953c40c874029fb2b5dac1fd2540d327.jpg'},
-    {'src':'http://pic.qiantucdn.com/58pic/17/91/72/51Z58PICNtg_1024.jpg'},
-    {'src':'http://img0.imgtn.bdimg.com/it/u=1531392329,2869685141&fm=200&gp=0.jpg'},
-    {'src':'http://img4.imgtn.bdimg.com/it/u=3400595141,3957584367&fm=200&gp=0.jpg'},
-    {'src':'http://pic.qiantucdn.com/58pic/17/91/72/51Z58PICNtg_1024.jpg'}]
-  };
-  //当前图片是否加载完成
-  var isLoadCompleted = true;
-  var spaceTime = true;
-  $( window ).on( "load", function(){
-    waterfall();
+  $(function(){
 
-    window.onscroll=function(){
-      //console.log("isCompleted=="+isLoadCompleted +"  spaceTime=="+spaceTime);
-      if(!isLoadCompleted && !spaceTime){
-        console.log("isCompleted=="+isLoadCompleted);
-        return;
+    var elesHeight = [];//每个元素的宽度
+    var colsHeight = [0,0]; //每列元素现有的高度
+    var count = 0;
+    $(".inner-container .item").each(function(index,item){
+      var eleHeight = $(this).height();
+      elesHeight.push(eleHeight);
+    });
+    //依次摆放每一个元素
+    $(".inner-container .item").each(function(index,item){
+      //alert(index);
+
+      //获得该元素应该在第几列
+      var colShould = getMinHeightCol(colsHeight);
+
+      var tempTop = colsHeight[colShould];
+      var tempLeft = colShould*50;
+      $(this).css({"position":"absolute","top":(tempTop)+"px",left:tempLeft+"%"});
+
+      //同时将该列的高度加上当前新增元素的高度
+      colsHeight[colShould] += $(this).height();
+      console.log("item height=="+$(this).height());
+
+      var max_height = colsHeight[0] > colsHeight[1] ? colsHeight[0]: colsHeight[1];
+      $(".inner-container").height(max_height);
+    });
+    //得到四列中高度最小的那一列
+    function getMinHeightCol(arr){
+      var minHeight = Math.min.apply(null, arr);
+      console.log("最小高度:"+minHeight);
+      for(var i in arr){
+        if(arr[i]==minHeight){
+          return i;
+        }
       }
-      //spaceTime = true;
-      if(isLoadCompleted && spaceTime && checkscrollside()){
-        /*$.ajax({
-          type: "POST",
-          url: "some.php",
-          data: "name=John&location=Boston",
-          success: function(data){
-            waterFallHandler(data);
-          }
-        });*/
-        
-        isLoadCompleted = false;
-        spaceTime = false;
-        waterFallHandler();
-      };
+      //默认第一列
+      return 0;
     }
+    var re;
+    window.onresize = function() {
+      clearTimeout(re);
+      //re = setTimeout(resize,100);
+    };
+    $(window).on("scroll",function(){
+      if($('body').height() <= $(window).scrollTop()+$(window).height()){
+        //当最短的ul的高度比窗口滚出去的高度+浏览器高度大时加载新图片
+        count = $(".inner-container .item").length;
+        console.log("count==="+count);
+        loadMeinv();
+      }
+    });
+     var index = 0;
+   function loadMeinv(){
+      var data = 0;
+      var imgArr = ['http://cued.xunlei.com/demos/publ/img/P_003.jpg','http://cued.xunlei.com/demos/publ/img/P_022.jpg','http://cued.xunlei.com/demos/publ/img/P_032.jpg','http://cued.xunlei.com/demos/publ/img/P_053.jpg'];
+      for(var i=0;i<4;i++){//每次加载时模拟随机加载图片
+        var html = "";
+        html = '<li class="item">' +
+          '<div class="item-container">'+
+          '<a href="./community_detail.html">'+
+          '<div class="imgbox">'+
+          '<img src="'+imgArr[i%4]+'" alt="关注">'+
+          '</div>'+
+          '<p class="title">'+(index++)+"超实用,超实用超实用,超实用超实用,超实用"+'</p>'+
+          '<p class="desc">'+(44+i)+'</p>'+
+          '</a>'+
+          '<a class="commu-user clearfix">'+
+          '<div class="imgbox">'+
+          '<img src="../../assets/images/app/bbs/bbs_msg_dead_normal.png" alt="头像">'+
+          '</div>'+
+          '<span class="text">巴塞洛拉巴塞洛拉</span>'+
+          '</a>'+
+          '<a class="praise" href="#">' +
+          '<i class="icon_commu_red_heart mrg-r10"></i>' +
+          '<span class="text">300</span>' +
+          '</a>'+
+          '</div>' +
+          '</li>';
+        $(".inner-container").append(html);
+      }
+     $(".inner-container .item").each(function(index,item){
+        if(index >=count){
+          //获得该元素应该在第几列
+          var colShould = getMinHeightCol(colsHeight);
+          var tempTop = colsHeight[colShould];
+          var tempLeft = colShould*50;
+          $(this).css({"position":"absolute","top":(tempTop)+"px",left:tempLeft+"%"});
+
+          //同时将该列的高度加上当前新增元素的高度
+          colsHeight[colShould] += $(this).height();
+          console.log("item height=="+$(this).height());
+
+          var max_height = colsHeight[0] > colsHeight[1] ? colsHeight[0]: colsHeight[1];
+          $(".inner-container").height(max_height);
+        }
+      });
+      var imgNum=$('.item-container .imgbox img').length;
+    }
+
+
   });
 
-  //异步请求回调
-  function waterFallHandler(data) {
-    var $oMian =  $("#main") ;
-    var html = temp(data);
-    $oMian.append(html);
-    //创建加载图片
-    var oImg=document.createElement('img');
-    //异步加载返回json数据
-    var index = Math.floor(Math.random()*7);
-    oImg.src=dataInt.data[index]['src'];
-    oImg.style.opacity='0';
-    oImg.style.height='0';
-    $("#main .item").last().find(".tempimgbox").css({"padding-top":"50%"}).append(oImg);
-    waterfall();
-    //图片加载完成高度确定，重新排版位置
-    oImg.onload = function(e){
-      oImg.onload = null;
-      $(e.target).parent(".tempimgbox").css({"padding-top":"0"});
-      e.target.style.opacity='1';
-      e.target.style.height='auto';
-
-      waterfall();
-      isLoadCompleted = true;
-      spaceTime = true;
-      clearTimeout(timer);
-    };
-    var timer = setTimeout(function() { //控制滑行手速，时间越长对速度的滑动时间影响越大。
-      spaceTime = true;
-    }, 200);
-  }
-
-
-  function waterfall(){
-    var $aPin = $( "#main>.item" );
-    var iPinW = $aPin.eq( 0 ).width();// 一个块框pin的宽
-    var num = 2;//每行个数
-    $( "#main" ).css({
-      'width:' : iPinW * num,
-      'margin': '0 auto'
-    });
-
-    var pinHArr=[];//用于存储 每列中的所有块框相加的高度。
-    $aPin.each( function( index, value ){
-      var pinH = $aPin.eq( index ).height();
-      if( index < num ){
-        pinHArr[ index ] = pinH; //第一行中的num个块框pin 先添加进数组pinHArr
-      }else{
-        var minH = Math.min.apply( null, pinHArr );//数组pinHArr中的最小值minH
-        var minHIndex = $.inArray( minH, pinHArr );
-        $( value ).css({
-          'position': 'absolute',
-          'top': minH + 0,
-          'left': $aPin.eq( minHIndex ).position().left
-        });
-        //数组 最小高元素的高 + 添加上的aPin[i]块框高
-        pinHArr[ minHIndex ] += $aPin.eq( index ).height() + 0;//更新添加了块框后的列高
-      }
-    });
-    var max_height = pinHArr[0] > pinHArr[1] ? pinHArr[0]: pinHArr[1];
-    $(".inner-container").height(max_height);
-  }
-
-  function checkscrollside(){
-    var scrollTop = $( window ).scrollTop(); //滚动距离
-    var documentH = $( document ).height();//页面高度
-    var viewH = $(window).height();//可视区域view高度
-    console.log("$(window).scrollTop()= "+$(window).scrollTop());
-    console.log("$(document).height()= "+$(document).height());
-    console.log("$(window).height()= "+$(window).height());
-    if (scrollTop >= documentH - viewH - 20) {
-      console.log("lastPinH==----true");
-      return true;
-    }else{
-      console.log("lastPinH==----false");
-      return false;
-    }
-  }
-
-  //模板 传入json数据
-  function temp(data) {
-    var html = "";
-    html = '<li class="item">' +
-      '<div class="item-container">'+
-      '<a href="./community_detail.html">'+
-      '<div class="imgbox tempimgbox">'+
-      '</div>'+
-      '<p class="title">'+(111)+"超实用,超实用超实用,超实用超实用,超实用"+'</p>'+
-      '<p class="desc">'+(44)+'</p>'+
-      '</a>'+
-      '<a class="commu-user clearfix">'+
-      '<div class="imgbox">'+
-      '<img src="../../assets/images/app/bbs/bbs_msg_dead_normal.png" alt="头像"/>'+
-      '</div>'+
-      '<span class="text">巴塞洛拉巴塞洛拉</span>'+
-      '</a>'+
-      '<a class="praise" href="#">' +
-      '<i class="icon_commu_red_heart mrg-r10"></i>' +
-      '<span class="text">300</span>' +
-      '</a>'+
-      '</div>' +
-      '</li>';
-    return html;
-  }
 
 </script>
 </body>

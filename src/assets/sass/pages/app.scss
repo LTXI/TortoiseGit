@@ -188,6 +188,13 @@
   }
   .itembox {
     @include brand-list-item;
+
+    .item-left .title {
+      width:1.18rem;
+      @include ellipsis;
+      font-size: .20rem;
+      text-align: center;
+    }
     .item-middle {
       align-self: flex-start; //中间部分上对齐
     }
@@ -847,6 +854,11 @@
 //设置单项
 .setinfoitem {
   @include link-item-icon-sprite(1rem, 0px);
+  .item-icon-status{
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: .12rem;
+  }
 }
 
 .community {
@@ -879,6 +891,9 @@
         text-indent: .35rem;
         font-size: .28rem;
         height: .6rem;
+        line-height: .6rem;
+      }
+      input::-webkit-input-placeholder {
         line-height: .6rem;
       }
       select{
@@ -1380,7 +1395,7 @@
       padding: .2rem 0;
       text-align: center;
       font-size: .35rem;
-      color: blue;
+      color: #1284FF;
       background-color: #fff;
     }
     .alert_mb_btn_ok::after{
@@ -1404,3 +1419,53 @@
 }
 //弹框end-----------------------
 @import "other_css";
+
+//复选框begin-----------
+.checkbox-container{
+  padding: 0 .2rem;
+  background-color: #FFF;
+  .checkbox-box-title {
+    text-align: center;
+    color: #999;
+    padding: .2rem 0;
+    font-size: .25rem;
+  }
+  .checkbox-box {
+    width: 100%;
+    font-size: 0;
+    .checkbox-item{
+      position: relative;
+      float: left;
+      width: 23%;
+      font-size: .25rem;
+      margin: 0 1% .2rem;
+      padding:.1rem .15rem;
+      background-color: #ececec;
+      border: 1px solid #ccc;
+      input[type="checkbox"] {
+        position: absolute;
+        opacity: 0;
+        width: 100%;
+        height: 100%;
+      }
+      label{
+        display: block;
+        width: 100%;
+        height: 100%;
+        color: #5f5f5f;
+        font-size: 0.25rem;
+        white-space:nowrap;
+        text-align: center;
+      }
+    }
+    .checkbox-item.checked{
+      background-color: #f23030;
+      border: none;
+    }
+    .checkbox-item.checked label{
+      color: #fff;
+    }
+  }
+}
+
+//复选框end-------------

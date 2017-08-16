@@ -594,7 +594,7 @@
   }
 }
 .on .icon_shop_community{
-  @include icon_shop_category_Pressed;
+  @include icon_shop_community_Pressed;
   &:after{
     height:$_36*$base_scale;width:$_51*$base_scale;background-position:0 0 -$_573*$base_scale;
   }
