@@ -654,6 +654,8 @@
   width: 100%;
   font-size: .24rem;
   color: #9FA0A0;
+  padding: 0 1rem;
+  line-height: 1.2;
 }
 
 .store-index-new .jm-store .store-main-logo {

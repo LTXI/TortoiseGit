@@ -1,0 +1,15 @@
+{
+    "appid":"com.ym.nineneeds",
+    "iOS":{
+    	"version":"1.0.5",
+    	"title":"提示",
+    	"note":"检查到新版本1.0.5，新增新浪微博分享，建议更新APP",
+    	"url":"itms-services://?action=download-manifest&url=https://git.oschina.net/liutx/nineneeds/raw/master/nineneeds-agency.plist"
+    },
+    "Android":{
+    	"version":"1.0.5",
+    	"title":"提示",
+    	"note":"检查到新版本1.0.5，新增新浪微博分享，建议更新APP",
+    	"url":"http://www.nineneeds.com/upload/appdownload/nine-agent.apk"
+    }
+}

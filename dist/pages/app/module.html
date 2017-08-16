@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+    <meta content="telephone=no" name="format-detection" />
+    <meta name="google" value="notranslate" />
+    <meta name="root-url" value="<?php echo JQ_URL; ?>" />
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <meta http-equiv="x-dns-prefetch-control" content="on" />
+    <title>公用模块</title>
+
+    <link rel="stylesheet" href="../../styles/mui.min.css" />
+    <link rel="stylesheet" href="../../styles/swiper.min.css" />
+    <link rel="stylesheet" href="../../styles/framework.css" />
+    <link rel="stylesheet" href="../../styles/app-base.css" />
+    <link rel="stylesheet" href="../../styles/ricky.css?v=04062" />
+ <script src="../../scripts/mui.min.js"></script>
+   <script type="text/javascript" src="../../scripts/zepto.min.js"></script>
+    <script type="text/javascript" src="../../scripts/zepto.swiper.min.js"></script>
+   <!--<script type="text/javascript" src="../../scripts/zepto.app.js?v=04063"></script>
+    <script type="text/javascript" src="../../scripts/zepto.custom.js?v=04062"></script>-->
+
+
+<!--
+    <link rel="stylesheet" href="http://192.168.2.133/styles/swiper.min.css" />
+        <link rel="stylesheet" href="http://192.168.2.133/styles/framework.css" />
+        <link rel="stylesheet" href="http://192.168.2.133/styles/app-base.css?v=04062" />
+        <link rel="stylesheet" href="http://192.168.2.133/styles/ricky.css" />
+    	<script type="text/javascript" src="http://192.168.2.133/scripts/mui.min.js"></script>
+        <script type="text/javascript" src="http://192.168.2.133/scripts/zepto.min.js"></script>
+        <script type="text/javascript" src="http://192.168.2.133/scripts/zepto.swiper.min.js"></script>
+        <script type="text/javascript" src="http://192.168.2.133/scripts/zepto.app.js?v=04063"></script>
+        <script type="text/javascript" src="http://192.168.2.133/scripts/zepto.custom.js?v=04062"></script>
+
+        <link rel='stylesheet' href='http://192.168.2.133/styles/mui.min.css'/>
+        <link rel='stylesheet' href='http://192.168.2.133/styles/app.css'/>
+        <script type="text/javascript" src="http://192.168.2.133/scripts/app.js"></script>
+         <link rel="stylesheet" href="http://192.168.2.133/styles/zepto.mdatetimer.css">
+        <script type="text/javascript" src="http://192.168.2.133/scripts/zepto.mdatetimer.js"></script>
+ -->
+    <!--样式模块公用放入-->
+
+    <link rel="stylesheet" href="../../assets/styles/app.css">
+    <script >
+document.addEventListener('DOMContentLoaded', function () {
+(function initFontSize() {
+		var resizeEvent = 'orientationchange' in window ? 'orientationchange' : 'resize';
+
+		function changeSize() {
+			const designWidth = 750; //设计稿尺寸是640px
+			const designWidth2 = 1080;
+			var html = document.documentElement; //根元素
+			var deviceWidth = html.clientWidth; //屏幕逻辑宽度
+			var base = 100;
+
+			if (deviceWidth > designWidth2) {
+				deviceWidth = designWidth2;
+			}
+			html.style.fontSize = (deviceWidth / designWidth) * base + "px";
+			//console.log(html.style.fontSize);
+			//alert(html.style.fontSize+"==="+deviceWidth);
+		}
+		changeSize();
+		window.addEventListener(resizeEvent, changeSize, false);
+	})();
+});
+</script>
+</head>
+<body>
+<!--头部-->
+<!--头部-->
+<div class="jm-header header-fixed">
+    <div class="jm-wrapper">
+        <a href="javascript:history.go(-1);">
+            <div class="posl icon icon_back icon-fix"></div>
+        </a>
+        <p class="title">公用模块</p>
+        <a href="#">
+            <div class="posr icon"></div>
+        </a>
+    </div>
+</div>
+<!--如果布局fixed，将占据垂直空间1.26rem-->
+<div class="hold-space-top"></div>
+<!--导航栏-->
+<div class="header-nav-bar">
+        <span class="triangle"></span>
+        <ul>
+            <a href="#"><li class="navltem bdr-bottom"><i class="navicon  icon_header_nav_home"></i>首页</li></a>
+        </ul>
+    </div>
+
+<div id="content" class="page-content search-page">
+
+    <!--多选项模块-->
+    <!--<div class="checkbox">
+        <div class="search-content">
+            <h3 class="u-title">热门搜索</h3>
+            <div class="m-hotwordlist clearfix">
+                <a class="u-hotword" href="#" target="_self">600元礼包券</a>
+                <a class="u-hotword z-highlight" href="#" target="_self">电动牙刷</a>
+                <a class="u-hotword z-highlight" href="#" target="_self">电动牙刷</a>
+
+                <a class="u-hotword z-highlight" href="#" target="_self">尤妮佳</a>
+                <a class="u-hotword z-highlight" href="#" target="_self">电动牙刷</a>
+            </div>
+        </div>
+    </div>-->
+
+
+    <!--地址-->
+    <div>
+        <div class="address">
+            <ul adid="137724804" type="1" class="selected">
+                <li class="icon_select afix"></li>
+                <li><strong>沈飞</strong> 138****9435</li>
+                <li>江苏南京市鼓楼区中山北路30号城市名人酒店40楼</li>
+            </ul>
+            <div class="edit" adid="137724804" type="1"><i class="icon-trash"></i></div>
+        </div>
+
+
+    </div>
+</div>
+
+
+</body>
+</html>

@@ -1119,6 +1119,10 @@ input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
   vertical-align: middle;
 }
 
+.shop-community-index {
+  overflow: inherit !important;
+}
+
 .shop-community-index .nav-index-box {
   position: relative;
   background: #fff;
@@ -1321,46 +1325,49 @@ input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
   border-radius: .5rem;
 }
 
-.shop-community-index .index-community-hobby {
+.shop-community-index .index-community-hobby-new .waterfall {
+  margin: 0.1rem 0.1rem;
+  font-size: 0;
+}
+
+.shop-community-index .index-community-hobby-new .waterfall .out-container {
+  position: relative;
   width: 100%;
-  padding: 0 .18rem;
-  margin: .3rem  auto;
 }
 
-.shop-community-index .index-community-hobby .waterfall {
-  -webkit-column-count: 2;
-     -moz-column-count: 2;
-          column-count: 2;
-  -webkit-column-gap: .18rem;
-     -moz-column-gap: .18rem;
-          column-gap: .18rem;
+.shop-community-index .index-community-hobby-new .waterfall .inner-container {
+  position: relative;
+  width: 100%;
 }
 
-.shop-community-index .index-community-hobby .waterfall .item {
-  -webkit-column-break-inside: avoid;
-     page-break-inside: avoid;
-          break-inside: avoid;
+.shop-community-index .index-community-hobby-new .waterfall .item {
+  background-color: #f4f4f4;
+  float: left;
+  font-size: 0;
+  padding: 0rem .1rem .22rem .1rem;
+  width: 50%;
+  overflow: hidden;
+}
+
+.shop-community-index .index-community-hobby-new .waterfall .item .item-container {
+  display: block;
+  width: 100%;
   background-color: #fff;
+  padding-bottom: .2rem;
 }
 
-.shop-community-index .index-community-hobby .waterfall .item .gapy {
-  width: 100%;
-  height: 0.18rem;
-  background-color: #F4F4F4;
-}
-
-.shop-community-index .index-community-hobby .waterfall .item .imgbox {
+.shop-community-index .index-community-hobby-new .waterfall .item .imgbox {
   text-align: center;
   overflow: hidden;
 }
 
-.shop-community-index .index-community-hobby .waterfall .item .imgbox img {
+.shop-community-index .index-community-hobby-new .waterfall .item .imgbox img {
   display: inline-block;
   max-width: 100%;
   margin-bottom: 10px;
 }
 
-.shop-community-index .index-community-hobby .waterfall .item .title {
+.shop-community-index .index-community-hobby-new .waterfall .item .title {
   font-size: .25rem;
   line-height: .36rem;
   color: #000000;
@@ -1374,11 +1381,10 @@ input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
   padding: 0 .2rem;
 }
 
-.shop-community-index .index-community-hobby .waterfall .item .desc {
+.shop-community-index .index-community-hobby-new .waterfall .item .desc {
   margin-top: .16rem;
   margin-bottom: .1rem;
   font-size: .2rem;
-  line-height: .3rem;
   height: auto;
   color: #9FA0A0;
   word-break: break-all;
@@ -1390,14 +1396,14 @@ input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
   padding: 0 .2rem;
 }
 
-.shop-community-index .index-community-hobby .waterfall .item .commu-user {
+.shop-community-index .index-community-hobby-new .waterfall .item .commu-user {
   display: inline-block;
   margin-top: .14rem;
   font-size: 0;
   padding-left: .2rem;
 }
 
-.shop-community-index .index-community-hobby .waterfall .item .commu-user .imgbox {
+.shop-community-index .index-community-hobby-new .waterfall .item .commu-user .imgbox {
   position: relative;
   display: inline-block;
   width: 0.4rem;
@@ -1422,36 +1428,40 @@ input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
   overflow-y: hidden;
 }
 
-.shop-community-index .index-community-hobby .waterfall .item .commu-user .imgbox img {
+.shop-community-index .index-community-hobby-new .waterfall .item .commu-user .imgbox img {
   display: inline-block;
   width: 0.4rem;
   height: 0.4rem;
   border-radius: 50%;
 }
 
-.shop-community-index .index-community-hobby .waterfall .item .commu-user .imgbox {
+.shop-community-index .index-community-hobby-new .waterfall .item .commu-user .imgbox {
   float: left;
   overflow: hidden;
   display: inline-block;
 }
 
-.shop-community-index .index-community-hobby .waterfall .item .commu-user .text {
+.shop-community-index .index-community-hobby-new .waterfall .item .commu-user .text {
   float: left;
+  width: 1.45rem;
   padding-left: .1rem;
   font-size: .25rem;
   height: .4rem;
   line-height: .4rem;
   color: #231815;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
-.shop-community-index .index-community-hobby .waterfall .item .praise {
+.shop-community-index .index-community-hobby-new .waterfall .item .praise {
   margin-top: .14rem;
   float: right;
   font-size: 0;
   padding-right: .2rem;
 }
 
-.shop-community-index .index-community-hobby .waterfall .item .praise .text {
+.shop-community-index .index-community-hobby-new .waterfall .item .praise .text {
   padding-left: .1rem;
   font-size: .25rem;
   height: .4rem;
@@ -1460,7 +1470,7 @@ input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
   vertical-align: middle;
 }
 
-.shop-community-index .index-community-hobby .icon_commu_heart {
+.shop-community-index .index-community-hobby-new .waterfall .icon_commu_heart {
   display: inline-block;
   width: .28rem;
   height: .26rem;
@@ -1469,7 +1479,7 @@ input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
   vertical-align: middle;
 }
 
-.shop-community-index .index-community-hobby .icon_commu_red_heart {
+.shop-community-index .index-community-hobby-new .waterfall .icon_commu_red_heart {
   display: inline-block;
   width: .28rem;
   height: .26rem;
@@ -1510,6 +1520,121 @@ input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
   font-size: .25rem;
 }
 
+/**动画begin-------------------------**/
+.loader2 {
+  position: fixed;
+  top: 80%;
+  left: 50%;
+  z-index: 10;
+  display: block;
+  -webkit-transform: translateX(-50%);
+     -moz-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.loader2 p {
+  text-align: center;
+  font-size: .24rem;
+}
+
+/**
+ * Lines
+ */
+@-webkit-keyframes line-scale {
+  0% {
+    -webkit-transform: scaley(1);
+    transform: scaley(1);
+  }
+  50% {
+    -webkit-transform: scaley(0.4);
+    transform: scaley(0.4);
+  }
+  100% {
+    -webkit-transform: scaley(1);
+    transform: scaley(1);
+  }
+}
+
+@-moz-keyframes line-scale {
+  0% {
+    -webkit-transform: scaley(1);
+    -moz-transform: scaley(1);
+         transform: scaley(1);
+  }
+  50% {
+    -webkit-transform: scaley(0.4);
+    -moz-transform: scaley(0.4);
+         transform: scaley(0.4);
+  }
+  100% {
+    -webkit-transform: scaley(1);
+    -moz-transform: scaley(1);
+         transform: scaley(1);
+  }
+}
+
+@keyframes line-scale {
+  0% {
+    -webkit-transform: scaley(1);
+    -moz-transform: scaley(1);
+         transform: scaley(1);
+  }
+  50% {
+    -webkit-transform: scaley(0.4);
+    -moz-transform: scaley(0.4);
+         transform: scaley(0.4);
+  }
+  100% {
+    -webkit-transform: scaley(1);
+    -moz-transform: scaley(1);
+         transform: scaley(1);
+  }
+}
+
+.line-scale > div:nth-child(1) {
+  -webkit-animation: line-scale 1s 0.1s infinite cubic-bezier(0.2, 0.68, 0.18, 1.08);
+  -moz-animation: line-scale 1s 0.1s infinite cubic-bezier(0.2, 0.68, 0.18, 1.08);
+       animation: line-scale 1s 0.1s infinite cubic-bezier(0.2, 0.68, 0.18, 1.08);
+}
+
+.line-scale > div:nth-child(2) {
+  -webkit-animation: line-scale 1s 0.2s infinite cubic-bezier(0.2, 0.68, 0.18, 1.08);
+  -moz-animation: line-scale 1s 0.2s infinite cubic-bezier(0.2, 0.68, 0.18, 1.08);
+       animation: line-scale 1s 0.2s infinite cubic-bezier(0.2, 0.68, 0.18, 1.08);
+}
+
+.line-scale > div:nth-child(3) {
+  -webkit-animation: line-scale 1s 0.3s infinite cubic-bezier(0.2, 0.68, 0.18, 1.08);
+  -moz-animation: line-scale 1s 0.3s infinite cubic-bezier(0.2, 0.68, 0.18, 1.08);
+       animation: line-scale 1s 0.3s infinite cubic-bezier(0.2, 0.68, 0.18, 1.08);
+}
+
+.line-scale > div:nth-child(4) {
+  -webkit-animation: line-scale 1s 0.4s infinite cubic-bezier(0.2, 0.68, 0.18, 1.08);
+  -moz-animation: line-scale 1s 0.4s infinite cubic-bezier(0.2, 0.68, 0.18, 1.08);
+       animation: line-scale 1s 0.4s infinite cubic-bezier(0.2, 0.68, 0.18, 1.08);
+}
+
+.line-scale > div:nth-child(5) {
+  -webkit-animation: line-scale 1s 0.5s infinite cubic-bezier(0.2, 0.68, 0.18, 1.08);
+  -moz-animation: line-scale 1s 0.5s infinite cubic-bezier(0.2, 0.68, 0.18, 1.08);
+       animation: line-scale 1s 0.5s infinite cubic-bezier(0.2, 0.68, 0.18, 1.08);
+}
+
+.line-scale > div {
+  background-color: #279fcf;
+  width: 4px;
+  height: 35px;
+  border-radius: 2px;
+  margin: 2px;
+  -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+       animation-fill-mode: both;
+  display: inline-block;
+}
+
+/**动画end-------------------------**/
 .shop-community-detail .head {
   height: auto;
   width: 7.5rem;

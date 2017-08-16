@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-       <meta charset="utf-8">
+        <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
     <meta content="telephone=no" name="format-detection" />
     <meta name="google" value="notranslate" />
@@ -172,7 +172,7 @@ document.addEventListener('DOMContentLoaded', function () {
                                 <i class="icon_bbs_like_normal mrg-r10"></i>
                                 <span class="text">赞</span>
                             </span>
-                            <span class="replay">
+                            <span class="replay" data-comment-id="20">
                                 <span class="text">回复</span>
                             </span>
                         </div>
@@ -210,7 +210,7 @@ document.addEventListener('DOMContentLoaded', function () {
                                 <i class="icon_bbs_like_normal mrg-r10"></i>
                                 <span class="text">赞</span>
                             </span>
-                            <span class="replay">
+                            <span class="replay" data-comment-id="21">
                                 <span class="text">回复</span>
                             </span>
                         </div>
@@ -328,9 +328,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
 <!--回复输入框-->
 <div class="form-comm-reply">
-    <div class="form-comm-inner">
+    <div class="form-comm-inner" id="CommentFrom">
         <form action="#" class="form-reply">
             <input type="text" class="form-reply-item" name="replay" placeholder="走心也分好几种，赶评论的最有种">
+            <input type="hidden" name="st_id" value="55">
+            <input type="hidden" name="is_reply" value="1">
+            <input type="hidden" name="comment_pid" value="14">
             <input type="submit" class="form-reply-btn" value="发布">
         </form>
     </div>
@@ -339,8 +342,6 @@ document.addEventListener('DOMContentLoaded', function () {
 <link rel="stylesheet" href="../../assets/styles/community.css">
 <script>
   $(function () {
-
-
     var bannerSwiper = new Swiper('.swiper-container-banner', {
       autoplay: 0,//可选选项，自动滑动
       direction: 'horizontal',
@@ -399,23 +400,36 @@ document.addEventListener('DOMContentLoaded', function () {
     }
   });
   $(function () {
-    $(document).on("click",".commu-review .tips, .replay", function(e){
+    $(document).on("click",".commu-review .tips", function(e){
+      $("#CommentFrom input[name=is_reply]").val(0);
+      $("#CommentFrom input[name=comment_pid]").val(0);
       $(".form-comm-reply").show();
       $(".community-footer").hide();
       $("input[type='text']").focus();
+      e.preventDefault();
+      console.log("tips--------------");
     });
-    $(".review").not(".commu-review .tips, .replay").on("click", function(e){
+    $(document).on("click",".replay", function(e){
+      $("#CommentFrom input[name=is_reply]").val(1);
+      var comment_id = $(this).attr('data-comment-id');
+      $("#CommentFrom input[name=comment_pid]").val(comment_id);
+      $(".form-comm-reply").show();
+      $(".community-footer").hide();
+      $("input[type='text']").focus();
+      e.preventDefault();
+      console.log("replayreplayreplayreplay--------------");
+    });
+
+    $("#content").not(".commu-review .tips, .replay").on("click", function(e){
       $(".form-comm-reply").hide();
       $(".community-footer").show();
+      //e.preventDefault();
+      console.log("notnt--------------");
     });
 
-  /* $("input[type='text']").blur(function(){
-     if($(".form-comm-inner").hasFocus){
-
-     }else{
+   /*$("input[type='text']").blur(function(){
        $(".form-comm-reply").hide();
        $(".community-footer").show();
-     }
    });*/
 
     scroll();
@@ -427,7 +441,7 @@ document.addEventListener('DOMContentLoaded', function () {
     $(window).scroll(function (e) {
       //头部高度
       var targetHight = target.height();
-      var initOpacity = 0.3;
+      var initOpacity = 0.0;
       var scrollTop = $(window).scrollTop();
       var scale = scrollTop / targetHight;
       headerEle.removeClass('bottom-line');

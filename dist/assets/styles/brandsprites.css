@@ -6,13 +6,12 @@ console.log('$_'+i+":"+(i/base)+"rem;");
 }*/
 .common_icon {
   background: url("../images/common/common_icon.png") no-repeat;
-  background-size: 2.06rem 4.61rem;
+  background-size: 2.03rem 4.61rem;
 }
 
 .common_icon_fix {
   background: none;
   position: relative;
-  overflow: hidden;
 }
 
 .common_icon_fix:after {
@@ -24,7 +23,7 @@ console.log('$_'+i+":"+(i/base)+"rem;");
   left: 0;
   top: 0;
   background: url("../images/common/common_icon.png") no-repeat;
-  background-size: 206rem 461rem;
+  background-size: 203rem 461rem;
   background-repeat: no-repeat;
   -webkit-transform-origin: 0 0;
   -webkit-transform: scale(0.01);
@@ -42,9 +41,21 @@ console.log('$_'+i+":"+(i/base)+"rem;");
   background-position: 0 -3.11rem;
 }
 
+.icon_community_qq:after {
+  height: 47rem;
+  width: 47rem;
+  background-position: 0 -311rem;
+}
+
 .icon_community_wechat {
   height: 0.47rem;
   width: 0.47rem;
+  background-position: 0 0;
+}
+
+.icon_community_wechat:after {
+  height: 47rem;
+  width: 47rem;
   background-position: 0 0;
 }
 
@@ -52,6 +63,12 @@ console.log('$_'+i+":"+(i/base)+"rem;");
   height: 0.47rem;
   width: 0.47rem;
   background-position: 0 -1.02rem;
+}
+
+.icon_community_code:after {
+  height: 47rem;
+  width: 47rem;
+  background-position: 0 -102rem;
 }
 
 .icon_right_arrow {
@@ -66,10 +83,22 @@ console.log('$_'+i+":"+(i/base)+"rem;");
   background-position: 0 -0.51rem;
 }
 
+.icon_community_tieba:after {
+  height: 47rem;
+  width: 47rem;
+  background-position: 0 -51rem;
+}
+
 .icon_community_weibo {
   height: 0.47rem;
   width: 0.47rem;
   background-position: 0 -1.54rem;
+}
+
+.icon_community_weibo:after {
+  height: 47rem;
+  width: 47rem;
+  background-position: 0 -154rem;
 }
 
 .icon_community_store {
@@ -78,10 +107,22 @@ console.log('$_'+i+":"+(i/base)+"rem;");
   background-position: 0 -2.58rem;
 }
 
+.icon_community_store:after {
+  height: 47rem;
+  width: 47rem;
+  background-position: 0 -258rem;
+}
+
 .icon_community_storeDesc {
   height: 0.47rem;
   width: 0.47rem;
   background-position: 0 -4.14rem;
+}
+
+.icon_community_storeDesc:after {
+  height: 47rem;
+  width: 47rem;
+  background-position: 0 -414rem;
 }
 
 .icon_community_storeLogo {
@@ -90,10 +131,22 @@ console.log('$_'+i+":"+(i/base)+"rem;");
   background-position: 0 -3.62rem;
 }
 
+.icon_community_storeLogo:after {
+  height: 47rem;
+  width: 47rem;
+  background-position: 0 -362rem;
+}
+
 .icon_community_storePhone {
   height: 0.47rem;
   width: 0.47rem;
   background-position: 0 -2.06rem;
+}
+
+.icon_community_storePhone:after {
+  height: 47rem;
+  width: 47rem;
+  background-position: 0 -206rem;
 }
 
 .icon-newfooter-home {
@@ -189,13 +242,13 @@ console.log('$_'+i+":"+(i/base)+"rem;");
 
 .icon_order_title_red_sign {
   height: 0.3rem;
-  width: 0.44rem;
+  width: 0.41rem;
   background-position: -1.62rem -0.65rem;
 }
 
 .icon_order_title_red_sign:after {
   height: 30rem;
-  width: 44rem;
+  width: 41rem;
   background-position: -162rem -65rem;
 }
 
@@ -477,7 +530,6 @@ console.log('$_'+i+":"+(i/base)+"rem;");
 .store_common_icon_fix {
   background: none;
   position: relative;
-  overflow: hidden;
 }
 
 .store_common_icon_fix:after {

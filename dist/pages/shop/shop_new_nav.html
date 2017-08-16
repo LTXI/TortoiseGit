@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="http://www.nineneeds.com/styles/ricky.css"><script type="text/javascript" src="http://www.nineneeds.com/scripts/mui.min.js"></script><script type="text/javascript" src="http://www.nineneeds.com/scripts/zepto.min.js"></script><script type="text/javascript" src="http://www.nineneeds.com/scripts/zepto.swiper.min.js"></script><script type="text/javascript" src="http://www.nineneeds.com/scripts/zepto.app.js?v=04063"></script><script type="text/javascript" src="http://www.nineneeds.com/scripts/zepto.custom.js?v=04062"></script><link rel="stylesheet" href="http://www.nineneeds.com/styles/mui.min.css">
     <!--<link rel="stylesheet" href="http://www.nineneeds.com/styles/app.css">-->
     <link rel="stylesheet" href="../../assets/styles/app.css">
-    <script type="text/javascript" src="http://www.nineneeds.com/scripts/app.js"></script><link rel="stylesheet" href="http://www.nineneeds.com/styles/zepto.mdatetimer.css"><script type="text/javascript" src="http://www.nineneeds.com/scripts/zepto.mdatetimer.js"></script>
+    <script type="text/javascript" src="../../assets/scripts/app.js"></script><link rel="stylesheet" href="http://www.nineneeds.com/styles/zepto.mdatetimer.css"><script type="text/javascript" src="http://www.nineneeds.com/scripts/zepto.mdatetimer.js"></script>
     <script >
 document.addEventListener('DOMContentLoaded', function () {
 (function initFontSize() {
@@ -264,11 +264,19 @@ document.addEventListener('DOMContentLoaded', function () {
                         </div>
                     </a>
                 </li>
+                <li class="goods-item swiper-slide look-more">
+                    <a href="#">
+                        <div class="imgbox">
+                            <img src="../../assets/images/shop/shop_index_look_more.png" alt="">
+                        </div>
+
+                    </a>
+                </li>
             </ul>
         </div>
     </div>
 
-    <div style="height: 500px"></div>
+    <!--<div style="height: 500px"></div>-->
 
 </div>
 <!--返回头部-->
@@ -303,12 +311,13 @@ document.addEventListener('DOMContentLoaded', function () {
                         <span class="text">社区</span>
                     </a>
                 </li>
-        <li class="footer_item">
-            <a class="link" href="#">
+        <li class="footer_item m-buybar">
+            <a class="link cart" href="#">
                 <span class="icon-box">
                     <i class="store_common_icon_fix icon_store_car"></i>
                 </span>
                 <span class="text">购物车</span>
+                <span class="count">1</span>
             </a>
         </li>
         <li class="footer_item">
@@ -321,6 +330,35 @@ document.addEventListener('DOMContentLoaded', function () {
         </li>
     </ul>
 </div>
+
+<!--<div class="m-layermsk m-newpopmsk m-newpopmsk-show">
+    <div class="m-window m-newpopup">
+        <div class="winbody">
+            <p class="title">分享到</p>
+            <ul class="content clearfix">
+                <li class="share-item" onclick="shareSelectWay("weixin", "weixin-1")">
+                    <i class="share-item-img icon_share_wechat"></i>
+                    <p class="share-item-text">微信好友</p>
+                </li>
+                <li class="share-item" onclick="shareSelectWay("weixin","weixin-2")>
+                    <i class="share-item-img icon_share_friends"></i>
+                    <p class="share-item-text">朋友圈</p>
+                </li>
+                <li class="share-item" onclick="shareSelectWay("sinaweibo",null)>
+                    <i class="share-item-img icon_share_weibo"></i>
+                    <p class="share-item-text">微博</p>
+                </li>
+                <li class="share-item" onclick="shareSelectWay("sinaweibo",null)>
+                    <i class="share-item-img icon_share_weibo"></i>
+                    <p class="share-item-text">微博</p>
+                </li>
+            </ul>
+            <p class="cancel bdr-top">取消</p>
+        </div>
+    </div>
+</div>-->
+
+
 <link rel="stylesheet" href="../../assets/styles/appshop.css">
 <script type="text/javascript">
   $(function () {

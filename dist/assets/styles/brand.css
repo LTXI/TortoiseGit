@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   margin: 0;
   padding: 0;
@@ -288,13 +289,12 @@ console.log('$_'+i+":"+(i/base)+"rem;");
 }*/
 .common_icon {
   background: url("../images/common/common_icon.png") no-repeat;
-  background-size: 2.06rem 4.61rem;
+  background-size: 2.03rem 4.61rem;
 }
 
 .common_icon_fix {
   background: none;
   position: relative;
-  overflow: hidden;
 }
 
 .common_icon_fix:after {
@@ -306,7 +306,7 @@ console.log('$_'+i+":"+(i/base)+"rem;");
   left: 0;
   top: 0;
   background: url("../images/common/common_icon.png") no-repeat;
-  background-size: 206rem 461rem;
+  background-size: 203rem 461rem;
   background-repeat: no-repeat;
   -webkit-transform-origin: 0 0;
   -webkit-transform: scale(0.01);
@@ -324,9 +324,21 @@ console.log('$_'+i+":"+(i/base)+"rem;");
   background-position: 0 -3.11rem;
 }
 
+.icon_community_qq:after {
+  height: 47rem;
+  width: 47rem;
+  background-position: 0 -311rem;
+}
+
 .icon_community_wechat {
   height: 0.47rem;
   width: 0.47rem;
+  background-position: 0 0;
+}
+
+.icon_community_wechat:after {
+  height: 47rem;
+  width: 47rem;
   background-position: 0 0;
 }
 
@@ -334,6 +346,12 @@ console.log('$_'+i+":"+(i/base)+"rem;");
   height: 0.47rem;
   width: 0.47rem;
   background-position: 0 -1.02rem;
+}
+
+.icon_community_code:after {
+  height: 47rem;
+  width: 47rem;
+  background-position: 0 -102rem;
 }
 
 .icon_right_arrow {
@@ -348,10 +366,22 @@ console.log('$_'+i+":"+(i/base)+"rem;");
   background-position: 0 -0.51rem;
 }
 
+.icon_community_tieba:after {
+  height: 47rem;
+  width: 47rem;
+  background-position: 0 -51rem;
+}
+
 .icon_community_weibo {
   height: 0.47rem;
   width: 0.47rem;
   background-position: 0 -1.54rem;
+}
+
+.icon_community_weibo:after {
+  height: 47rem;
+  width: 47rem;
+  background-position: 0 -154rem;
 }
 
 .icon_community_store {
@@ -360,10 +390,22 @@ console.log('$_'+i+":"+(i/base)+"rem;");
   background-position: 0 -2.58rem;
 }
 
+.icon_community_store:after {
+  height: 47rem;
+  width: 47rem;
+  background-position: 0 -258rem;
+}
+
 .icon_community_storeDesc {
   height: 0.47rem;
   width: 0.47rem;
   background-position: 0 -4.14rem;
+}
+
+.icon_community_storeDesc:after {
+  height: 47rem;
+  width: 47rem;
+  background-position: 0 -414rem;
 }
 
 .icon_community_storeLogo {
@@ -372,10 +414,22 @@ console.log('$_'+i+":"+(i/base)+"rem;");
   background-position: 0 -3.62rem;
 }
 
+.icon_community_storeLogo:after {
+  height: 47rem;
+  width: 47rem;
+  background-position: 0 -362rem;
+}
+
 .icon_community_storePhone {
   height: 0.47rem;
   width: 0.47rem;
   background-position: 0 -2.06rem;
+}
+
+.icon_community_storePhone:after {
+  height: 47rem;
+  width: 47rem;
+  background-position: 0 -206rem;
 }
 
 .icon-newfooter-home {
@@ -471,13 +525,13 @@ console.log('$_'+i+":"+(i/base)+"rem;");
 
 .icon_order_title_red_sign {
   height: 0.3rem;
-  width: 0.44rem;
+  width: 0.41rem;
   background-position: -1.62rem -0.65rem;
 }
 
 .icon_order_title_red_sign:after {
   height: 30rem;
-  width: 44rem;
+  width: 41rem;
   background-position: -162rem -65rem;
 }
 
@@ -759,7 +813,6 @@ console.log('$_'+i+":"+(i/base)+"rem;");
 .store_common_icon_fix {
   background: none;
   position: relative;
-  overflow: hidden;
 }
 
 .store_common_icon_fix:after {
@@ -951,11 +1004,11 @@ console.log('$_'+i+":"+(i/base)+"rem;");
   height: 1.26rem;
 }
 
-.header-fixed + .hold-space-top {
+.jm-shop-header.jm-shop-header + .hold-space-top {
   height: 1rem;
 }
 
-.header-fixed ~ .page-content .hold-space-top {
+.header-fixed.jm-shop-header ~ .page-content .hold-space-top {
   height: 1rem;
 }
 
@@ -1612,12 +1665,29 @@ console.log('$_'+i+":"+(i/base)+"rem;");
   width: 100%;
   height: .4rem;
   line-height: .4rem;
-  font-size: .18rem;
+  font-size: .25rem;
   position: relative;
 }
 
 .new-store-page-footer .footer_inner .footer_item .link.on .text {
   color: #F23030;
+}
+
+.m-buybar .cart .count {
+  position: absolute;
+  min-width: 16px;
+  height: 16px;
+  left: 27px;
+  top: 2px;
+  background-color: #fff;
+  color: #e31436;
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
+  font-size: 12px;
+  line-height: 14px;
+  text-align: center;
+  padding: 0 4px;
+  border: 1px solid #e31436;
 }
 
 .new-app-page-footer {
@@ -1688,7 +1758,7 @@ console.log('$_'+i+":"+(i/base)+"rem;");
   width: 100%;
   height: .4rem;
   line-height: .4rem;
-  font-size: .18rem;
+  font-size: .25rem;
   position: relative;
 }
 
@@ -1810,17 +1880,12 @@ console.log('$_'+i+":"+(i/base)+"rem;");
 }
 
 .brandgoods .goods-box .goods-item {
-  -webkit-flex-basis: 3.37rem;
-      -ms-flex-preferred-size: 3.37rem;
-          flex-basis: 3.37rem;
   -webkit-box-flex: 0;
-  -webkit-flex-grow: 0;
+  -webkit-flex: 0 1 3.37rem;
      -moz-box-flex: 0;
-      -ms-flex-positive: 0;
-          flex-grow: 0;
-  -webkit-flex-shrink: 1;
-      -ms-flex-negative: 1;
-          flex-shrink: 1;
+      -ms-flex: 0 1 3.37rem;
+          flex: 0 1 3.37rem;
+  width: 50%;
   height: 4.74rem;
   background-color: #fff;
   margin-bottom: .2rem;
@@ -1921,6 +1986,259 @@ console.log('$_'+i+":"+(i/base)+"rem;");
   background-size: .83rem  .29rem;
 }
 
+/**热门品牌滑动--**/
+.index-brand-box {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+     -moz-box-orient: horizontal;
+     -moz-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 7.5rem;
+  height: 3.6rem;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+     -moz-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+     -moz-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-align-content: flex-start;
+      -ms-flex-line-pack: start;
+          align-content: flex-start;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
+  background-color: #fff;
+  padding-bottom: .23rem;
+}
+
+.index-brand-box .brand-item {
+  width: 40.3%;
+  height: 3.45rem;
+  background-color: #fff;
+  margin-bottom: .2rem;
+}
+
+.index-brand-box .brand-item:first-child {
+  margin-left: .12rem;
+}
+
+.index-brand-box .brand-item .inner {
+  padding: 0.3rem .25rem;
+  margin: .12rem .12rem .12rem 0.12rem;
+  height: 3.2rem;
+  position: relative;
+  -webkit-box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.3);
+          box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.3);
+}
+
+.index-brand-box .brand-item .item {
+  height: 1.6rem;
+  overflow: hidden;
+  margin-bottom: .25rem;
+}
+
+.index-brand-box .brand-item .item .imgbox {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+     -moz-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0rem;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+.index-brand-box .brand-item .item .imgbox img {
+  display: inline-block;
+  max-width: 100%;
+}
+
+.index-brand-box .brand-item .title, .index-brand-box .brand-item .desc {
+  font-size: .25rem;
+  text-align: center;
+  color: #231815;
+  line-height: .32rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.index-brand-box .brand-item .desc {
+  color: #9FA0A0;
+}
+
+/**分享begin**/
+.m-layermsk {
+  background: transparent;
+  position: fixed;
+  z-index: 10000;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.m-newpopmsk {
+  background-color: rgba(0, 0, 0, 0.6);
+  -webkit-animation: animation-opacity 500ms ease;
+     -moz-animation: animation-opacity 500ms ease;
+          animation: animation-opacity 500ms ease;
+}
+
+@-webkit-keyframes animation-opacity {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes animation-opacity {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes animation-opacity {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes animation-move {
+  from {
+    -webkit-transform: translateY(100%) translateZ(0);
+            transform: translateY(100%) translateZ(0);
+  }
+  to {
+    -webkit-transform: translateY(0) translateZ(0);
+            transform: translateY(0) translateZ(0);
+  }
+}
+
+@-moz-keyframes animation-move {
+  from {
+    -moz-transform: translateY(100%) translateZ(0);
+         transform: translateY(100%) translateZ(0);
+  }
+  to {
+    -moz-transform: translateY(0) translateZ(0);
+         transform: translateY(0) translateZ(0);
+  }
+}
+
+@keyframes animation-move {
+  from {
+    -webkit-transform: translateY(100%) translateZ(0);
+       -moz-transform: translateY(100%) translateZ(0);
+            transform: translateY(100%) translateZ(0);
+  }
+  to {
+    -webkit-transform: translateY(0) translateZ(0);
+       -moz-transform: translateY(0) translateZ(0);
+            transform: translateY(0) translateZ(0);
+  }
+}
+
+.m-window {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.winbody {
+  position: absolute;
+  bottom: 0%;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.95);
+  text-align: center;
+  padding: .2rem  .4rem .2rem .4rem;
+  font-size: 0;
+  -webkit-animation: animation-move 500ms ease;
+     -moz-animation: animation-move 500ms ease;
+          animation: animation-move 500ms ease;
+}
+
+.winbody .share-content {
+  margin: .2rem 0;
+}
+
+.winbody .title {
+  font-size: .3rem;
+}
+
+.winbody .share-item {
+  float: left;
+  width: 33.33%;
+  padding: .15rem;
+  text-align: center;
+}
+
+.winbody .share-item-img {
+  display: inline-block;
+  width: 100%;
+  height: 1.2rem;
+}
+
+.winbody .share-item-text {
+  font-size: .28rem;
+  color: #000;
+}
+
+.winbody .icon_share_wechat {
+  background: url("../images/app/share/icon_share_wechat.png") center center no-repeat;
+  background-size: 1.2rem auto;
+}
+
+.winbody .icon_share_friends {
+  background: url("../images/app/share/icon_share_friends.png") center center no-repeat;
+  background-size: 1.2rem auto;
+}
+
+.winbody .icon_share_weibo {
+  background: url("../images/app/share/icon_share_weibo.png") center center no-repeat;
+  background-size: 1.2rem auto;
+}
+
+.winbody .cancel {
+  font-size: .3rem;
+  padding: .25rem 0 0 0;
+}
+
+/**分享end**/
 body {
   background: #f4f4f4;
 }
@@ -2113,7 +2431,7 @@ body {
 .brandlistbox .itembox .item-middle .desc {
   padding-right: .44rem;
   line-height: 1.2;
-  font-size: .16rem;
+  font-size: .24rem;
   color: #595757;
   word-break: break-all;
   display: -webkit-box;
@@ -2125,7 +2443,7 @@ body {
 
 .brandlistbox .itembox .item-middle span {
   color: #595757;
-  font-size: .16rem;
+  font-size: .24rem;
 }
 
 .brandlistbox .itembox .item-right {

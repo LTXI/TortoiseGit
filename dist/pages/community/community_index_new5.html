@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+    <meta content="telephone=no" name="format-detection" />
+    <meta name="google" value="notranslate" />
+    <meta name="root-url" value="<?php echo JQ_URL; ?>" />
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <meta http-equiv="x-dns-prefetch-control" content="on" />
+    <title>社区首页</title>
+
+    <link rel="stylesheet" href="../../styles/mui.min.css" />
+    <link rel="stylesheet" href="../../styles/swiper.min.css" />
+    <link rel="stylesheet" href="../../styles/framework.css" />
+    <link rel="stylesheet" href="../../styles/app-base.css" />
+    <link rel="stylesheet" href="../../styles/ricky.css?v=04062" />
+ <script src="../../scripts/mui.min.js"></script>
+   <script type="text/javascript" src="../../scripts/zepto.min.js"></script>
+    <script type="text/javascript" src="../../scripts/zepto.swiper.min.js"></script>
+   <!--<script type="text/javascript" src="../../scripts/zepto.app.js?v=04063"></script>
+    <script type="text/javascript" src="../../scripts/zepto.custom.js?v=04062"></script>-->
+
+
+<!--
+    <link rel="stylesheet" href="http://192.168.2.133/styles/swiper.min.css" />
+        <link rel="stylesheet" href="http://192.168.2.133/styles/framework.css" />
+        <link rel="stylesheet" href="http://192.168.2.133/styles/app-base.css?v=04062" />
+        <link rel="stylesheet" href="http://192.168.2.133/styles/ricky.css" />
+    	<script type="text/javascript" src="http://192.168.2.133/scripts/mui.min.js"></script>
+        <script type="text/javascript" src="http://192.168.2.133/scripts/zepto.min.js"></script>
+        <script type="text/javascript" src="http://192.168.2.133/scripts/zepto.swiper.min.js"></script>
+        <script type="text/javascript" src="http://192.168.2.133/scripts/zepto.app.js?v=04063"></script>
+        <script type="text/javascript" src="http://192.168.2.133/scripts/zepto.custom.js?v=04062"></script>
+
+        <link rel='stylesheet' href='http://192.168.2.133/styles/mui.min.css'/>
+        <link rel='stylesheet' href='http://192.168.2.133/styles/app.css'/>
+        <script type="text/javascript" src="http://192.168.2.133/scripts/app.js"></script>
+         <link rel="stylesheet" href="http://192.168.2.133/styles/zepto.mdatetimer.css">
+        <script type="text/javascript" src="http://192.168.2.133/scripts/zepto.mdatetimer.js"></script>
+ -->
+    <!--样式模块公用放入-->
+
+    <link rel="stylesheet" href="../../assets/styles/app.css">
+    <script >
+document.addEventListener('DOMContentLoaded', function () {
+(function initFontSize() {
+		var resizeEvent = 'orientationchange' in window ? 'orientationchange' : 'resize';
+
+		function changeSize() {
+			const designWidth = 750; //设计稿尺寸是640px
+			const designWidth2 = 1080;
+			var html = document.documentElement; //根元素
+			var deviceWidth = html.clientWidth; //屏幕逻辑宽度
+			var base = 100;
+
+			if (deviceWidth > designWidth2) {
+				deviceWidth = designWidth2;
+			}
+			html.style.fontSize = (deviceWidth / designWidth) * base + "px";
+			//console.log(html.style.fontSize);
+			//alert(html.style.fontSize+"==="+deviceWidth);
+		}
+		changeSize();
+		window.addEventListener(resizeEvent, changeSize, false);
+	})();
+});
+</script>
+
+</head>
+<body>
+<!--头部-->
+<div class="header-fixed jm-shop-header jm-header-column-two-right shop-community-index-head ">
+    <div class="jm-wrapper un-bottom-line">
+        <div class="header-left-box">
+            <a href=""><i class=""></i></a>
+        </div>
+        <div class="header-center-box mid-search">
+            <div class="search-box">
+                <form action="#" method="" class="search-form">
+                    <div class="inner-box">
+                        <input type="search" name="search-form-content" placeholder="输入搜索内容" autocomplete="off"
+                               class="search-form-item">
+                        <button type="submit" class="search-sub-btn"><i class="icon_header_commu_search"></i></button>
+                        <i class="icon_header_shop_search_cancel"></i>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="header-right-box">
+            <a href="#" style="display: block"><i class="icon-r show  icon_header_commu_plus"></i></a>
+        </div>
+    </div>
+</div>
+<!--如果布局fixed，将占据垂直空间1.26rem-->
+<div class="hold-space-top"></div>
+<!--body内容信息-->
+<div id="content" class="page-content shop-community-index">
+    <div class="nav-index-box mrg-bottom24">
+        <ul class="main-nav">
+            <a href="#">
+                <li class="nav-type-item current"><span>推荐</span></li>
+            </a>
+            <a href="#">
+                <li class="nav-type-item"><span>饮食</span></li>
+            </a>
+            <a href="#">
+                <li class="nav-type-item"><span>限时特惠</span></li>
+            </a>
+            <a href="#">
+                <li class="nav-type-item"><span>美妆</span></li>
+            </a>
+            <a href="#">
+                <li class="nav-type-item"><span>母婴</span></li>
+            </a>
+            <a href="#">
+                <li class="nav-type-item"><span>出行</span></li>
+            </a>
+            <a href="#">
+                <li class="nav-type-item"><span>美食</span></li>
+            </a>
+            <a href="#">
+                <li class="nav-type-item"><span>游乐</span></li>
+            </a>
+        </ul>
+        <span class="nav-arrow-box">
+            <i class="arrow"></i>
+        </span>
+    </div>
+    <!--广告宣传-->
+    <div class="shop-community-index-banner">
+        <div class="swiper-container swiper-container-banner">
+            <div class="swiper-wrapper">
+                <a
+                        class="swiper-slide swiper-slide-active" href="javascript:void(0);"><img
+                        src="../../assets/images/app/bbs/banner.png"></a>
+                <a
+                        class="swiper-slide swiper-slide-active" href="javascript:void(0);"><img
+                        src="../../assets/images/app/bbs/banner2.png"></a>
+
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </div>
+    <div class="recommend-title">
+        <div class="info-list-title">
+        <span class="title-box">
+<i class="common_icon_fix icon_order_title_sign"></i>           <span class="title">你可能感兴趣的圈子</span>
+<i class="common_icon_fix icon_order_title_sign scalex"></i>
+</span>
+        </div>
+        <!--<a href="#" class="more-btn">更多</a>-->
+    </div>
+    <!--品牌-->
+    <div class="index-hobby-box mrg-bottom24">
+        <div class="swiper-container swiper-container-hobby">
+            <ul class="list swiper-wrapper">
+                <li class="hobby-item item-box swiper-slide">
+                    <a href="#">
+                        <div class="inner">
+                            <div class="item">
+                                <div class="imgbox">
+                                    <img src="../../assets/images/app/bbs/icon_bbs_nav_1.png" alt="美食饮料"/>
+                                </div>
+                            </div>
+                            <p class="title">美食饮料</p>
+                            <p class="desc">保持沁润水靓保持沁润保持沁润水靓保持沁润</p>
+                            <span class="attention-btn">加入</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="hobby-item item-box swiper-slide">
+                    <a href="#">
+                        <div class="inner">
+                            <div class="item">
+                                <div class="imgbox">
+                                    <img src="../../assets/images/app/bbs/icon_bbs_nav_2.png" alt="出行旅行"/>
+                                </div>
+                            </div>
+                            <p class="title">出行旅行</p>
+                            <p class="desc">保持沁润水</p>
+                            <span class="attention-btn">加入</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="hobby-item item-box swiper-slide">
+                    <a href="#">
+                        <div class="inner">
+                            <div class="item">
+                                <div class="imgbox">
+                                    <img src="../../assets/images/app/bbs/icon_bbs_nav_3.png" alt="装逼"/>
+                                </div>
+                            </div>
+                            <p class="title">装逼</p>
+                            <p class="desc">保持沁润水靓保持沁润保持沁润水靓保持沁润</p>
+                            <span class="attention-btn">加入</span>
+                        </div>
+                    </a>
+                </li>
+                <li class="hobby-item item-box swiper-slide">
+                    <a href="#">
+                        <div class="inner">
+                            <div class="item">
+                                <div class="imgbox">
+                                    <img src="../../assets/images/app/bbs/icon_bbs_nav_1.png" alt="美食饮料"/>
+                                </div>
+                            </div>
+                            <p class="title">美食饮料</p>
+                            <p class="desc">保持沁润水靓保持沁润保持沁润水靓保持沁润</p>
+                            <span class="attention-btn">加入</span>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!--热推产品-->
+    <div class="index-community-hobby-new">
+        <div id="container" class="waterfall">
+            <ul class="inner-container clearfix" id="main">
+                <li class="item">
+                    <div class="item-container">
+                        <a href="./community_detail.html">
+                            <div class="imgbox tempimgbox">
+                                <img src="../../assets/images/brand/1484592650148983443.jpg" alt="关注">
+                            </div>
+                            <p class="title">超实用！超实用！超实用干货攻略</p>
+                            <p class="desc">超实用干货攻略超实用干货攻略描述描述超实用干货攻略超实用干货攻略描述描述</p>
+                        </a>
+                        <a class="commu-user clearfix">
+                            <div class="imgbox tempimgbox">
+                                <img src="../../assets/images/app/bbs/bbs_msg_dead_normal.png" alt="头像">
+                            </div>
+                            <span class="text">巴塞洛拉</span>
+                        </a>
+
+                        <a class="praise" href="#"><i class="icon_commu_heart mrg-r10"></i><span class="text">300</span></a>
+                    </div>
+
+                </li>
+                <li class="item">
+                    <div class="item-container">
+                        <div href="./community_detail.html" class="clearfix">
+                            <div class="imgbox tempimgbox">
+                                <img src="../../assets/images/app/user/icon_user_track2.png" alt="关注">
+                            </div>
+                            <p class="title">超实用！超实用</p>
+                            <p class="desc">44</p>
+                        </div>
+                        <div class="commu-user clearfix">
+                            <div class="imgbox">
+                                <img src="../../assets/images/app/bbs/bbs_msg_dead_normal.png" alt="头像">
+                            </div>
+                            <span class="text">巴塞洛拉</span>
+                        </div>
+                        <div class="praise clearfix" href="#"><i class="icon_commu_red_heart mrg-r10"></i><span
+                                class="text">300</span></div>
+                    </div>
+
+                </li>
+                <li class="item">
+                    <div class="item-container">
+                        <a href="./community_detail.html">
+                            <div class="imgbox tempimgbox">
+                                <img src="../../assets/images/brand/1484592650148983443.jpg" alt="关注">
+                            </div>
+                            <p class="title">超实用！超实用！超实用干货攻略</p>
+                            <p class="desc">超实用干货攻略超实用干货攻略描述描述超实用干货攻略超实用干货攻略描述描述</p>
+                        </a>
+                        <a class="commu-user clearfix">
+                            <div class="imgbox">
+                                <img src="../../assets/images/app/bbs/bbs_msg_dead_normal.png" alt="头像">
+                            </div>
+                            <span class="text">巴塞洛拉</span>
+                        </a>
+
+                        <a class="praise" href="#"><i class="icon_commu_heart mrg-r10"></i><span class="text">300</span></a>
+                    </div>
+
+                </li>
+                <li class="item">
+                    <div class="item-container">
+                        <a href="./community_detail.html">
+                            <div class="imgbox tempimgbox">
+                                <img src="../../assets/images/brand/1484592650148983443.jpg" alt="关注">
+                            </div>
+                            <p class="title">超实用！超实用！超实用干货攻略</p>
+                            <p class="desc">超实用干货攻略超实用干货攻略描述描述超实用干货攻略超实用干货攻略描述描述</p>
+                        </a>
+                        <a class="commu-user clearfix">
+                            <div class="imgbox">
+                                <img src="../../assets/images/app/bbs/bbs_msg_dead_normal.png" alt="头像">
+                            </div>
+                            <span class="text">巴塞洛拉</span>
+                        </a>
+                        <a class="praise" href="#"><i class="icon_commu_heart mrg-r10"></i><span class="text">300</span></a>
+                    </div>
+                </li>
+            </ul>
+            <!--<div class="loader2">
+                <div class="loader-inner line-scale">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <p>加载中...</p>
+                </div>
+            </div>-->
+        </div>
+    </div>
+    <div class="mask">
+        <ul class="nav-list clearfix">
+            <li class="nav-item">饮食</li>
+            <li class="nav-item">饮食</li>
+            <li class="nav-item">美妆</li>
+            <li class="nav-item">出行</li>
+            <li class="nav-item">出行</li>
+            <li class="nav-item">饮食</li>
+            <li class="nav-item">饮食</li>
+            <li class="nav-item">美妆</li>
+            <li class="nav-item">出行</li>
+            <li class="nav-item">出行</li>
+            <li class="nav-item">饮食</li>
+            <li class="nav-item">饮食</li>
+            <li class="nav-item">美妆</li>
+            <li class="nav-item">出行</li>
+            <li class="nav-item">出行</li>
+        </ul>
+    </div>
+</div>
+
+<!--底部导航-->
+<div id="footer" class="new-store-page-footer">
+    <ul class="footer_inner ">
+        <li class="footer_item">
+            <a class="on  link" href="#">
+            <span class="icon-box">
+                <i class="store_common_icon_fix icon_shop_indexmain"></i>
+            </span>
+
+             <span class="text">首页</span>
+            </a>
+        </li>
+        <li class="footer_item">
+            <a class="link" href="#">
+                <span class="icon-box">
+                    <i class="store_common_icon_fix icon_shop_category"></i>
+                </span>
+
+                <span class="text">分类</span>
+            </a>
+        </li>
+        <li class="footer_item">
+                    <a class="link" href="#">
+                        <span class="icon-box">
+                            <i class="store_common_icon_fix icon_shop_community"></i>
+                        </span>
+                        <span class="text">社区</span>
+                    </a>
+                </li>
+        <li class="footer_item">
+            <a class="link" href="#">
+                <span class="icon-box">
+                    <i class="store_common_icon_fix icon_store_car"></i>
+                </span>
+                <span class="text">购物车</span>
+            </a>
+        </li>
+        <li class="footer_item">
+            <a class="link" href="#">
+                <span class="icon-box">
+                    <i class="store_common_icon_fix icon_store_my"></i>
+                </span>
+                <span class="text">我的</span>
+             </a>
+        </li>
+    </ul>
+</div>
+<link rel="stylesheet" href="../../assets/styles/community.css">
+
+<script type="text/javascript">
+  $(function () {
+    var mySwiperbanner = new Swiper('.swiper-container-banner', {
+      autoplay: 5000,
+      direction: 'horizontal',
+      loop: true,
+      pagination: '.swiper-pagination',
+      paginationClickable: true
+    });
+
+    var mySwiperhobby = new Swiper('.swiper-container-hobby', {
+      freeMode: true,
+      centeredSlides: false,
+      slidesPerView: 3.6,
+      paginationClickable: true,
+      onTouchStart: function (swiper, even) {
+        swiper.unlockSwipeToPrev();
+        swiper.unlockSwipeToNext();
+        if (swiper.isEnd) {
+          swiper.lockSwipeToNext();
+        }
+        else if (swiper.activeIndex == 0) {
+          swiper.lockSwipeToPrev();
+        }
+      }
+    });
+
+    $(".nav-arrow-box").on('click', function (e) {
+      if ($(this).find(".arrow").hasClass("open")) {//打开的
+        $(this).find(".arrow").removeClass("open");
+        $(".mask").removeClass("open");
+        $("body").css({"overflow": "auto"});
+      } else {
+        $(this).find(".arrow").addClass("open");
+        $(".mask").addClass("open");
+        $("body").css({"overflow": "hidden"});
+      }
+    });
+    $(".mask").on('click', function (e) {
+      $(".nav-arrow-box").find(".arrow").removeClass("open");
+      $(".mask").removeClass("open");
+      $("body").css({"overflow": "auto"});
+    });
+  })
+</script>
+
+<!--瀑布流-->
+<script type="text/javascript">
+  var dataInt = {
+    'data': [
+      {'src': 'http://img4.imgtn.bdimg.com/it/u=3400595141,3957584367&fm=200&gp=0.jpg'},
+      {'src': 'http://pic41.nipic.com/20140501/18539861_155959517170_2.jpg'},
+      {'src': 'http://imgsrc.baidu.com/forum/pic/item/5d8ea144ad345982913052140cf431adcaef8455.jpg'},
+      {'src': 'http://img4.imgtn.bdimg.com/it/u=3400595141,3957584367&fm=200&gp=0.jpg'},
+      {'src': 'http://img17.3lian.com/d/file/201702/22/953c40c874029fb2b5dac1fd2540d327.jpg'},
+      {'src': 'http://pic.qiantucdn.com/58pic/17/91/72/51Z58PICNtg_1024.jpg'},
+      {'src': 'http://img0.imgtn.bdimg.com/it/u=1531392329,2869685141&fm=200&gp=0.jpg'},
+      {'src': 'http://img4.imgtn.bdimg.com/it/u=3400595141,3957584367&fm=200&gp=0.jpg'},
+      {'src': 'http://pic.qiantucdn.com/58pic/17/91/72/51Z58PICNtg_1024.jpg'}]
+  };
+
+
+  window.onload=function(){
+    waterfall('main','item');
+    window.onscroll=function(){
+      if(checkscrollside()){
+        var oParent = document.getElementById('main');// 父级对象
+        for(var i=0;i<dataInt.data.length;i++){
+          /*var oPin=document.createElement('div'); //添加 元素节点
+          oPin.className='pin';                   //添加 类名 name属性
+          oParent.appendChild(oPin);              //添加 子节点
+          var oBox=document.createElement('div');
+          oBox.className='box';
+          oPin.appendChild(oBox);
+          var oImg=document.createElement('img');
+          oImg.src='./images/'+dataInt.data[i].src;
+          oBox.appendChild(oImg);*/
+          var temphtml = temp(dataInt.data[i]);
+
+          $(oParent).append(temphtml);
+        }
+        waterfall('main','item');
+      };
+    }
+  };
+
+  /*
+   parend 父级id
+   pin 元素id
+   */
+  function waterfall(parent,pin){
+    var oParent=document.getElementById(parent);// 父级对象
+    var aPin=getClassObj(oParent,pin);// 获取存储块框pin的数组aPin
+    var iPinW=aPin[0].offsetWidth;// 一个块框pin的宽
+    var num=2;//Math.floor(document.documentElement.clientWidth/iPinW);//每行中能容纳的pin个数【窗口宽度除以一个块框宽度】
+    oParent.style.cssText='width:'+iPinW*num+'px;margin:0 auto;';//设置父级居中样式：定宽+自动水平外边距
+
+    var pinHArr=[];//用于存储 每列中的所有块框相加的高度。
+    for(var i=0;i<aPin.length;i++){//遍历数组aPin的每个块框元素
+      var pinH=aPin[i].offsetHeight;
+      if(i<num){
+        console.log("--------------i=="+i+"  "+pinH);
+        pinHArr[i]=pinH; //第一行中的num个块框pin 先添加进数组pinHArr
+        aPin[i].style.position='absolute';//设置绝对位移
+        aPin[i].style.top=0;
+        if(i==0){
+          aPin[i].style.left=0;
+        }else{
+          aPin[i].style.left='50%';
+        }
+        //aPin[i].style.left=iPinW * (i%2) + "px";
+      }else{
+        var minH=Math.min.apply(null,pinHArr);//数组pinHArr中的最小值minH
+        var minHIndex=getminHIndex(pinHArr,minH);
+        aPin[i].style.position='absolute';//设置绝对位移
+        aPin[i].style.top=minH+'px';
+        aPin[i].style.left=aPin[minHIndex].offsetLeft+'px';
+        //数组 最小高元素的高 + 添加上的aPin[i]块框高
+        pinHArr[minHIndex]+=aPin[i].offsetHeight;//更新添加了块框后的列高
+      }
+    }
+    //最外层容器高度
+    var max_height = pinHArr[0] > pinHArr[1] ? pinHArr[0] : pinHArr[1];
+    $(".inner-container").height(max_height);
+  }
+
+  /****
+   *通过父级和子元素的class类 获取该同类子元素的数组
+   */
+  function getClassObj(parent,className){
+    var obj=parent.getElementsByTagName('*');//获取 父级的所有子集
+    var pinS=[];//创建一个数组 用于收集子元素
+    for (var i=0;i<obj.length;i++) {//遍历子元素、判断类别、压入数组
+      if (obj[i].className==className){
+        pinS.push(obj[i]);
+      }
+    };
+    return pinS;
+  }
+  /****
+   *获取 pin高度 最小值的索引index
+   */
+  function getminHIndex(arr,minH){
+    for(var i in arr){
+      if(arr[i]==minH){
+        return i;
+      }
+    }
+  }
+
+
+  //当前图片是否加载完成
+  var loadedFlag = true;
+
+  function checkscrollside() {
+    var scrollTop = $(window).scrollTop(); //滚动距离
+    var documentH = $(document).height();//页面高度
+    var viewH = $(window).height();//可视区域view高度
+      var flag = scrollTop >= (documentH - viewH - 20) ? true : false;
+    //console.log("checkscrollside=="+flag);
+      return flag;
+  }
+var index = 0;
+  //模板 传入json数据
+  function temp(data) {
+    var html = "";
+    html = '<li class="item">' +
+      '<div class="item-container">' +
+      '<a href="./community_detail.html">' +
+      '<div class="imgbox tempimgbox">' +
+      '<img src="' + data.src + '" alt="img">' +
+      '</div>' +
+      '<p class="title">' + (index++) + "超实用,超实用超实用,超实用超实用,超实用" + '</p>' +
+      '<p class="desc">' + (44) + '</p>' +
+      '</a>' +
+      '<a class="commu-user clearfix">' +
+      '<div class="imgbox">' +
+      '<img src="../../assets/images/app/bbs/bbs_msg_dead_normal.png" alt="头像"/>' +
+      '</div>' +
+      '<span class="text">巴塞洛拉巴塞洛拉</span>' +
+      '</a>' +
+      '<a class="praise" href="#">' +
+      '<i class="icon_commu_red_heart mrg-r10"></i>' +
+      '<span class="text">300</span>' +
+      '</a>' +
+      '</div>' +
+      '</li>';
+    return html;
+  }
+</script>
+</body>
+</html>

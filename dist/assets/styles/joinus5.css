@@ -1,0 +1,288 @@
+html, body {
+  background-color: #fff !important;
+}
+
+.join-index-new {
+  position: relative;
+  width: 100%;
+  height: 20.53rem;
+  background: #fff url("../images/joinus/bg.png") no-repeat;
+  background-size: 100% 100%;
+}
+
+.join-index-new .join-title-box {
+  text-align: center;
+  display: inline-block;
+  width: 6.42rem;
+  margin: 0 auto;
+  background: url("../images/joinus/title_item_bg.png") no-repeat 0;
+  background-size: 100% auto;
+}
+
+.join-index-new .join-title-box .title {
+  width: 100%;
+  color: #B28146;
+  line-height: normal;
+  font-weight: 600;
+  padding: 0 1.8rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.join-index-new .join-title-box .big {
+  margin-top: .2rem;
+  font-size: .4rem;
+}
+
+.join-index-new .join-title-box .sm {
+  margin-bottom: .15rem;
+  font-size: .3rem;
+}
+
+.join-top {
+  text-align: center;
+  padding-top: 5rem;
+  position: relative;
+  font-size: 0;
+}
+
+.join-top .join-product-item {
+  text-align: center;
+}
+
+.join-top .join-product-item span {
+  display: block;
+  color: #595757;
+  font-size: .26rem;
+}
+
+.join-top .join-product-item i {
+  padding: 0 .1rem;
+  font-size: 0.4rem;
+  vertical-align: middle;
+}
+
+.join-top .join-product-item .product-img {
+  display: inline-block;
+  margin: .2rem 0 .4rem 0;
+}
+
+.join-top .join-product-item .product-img .imgbox {
+  position: relative;
+  width: 1.6rem;
+  height: 1.6rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+     -moz-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+     -moz-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+.join-top .join-product-item .product-img .imgbox img {
+  display: inline-block;
+  max-width: 100%;
+}
+
+.join-top .join-product-item .description {
+  display: inline-block;
+  width: 4rem;
+  height: .48rem;
+  line-height: .48rem;
+  background: #000;
+  border-radius: 1rem;
+  color: #fff;
+  font-size: .26rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.join-num {
+  margin: .3rem 0;
+  background: #F6EFE6;
+  padding: .2rem 0;
+  color: #000;
+  font-size: .26rem;
+  text-align: center;
+}
+
+.join-num span {
+  color: #B28146;
+  font-size: .32rem;
+  padding: 0 .15rem;
+  font-weight: 600;
+}
+
+.profit {
+  text-align: center;
+  padding: .2rem 0 .65rem 0;
+  border-bottom: 1px solid #E7E7E7;
+}
+
+.profit ul {
+  padding: 0 .92rem;
+  margin: 0 auto;
+}
+
+.profit .profit-item {
+  margin-top: .3rem;
+}
+
+.profit .profit-item .profit-img {
+  width: .8rem;
+  height: .8rem;
+  float: left;
+}
+
+.profit .profit-item .profit-desc {
+  padding-left: .2rem;
+  text-align: left;
+  color: #000;
+  font-size: .32rem;
+  line-height: .8rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.join-logo {
+  margin-top: .5rem;
+}
+
+.join-logo .logobox {
+  display: inline-block;
+  width: 1.12rem;
+  height: 1.12rem;
+  left: 50%;
+  overflow: hidden;
+}
+
+.join-logo .logobox img {
+  max-width: 100%;
+}
+
+.join-slogan {
+  position: relative;
+  margin-top: .2rem;
+  height: .6rem;
+  background-color: #fff;
+  text-align: center;
+}
+
+.join-slogan .title-box {
+  width: 100%;
+  display: inline-block;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 0;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+     -moz-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.join-slogan .title {
+  font-size: .3rem;
+  vertical-align: middle;
+  padding: 0 .28rem;
+}
+
+.join-slogan .icon_join_title_sign {
+  width: .72rem;
+  height: .56rem;
+  display: inline-block;
+  vertical-align: middle;
+  background: url("../images/joinus/icon_join_title_sign.png") no-repeat;
+  background-size: .72rem .56rem;
+}
+
+.join-slogan .scalex {
+  -webkit-transform: scaleX(-1);
+     -moz-transform: scaleX(-1);
+      -ms-transform: scaleX(-1);
+          transform: scaleX(-1);
+}
+
+.join-enter {
+  background: #C9AF8A;
+  display: inline-block;
+  height: .84rem;
+  width: 100%;
+  border-radius: .1rem;
+}
+
+.join-enter .join-enter-desc {
+  display: block;
+  text-align: center;
+  width: 100%;
+  top: 0;
+  height: .84rem;
+  line-height: .84rem;
+  color: #231815;
+  font-size: .38rem;
+}
+
+.join-form {
+  padding: 0 .2rem;
+}
+
+.join-form input[type=checkbox] {
+  display: none;
+}
+
+.join-form .join-protocol {
+  text-align: center;
+  padding: .05rem 0 .05rem .35rem;
+  bottom: 0;
+}
+
+.join-switch + label {
+  position: relative;
+  width: 6.44rem;
+  padding-left: .1rem;
+  font-size: .28rem;
+  line-height: .28rem;
+  color: #9FA0A0;
+}
+
+.join-switch + label:before {
+  position: absolute;
+  top: 0.05rem;
+  left: -.3rem;
+  content: '';
+  width: .3rem;
+  height: .3rem;
+  background: #fff url("../images/joinus/icon_hook_square.png") no-repeat left center;
+  background-size: .3rem .3rem;
+}
+
+.join-switch:checked + label:after {
+  position: absolute;
+  top: 0.03rem;
+  left: -.25rem;
+  content: '';
+  color: #fff;
+  width: 0.3rem;
+  height: .3rem;
+  background: url("../images/joinus/icon_hook.png") no-repeat left center;
+  background-size: .25rem .21rem;
+}
+
+/*# sourceMappingURL=maps/joinus5.css.map */
