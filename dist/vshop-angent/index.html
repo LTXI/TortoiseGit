@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>入口页面</title>
+		<link href="css/mui.min.css" rel="stylesheet" />
+	</head>
+
+	<body>
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript" src="js/update.js"></script>
+		<script type="text/javascript" charset="utf-8">
+			//站点地址
+			var index_url = "http://www.nineneeds.com/#m=user&a=login&loginType=agent";
+			//当前webview
+			var self = null;
+			//新页面
+			var nw = null; //
+			mui.init({
+				id: "index",
+				swipeBack: false,
+				show: {
+					autoShow: true, //页面loaded事件发生后自动显示，默认为true
+					aniShow: 'none', //页面显示动画，默认为”slide-in-right“；
+					duration: 3000, //页面动画持续时间，Android平台默认100毫秒，iOS平台默认200毫秒；
+					event: 'titleUpdate', //页面显示时机，默认为titleUpdate事件时显示
+					extras: {} //窗口动画是否使用图片加速
+				}
+			});
+			mui.plusReady(function() {
+				
+				
+				//状态栏前景色黑色
+				self = plus.webview.currentWebview();
+				plus.navigator.setStatusBarStyle('dark');
+				// 仅支持竖屏显示，这个具体的API我也没有找到，是看的hello mui的例子；
+				plus.screen.lockOrientation("portrait-primary");
+
+				var firstBackbutton = null;
+				var old_back = mui.back;
+				var max_time = 1000; //毫秒
+				var lasturl = null;
+
+				//判断网络
+				/*CONNECTION_UNKNOW: 网络状态常量，表示当前设备网络状态未知，固定值为0。
+				CONNECTION_NONE: 网络状态常量，当前设备网络未连接网络，固定值为1。
+				CONNECTION_ETHERNET: 网络状态常量，当前设备连接到有线网络，固定值为2。
+				CONNECTION_WIFI: 网络状态常量，当前设备连接到无线WIFI网络，固定值为3。
+				CONNECTION_CELL2G: 网络状态常量，当前设备连接到蜂窝移动2G网络，固定值为4。
+				CONNECTION_CELL3G: 网络状态常量，当前设备连接到蜂窝移动3G网络，固定值为5。
+				CONNECTION_CELL4G: 网络状态常量，当前设备连接到蜂窝移动4G网络，固定值为6。*/
+				var connectionStatus = plus.networkinfo.getCurrentType();
+
+				if(connectionStatus == 0 || connectionStatus == 1) {
+					//mui.toast('无法连接网络');
+					plus.webview.open('error.html', 'error', {}, 'fade-in', 1000);
+					reurn;
+					//nw = plus.webview.create('error.html', "error", {top: 0,bottom: 0});
+					//self.append(nw);
+				} else if(connectionStatus == 3 || connectionStatus == 4 || connectionStatus == 5 || connectionStatus == 2 || connectionStatus == 6) {
+					//mui.toast('使用wifi');
+					console.log("使用wifi" + "==" + nw);
+					/*plus.webview.open(index_url, 'index', {}, 'fade-in', 1000);
+						plus.webview.open()*/
+					//linkIndexPage();
+					//self = plus.webview.currentWebview();
+					//self.clear();
+					nw = plus.webview.create(index_url, "index", {
+						top: 0,
+						bottom: 0
+					});
+					self.append(nw);
+				}
+
+				//console.log(11111+"==" +nw);
+				mui.back = function() {
+					nw.canBack(function(e) {
+						//mui.toast('返回');
+						if(e.canBack) {
+							if(!firstBackbutton) {
+								nw.back(); //返回上一页
+								//endAnimal();//动画
+								firstBackbutton = new Date().getTime();
+								setTimeout(function() {
+									firstBackbutton = null;
+								}, max_time);
+							} else {
+								if((new Date().getTime() - firstBackbutton) < max_time) {
+									old_back();
+								}
+							}
+						} else {
+							old_back();
+						}
+					});
+				}
+
+				nw.onloaded = embedLoaded;
+				//nw.onloading = embedLoading;
+				// 页面加载完成事件回调函数
+				function embedLoaded(e) {
+					if(lasturl == null || (lasturl != nw.getURL() && (lasturl != index_url))) {
+						//startAnimal();
+						lasturl = nw.getURL();
+					}
+				}
+				// 页面开始加载事件回调函数
+				function embedLoading(e) {}
+				//结束动画
+				function endAnimal() {
+					plus.webview.startAnimation({
+							view: nw,
+							styles: {
+								fromLeft: '-100%',
+								toLeft: '0%'
+							},
+							action: 'none'
+						}, {},
+						function(e) {
+							nw.setStyle({
+								left: "0px"
+							})
+						});
+				}
+				//开始动画
+				function startAnimal() {
+					plus.webview.startAnimation({
+							view: self,
+							styles: {
+								fromLeft: '0%',
+								toLeft: '-100%'
+							},
+							action: 'none'
+						}, {
+							view: nw,
+							styles: {
+								fromLeft: '100%',
+								toLeft: '0%'
+							},
+							action: 'none'
+						},
+						function(e) {
+
+						});
+				}
+			});
+
+			/*function linkIndexPage(){
+				mui.toast('linkIndexPage');
+				self = plus.webview.currentWebview();
+				self.clear();
+				nw = plus.webview.create(index_url, "index", {top: 0,bottom: 0});
+				self.append(nw);
+			}*/
+		</script>
+
+	</body>
+
+</html>

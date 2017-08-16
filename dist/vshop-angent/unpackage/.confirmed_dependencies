@@ -1,0 +1,45 @@
+{
+  "index.html": {
+    "resources": [
+      "img/i-person.png",
+      "js/mui.min.js",
+      "fonts/mui.ttf",
+      "css/mui.min.css",
+      "img/i-message.png",
+      "img/i-home-active.png",
+      "img/i-find.png",
+      "img/i-home.png",
+      "img/i-message-active.png",
+      "img/i-find-active.png",
+      "img/i-person-active.png",
+      "js/update.js"
+    ],
+    "refer": [
+      "gt.html",
+      "guide.html"
+    ]
+  },
+  "gt.html": {
+    "resources": [
+      "js/mui.min.js",
+      "fonts/mui.ttf",
+      "css/mui.min.css"
+    ],
+    "refer": []
+  },
+  "guide.html": {
+    "resources": [
+      "js/mui.min.js",
+      "css/mui.min.css"
+    ],
+    "refer": []
+  },
+  "error.html": {
+    "resources": [
+      "img/error_icon.png",
+      "js/mui.min.js",
+      "css/mui.min.css"
+    ],
+    "refer": []
+  }
+}

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>入口页面</title>
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<style type="text/css">
+			.data-tips {
+				text-align: center;
+				width: 100%;
+				min-height: 100%;
+				position: relative;
+			}
+			
+			.data-tips .tipsbox {
+				display: inline-block;
+				padding-top: 40%;
+				width: 60%;
+				//border: 1px solid red;
+			}
+			
+			.data-tips .tipsbox i.icon {
+				display: inline-block;
+				width: 100px;
+				height: 100px;
+				background: url("img/error_icon.png") no-repeat center center;
+				background-size: contain;
+			}
+			
+			.data-tips .tipsbox p.desc {
+				color: #595757;
+				line-height: 10px;
+				padding-top: 10px;
+			}
+			
+			.data-tips .tipsbox p.desc1 {
+				font-size: 16px;
+			}
+			
+			.data-tips .tipsbox p.desc2 {
+				font-size: 12px;
+				margin-bottom: 22px;
+			}
+			
+			.data-tips .btn {
+				display: inline-block;
+				color: #595757;
+				border: 1px solid #ccc;
+				border-radius: 5px;
+				padding: 6px 30px;
+				font-size: 12px;
+			}
+		</style>
+	</head>
+
+	<body>
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript" charset="utf-8">
+			//站点地址
+			var index_url = "http://vshop.guaten.com/#m=user&a=login&loginType=agent";
+			//当前webview
+			var self = null;
+			//新页面
+			var nw  = null; 
+			
+			mui.init({
+				id: 'error',
+				swipeBack: false,
+				show: {
+					autoShow: true, //页面loaded事件发生后自动显示，默认为true
+					aniShow: 'none', //页面显示动画，默认为”slide-in-right“；
+					duration: 3000, //页面动画持续时间，Android平台默认100毫秒，iOS平台默认200毫秒；
+					event: 'titleUpdate', //页面显示时机，默认为titleUpdate事件时显示
+					extras: {} //窗口动画是否使用图片加速
+				}
+			});
+             var firstBackbutton = null;
+				var old_back = mui.back;
+				var max_time = 1000;//毫秒
+				var lasturl = null;
+			  mui.plusReady(function() {
+				// 仅支持竖屏显示，这个具体的API我也没有找到，是看的hello mui的例子；
+				plus.screen.lockOrientation("portrait-primary");
+				
+			});
+			/*document.addEventListener("error", function(e) {
+				if(href == "") {
+					href = e.href;
+				}
+				console.log("11111" + e.href);
+			}, false);*/
+
+			function refresh() {
+				//console.log("223333===" + href);
+				var connectionStatus = plus.networkinfo.getCurrentType();
+				//mui.toast('connectionStatus==' + connectionStatus);
+				if(connectionStatus == 0 || connectionStatus == 1) {
+					mui.toast('无法连接网络');
+					return;
+				} else if(connectionStatus == 3 || connectionStatus == 4 || connectionStatus == 5 || connectionStatus == 2 || connectionStatus == 6) {
+					//var errorpage = plus.webview.getWebviewById('error');
+					//errorpage.close();
+					//mui.toast('使用wifi' );
+
+					/*var agent_url = "http://vshop.guaten.com/#m=user&a=login&loginType=agent";
+					mui.toast('跳转href===' + agent_url);*/
+					//plus.webview.open(index_url, 'index', {}, 'fade-in', 1000);
+					//console.log("end----href=" + agent_url);
+					//linkIndexPage();
+					//plus.webview.getWebviewById("index").show();
+					
+					var self = plus.webview.currentWebview();
+				   var nw = plus.webview.create(index_url, "index", {top: 0,bottom: 0});
+				   self.append(nw);
+				  
+				
+				//判断网络
+				/*CONNECTION_UNKNOW: 网络状态常量，表示当前设备网络状态未知，固定值为0。
+				CONNECTION_NONE: 网络状态常量，当前设备网络未连接网络，固定值为1。
+				CONNECTION_ETHERNET: 网络状态常量，当前设备连接到有线网络，固定值为2。
+				CONNECTION_WIFI: 网络状态常量，当前设备连接到无线WIFI网络，固定值为3。
+				CONNECTION_CELL2G: 网络状态常量，当前设备连接到蜂窝移动2G网络，固定值为4。
+				CONNECTION_CELL3G: 网络状态常量，当前设备连接到蜂窝移动3G网络，固定值为5。
+				CONNECTION_CELL4G: 网络状态常量，当前设备连接到蜂窝移动4G网络，固定值为6。*/
+				var connectionStatus = plus.networkinfo.getCurrentType();
+				
+				if(connectionStatus == 0 || connectionStatus == 1) {
+					return;
+				} else if(connectionStatus == 3 || connectionStatus == 4 || connectionStatus == 5 || connectionStatus == 2 || connectionStatus == 6) {
+					//mui.toast('error 使用wifi');
+				    nw = plus.webview.create(index_url, "index", {top: 0,bottom: 0});
+				    self.append(nw);
+				}
+			    var firstBackbutton = null;
+				var old_back = mui.back;
+				var max_time = 1000;//毫秒
+				var lasturl = null;
+				mui.back = function() {
+					nw.canBack(function(e) {
+						//mui.toast('返回');
+						if(e.canBack) {
+							if(!firstBackbutton) {
+								nw.back();//返回上一页
+								endAnimal();//动画
+								firstBackbutton = new Date().getTime();
+								setTimeout(function() {
+									firstBackbutton = null
+								}, max_time);
+							} else {
+								if((new Date().getTime() - firstBackbutton) < max_time) {
+									old_back();
+								}
+							}
+						} else {
+							old_back();
+						}
+					});
+				}
+			}
+		}
+		</script>
+
+		<div id="content"></div>
+		<div class="data-tips">
+			<div class="tipsbox">
+				<i class="icon"></i>
+				<p class="desc desc1">网络请求失败!</p>
+				<p class="desc desc2">请检查您的网络!</p>
+			</div>
+			<div class="btnbox">
+				<p class="btn" id="refresh" onclick="refresh()">重新加载</p>
+			</div>
+		</div>
+	</body>
+</html>
